@@ -1,0 +1,35 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  unittest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.13"]
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+      # Runtime and unit tests use only Python's standard library. The tests
+      # mock external providers; local HTTP tests bind ephemeral loopback ports.
+      # Live provider benchmarks are manual and never consume CI credentials.
+      - name: Check Python syntax
+        run: python -m compileall -q wallet_age_days wallet_insights eth_wallet_check examples
+      - name: Run unit and local HTTP tests
+        run: python -m unittest discover -s tests -v

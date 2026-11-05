@@ -1,0 +1,46 @@
+{
+  "started_at": "2026-11-05T20:51:15.106680+00:00",
+  "finished_at": "2026-11-05T20:51:20.737483+00:00",
+  "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+  "platform": "darwin",
+  "row_count": 1000000,
+  "chain_key": "evm:1:v1",
+  "database_capacity": 1000000,
+  "eviction_policy": "lru",
+  "load_seconds": 4.323284041020088,
+  "load_rows_per_second": 231305.64416120294,
+  "database_bytes": 142901248,
+  "bytes_per_record": 142.901248,
+  "sqlite_page_count": 34888,
+  "sqlite_page_size": 4096,
+  "peak_rss_before_bytes": 19394560,
+  "peak_rss_after_bytes": 21594112,
+  "additional_peak_rss_bytes": 2199552,
+  "lookup_seconds": {
+    "n": 1000,
+    "mean": 0.0012682163711870088,
+    "median": 0.0010712505027186126,
+    "p95": 0.0018218340119346976,
+    "p99": 0.005816397660528308,
+    "max": 0.015131500025745481
+  },
+  "missing_lookup_seconds": 0.0006363749853335321,
+  "capacity_boundary": {
+    "new_record_stored": true,
+    "least_recent_entry_evicted": true,
+    "recently_read_entry_retained": true,
+    "existing_record_updated": true,
+    "row_count_unchanged": true
+  },
+  "eviction_insert_seconds": 0.0011757080210372806,
+  "notes": [
+    "Actual rows in the production WITHOUT ROWID schema: chain, address, epoch, persisted access sequence and LRU index.",
+    "Chain namespace evm:1:v1 represents current Ethereum-only coverage; it does not establish every EVM chain's age.",
+    "Synthetic offline records; no blockchain queries, funding or private keys.",
+    "Bulk insertion throughput differs from put_min() throughput; timed get() includes per-operation setup and a persisted LRU touch.",
+    "Read timings follow population with a warm OS filesystem cache; cold storage and upstream caches are not measured.",
+    "RSS is process peak resident memory, excluding the operating system filesystem page cache.",
+    "The complete million-record dictionary is never constructed in RAM; SQLite connection page cache is bounded.",
+    "At capacity a new fact was stored and the least recently used entry evicted; a recently read key was retained and an existing epoch improved."
+  ]
+}

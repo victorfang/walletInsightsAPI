@@ -1,0 +1,14 @@
+test_deployment_reference_requires_canonical_verification (test_benchmark_analysis.BenchmarkAnalysisTests.test_deployment_reference_requires_canonical_verification) ... ok
+test_earlier_than_deployment_is_ambiguous_not_labeled_wrong (test_benchmark_analysis.BenchmarkAnalysisTests.test_earlier_than_deployment_is_ambiguous_not_labeled_wrong) ... ok
+test_missing_address_global_400_is_a_correct_syntax_rejection (test_benchmark_analysis.BenchmarkAnalysisTests.test_missing_address_global_400_is_a_correct_syntax_rejection) ... ok
+test_missing_age_is_coverage_failure_not_exact_agreement (test_benchmark_analysis.BenchmarkAnalysisTests.test_missing_age_is_coverage_failure_not_exact_agreement) ... ok
+test_partial_final_line_is_skipped_but_corrupt_complete_line_raises (test_benchmark_analysis.BenchmarkAnalysisTests.test_partial_final_line_is_skipped_but_corrupt_complete_line_raises) ... ok
+test_recent_eoa_proof_is_only_an_upper_bound (test_benchmark_analysis.BenchmarkAnalysisTests.test_recent_eoa_proof_is_only_an_upper_bound) ... ok
+test_type_seven_quantiles_and_empty_inputs (test_benchmark_analysis.BenchmarkAnalysisTests.test_type_seven_quantiles_and_empty_inputs) ... ok
+test_unknown_is_not_counted_as_correct_or_as_a_negative (test_benchmark_analysis.BenchmarkAnalysisTests.test_unknown_is_not_counted_as_correct_or_as_a_negative) ... ok
+test_warm_cache_consistency_and_no_upstream (test_benchmark_analysis.BenchmarkAnalysisTests.test_warm_cache_consistency_and_no_upstream) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.004s
+
+OK

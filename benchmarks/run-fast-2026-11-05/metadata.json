@@ -1,0 +1,50 @@
+{
+  "started_at": "2026-11-05T19:36:18.048632Z",
+  "dataset_sha256": "72d1a2fa26ad76e467e771e60c448aae16b49d319d27243278bdf751fd46dee0",
+  "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+  "cases": 100,
+  "seed": 20261105,
+  "concurrency": 1,
+  "upstream_timeout_seconds": 2.6,
+  "inter_cold_request_pause_seconds": 0.15,
+  "provider_order": [
+    "publicnode",
+    "1rpc",
+    "blockpi"
+  ],
+  "paid_providers_configured": [],
+  "production_sha256": {
+    "eth_wallet_check/__init__.py": "4c32b9edf6b64abb522a8747adc75c6d6a1423f545970ade5fa1e1a91ce55cdd",
+    "eth_wallet_check/__main__.py": "d53a5b1d518ac0adb417947a805ba6263a2a19a7f76cdf6a4198e0511fdb7e05",
+    "eth_wallet_check/age_store.py": "c1fee97e6bfad81d72665bd524ebd08143be96d9ef98ba3d4f777b9fedbdabab",
+    "eth_wallet_check/api.py": "4b59aec31722ea6c274a5a1dd71c15d74cf48e6b8454f86769a1aa2fd64220ad",
+    "eth_wallet_check/cache.py": "fddc4df21db3556163ed79d0b715378f569433031cdb6d640a8eb66d018a00bc",
+    "eth_wallet_check/config.py": "e5b6b5c4c56a0f7e87a2815b4e865758788fe2ed719ce9da2b6b270718df01e2",
+    "eth_wallet_check/deadline.py": "0d15093bfccf8d8817803e8d41b263b8976e4871e1feed45104ef857d5c4c293",
+    "eth_wallet_check/dispatch.py": "3f3ee95385ea26b2c403365185a5a6d63f738838341b1a337649a61ef2a21bc0",
+    "eth_wallet_check/factory.py": "b05da083e6ad806f277f13d66b145d1b50c66b57a871a8c9c5bc52835155c27b",
+    "eth_wallet_check/fast_history.py": "284c42bc7c8495bed2605ba50ef63462365b890e59c94b7a120bb3fd8e932d06",
+    "eth_wallet_check/fast_service.py": "b741b758349a3114f265925cc0785e3a379de18b18b946a61a3c0b74319101a7",
+    "eth_wallet_check/history.py": "f6351657b947d17dab9005e6389f15754d323d16a917edeca5a775a1519a48df",
+    "eth_wallet_check/http.py": "a6ed0053e25851ac3802be11c12d27a8f33fd6c84ba15513af9afb64d6fd07c6",
+    "eth_wallet_check/protocols.py": "10e87d083c1a60e52793bc6da6599cba4a4c011dfae3901562f7548ac31057a5",
+    "eth_wallet_check/rpc.py": "bf8c708edf5f2c6a1410a829b07e8e8561fa38bda36d1d9e7b22a41fa739967a",
+    "eth_wallet_check/server.py": "8fb50ba1f3aee4b0fc6d97cbc5a4ca3a3caf612046f8f4a030980c1c7d58320e",
+    "eth_wallet_check/service.py": "1888f6ef97fa9196cab438085ca1b1b75656df9c85fb436fbcdcfc1f4ea8de7e",
+    "openapi.json": "1d9e76f71492badc2dbc7b8bece40f78cb3a8c0e18b4ef8e7a72ae303d9b9566"
+  },
+  "cohorts": {
+    "existing_eoa": 20,
+    "existing_contract": 20,
+    "generated_valid": 40,
+    "malformed": 20
+  },
+  "persisted_age_rows": 40,
+  "permanent_age_inputs": 40,
+  "finished_at": "2026-11-05T19:38:23.409173Z",
+  "total_api_requests": 240,
+  "total_upstream_call_attempts": 841,
+  "unfinished_upstream_calls": 0,
+  "production_unchanged": true,
+  "validation_note": "174 application regression tests passed after integration, including localhost HTTP checks."
+}

@@ -1,0 +1,48 @@
+{
+  "started_at": "2026-11-05T20:38:28.886838Z",
+  "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+  "seed": 20261105,
+  "pause_seconds": 0.15,
+  "dataset_sha256": "72d1a2fa26ad76e467e771e60c448aae16b49d319d27243278bdf751fd46dee0",
+  "paid_configured": [
+    "alchemy",
+    "quicknode"
+  ],
+  "anchain_configured": true,
+  "env_file_supplied": true,
+  "initial_cache_probe": {
+    "snapshot": false,
+    "riskLabels": false
+  },
+  "cold_miss_proofs": 80,
+  "runtime_sha256": {
+    "wallet_insights/__init__.py": "1828eb79d1fc9d14cf0b5f9fad3e431460e622d96f53e6209c24141e8d7eb758",
+    "wallet_insights/__main__.py": "74c77048d437b9a0b92179bc6403a9b1ceab6fd7b04af7c9a670df5ba3a0d34e",
+    "wallet_insights/anchain.py": "f86bd27f006dd13418825c010abf551950124bd9ae59ffa6b34a65f2817a62fa",
+    "wallet_insights/cache.py": "b6022747bc3e203ca9bf38ee76d0a88b53b0279e2a6272231b51f431442faffe",
+    "wallet_insights/config.py": "c50f241601c00a902199254c42fc5498efaf8ad52950d339622f366b7985c224",
+    "wallet_insights/factory.py": "ca98da8778dcc72ec797be4de322781f362becdc1bef6f118e373eed8cffdd3f",
+    "wallet_insights/rpc.py": "878bf7bb0c3d9c379f79896c73509aff44c6ef632915f653394fa3cc6e640651",
+    "wallet_insights/service.py": "52ce6b7c9a60c0d080ef5b93a41c676b906e8d6b4d1bf00a458be5c523319741",
+    "wallet_age_days/server.py": "a0ddbb99a79da19e724eabccd78dbac344c7b43628dc22b1f5d7c792a38a87a8",
+    "eth_wallet_check/http.py": "54df5bd3229dc6474a307481cfebee499ad0ff199e90c1097296218563300b92",
+    "eth_wallet_check/config.py": "e5b6b5c4c56a0f7e87a2815b4e865758788fe2ed719ce9da2b6b270718df01e2",
+    "eth_wallet_check/rpc.py": "bf8c708edf5f2c6a1410a829b07e8e8561fa38bda36d1d9e7b22a41fa739967a",
+    "eth_wallet_check/deadline.py": "0d15093bfccf8d8817803e8d41b263b8976e4871e1feed45104ef857d5c4c293"
+  },
+  "reference_skipped": false,
+  "loop_wall_seconds": 71.79576249996899,
+  "finished_at": "2026-11-05T20:42:34.634435Z",
+  "api_seconds": 55.62596120295348,
+  "runtime_unchanged": true,
+  "unfinished_calls": 0,
+  "upstream_attempts": 378,
+  "reference_http_attempts": 134,
+  "initial_reference_pass_completed_at": "2026-11-05T20:40:24.861210Z",
+  "reference_supplemental": {
+    "inputs": 27,
+    "repaired": 27,
+    "provider": "quicknode",
+    "reason": "Public reference providers rate-limited/unavailable; timed API requests unchanged."
+  }
+}

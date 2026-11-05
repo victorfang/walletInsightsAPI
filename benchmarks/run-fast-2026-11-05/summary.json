@@ -1,0 +1,741 @@
+{
+  "generated_at": "2026-11-05T19:40:37.617361Z",
+  "metadata": {
+    "started_at": "2026-11-05T19:36:18.048632Z",
+    "dataset_sha256": "72d1a2fa26ad76e467e771e60c448aae16b49d319d27243278bdf751fd46dee0",
+    "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+    "cases": 100,
+    "seed": 20261105,
+    "concurrency": 1,
+    "upstream_timeout_seconds": 2.6,
+    "inter_cold_request_pause_seconds": 0.15,
+    "provider_order": [
+      "publicnode",
+      "1rpc",
+      "blockpi"
+    ],
+    "paid_providers_configured": [],
+    "production_sha256": {
+      "eth_wallet_check/__init__.py": "4c32b9edf6b64abb522a8747adc75c6d6a1423f545970ade5fa1e1a91ce55cdd",
+      "eth_wallet_check/__main__.py": "d53a5b1d518ac0adb417947a805ba6263a2a19a7f76cdf6a4198e0511fdb7e05",
+      "eth_wallet_check/age_store.py": "c1fee97e6bfad81d72665bd524ebd08143be96d9ef98ba3d4f777b9fedbdabab",
+      "eth_wallet_check/api.py": "4b59aec31722ea6c274a5a1dd71c15d74cf48e6b8454f86769a1aa2fd64220ad",
+      "eth_wallet_check/cache.py": "fddc4df21db3556163ed79d0b715378f569433031cdb6d640a8eb66d018a00bc",
+      "eth_wallet_check/config.py": "e5b6b5c4c56a0f7e87a2815b4e865758788fe2ed719ce9da2b6b270718df01e2",
+      "eth_wallet_check/deadline.py": "0d15093bfccf8d8817803e8d41b263b8976e4871e1feed45104ef857d5c4c293",
+      "eth_wallet_check/dispatch.py": "3f3ee95385ea26b2c403365185a5a6d63f738838341b1a337649a61ef2a21bc0",
+      "eth_wallet_check/factory.py": "b05da083e6ad806f277f13d66b145d1b50c66b57a871a8c9c5bc52835155c27b",
+      "eth_wallet_check/fast_history.py": "284c42bc7c8495bed2605ba50ef63462365b890e59c94b7a120bb3fd8e932d06",
+      "eth_wallet_check/fast_service.py": "b741b758349a3114f265925cc0785e3a379de18b18b946a61a3c0b74319101a7",
+      "eth_wallet_check/history.py": "f6351657b947d17dab9005e6389f15754d323d16a917edeca5a775a1519a48df",
+      "eth_wallet_check/http.py": "a6ed0053e25851ac3802be11c12d27a8f33fd6c84ba15513af9afb64d6fd07c6",
+      "eth_wallet_check/protocols.py": "10e87d083c1a60e52793bc6da6599cba4a4c011dfae3901562f7548ac31057a5",
+      "eth_wallet_check/rpc.py": "bf8c708edf5f2c6a1410a829b07e8e8561fa38bda36d1d9e7b22a41fa739967a",
+      "eth_wallet_check/server.py": "8fb50ba1f3aee4b0fc6d97cbc5a4ca3a3caf612046f8f4a030980c1c7d58320e",
+      "eth_wallet_check/service.py": "1888f6ef97fa9196cab438085ca1b1b75656df9c85fb436fbcdcfc1f4ea8de7e",
+      "openapi.json": "1d9e76f71492badc2dbc7b8bece40f78cb3a8c0e18b4ef8e7a72ae303d9b9566"
+    },
+    "cohorts": {
+      "existing_eoa": 20,
+      "existing_contract": 20,
+      "generated_valid": 40,
+      "malformed": 20
+    },
+    "persisted_age_rows": 40,
+    "permanent_age_inputs": 40,
+    "finished_at": "2026-11-05T19:38:23.409173Z",
+    "total_api_requests": 240,
+    "total_upstream_call_attempts": 841,
+    "unfinished_upstream_calls": 0,
+    "production_unchanged": true,
+    "validation_note": "174 application regression tests passed after integration, including localhost HTTP checks."
+  },
+  "phase_metrics": {
+    "detailed_cold": {
+      "requests": 100,
+      "valid_requests": 80,
+      "latency_all": {
+        "n": 100,
+        "min": 0.0010391250252723694,
+        "mean": 1.1175509616924684,
+        "median": 1.0101699580263812,
+        "p90": 2.2504673667193855,
+        "p95": 2.4539270208915696,
+        "p99": 2.470620836895541,
+        "max": 2.472415500029456
+      },
+      "latency_valid": {
+        "n": 80,
+        "min": 0.7204272500239313,
+        "mean": 1.3957000089169014,
+        "median": 1.1866572290309705,
+        "p90": 2.2910368499753537,
+        "p95": 2.459957737792865,
+        "p99": 2.470983395104413,
+        "max": 2.472415500029456
+      },
+      "latency_result_cache_hits": {
+        "n": 0,
+        "min": null,
+        "mean": null,
+        "median": null,
+        "p90": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      },
+      "result_cache_hits": 0,
+      "permanent_age_cache_hits": 0,
+      "over_3_seconds": 0,
+      "http_statuses": {
+        "400": 20,
+        "200": 80
+      },
+      "transport_errors": 0,
+      "upstream_call_attempts": 840,
+      "upstream_rpc_method_attempts": 768,
+      "accuracy": {
+        "unique_cases": 100,
+        "format_correct": 100,
+        "format_accuracy": 1.0,
+        "known_used_recall": {
+          "eligible": 40,
+          "conclusive": 40,
+          "correct": 40,
+          "incorrect_conclusive": 0,
+          "unknown_or_unusable": 0,
+          "agreement_including_unknown_as_not_correct": 1.0,
+          "agreement_among_conclusive": 1.0,
+          "conclusive_coverage": 1.0
+        },
+        "synthetic_candidate_agreement": {
+          "eligible": 40,
+          "conclusive": 40,
+          "correct": 40,
+          "incorrect_conclusive": 0,
+          "unknown_or_unusable": 0,
+          "agreement_including_unknown_as_not_correct": 1.0,
+          "agreement_among_conclusive": 1.0,
+          "conclusive_coverage": 1.0
+        },
+        "valid_dataset_agreement": {
+          "eligible": 80,
+          "conclusive": 80,
+          "correct": 80,
+          "incorrect_conclusive": 0,
+          "unknown_or_unusable": 0,
+          "agreement_including_unknown_as_not_correct": 1.0,
+          "agreement_among_conclusive": 1.0,
+          "conclusive_coverage": 1.0
+        },
+        "by_category": {
+          "existing_contract": {
+            "n": 20,
+            "format_correct": 20,
+            "eligible": 20,
+            "conclusive": 20,
+            "correct": 20,
+            "incorrect_conclusive": 0,
+            "unknown_or_unusable": 0,
+            "agreement_including_unknown_as_not_correct": 1.0,
+            "agreement_among_conclusive": 1.0,
+            "conclusive_coverage": 1.0
+          },
+          "existing_eoa": {
+            "n": 20,
+            "format_correct": 20,
+            "eligible": 20,
+            "conclusive": 20,
+            "correct": 20,
+            "incorrect_conclusive": 0,
+            "unknown_or_unusable": 0,
+            "agreement_including_unknown_as_not_correct": 1.0,
+            "agreement_among_conclusive": 1.0,
+            "conclusive_coverage": 1.0
+          },
+          "generated_valid": {
+            "n": 40,
+            "format_correct": 40,
+            "eligible": 40,
+            "conclusive": 40,
+            "correct": 40,
+            "incorrect_conclusive": 0,
+            "unknown_or_unusable": 0,
+            "agreement_including_unknown_as_not_correct": 1.0,
+            "agreement_among_conclusive": 1.0,
+            "conclusive_coverage": 1.0
+          },
+          "malformed": {
+            "n": 20,
+            "format_correct": 20,
+            "eligible": 0,
+            "conclusive": 0,
+            "correct": 0,
+            "incorrect_conclusive": 0,
+            "unknown_or_unusable": 0,
+            "agreement_including_unknown_as_not_correct": null,
+            "agreement_among_conclusive": null,
+            "conclusive_coverage": null
+          }
+        }
+      },
+      "known_used_age_coverage": {
+        "eligible": 40,
+        "timestamp_returned": 40,
+        "age_statuses": {
+          "lower_bound": 40
+        }
+      }
+    },
+    "detailed_warm": {
+      "requests": 100,
+      "valid_requests": 80,
+      "latency_all": {
+        "n": 100,
+        "min": 0.0005283749778755009,
+        "mean": 0.001488493310753256,
+        "median": 0.0014139369886834174,
+        "p90": 0.0021306247042957695,
+        "p95": 0.002506787187303416,
+        "p99": 0.003192902378505103,
+        "max": 0.004589834017679095
+      },
+      "latency_valid": {
+        "n": 80,
+        "min": 0.0013186249998398125,
+        "mean": 0.001682554162835004,
+        "median": 0.001441666972823441,
+        "p90": 0.0022338463924825203,
+        "p95": 0.0025484128535026677,
+        "p99": 0.0034751107904594306,
+        "max": 0.004589834017679095
+      },
+      "latency_result_cache_hits": {
+        "n": 80,
+        "min": 0.0013186249998398125,
+        "mean": 0.001682554162835004,
+        "median": 0.001441666972823441,
+        "p90": 0.0022338463924825203,
+        "p95": 0.0025484128535026677,
+        "p99": 0.0034751107904594306,
+        "max": 0.004589834017679095
+      },
+      "result_cache_hits": 80,
+      "permanent_age_cache_hits": 40,
+      "over_3_seconds": 0,
+      "http_statuses": {
+        "400": 20,
+        "200": 80
+      },
+      "transport_errors": 0,
+      "upstream_call_attempts": 0,
+      "upstream_rpc_method_attempts": 0,
+      "accuracy": {
+        "unique_cases": 100,
+        "format_correct": 100,
+        "format_accuracy": 1.0,
+        "known_used_recall": {
+          "eligible": 40,
+          "conclusive": 40,
+          "correct": 40,
+          "incorrect_conclusive": 0,
+          "unknown_or_unusable": 0,
+          "agreement_including_unknown_as_not_correct": 1.0,
+          "agreement_among_conclusive": 1.0,
+          "conclusive_coverage": 1.0
+        },
+        "synthetic_candidate_agreement": {
+          "eligible": 40,
+          "conclusive": 40,
+          "correct": 40,
+          "incorrect_conclusive": 0,
+          "unknown_or_unusable": 0,
+          "agreement_including_unknown_as_not_correct": 1.0,
+          "agreement_among_conclusive": 1.0,
+          "conclusive_coverage": 1.0
+        },
+        "valid_dataset_agreement": {
+          "eligible": 80,
+          "conclusive": 80,
+          "correct": 80,
+          "incorrect_conclusive": 0,
+          "unknown_or_unusable": 0,
+          "agreement_including_unknown_as_not_correct": 1.0,
+          "agreement_among_conclusive": 1.0,
+          "conclusive_coverage": 1.0
+        },
+        "by_category": {
+          "existing_contract": {
+            "n": 20,
+            "format_correct": 20,
+            "eligible": 20,
+            "conclusive": 20,
+            "correct": 20,
+            "incorrect_conclusive": 0,
+            "unknown_or_unusable": 0,
+            "agreement_including_unknown_as_not_correct": 1.0,
+            "agreement_among_conclusive": 1.0,
+            "conclusive_coverage": 1.0
+          },
+          "existing_eoa": {
+            "n": 20,
+            "format_correct": 20,
+            "eligible": 20,
+            "conclusive": 20,
+            "correct": 20,
+            "incorrect_conclusive": 0,
+            "unknown_or_unusable": 0,
+            "agreement_including_unknown_as_not_correct": 1.0,
+            "agreement_among_conclusive": 1.0,
+            "conclusive_coverage": 1.0
+          },
+          "generated_valid": {
+            "n": 40,
+            "format_correct": 40,
+            "eligible": 40,
+            "conclusive": 40,
+            "correct": 40,
+            "incorrect_conclusive": 0,
+            "unknown_or_unusable": 0,
+            "agreement_including_unknown_as_not_correct": 1.0,
+            "agreement_among_conclusive": 1.0,
+            "conclusive_coverage": 1.0
+          },
+          "malformed": {
+            "n": 20,
+            "format_correct": 20,
+            "eligible": 0,
+            "conclusive": 0,
+            "correct": 0,
+            "incorrect_conclusive": 0,
+            "unknown_or_unusable": 0,
+            "agreement_including_unknown_as_not_correct": null,
+            "agreement_among_conclusive": null,
+            "conclusive_coverage": null
+          }
+        }
+      },
+      "known_used_age_coverage": {
+        "eligible": 40,
+        "timestamp_returned": 40,
+        "age_statuses": {
+          "lower_bound": 40
+        }
+      }
+    },
+    "permanent_age": {
+      "requests": 40,
+      "valid_requests": 40,
+      "latency_all": {
+        "n": 40,
+        "min": 0.0012453329982236028,
+        "mean": 0.0013665602513356135,
+        "median": 0.0013451869890559465,
+        "p90": 0.0014551705040503295,
+        "p95": 0.0014928652031812812,
+        "p99": 0.001658567363047041,
+        "max": 0.0016608749865554273
+      },
+      "latency_valid": {
+        "n": 40,
+        "min": 0.0012453329982236028,
+        "mean": 0.0013665602513356135,
+        "median": 0.0013451869890559465,
+        "p90": 0.0014551705040503295,
+        "p95": 0.0014928652031812812,
+        "p99": 0.001658567363047041,
+        "max": 0.0016608749865554273
+      },
+      "latency_result_cache_hits": {
+        "n": 0,
+        "min": null,
+        "mean": null,
+        "median": null,
+        "p90": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      },
+      "result_cache_hits": 0,
+      "permanent_age_cache_hits": 40,
+      "over_3_seconds": 0,
+      "http_statuses": {
+        "200": 40
+      },
+      "transport_errors": 0,
+      "upstream_call_attempts": 0,
+      "upstream_rpc_method_attempts": 0,
+      "accuracy": {
+        "unique_cases": 40,
+        "format_correct": 40,
+        "format_accuracy": 1.0,
+        "known_used_recall": {
+          "eligible": 40,
+          "conclusive": 40,
+          "correct": 40,
+          "incorrect_conclusive": 0,
+          "unknown_or_unusable": 0,
+          "agreement_including_unknown_as_not_correct": 1.0,
+          "agreement_among_conclusive": 1.0,
+          "conclusive_coverage": 1.0
+        },
+        "synthetic_candidate_agreement": {
+          "eligible": 0,
+          "conclusive": 0,
+          "correct": 0,
+          "incorrect_conclusive": 0,
+          "unknown_or_unusable": 0,
+          "agreement_including_unknown_as_not_correct": null,
+          "agreement_among_conclusive": null,
+          "conclusive_coverage": null
+        },
+        "valid_dataset_agreement": {
+          "eligible": 40,
+          "conclusive": 40,
+          "correct": 40,
+          "incorrect_conclusive": 0,
+          "unknown_or_unusable": 0,
+          "agreement_including_unknown_as_not_correct": 1.0,
+          "agreement_among_conclusive": 1.0,
+          "conclusive_coverage": 1.0
+        },
+        "by_category": {
+          "existing_contract": {
+            "n": 20,
+            "format_correct": 20,
+            "eligible": 20,
+            "conclusive": 20,
+            "correct": 20,
+            "incorrect_conclusive": 0,
+            "unknown_or_unusable": 0,
+            "agreement_including_unknown_as_not_correct": 1.0,
+            "agreement_among_conclusive": 1.0,
+            "conclusive_coverage": 1.0
+          },
+          "existing_eoa": {
+            "n": 20,
+            "format_correct": 20,
+            "eligible": 20,
+            "conclusive": 20,
+            "correct": 20,
+            "incorrect_conclusive": 0,
+            "unknown_or_unusable": 0,
+            "agreement_including_unknown_as_not_correct": 1.0,
+            "agreement_among_conclusive": 1.0,
+            "conclusive_coverage": 1.0
+          }
+        }
+      },
+      "known_used_age_coverage": {
+        "eligible": 40,
+        "timestamp_returned": 40,
+        "age_statuses": {
+          "lower_bound": 40
+        }
+      }
+    }
+  },
+  "deployment_controls": [
+    {
+      "id": "eth-021",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "label": "WETH9",
+      "reference_deployment_epoch": 1513077455,
+      "returned_epoch": 1513077455,
+      "age_status": "lower_bound",
+      "error_seconds": 0,
+      "assessment": "agrees_with_deployment"
+    },
+    {
+      "id": "eth-022",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "label": "USDC",
+      "reference_deployment_epoch": 1533324504,
+      "returned_epoch": 1533324504,
+      "age_status": "lower_bound",
+      "error_seconds": 0,
+      "assessment": "agrees_with_deployment"
+    },
+    {
+      "id": "eth-023",
+      "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "label": "USDT",
+      "reference_deployment_epoch": 1511829681,
+      "returned_epoch": 1511829681,
+      "age_status": "lower_bound",
+      "error_seconds": 0,
+      "assessment": "agrees_with_deployment"
+    },
+    {
+      "id": "eth-024",
+      "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+      "label": "DAI",
+      "reference_deployment_epoch": 1573672677,
+      "returned_epoch": 1573672677,
+      "age_status": "lower_bound",
+      "error_seconds": 0,
+      "assessment": "agrees_with_deployment"
+    },
+    {
+      "id": "eth-025",
+      "address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "label": "UNI",
+      "reference_deployment_epoch": 1600107086,
+      "returned_epoch": 1600107086,
+      "age_status": "lower_bound",
+      "error_seconds": 0,
+      "assessment": "agrees_with_deployment"
+    },
+    {
+      "id": "eth-026",
+      "address": "0x514910771af9ca656af840dff83e8264ecf986ca",
+      "label": "LINK",
+      "reference_deployment_epoch": 1505597189,
+      "returned_epoch": 1505597189,
+      "age_status": "lower_bound",
+      "error_seconds": 0,
+      "assessment": "agrees_with_deployment"
+    },
+    {
+      "id": "eth-027",
+      "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "label": "WBTC",
+      "reference_deployment_epoch": 1543095952,
+      "returned_epoch": 1543095952,
+      "age_status": "lower_bound",
+      "error_seconds": 0,
+      "assessment": "agrees_with_deployment"
+    },
+    {
+      "id": "eth-028",
+      "address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+      "label": "AAVE",
+      "reference_deployment_epoch": 1600970788,
+      "returned_epoch": 1600970788,
+      "age_status": "lower_bound",
+      "error_seconds": 0,
+      "assessment": "agrees_with_deployment"
+    },
+    {
+      "id": "eth-029",
+      "address": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
+      "label": "MKR",
+      "reference_deployment_epoch": 1511634257,
+      "returned_epoch": 1511634257,
+      "age_status": "lower_bound",
+      "error_seconds": 0,
+      "assessment": "agrees_with_deployment"
+    },
+    {
+      "id": "eth-030",
+      "address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+      "label": "COMP",
+      "reference_deployment_epoch": 1583280535,
+      "returned_epoch": 1583280535,
+      "age_status": "lower_bound",
+      "error_seconds": 0,
+      "assessment": "agrees_with_deployment"
+    },
+    {
+      "id": "eth-031",
+      "address": "0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f",
+      "label": "Uniswap V2 Factory",
+      "reference_deployment_epoch": 1588610042,
+      "returned_epoch": 1588610042,
+      "age_status": "lower_bound",
+      "error_seconds": 0,
+      "assessment": "agrees_with_deployment"
+    },
+    {
+      "id": "eth-032",
+      "address": "0x7a250d5630b4cf539739df2c5dacb4c659f2488d",
+      "label": "Uniswap V2 Router02",
+      "reference_deployment_epoch": 1591388241,
+      "returned_epoch": 1591388241,
+      "age_status": "lower_bound",
+      "error_seconds": 0,
+      "assessment": "agrees_with_deployment"
+    },
+    {
+      "id": "eth-033",
+      "address": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+      "label": "Uniswap V3 Factory",
+      "reference_deployment_epoch": 1620156420,
+      "returned_epoch": 1620156420,
+      "age_status": "lower_bound",
+      "error_seconds": 0,
+      "assessment": "agrees_with_deployment"
+    },
+    {
+      "id": "eth-034",
+      "address": "0xe592427a0aece92de3edee1f18e0157c05861564",
+      "label": "Uniswap V3 SwapRouter",
+      "reference_deployment_epoch": 1620156641,
+      "returned_epoch": 1620156641,
+      "age_status": "lower_bound",
+      "error_seconds": 0,
+      "assessment": "agrees_with_deployment"
+    },
+    {
+      "id": "eth-035",
+      "address": "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45",
+      "label": "Uniswap SwapRouter02",
+      "reference_deployment_epoch": 1639503446,
+      "returned_epoch": 1639503446,
+      "age_status": "lower_bound",
+      "error_seconds": 0,
+      "assessment": "agrees_with_deployment"
+    },
+    {
+      "id": "eth-036",
+      "address": "0xc36442b4a4522e871399cd717abdd847ab11fe88",
+      "label": "Uniswap V3 NonfungiblePositionManager",
+      "reference_deployment_epoch": 1620156913,
+      "returned_epoch": 1620156913,
+      "age_status": "lower_bound",
+      "error_seconds": 0,
+      "assessment": "agrees_with_deployment"
+    },
+    {
+      "id": "eth-037",
+      "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+      "label": "Permit2",
+      "reference_deployment_epoch": 1668647879,
+      "returned_epoch": 1668647879,
+      "age_status": "lower_bound",
+      "error_seconds": 0,
+      "assessment": "agrees_with_deployment"
+    },
+    {
+      "id": "eth-038",
+      "address": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+      "label": "ENS Registry",
+      "reference_deployment_epoch": 1580344632,
+      "returned_epoch": 1580344632,
+      "age_status": "lower_bound",
+      "error_seconds": 0,
+      "assessment": "agrees_with_deployment"
+    },
+    {
+      "id": "eth-039",
+      "address": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+      "label": "ENS BaseRegistrarImplementation",
+      "reference_deployment_epoch": 1580345034,
+      "returned_epoch": 1580345034,
+      "age_status": "lower_bound",
+      "error_seconds": 0,
+      "assessment": "agrees_with_deployment"
+    },
+    {
+      "id": "eth-040",
+      "address": "0x00000000219ab540356cbb839cbe05303d7705fa",
+      "label": "Beacon deposit contract",
+      "reference_deployment_epoch": 1602667372,
+      "returned_epoch": 1602667372,
+      "age_status": "lower_bound",
+      "error_seconds": 0,
+      "assessment": "agrees_with_deployment"
+    }
+  ],
+  "deployment_assessments": {
+    "agrees_with_deployment": 20
+  },
+  "age_computation": {
+    "timestamp_responses": 120,
+    "age_days_formula_correct": 120,
+    "repeated_timestamp_responses": 80,
+    "repeated_epoch_matches_cold": 80
+  },
+  "baseline_detailed_cold_valid_latency": {
+    "n": 80,
+    "min": 4.585579250007868,
+    "mean": 9.761594915151363,
+    "median": 8.100238729501143,
+    "p90": 16.331933421106083,
+    "p95": 18.45572407119325,
+    "p99": 22.983156178136685,
+    "max": 25.381045417045243
+  },
+  "storage_benchmarks": {
+    "sqlite": {
+      "started_at": "2026-11-05T19:28:51.150589+00:00",
+      "finished_at": "2026-11-05T19:28:58.082477+00:00",
+      "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+      "platform": "darwin",
+      "row_count": 1000000,
+      "load_seconds": 6.34230766701512,
+      "load_rows_per_second": 157671.31657783955,
+      "database_bytes": 292589568,
+      "bytes_per_record": 292.589568,
+      "sqlite_page_count": 71433,
+      "sqlite_page_size": 4096,
+      "peak_rss_before_bytes": 19341312,
+      "peak_rss_after_bytes": 25821184,
+      "additional_peak_rss_bytes": 6479872,
+      "lookup_seconds": {
+        "n": 1000,
+        "mean": 0.0005177168917143717,
+        "median": 0.0004937915073242038,
+        "p95": 0.0006256437685806304,
+        "p99": 0.0007083799794781951,
+        "max": 0.0013151669991202652
+      },
+      "missing_lookup_seconds": 0.00046387501060962677,
+      "notes": [
+        "Real rows in the production WITHOUT ROWID schema, including 64-hex transaction hashes and scope metadata.",
+        "Synthetic offline records; no blockchain lookup or private key generation.",
+        "Bulk insert throughput differs from observe() throughput; lookups use actual get().",
+        "RSS is process peak memory, not a claim about total OS filesystem cache.",
+        "Lookups run after population; filesystem/provider cold-cache behavior is not measured.",
+        "A Python dict is not constructed; SQLite keeps the million records on disk."
+      ]
+    },
+    "python_dictionary": {
+      "started_at": "2026-11-05T19:32:15.703408+00:00",
+      "finished_at": "2026-11-05T19:32:17.516738+00:00",
+      "python": "3.13.7",
+      "platform": "darwin",
+      "row_count": 1000000,
+      "key_format": "(chain: str, address: str); shared chain string eth:mainnet, 42-character ETH address",
+      "value_format": "distinct integer first_seen_timestamp per record",
+      "load_seconds": 0.8491207080078311,
+      "load_rows_per_second": 1177688.8616297618,
+      "reachable_python_object_bytes": 212943180,
+      "python_object_bytes_per_record": 212.94318,
+      "peak_rss_before_bytes": 16785408,
+      "peak_rss_after_bytes": 308248576,
+      "additional_peak_rss_bytes": 291463168,
+      "lookup_seconds": {
+        "n": 1000,
+        "mean": 1.0909849661402404e-06,
+        "median": 1.00000761449337e-06,
+        "p95": 1.667009200900793e-06,
+        "p99": 2.299064653925591e-06,
+        "max": 8.25000461190939e-06
+      },
+      "tracemalloc": {
+        "status": "aborted_before_measurement_to_limit_instrumentation_memory",
+        "rss_safety_limit_bytes": 513802240,
+        "note": "A separate fresh-process run with tracemalloc enabled hit the RSS safety threshold and exited. The successful full-million baseline uses exact reachable object sizes and uninstrumented RSS, not an extrapolation."
+      },
+      "notes": [
+        "Real 1,000,000-entry Python dictionary constructed in a fresh process, with no SQLite imports or retained database allocation.",
+        "Synthetic offline addresses and timestamps; no private keys, blockchain queries, or funding.",
+        "Object memory is the sum of sys.getsizeof over all actual distinct reachable dict, tuple, address-string and integer objects. It excludes Python allocator fragmentation and interpreter overhead.",
+        "The shared chain string is stored once; each address string, tuple key and epoch integer is distinct.",
+        "Only the integer epoch is stored per value: no completeness, finality, provenance, block hashes, transaction hashes, or durable storage.",
+        "Lookup key construction is outside each timed interval.",
+        "RSS is process peak resident memory and cannot be compared directly to SQLite disk size."
+      ]
+    }
+  },
+  "definitions": {
+    "latency": "Client wall time over the actual local HTTP route, including handler, providers and serialization; pauses excluded.",
+    "cold": "Empty application TTL and permanent-age stores; upstream provider caches are outside the benchmark's control.",
+    "warm": "Same inputs after cold pass. Failed/unknown results can be retried and are not automatically cache hits.",
+    "permanent_age": "TTL result entries deleted only from this run's isolated database; positive persisted addresses checked with details=false.",
+    "accuracy": "Unknown/unusable is counted separately; synthetic absence is an expectation, not proof of complete history.",
+    "age": "Returned observed timestamps and lower-bound ages are separate from exact-age claims. Deployment agreement is not universal first-appearance accuracy.",
+    "upstream_call_attempts": "Calls entering the instrumented HTTP client, including deadline-rejected calls; not necessarily sockets opened."
+  }
+}

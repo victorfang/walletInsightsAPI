@@ -1,0 +1,404 @@
+{
+  "metadata": {
+    "started_at": "2026-11-05T19:59:37.028774Z",
+    "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+    "pause_seconds": 0.15,
+    "dataset_sha256": "72d1a2fa26ad76e467e771e60c448aae16b49d319d27243278bdf751fd46dee0",
+    "paid_configured": [],
+    "coverage": "ethereum",
+    "namespace": "evm:1:v1",
+    "runtime_sha256": {
+      "wallet_age_days/__init__.py": "93a694b11af7bafd1894b33eaff86e8c49ec4878ab40d7c9d6738ef802bfabb8",
+      "wallet_age_days/__main__.py": "e27ecec7d9ed985a44fcf07477f56e3f1e24e0bd2b240d655d4447076a097223",
+      "wallet_age_days/cli.py": "9c8f6436121a3751bfc9a7bee20aba2ca5e67cc0cd62cc4c223314a08f4dd446",
+      "wallet_age_days/factory.py": "d85757ebc57e62c4f5274706f197df1ca34ea45429fc6119bc503b3f436e2910",
+      "wallet_age_days/providers.py": "7aa3e524fd4f1dceffef4916780523e5f72521f19772981a29205fe4caf15d16",
+      "wallet_age_days/server.py": "8074f1ffecb69ca1ec04b1e2b6e9aa558d2746597f61e733e746b4800bb33027",
+      "wallet_age_days/service.py": "e630e4b82a3a618f791334a76b26797b4b2149a301cc3af6dd11522cc2d5bccf",
+      "wallet_age_days/store.py": "70f2784129625282760f032c8acb038d9eaf679fdd585da04a6169aacb41908f",
+      "eth_wallet_check/config.py": "e5b6b5c4c56a0f7e87a2815b4e865758788fe2ed719ce9da2b6b270718df01e2",
+      "eth_wallet_check/http.py": "a6ed0053e25851ac3802be11c12d27a8f33fd6c84ba15513af9afb64d6fd07c6",
+      "eth_wallet_check/rpc.py": "bf8c708edf5f2c6a1410a829b07e8e8561fa38bda36d1d9e7b22a41fa739967a",
+      "eth_wallet_check/deadline.py": "0d15093bfccf8d8817803e8d41b263b8976e4871e1feed45104ef857d5c4c293"
+    },
+    "finished_at": "2026-11-05T20:01:34.955050Z",
+    "upstream_attempts": 838,
+    "runtime_unchanged": true,
+    "forbidden_rpc_methods": [],
+    "cached_rows": 40,
+    "unfinished_calls": 0
+  },
+  "phases": {
+    "cold": {
+      "requests": 100,
+      "valid_requests": 80,
+      "latency_all": {
+        "n": 100,
+        "min": 0.001413875026628375,
+        "mean": 0.7765606512886006,
+        "median": 0.4113400624773931,
+        "p90": 2.029104754200671,
+        "p95": 2.1587213079910725,
+        "p99": 2.4720812483131884,
+        "max": 2.474023957969621
+      },
+      "latency_valid": {
+        "n": 80,
+        "min": 0.29663837497355416,
+        "mean": 0.9694075995110325,
+        "median": 0.7153258129837923,
+        "p90": 2.0695564959140027,
+        "p95": 2.220531089202267,
+        "p99": 2.4724737149104477,
+        "max": 2.474023957969621
+      },
+      "cache_hits": 0,
+      "latency_cache_hits": {
+        "n": 0,
+        "min": null,
+        "mean": null,
+        "median": null,
+        "p90": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      },
+      "http_statuses": {
+        "400": 20,
+        "200": 40,
+        "503": 38,
+        "404": 2
+      },
+      "over_three_seconds": 0,
+      "known_used_inputs": 40,
+      "known_used_age_returned": 40,
+      "latency_known_used": {
+        "n": 40,
+        "min": 0.7641069589881226,
+        "mean": 1.5552269551917561,
+        "median": 1.504325166984927,
+        "p90": 2.2333997204550546,
+        "p95": 2.4679812961374408,
+        "p99": 2.4732586481049657,
+        "max": 2.474023957969621
+      },
+      "upstream_attempts_during_requests": 630
+    },
+    "warm": {
+      "requests": 100,
+      "valid_requests": 80,
+      "latency_all": {
+        "n": 100,
+        "min": 0.0011259589809924364,
+        "mean": 0.16734907330654095,
+        "median": 0.007363750017248094,
+        "p90": 0.5036277712264564,
+        "p95": 0.5387667125527514,
+        "p99": 0.6648295243515172,
+        "max": 0.7554623750038445
+      },
+      "latency_valid": {
+        "n": 80,
+        "min": 0.0017631250084377825,
+        "mean": 0.20846886246145005,
+        "median": 0.15656166651751846,
+        "p90": 0.5148208042082842,
+        "p95": 0.539928495849017,
+        "p99": 0.6831391911499662,
+        "max": 0.7554623750038445
+      },
+      "cache_hits": 40,
+      "latency_cache_hits": {
+        "n": 40,
+        "min": 0.0017631250084377825,
+        "mean": 0.005259092623600736,
+        "median": 0.004738854040624574,
+        "p90": 0.008452000614488498,
+        "p95": 0.009719807674991894,
+        "p99": 0.013018948133103548,
+        "max": 0.014473583025392145
+      },
+      "http_statuses": {
+        "400": 20,
+        "200": 40,
+        "503": 40
+      },
+      "over_three_seconds": 0,
+      "known_used_inputs": 40,
+      "known_used_age_returned": 40,
+      "latency_known_used": {
+        "n": 40,
+        "min": 0.0017631250084377825,
+        "mean": 0.005259092623600736,
+        "median": 0.004738854040624574,
+        "p90": 0.008452000614488498,
+        "p95": 0.009719807674991894,
+        "p99": 0.013018948133103548,
+        "max": 0.014473583025392145
+      },
+      "upstream_attempts_during_requests": 200
+    },
+    "polygon_alias": {
+      "requests": 40,
+      "valid_requests": 40,
+      "latency_all": {
+        "n": 40,
+        "min": 0.0010938330087810755,
+        "mean": 0.0015520781249506398,
+        "median": 0.0013084794918540865,
+        "p90": 0.0021118711913004516,
+        "p95": 0.0023737940704450008,
+        "p99": 0.002694004863151349,
+        "max": 0.0028440409805625677
+      },
+      "latency_valid": {
+        "n": 40,
+        "min": 0.0010938330087810755,
+        "mean": 0.0015520781249506398,
+        "median": 0.0013084794918540865,
+        "p90": 0.0021118711913004516,
+        "p95": 0.0023737940704450008,
+        "p99": 0.002694004863151349,
+        "max": 0.0028440409805625677
+      },
+      "cache_hits": 40,
+      "latency_cache_hits": {
+        "n": 40,
+        "min": 0.0010938330087810755,
+        "mean": 0.0015520781249506398,
+        "median": 0.0013084794918540865,
+        "p90": 0.0021118711913004516,
+        "p95": 0.0023737940704450008,
+        "p99": 0.002694004863151349,
+        "max": 0.0028440409805625677
+      },
+      "http_statuses": {
+        "200": 40
+      },
+      "over_three_seconds": 0,
+      "known_used_inputs": 40,
+      "known_used_age_returned": 40,
+      "latency_known_used": {
+        "n": 40,
+        "min": 0.0010938330087810755,
+        "mean": 0.0015520781249506398,
+        "median": 0.0013084794918540865,
+        "p90": 0.0021118711913004516,
+        "p95": 0.0023737940704450008,
+        "p99": 0.002694004863151349,
+        "max": 0.0028440409805625677
+      },
+      "upstream_attempts_during_requests": 0
+    }
+  },
+  "deployment_controls": [
+    {
+      "id": "eth-021",
+      "label": "WETH9",
+      "epoch": 1513077455,
+      "reference_epoch": 1513077455,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-022",
+      "label": "USDC",
+      "epoch": 1533324504,
+      "reference_epoch": 1533324504,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-023",
+      "label": "USDT",
+      "epoch": 1511829681,
+      "reference_epoch": 1511829681,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-024",
+      "label": "DAI",
+      "epoch": 1573672677,
+      "reference_epoch": 1573672677,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-025",
+      "label": "UNI",
+      "epoch": 1600107086,
+      "reference_epoch": 1600107086,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-026",
+      "label": "LINK",
+      "epoch": 1505597189,
+      "reference_epoch": 1505597189,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-027",
+      "label": "WBTC",
+      "epoch": 1543095952,
+      "reference_epoch": 1543095952,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-028",
+      "label": "AAVE",
+      "epoch": 1600970788,
+      "reference_epoch": 1600970788,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-029",
+      "label": "MKR",
+      "epoch": 1511634257,
+      "reference_epoch": 1511634257,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-030",
+      "label": "COMP",
+      "epoch": 1583280535,
+      "reference_epoch": 1583280535,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-031",
+      "label": "Uniswap V2 Factory",
+      "epoch": 1588610042,
+      "reference_epoch": 1588610042,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-032",
+      "label": "Uniswap V2 Router02",
+      "epoch": 1591388241,
+      "reference_epoch": 1591388241,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-033",
+      "label": "Uniswap V3 Factory",
+      "epoch": 1620156420,
+      "reference_epoch": 1620156420,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-034",
+      "label": "Uniswap V3 SwapRouter",
+      "epoch": 1620156641,
+      "reference_epoch": 1620156641,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-035",
+      "label": "Uniswap SwapRouter02",
+      "epoch": 1639503446,
+      "reference_epoch": 1639503446,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-036",
+      "label": "Uniswap V3 NonfungiblePositionManager",
+      "epoch": 1620156913,
+      "reference_epoch": 1620156913,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-037",
+      "label": "Permit2",
+      "epoch": 1668647879,
+      "reference_epoch": 1668647879,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-038",
+      "label": "ENS Registry",
+      "epoch": 1580344632,
+      "reference_epoch": 1580344632,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-039",
+      "label": "ENS BaseRegistrarImplementation",
+      "epoch": 1580345034,
+      "reference_epoch": 1580345034,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-040",
+      "label": "Beacon deposit contract",
+      "epoch": 1602667372,
+      "reference_epoch": 1602667372,
+      "difference_seconds": 0
+    }
+  ],
+  "deployment_agreement": {
+    "eligible": 20,
+    "exact_matches": 20,
+    "missing": 0
+  },
+  "format_validation": {
+    "malformed_inputs": 20,
+    "malformed_rejected_cold": 20,
+    "valid_syntax_inputs": 80,
+    "valid_syntax_accepted_cold": 80,
+    "malformed_provider_calls": 0
+  },
+  "age_computation": {
+    "integer_successes": 120,
+    "formula_matches": 120,
+    "repeated_successes": 80,
+    "unchanged_epochs": 80
+  },
+  "synthetic_candidates": {
+    "inputs": 40,
+    "cold_outcomes": {
+      "503": 38,
+      "404": 2
+    },
+    "fabricated_zero_ages": 0
+  },
+  "storage_million": {
+    "started_at": "2026-11-05T19:46:25.472471+00:00",
+    "finished_at": "2026-11-05T19:46:29.106780+00:00",
+    "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+    "platform": "darwin",
+    "row_count": 1000000,
+    "chain_key": "evm:1:v1",
+    "database_capacity": 1000000,
+    "load_seconds": 3.090712417033501,
+    "load_rows_per_second": 323549.99918103375,
+    "database_bytes": 69521408,
+    "bytes_per_record": 69.521408,
+    "sqlite_page_count": 16973,
+    "sqlite_page_size": 4096,
+    "peak_rss_before_bytes": 18165760,
+    "peak_rss_after_bytes": 22302720,
+    "additional_peak_rss_bytes": 4136960,
+    "lookup_seconds": {
+      "n": 1000,
+      "mean": 0.0005180767463170923,
+      "median": 0.0004779159789904952,
+      "p95": 0.0007080749783199279,
+      "p99": 0.0008414381567854434,
+      "max": 0.0020682080066762865
+    },
+    "missing_lookup_seconds": 0.00046670803567394614,
+    "capacity_boundary": {
+      "new_record_rejected": true,
+      "existing_record_updated": true,
+      "row_count_unchanged": true
+    },
+    "notes": [
+      "Actual rows in the production compact WITHOUT ROWID schema: chain namespace, address string and epoch integer.",
+      "Chain namespace evm:1:v1 represents current Ethereum-only coverage; it does not establish every EVM chain's age.",
+      "Synthetic offline records; no blockchain queries, funding or private keys.",
+      "Bulk insertion throughput differs from put_min() throughput; timed lookups use actual get() with per-operation connection setup.",
+      "Read timings follow population with a warm OS filesystem cache; cold storage and upstream caches are not measured.",
+      "RSS is process peak resident memory, excluding the operating system filesystem page cache.",
+      "The complete million-record dictionary is never constructed in RAM; SQLite connection page cache is bounded.",
+      "The production put_min() path was tested at capacity: new fact refused, existing fact improved without eviction."
+    ]
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "completed_at": "2026-11-05T20:43:59.705590+00:00",
+  "address": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
+  "scope": "Supplemental RPC failover controls only; excluded from the 100 timed production HTTP requests. AnChain labels were stubbed explicitly and are not evidence of label performance.",
+  "controls": [
+    {
+      "control": "alchemy_failure",
+      "labels_are_stubbed": true,
+      "anchain_network_calls": 0,
+      "measurement": "Direct production service.check; real RPC network; not full HTTP+live-risk endpoint timing",
+      "cache_before": {
+        "snapshot": false,
+        "riskLabels": false
+      },
+      "status": 200,
+      "seconds": 0.579794208984822,
+      "under_3_seconds": true,
+      "selected_provider": "quicknode",
+      "snapshot_status": "complete",
+      "snapshot_cache_hit": false,
+      "native_balance_available": true,
+      "nonce_available": true,
+      "code_profile_available": true,
+      "token_statuses": {
+        "USDC": "available",
+        "USDT": "available",
+        "DAI": "available"
+      },
+      "cached_snapshot_unchanged_after_late_work": true,
+      "attempts": [
+        {
+          "source": "alchemy",
+          "injected_failure": true,
+          "injected_delay_seconds": 0,
+          "outcome": "error",
+          "error_type": "TimeoutError",
+          "seconds": 7.333001121878624e-06
+        },
+        {
+          "source": "quicknode",
+          "injected_failure": false,
+          "injected_delay_seconds": 0,
+          "outcome": "snapshot",
+          "complete": true,
+          "seconds": 0.5693788339849561
+        },
+        {
+          "source": "publicnode",
+          "injected_failure": false,
+          "injected_delay_seconds": 0
+        }
+      ]
+    },
+    {
+      "control": "both_paid_failure",
+      "labels_are_stubbed": true,
+      "anchain_network_calls": 0,
+      "measurement": "Direct production service.check; real RPC network; not full HTTP+live-risk endpoint timing",
+      "cache_before": {
+        "snapshot": false,
+        "riskLabels": false
+      },
+      "status": 200,
+      "seconds": 0.7346122500021011,
+      "under_3_seconds": true,
+      "selected_provider": "publicnode",
+      "snapshot_status": "complete",
+      "snapshot_cache_hit": false,
+      "native_balance_available": true,
+      "nonce_available": true,
+      "code_profile_available": true,
+      "token_statuses": {
+        "USDC": "available",
+        "USDT": "available",
+        "DAI": "available"
+      },
+      "cached_snapshot_unchanged_after_late_work": true,
+      "attempts": [
+        {
+          "source": "alchemy",
+          "injected_failure": true,
+          "injected_delay_seconds": 0,
+          "outcome": "error",
+          "error_type": "TimeoutError",
+          "seconds": 1.5249999705702066e-05
+        },
+        {
+          "source": "quicknode",
+          "injected_failure": true,
+          "injected_delay_seconds": 0,
+          "outcome": "error",
+          "error_type": "TimeoutError",
+          "seconds": 1.2124946806579828e-05
+        },
+        {
+          "source": "publicnode",
+          "injected_failure": false,
+          "injected_delay_seconds": 0,
+          "outcome": "snapshot",
+          "complete": true,
+          "seconds": 0.7196863749995828
+        },
+        {
+          "source": "1rpc",
+          "injected_failure": false,
+          "injected_delay_seconds": 0,
+          "outcome": "error",
+          "error_type": "RPCResponseError",
+          "seconds": 0.36379087500972673
+        },
+        {
+          "source": "blockpi",
+          "injected_failure": false,
+          "injected_delay_seconds": 0
+        }
+      ]
+    },
+    {
+      "control": "alchemy_slow_3s",
+      "labels_are_stubbed": true,
+      "anchain_network_calls": 0,
+      "measurement": "Direct production service.check; real RPC network; not full HTTP+live-risk endpoint timing",
+      "cache_before": {
+        "snapshot": false,
+        "riskLabels": false
+      },
+      "status": 200,
+      "seconds": 1.1586215840070508,
+      "under_3_seconds": true,
+      "selected_provider": "quicknode",
+      "snapshot_status": "complete",
+      "snapshot_cache_hit": false,
+      "native_balance_available": true,
+      "nonce_available": true,
+      "code_profile_available": true,
+      "token_statuses": {
+        "USDC": "available",
+        "USDT": "available",
+        "DAI": "available"
+      },
+      "cached_snapshot_unchanged_after_late_work": true,
+      "attempts": [
+        {
+          "source": "alchemy",
+          "injected_failure": false,
+          "injected_delay_seconds": 3.1,
+          "outcome": "error",
+          "error_type": "SourceError",
+          "seconds": 3.1094873339752667
+        },
+        {
+          "source": "quicknode",
+          "injected_failure": false,
+          "injected_delay_seconds": 0,
+          "outcome": "snapshot",
+          "complete": true,
+          "seconds": 0.5467880410142243
+        },
+        {
+          "source": "publicnode",
+          "injected_failure": false,
+          "injected_delay_seconds": 0,
+          "outcome": "snapshot",
+          "complete": true,
+          "seconds": 0.7719715419807471
+        }
+      ]
+    }
+  ]
+}

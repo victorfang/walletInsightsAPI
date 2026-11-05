@@ -1,0 +1,42 @@
+{
+  "started_at": "2026-11-05T19:46:25.472471+00:00",
+  "finished_at": "2026-11-05T19:46:29.106780+00:00",
+  "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+  "platform": "darwin",
+  "row_count": 1000000,
+  "chain_key": "evm:1:v1",
+  "database_capacity": 1000000,
+  "load_seconds": 3.090712417033501,
+  "load_rows_per_second": 323549.99918103375,
+  "database_bytes": 69521408,
+  "bytes_per_record": 69.521408,
+  "sqlite_page_count": 16973,
+  "sqlite_page_size": 4096,
+  "peak_rss_before_bytes": 18165760,
+  "peak_rss_after_bytes": 22302720,
+  "additional_peak_rss_bytes": 4136960,
+  "lookup_seconds": {
+    "n": 1000,
+    "mean": 0.0005180767463170923,
+    "median": 0.0004779159789904952,
+    "p95": 0.0007080749783199279,
+    "p99": 0.0008414381567854434,
+    "max": 0.0020682080066762865
+  },
+  "missing_lookup_seconds": 0.00046670803567394614,
+  "capacity_boundary": {
+    "new_record_rejected": true,
+    "existing_record_updated": true,
+    "row_count_unchanged": true
+  },
+  "notes": [
+    "Actual rows in the production compact WITHOUT ROWID schema: chain namespace, address string and epoch integer.",
+    "Chain namespace evm:1:v1 represents current Ethereum-only coverage; it does not establish every EVM chain's age.",
+    "Synthetic offline records; no blockchain queries, funding or private keys.",
+    "Bulk insertion throughput differs from put_min() throughput; timed lookups use actual get() with per-operation connection setup.",
+    "Read timings follow population with a warm OS filesystem cache; cold storage and upstream caches are not measured.",
+    "RSS is process peak resident memory, excluding the operating system filesystem page cache.",
+    "The complete million-record dictionary is never constructed in RAM; SQLite connection page cache is bounded.",
+    "The production put_min() path was tested at capacity: new fact refused, existing fact improved without eviction."
+  ]
+}

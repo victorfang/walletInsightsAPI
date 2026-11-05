@@ -1,0 +1,5650 @@
+[
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-011",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.39299129199935123
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-011",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3395112499711104
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-011",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3163050420116633
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-011",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.43141633400227875
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-025",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.30332220799755305
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-025",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4111149579985067
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-011",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.33867249998729676
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-025",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.38859804201638326
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-025",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3675342499627732
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-025",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3269898340222426
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-048",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3809187079896219
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-048",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.32113808300346136
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-048",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.29309291701065376
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-048",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3738960409536958
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-051",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.35414991597644985
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-051",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.38135616696672514
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-048",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2788185409735888
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-051",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3028726659831591
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-051",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3599550420185551
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-012",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.33997395797632635
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-012",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3234930420294404
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-051",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.38763208396267146
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-012",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.34370245796162635
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-012",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.277347750030458
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-065",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.48315041698515415
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-065",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.35686575004365295
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-012",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.26040620799176395
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-065",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.347052542027086
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-065",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.46460704202763736
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-008",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.39711495803203434
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-008",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4253362919553183
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-065",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2938183330115862
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-008",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.305430292035453
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-008",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.34070524998242036
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-077",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.38533395901322365
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-077",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2791914159897715
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-008",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.273066415975336
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-077",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.36716083297505975
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-077",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4214932919712737
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-038",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.41512879100628197
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-038",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3675665420014411
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-077",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.26760462496895343
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-038",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.35939070797758177
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-038",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.34695625002495944
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-050",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3493205839768052
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-050",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3550054159713909
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-038",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.30242474999977276
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-050",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3008280419744551
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-050",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.32531166600529104
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-036",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.38717058300971985
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-036",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.312176208011806
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-050",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2825967500102706
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-036",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.44076579198008403
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-036",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2952820410137065
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-036",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4960002080188133
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-070",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4024289160151966
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-070",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.36575354100205004
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-070",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.30879829096375033
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-070",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.32950383401475847
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-001",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.35196983302012086
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-001",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.352204916998744
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-070",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2648618340026587
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-001",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.29463349998695776
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-001",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3877193329972215
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-014",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3573691669735126
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-014",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.32670737500302494
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-001",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.19356304197572172
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-014",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3916024169884622
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-014",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3050726660294458
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-014",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.38851562497438863
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-057",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.42163149995030835
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-057",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.392746333964169
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-057",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3843287920462899
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-057",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2930969169829041
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-057",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3017168330261484
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-052",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3829954999964684
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-052",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3570815410348587
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-052",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.30073358304798603
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-052",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3212321670143865
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-030",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3577162920264527
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-030",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.35527408303460106
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-052",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.25443212501704693
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-030",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.36877929198089987
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-030",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.37197874998673797
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-068",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.34253770898794755
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-068",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2885357920313254
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-030",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2684482909971848
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-068",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.37452087504789233
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-068",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2905194999766536
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-074",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.41524370899423957
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-074",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3377327090129256
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-068",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2645332500105724
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-074",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4018216250115074
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-074",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3901365000056103
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-074",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.31785345799289644
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-032",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4505705829942599
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-032",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3829318340285681
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-032",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4386905419523828
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-032",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.33201508299680427
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-032",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.36381916602840647
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-037",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3875856250524521
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-037",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3607884160010144
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-037",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.46645087498473004
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-037",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3177338329842314
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-037",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.33295341703342274
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-045",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.323079333989881
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-045",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4611760840052739
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-045",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.30016849999083206
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-045",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3332027919823304
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-066",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.34366583300288767
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-066",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.29444145900197327
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-045",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.20049166702665389
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-066",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3848349170293659
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-066",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.29972983297193423
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-027",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4966393749928102
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-027",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3162685409770347
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-066",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2822253750055097
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-027",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.29570112499641255
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-027",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2838349170051515
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-027",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.33585600001970306
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-071",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.36783908400684595
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-071",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3604993330081925
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-071",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3424764579976909
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-071",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.39172691700514406
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-018",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.460518125037197
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-018",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3598264169995673
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-071",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2638370000058785
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-018",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2964748339727521
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-018",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.24830024997936562
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-034",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3555977090145461
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-034",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3273405840154737
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-018",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.29663283296395093
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-034",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3585002910112962
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-034",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3526547499932349
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-034",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.26826508302474394
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-067",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3492615839932114
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-067",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3494738339795731
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-067",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.31893991702236235
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-067",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.43292808398837224
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-060",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.34712412499357015
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-060",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.30336237500887364
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-067",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3672222910099663
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-060",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2944130830001086
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-010",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3385949580115266
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-010",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.36461629200493917
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-010",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3076641670195386
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-010",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3899369580321945
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-003",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3902429169975221
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-003",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.29581908299587667
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-010",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.18985999998403713
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-003",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3870815000263974
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-003",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.25612158299190924
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-042",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4635008340119384
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-042",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3239561669761315
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-003",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.33423995797056705
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-042",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3700370829901658
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-042",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.32396329200128093
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-019",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3688214580179192
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-019",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.35554108303040266
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-042",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3060036249808036
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-019",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.30432512500556186
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-019",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.33056149998446926
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-026",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3550892500206828
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-026",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.32152087497524917
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-019",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2025894169928506
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-026",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.40952529199421406
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-026",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3442824579542503
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-005",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.7174907500157133
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-005",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3421400410006754
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-026",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.38906237500486895
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-005",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.37309279199689627
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-005",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.31687904201680794
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-047",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4297399159986526
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-047",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.40693870902759954
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-005",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3882462080218829
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-047",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.30616645800182596
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-047",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.31481120898388326
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-047",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.28088116698199883
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-072",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.5686901669832878
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-072",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3358347089961171
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-072",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3001145420130342
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-072",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3630245829699561
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-033",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.5564912079717033
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-033",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3003314590314403
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-072",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.20316025003558025
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-033",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.43186858302215114
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-033",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.30955083400476724
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-033",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3991542080184445
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-058",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.43586700002197176
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-058",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.37707104202127084
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-058",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.31016366701805964
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-058",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.33834208303596824
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-046",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.35676691704429686
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-046",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.34280629199929535
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-058",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3592235000105575
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-046",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.30317662499146536
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-046",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.376414125028532
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-002",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3411058339988813
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-002",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.30573691602330655
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-046",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.26199029199779034
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-002",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2958654160029255
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-016",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.38490570802241564
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-016",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.38126383401686326
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-016",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2926472080289386
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-016",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.40373683301731944
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-016",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3606142499484122
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-069",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.38805091701215133
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-069",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3579344160389155
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-069",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.30178104201331735
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-069",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2670135410153307
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-076",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.39489591703750193
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-076",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3307392089627683
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-069",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.21312887500971556
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-076",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.38965237501543015
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-076",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.20667849999153987
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-076",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2805797919863835
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-054",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.37782683299155906
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-054",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.36234237503958866
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-054",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3458822909742594
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-054",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3468461249722168
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-023",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4715700829983689
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-023",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3264581250259653
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-054",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.28814695798791945
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-023",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4407365840161219
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-023",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2759328330284916
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-023",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4368220830219798
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-028",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4491582089685835
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-028",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3387283330084756
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-028",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.31488662504125386
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-028",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2672497080056928
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-029",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3992182500078343
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-029",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.34926325001288205
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-028",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3051545839989558
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-029",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.29579762497451156
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-029",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.41672104195458815
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-031",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3747324169962667
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-031",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3334158330108039
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-029",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.21420950000174344
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-031",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.37115958402864635
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-031",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.27832929202122614
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-031",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.400051791977603
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-043",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4043174590333365
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-043",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.26325954200001433
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-043",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.31804149999516085
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-061",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.38150524999946356
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-061",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.23603362496942282
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-061",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3482922909897752
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-006",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4523629170143977
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-006",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.29340037499787286
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-006",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3221595829818398
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-006",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2990042500314303
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-056",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4046676250291057
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-056",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.23286283301422372
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-006",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2803804999566637
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-056",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3538475840468891
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-080",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4498468749807216
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-080",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.27383954101242125
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-080",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3635801249765791
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-080",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2750772919971496
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-064",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.35670133400708437
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-064",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.22411700000520796
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-080",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.18851024995092303
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-064",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3590519159915857
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-015",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4323880830197595
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-015",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.264772082970012
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-015",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.37091524997958913
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-015",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.21317479194840416
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-049",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.36252162500750273
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-049",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.22360291698714718
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-015",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.35133058298379183
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-049",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3657532910001464
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-021",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.43978495901683345
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-021",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.34233754203887656
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-021",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2967154170037247
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-021",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.22168041695840657
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-075",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3581625419901684
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-075",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.22487958299461752
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-021",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.20436870801495388
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-075",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3695032910327427
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-073",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4630627079750411
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-073",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.22933741699671373
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-073",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3800714159733616
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-073",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.25725954200606793
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-062",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.5068867920199409
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-062",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2920729159959592
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-073",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2662572079570964
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-062",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3034815830178559
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-009",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.37341987498803064
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-009",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.21731670899316669
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-009",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.29798412503441796
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-063",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.40010499994968995
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-063",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.30293091700877994
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-063",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3050737910089083
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-007",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3530922089703381
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-007",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.31863608304411173
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-007",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3847275419975631
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-007",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.26907974999630824
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-007",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2989650829695165
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-044",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3707780829863623
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-044",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3573263330035843
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-044",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.37117620900971815
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-044",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3431178749888204
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-035",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.35937345802085474
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-035",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3552244999445975
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-044",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3048501660232432
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-035",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.512829250015784
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-035",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.34379008295945823
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-035",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4570086669991724
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-040",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.36772545799613
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-040",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.42533758300123736
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-040",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.29589649999979883
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-040",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.43553508300101385
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-004",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.37890162505209446
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-004",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2917130829882808
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-040",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.34626254200702533
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-004",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3598572500050068
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-004",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4030925830011256
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-024",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3826656669843942
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-024",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3161920419661328
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-004",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.27050483401399106
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-024",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4652158329845406
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-024",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.27547175000654534
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-024",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.42624891694867983
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-041",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4629292089957744
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-041",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3567576250061393
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-041",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.30861850001383573
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-041",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3645740829524584
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-041",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2633780000032857
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-059",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.43363383400719613
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-059",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.37166395800886676
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-059",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3152897920226678
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-059",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.31778674997622147
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-059",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.29584337497362867
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-039",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3939617919968441
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-039",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.33146162499906495
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-039",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.468668749963399
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-039",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.25720583397196606
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-039",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3365854999865405
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-055",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4772109169862233
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-055",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.31301120802527294
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-055",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4010185830411501
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-055",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.38419345795409754
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-055",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.34821591700892895
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-022",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.35393862501950935
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-022",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.37577654101187363
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-022",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.306665875017643
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-022",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.32470175001071766
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-022",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.33672666701022536
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-079",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4358433749875985
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-079",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3890767910052091
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-079",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.33444679103558883
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-079",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.350051874993369
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-053",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.39350429200567305
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-053",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3303269590251148
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-079",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.34855383401736617
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-053",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.317000208015088
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-053",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.357648583012633
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-013",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3439918329822831
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-013",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3043745000031777
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-053",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.19758691702736542
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-013",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.40687695902306587
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-013",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.5077407920034602
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-078",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.5615247079986148
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-078",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3871538749663159
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-013",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3045614159782417
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-078",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.33905387500999495
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-078",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.34094070800347254
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-020",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3401219170191325
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-020",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4037022080156021
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-078",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2906957500381395
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-020",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.2986553329974413
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-020",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.4326597499893978
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-020",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.19706458400469273
+  },
+  {
+    "provider": "anchain",
+    "methods": [],
+    "phase_started": "cold",
+    "case_id": "eth-017",
+    "component": "riskLabels",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.39085495803738013
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-017",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.3475670000188984
+  },
+  {
+    "provider": "alchemy",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-017",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.33256562502356246
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "phase_started": "cold",
+    "case_id": "eth-017",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.44227733404841274
+  },
+  {
+    "provider": "quicknode",
+    "methods": [
+      "eth_getBalance",
+      "eth_getTransactionCount",
+      "eth_getCode",
+      "eth_call",
+      "eth_call",
+      "eth_call"
+    ],
+    "phase_started": "warm",
+    "case_id": "eth-017",
+    "component": "snapshot",
+    "finished": true,
+    "locally_expired": false,
+    "json_returned": true,
+    "seconds": 0.34640512499026954
+  }
+]

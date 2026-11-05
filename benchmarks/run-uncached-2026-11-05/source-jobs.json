@@ -1,0 +1,2757 @@
+[
+  {
+    "case_id": "eth-011",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1792556987,
+    "finalized": true,
+    "seconds": 0.9907254999852739
+  },
+  {
+    "case_id": "eth-011",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.23426674999063835
+  },
+  {
+    "case_id": "eth-011",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3761001249658875
+  },
+  {
+    "case_id": "eth-011",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.37755966698750854
+  },
+  {
+    "case_id": "eth-011",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.2230299999937415
+  },
+  {
+    "case_id": "eth-025",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1600107086,
+    "finalized": true,
+    "seconds": 0.9326427920022979
+  },
+  {
+    "case_id": "eth-025",
+    "job": "routescan_creation",
+    "state": "verified_observation",
+    "epoch": 1600107086,
+    "finalized": true,
+    "seconds": 1.0118113750359043
+  },
+  {
+    "case_id": "eth-025",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3160514589981176
+  },
+  {
+    "case_id": "eth-025",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.31129245803458616
+  },
+  {
+    "case_id": "eth-025",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "SourceError",
+    "seconds": 0.6176230409764685
+  },
+  {
+    "case_id": "eth-048",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.17629291699267924
+  },
+  {
+    "case_id": "eth-048",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.1908344579860568
+  },
+  {
+    "case_id": "eth-048",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3013327500084415
+  },
+  {
+    "case_id": "eth-048",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.8694837500224821
+  },
+  {
+    "case_id": "eth-048",
+    "job": "blockcypher",
+    "state": "empty",
+    "seconds": 0.50821908301441
+  },
+  {
+    "case_id": "eth-051",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.1720531249884516
+  },
+  {
+    "case_id": "eth-051",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.1807762500247918
+  },
+  {
+    "case_id": "eth-051",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.30657908401917666
+  },
+  {
+    "case_id": "eth-051",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3201161670149304
+  },
+  {
+    "case_id": "eth-051",
+    "job": "blockcypher",
+    "state": "empty",
+    "seconds": 0.45089637499768287
+  },
+  {
+    "case_id": "eth-012",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1792341875,
+    "finalized": true,
+    "seconds": 0.9083357919589616
+  },
+  {
+    "case_id": "eth-012",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.22203191701555625
+  },
+  {
+    "case_id": "eth-012",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.33600325003499165
+  },
+  {
+    "case_id": "eth-012",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.33772862498881295
+  },
+  {
+    "case_id": "eth-012",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "SourceError",
+    "seconds": 0.5061558340094052
+  },
+  {
+    "case_id": "eth-065",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.18830704200081527
+  },
+  {
+    "case_id": "eth-065",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.18309012503596023
+  },
+  {
+    "case_id": "eth-065",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.31519983301404864
+  },
+  {
+    "case_id": "eth-065",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.34781037498032674
+  },
+  {
+    "case_id": "eth-065",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.1721774580073543
+  },
+  {
+    "case_id": "eth-008",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1789129859,
+    "finalized": true,
+    "seconds": 1.5620535000343807
+  },
+  {
+    "case_id": "eth-008",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.1838824589503929
+  },
+  {
+    "case_id": "eth-008",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3931196250487119
+  },
+  {
+    "case_id": "eth-008",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.31644608301576227
+  },
+  {
+    "case_id": "eth-008",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.18089658400276676
+  },
+  {
+    "case_id": "eth-077",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.18378424999536946
+  },
+  {
+    "case_id": "eth-077",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.21162175002973527
+  },
+  {
+    "case_id": "eth-077",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.32127300003776327
+  },
+  {
+    "case_id": "eth-077",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.32611670898040757
+  },
+  {
+    "case_id": "eth-077",
+    "job": "blockcypher",
+    "state": "empty",
+    "seconds": 0.45652341697132215
+  },
+  {
+    "case_id": "eth-038",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1580344632,
+    "finalized": true,
+    "seconds": 1.4807770000188611
+  },
+  {
+    "case_id": "eth-038",
+    "job": "routescan_creation",
+    "state": "verified_observation",
+    "epoch": 1580344632,
+    "finalized": true,
+    "seconds": 0.9488545420463197
+  },
+  {
+    "case_id": "eth-038",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.318903416977264
+  },
+  {
+    "case_id": "eth-038",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3045477920095436
+  },
+  {
+    "case_id": "eth-038",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.16754287498770282
+  },
+  {
+    "case_id": "eth-050",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.2346642499906011
+  },
+  {
+    "case_id": "eth-050",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.21601383399683982
+  },
+  {
+    "case_id": "eth-050",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.31174154102336615
+  },
+  {
+    "case_id": "eth-050",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3262352080200799
+  },
+  {
+    "case_id": "eth-050",
+    "job": "blockcypher",
+    "state": "empty",
+    "seconds": 0.514283999975305
+  },
+  {
+    "case_id": "eth-036",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1620156913,
+    "finalized": true,
+    "seconds": 0.862181208038237
+  },
+  {
+    "case_id": "eth-036",
+    "job": "routescan_creation",
+    "state": "verified_observation",
+    "epoch": 1620156913,
+    "finalized": true,
+    "seconds": 1.3546042909729294
+  },
+  {
+    "case_id": "eth-036",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3087102919816971
+  },
+  {
+    "case_id": "eth-036",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3014992499956861
+  },
+  {
+    "case_id": "eth-036",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.16529137501493096
+  },
+  {
+    "case_id": "eth-070",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.1866127920220606
+  },
+  {
+    "case_id": "eth-070",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.18140529101947322
+  },
+  {
+    "case_id": "eth-070",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.32000829197932035
+  },
+  {
+    "case_id": "eth-070",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3166728340438567
+  },
+  {
+    "case_id": "eth-070",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.16797037498326972
+  },
+  {
+    "case_id": "eth-001",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1443428683,
+    "finalized": true,
+    "seconds": 1.854333791998215
+  },
+  {
+    "case_id": "eth-001",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.17097349994583055
+  },
+  {
+    "case_id": "eth-001",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.29876062500989065
+  },
+  {
+    "case_id": "eth-001",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.32514304196229205
+  },
+  {
+    "case_id": "eth-001",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.1566188749857247
+  },
+  {
+    "case_id": "eth-014",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1784052479,
+    "finalized": true,
+    "seconds": 0.8160265409969725
+  },
+  {
+    "case_id": "eth-014",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.2270055420231074
+  },
+  {
+    "case_id": "eth-014",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3157820419874042
+  },
+  {
+    "case_id": "eth-014",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3136386669939384
+  },
+  {
+    "case_id": "eth-014",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.17993762501282617
+  },
+  {
+    "case_id": "eth-057",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.17593004199443385
+  },
+  {
+    "case_id": "eth-057",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.18181629199534655
+  },
+  {
+    "case_id": "eth-057",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3285840000025928
+  },
+  {
+    "case_id": "eth-057",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.30056570796296
+  },
+  {
+    "case_id": "eth-057",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.16602637502364814
+  },
+  {
+    "case_id": "eth-052",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.17660350003279746
+  },
+  {
+    "case_id": "eth-052",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.20471308304695413
+  },
+  {
+    "case_id": "eth-052",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3185218329890631
+  },
+  {
+    "case_id": "eth-052",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.30623154097702354
+  },
+  {
+    "case_id": "eth-052",
+    "job": "blockcypher",
+    "state": "empty",
+    "seconds": 0.5284098329721019
+  },
+  {
+    "case_id": "eth-030",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1583280535,
+    "finalized": true,
+    "seconds": 1.57687900000019
+  },
+  {
+    "case_id": "eth-030",
+    "job": "routescan_creation",
+    "state": "verified_observation",
+    "epoch": 1583280535,
+    "finalized": true,
+    "seconds": 0.883171042019967
+  },
+  {
+    "case_id": "eth-030",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.32133245799923316
+  },
+  {
+    "case_id": "eth-030",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3189380840049125
+  },
+  {
+    "case_id": "eth-030",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.1736342089716345
+  },
+  {
+    "case_id": "eth-068",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.17953904095338657
+  },
+  {
+    "case_id": "eth-068",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.29569641599664465
+  },
+  {
+    "case_id": "eth-068",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.1791492920019664
+  },
+  {
+    "case_id": "eth-068",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.16238675004569814
+  },
+  {
+    "case_id": "eth-068",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.6191082080476917
+  },
+  {
+    "case_id": "eth-074",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.19129695801530033
+  },
+  {
+    "case_id": "eth-074",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.18346233299234882
+  },
+  {
+    "case_id": "eth-074",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.36331950000021607
+  },
+  {
+    "case_id": "eth-074",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3137315000058152
+  },
+  {
+    "case_id": "eth-074",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.15690420794999227
+  },
+  {
+    "case_id": "eth-032",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1591388241,
+    "finalized": true,
+    "seconds": 0.8785916659981012
+  },
+  {
+    "case_id": "eth-032",
+    "job": "routescan_creation",
+    "state": "verified_observation",
+    "epoch": 1591388241,
+    "finalized": true,
+    "seconds": 0.8762114169658162
+  },
+  {
+    "case_id": "eth-032",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.30686362501000986
+  },
+  {
+    "case_id": "eth-032",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.30528899998171255
+  },
+  {
+    "case_id": "eth-032",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "SourceError",
+    "seconds": 0.4440193329937756
+  },
+  {
+    "case_id": "eth-037",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1668653243,
+    "finalized": true,
+    "seconds": 1.3642897089594044
+  },
+  {
+    "case_id": "eth-037",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.30504383298102766
+  },
+  {
+    "case_id": "eth-037",
+    "job": "routescan_creation",
+    "state": "verified_observation",
+    "epoch": 1668647879,
+    "finalized": true,
+    "seconds": 1.3506799589958973
+  },
+  {
+    "case_id": "eth-037",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3148256249842234
+  },
+  {
+    "case_id": "eth-037",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.16474833397660404
+  },
+  {
+    "case_id": "eth-045",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.21970720798708498
+  },
+  {
+    "case_id": "eth-045",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.21439533401280642
+  },
+  {
+    "case_id": "eth-045",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.33361729205353186
+  },
+  {
+    "case_id": "eth-045",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.36294220900163054
+  },
+  {
+    "case_id": "eth-045",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.16986262501450256
+  },
+  {
+    "case_id": "eth-066",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.18116049998207018
+  },
+  {
+    "case_id": "eth-066",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.20306729100411758
+  },
+  {
+    "case_id": "eth-066",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3074297090061009
+  },
+  {
+    "case_id": "eth-066",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.47421816701535136
+  },
+  {
+    "case_id": "eth-066",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.17161099996883422
+  },
+  {
+    "case_id": "eth-027",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1543095952,
+    "finalized": true,
+    "seconds": 1.3650646249880083
+  },
+  {
+    "case_id": "eth-027",
+    "job": "routescan_creation",
+    "state": "verified_observation",
+    "epoch": 1543095952,
+    "finalized": true,
+    "seconds": 1.3662027919781394
+  },
+  {
+    "case_id": "eth-027",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.6402606249903329
+  },
+  {
+    "case_id": "eth-027",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.6378339169896208
+  },
+  {
+    "case_id": "eth-027",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.1918174999882467
+  },
+  {
+    "case_id": "eth-071",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.197247417003382
+  },
+  {
+    "case_id": "eth-071",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.16931112500606105
+  },
+  {
+    "case_id": "eth-071",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3117558339727111
+  },
+  {
+    "case_id": "eth-071",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3026466660085134
+  },
+  {
+    "case_id": "eth-071",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.16147133300546557
+  },
+  {
+    "case_id": "eth-018",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1696442603,
+    "finalized": true,
+    "seconds": 1.3868450410082005
+  },
+  {
+    "case_id": "eth-018",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.20603804098209366
+  },
+  {
+    "case_id": "eth-018",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.33657941699493676
+  },
+  {
+    "case_id": "eth-018",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.32607987499795854
+  },
+  {
+    "case_id": "eth-018",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "SourceError",
+    "seconds": 0.5924710829858668
+  },
+  {
+    "case_id": "eth-034",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1620156641,
+    "finalized": true,
+    "seconds": 1.7382235410041176
+  },
+  {
+    "case_id": "eth-034",
+    "job": "routescan_creation",
+    "state": "verified_observation",
+    "epoch": 1620156641,
+    "finalized": true,
+    "seconds": 1.3819947500014678
+  },
+  {
+    "case_id": "eth-034",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3473504579742439
+  },
+  {
+    "case_id": "eth-034",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3450700829853304
+  },
+  {
+    "case_id": "eth-034",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.1741325840121135
+  },
+  {
+    "case_id": "eth-067",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.19322483299765736
+  },
+  {
+    "case_id": "eth-067",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.20397224999032915
+  },
+  {
+    "case_id": "eth-067",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.35019262495916337
+  },
+  {
+    "case_id": "eth-067",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.6052926660049707
+  },
+  {
+    "case_id": "eth-067",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.18631820799782872
+  },
+  {
+    "case_id": "eth-060",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.17374762502731755
+  },
+  {
+    "case_id": "eth-060",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.2222114580217749
+  },
+  {
+    "case_id": "eth-060",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.30864837497938424
+  },
+  {
+    "case_id": "eth-060",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3002532499958761
+  },
+  {
+    "case_id": "eth-060",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.17910825001308694
+  },
+  {
+    "case_id": "eth-010",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1747201343,
+    "finalized": true,
+    "seconds": 1.359699750028085
+  },
+  {
+    "case_id": "eth-010",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.1986775840050541
+  },
+  {
+    "case_id": "eth-010",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.6296155839809217
+  },
+  {
+    "case_id": "eth-010",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.629154332971666
+  },
+  {
+    "case_id": "eth-010",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "SourceError",
+    "seconds": 0.5310556250042282
+  },
+  {
+    "case_id": "eth-003",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1776798083,
+    "finalized": true,
+    "seconds": 0.876064166019205
+  },
+  {
+    "case_id": "eth-003",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.19545699999434873
+  },
+  {
+    "case_id": "eth-003",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3145513340132311
+  },
+  {
+    "case_id": "eth-003",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.31300283304881305
+  },
+  {
+    "case_id": "eth-003",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "SourceError",
+    "seconds": 0.5275686670211144
+  },
+  {
+    "case_id": "eth-042",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.17846316698705778
+  },
+  {
+    "case_id": "eth-042",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.1871081249555573
+  },
+  {
+    "case_id": "eth-042",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.31582520803203806
+  },
+  {
+    "case_id": "eth-042",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.19797712500439957
+  },
+  {
+    "case_id": "eth-042",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.30911425000522286
+  },
+  {
+    "case_id": "eth-019",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1757563883,
+    "finalized": true,
+    "seconds": 1.481467374949716
+  },
+  {
+    "case_id": "eth-019",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.2035575420013629
+  },
+  {
+    "case_id": "eth-019",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.30586308299098164
+  },
+  {
+    "case_id": "eth-019",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3052052909624763
+  },
+  {
+    "case_id": "eth-019",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "SourceError",
+    "seconds": 0.4951304589631036
+  },
+  {
+    "case_id": "eth-026",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1505597189,
+    "finalized": true,
+    "seconds": 0.9012741670012474
+  },
+  {
+    "case_id": "eth-026",
+    "job": "routescan_creation",
+    "state": "verified_observation",
+    "epoch": 1505597189,
+    "finalized": true,
+    "seconds": 0.8480710000148974
+  },
+  {
+    "case_id": "eth-026",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3358492080005817
+  },
+  {
+    "case_id": "eth-026",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3222470409818925
+  },
+  {
+    "case_id": "eth-026",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.18728662497596815
+  },
+  {
+    "case_id": "eth-005",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1793292215,
+    "finalized": true,
+    "seconds": 0.8444098330219276
+  },
+  {
+    "case_id": "eth-005",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.18564974999753758
+  },
+  {
+    "case_id": "eth-005",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.44136145897209644
+  },
+  {
+    "case_id": "eth-005",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.167965084023308
+  },
+  {
+    "case_id": "eth-005",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.30886333395028487
+  },
+  {
+    "case_id": "eth-047",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.1806252910173498
+  },
+  {
+    "case_id": "eth-047",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.21028274996206164
+  },
+  {
+    "case_id": "eth-047",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.305125082959421
+  },
+  {
+    "case_id": "eth-047",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.31672545796027407
+  },
+  {
+    "case_id": "eth-047",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.17406845901859924
+  },
+  {
+    "case_id": "eth-072",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.22991912497673184
+  },
+  {
+    "case_id": "eth-072",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.1871164589538239
+  },
+  {
+    "case_id": "eth-072",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.31126975000370294
+  },
+  {
+    "case_id": "eth-072",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.33423679100815207
+  },
+  {
+    "case_id": "eth-072",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.44902025000192225
+  },
+  {
+    "case_id": "eth-033",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1620156420,
+    "finalized": true,
+    "seconds": 0.9322980419965461
+  },
+  {
+    "case_id": "eth-033",
+    "job": "routescan_creation",
+    "state": "verified_observation",
+    "epoch": 1620156420,
+    "finalized": true,
+    "seconds": 0.9302734159864485
+  },
+  {
+    "case_id": "eth-033",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3097743330290541
+  },
+  {
+    "case_id": "eth-033",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.4438366669928655
+  },
+  {
+    "case_id": "eth-033",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.17315470799803734
+  },
+  {
+    "case_id": "eth-058",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.20192216598661616
+  },
+  {
+    "case_id": "eth-058",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.17899500002386048
+  },
+  {
+    "case_id": "eth-058",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.30229337501805276
+  },
+  {
+    "case_id": "eth-058",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.5507090000319295
+  },
+  {
+    "case_id": "eth-058",
+    "job": "blockcypher",
+    "state": "empty",
+    "seconds": 0.44333929097047076
+  },
+  {
+    "case_id": "eth-046",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.18389758304692805
+  },
+  {
+    "case_id": "eth-046",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.1921000000438653
+  },
+  {
+    "case_id": "eth-046",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.310720624984242
+  },
+  {
+    "case_id": "eth-046",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.4088392920093611
+  },
+  {
+    "case_id": "eth-046",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.5282865829649381
+  },
+  {
+    "case_id": "eth-002",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1439048640,
+    "finalized": true,
+    "seconds": 1.7671245000092313
+  },
+  {
+    "case_id": "eth-002",
+    "job": "routescan_creation",
+    "state": "verified_observation",
+    "epoch": 1439048640,
+    "finalized": true,
+    "seconds": 0.8561168750165962
+  },
+  {
+    "case_id": "eth-002",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3054575829883106
+  },
+  {
+    "case_id": "eth-002",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3502332500065677
+  },
+  {
+    "case_id": "eth-002",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.17190358397783712
+  },
+  {
+    "case_id": "eth-016",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1780687259,
+    "finalized": true,
+    "seconds": 1.3440564170014113
+  },
+  {
+    "case_id": "eth-016",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.17672099999617785
+  },
+  {
+    "case_id": "eth-016",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.29303154099034145
+  },
+  {
+    "case_id": "eth-016",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.32315633399412036
+  },
+  {
+    "case_id": "eth-016",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.15157162497052923
+  },
+  {
+    "case_id": "eth-069",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.22903350001433864
+  },
+  {
+    "case_id": "eth-069",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.18523187504615635
+  },
+  {
+    "case_id": "eth-069",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3136797919869423
+  },
+  {
+    "case_id": "eth-069",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.307858792017214
+  },
+  {
+    "case_id": "eth-069",
+    "job": "blockcypher",
+    "state": "empty",
+    "seconds": 0.5528749999939464
+  },
+  {
+    "case_id": "eth-076",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.18260649999137968
+  },
+  {
+    "case_id": "eth-076",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.20564141700742766
+  },
+  {
+    "case_id": "eth-076",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3078630000236444
+  },
+  {
+    "case_id": "eth-076",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.31678387499414384
+  },
+  {
+    "case_id": "eth-076",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.16631366702495143
+  },
+  {
+    "case_id": "eth-054",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.19639670802280307
+  },
+  {
+    "case_id": "eth-054",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.1921825830359012
+  },
+  {
+    "case_id": "eth-054",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3267442079959437
+  },
+  {
+    "case_id": "eth-054",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3175792080000974
+  },
+  {
+    "case_id": "eth-054",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.190262290998362
+  },
+  {
+    "case_id": "eth-023",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1511829681,
+    "finalized": true,
+    "seconds": 0.9658652500365861
+  },
+  {
+    "case_id": "eth-023",
+    "job": "routescan_creation",
+    "state": "verified_observation",
+    "epoch": 1511829681,
+    "finalized": true,
+    "seconds": 1.929565750004258
+  },
+  {
+    "case_id": "eth-023",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.33784900000318885
+  },
+  {
+    "case_id": "eth-023",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.30871362501056865
+  },
+  {
+    "case_id": "eth-023",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.18814316700445488
+  },
+  {
+    "case_id": "eth-028",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1600970788,
+    "finalized": true,
+    "seconds": 0.8787621669471264
+  },
+  {
+    "case_id": "eth-028",
+    "job": "routescan_creation",
+    "state": "verified_observation",
+    "epoch": 1600970788,
+    "finalized": true,
+    "seconds": 0.8936257910099812
+  },
+  {
+    "case_id": "eth-028",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.33110579097410664
+  },
+  {
+    "case_id": "eth-028",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.32843362499261275
+  },
+  {
+    "case_id": "eth-028",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.17844762501772493
+  },
+  {
+    "case_id": "eth-029",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1511637118,
+    "finalized": true,
+    "seconds": 0.9695508749573492
+  },
+  {
+    "case_id": "eth-029",
+    "job": "routescan_creation",
+    "state": "verified_observation",
+    "epoch": 1511634257,
+    "finalized": true,
+    "seconds": 1.3238506250199862
+  },
+  {
+    "case_id": "eth-029",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3142477080109529
+  },
+  {
+    "case_id": "eth-029",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.40706662501906976
+  },
+  {
+    "case_id": "eth-029",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "SourceError",
+    "seconds": 0.4580176249728538
+  },
+  {
+    "case_id": "eth-031",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1588610042,
+    "finalized": true,
+    "seconds": 0.8774783329572529
+  },
+  {
+    "case_id": "eth-031",
+    "job": "routescan_creation",
+    "state": "verified_observation",
+    "epoch": 1588610042,
+    "finalized": true,
+    "seconds": 1.4593354169628583
+  },
+  {
+    "case_id": "eth-031",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3153043339843862
+  },
+  {
+    "case_id": "eth-031",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3241145420470275
+  },
+  {
+    "case_id": "eth-031",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.1729542919783853
+  },
+  {
+    "case_id": "eth-043",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.19045525003457442
+  },
+  {
+    "case_id": "eth-043",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.18533250002656132
+  },
+  {
+    "case_id": "eth-043",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3204212500131689
+  },
+  {
+    "case_id": "eth-043",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3229434579843655
+  },
+  {
+    "case_id": "eth-043",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.1717038340284489
+  },
+  {
+    "case_id": "eth-061",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.17920075001893565
+  },
+  {
+    "case_id": "eth-061",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.1816037920070812
+  },
+  {
+    "case_id": "eth-061",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3796110420371406
+  },
+  {
+    "case_id": "eth-061",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3120679589919746
+  },
+  {
+    "case_id": "eth-061",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.16567687498172745
+  },
+  {
+    "case_id": "eth-006",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1793202539,
+    "finalized": true,
+    "seconds": 1.3692681249813177
+  },
+  {
+    "case_id": "eth-006",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.19122383400099352
+  },
+  {
+    "case_id": "eth-006",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.32459479197859764
+  },
+  {
+    "case_id": "eth-006",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.323297041002661
+  },
+  {
+    "case_id": "eth-006",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.17145904200151563
+  },
+  {
+    "case_id": "eth-056",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.1784420830081217
+  },
+  {
+    "case_id": "eth-056",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.18338258296716958
+  },
+  {
+    "case_id": "eth-056",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.31094212498283014
+  },
+  {
+    "case_id": "eth-056",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.30854975001420826
+  },
+  {
+    "case_id": "eth-056",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.16699020797386765
+  },
+  {
+    "case_id": "eth-080",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.1973362080170773
+  },
+  {
+    "case_id": "eth-080",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.2106857500039041
+  },
+  {
+    "case_id": "eth-080",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.35593783302465454
+  },
+  {
+    "case_id": "eth-080",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.338880583003629
+  },
+  {
+    "case_id": "eth-080",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.19372245797421783
+  },
+  {
+    "case_id": "eth-064",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.21900670800823718
+  },
+  {
+    "case_id": "eth-064",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.18266066699288785
+  },
+  {
+    "case_id": "eth-064",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3097332500037737
+  },
+  {
+    "case_id": "eth-064",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3079575830488466
+  },
+  {
+    "case_id": "eth-064",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.17479191604070365
+  },
+  {
+    "case_id": "eth-015",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1791777815,
+    "finalized": true,
+    "seconds": 0.8676274160388857
+  },
+  {
+    "case_id": "eth-015",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.19363816600525752
+  },
+  {
+    "case_id": "eth-015",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.41114204202312976
+  },
+  {
+    "case_id": "eth-015",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.30915570800425485
+  },
+  {
+    "case_id": "eth-015",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.5011809159768745
+  },
+  {
+    "case_id": "eth-049",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.19526166701689363
+  },
+  {
+    "case_id": "eth-049",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.2045976249501109
+  },
+  {
+    "case_id": "eth-049",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.30135645798873156
+  },
+  {
+    "case_id": "eth-049",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3024288330343552
+  },
+  {
+    "case_id": "eth-049",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.17632754100486636
+  },
+  {
+    "case_id": "eth-021",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1513077455,
+    "finalized": true,
+    "seconds": 1.6564817079924978
+  },
+  {
+    "case_id": "eth-021",
+    "job": "routescan_creation",
+    "state": "verified_observation",
+    "epoch": 1513077455,
+    "finalized": true,
+    "seconds": 1.3290292089805007
+  },
+  {
+    "case_id": "eth-021",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3108610830386169
+  },
+  {
+    "case_id": "eth-021",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3076955830329098
+  },
+  {
+    "case_id": "eth-021",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.1629488329635933
+  },
+  {
+    "case_id": "eth-075",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.1861727919895202
+  },
+  {
+    "case_id": "eth-075",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.2128627499914728
+  },
+  {
+    "case_id": "eth-075",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3341254169936292
+  },
+  {
+    "case_id": "eth-075",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.344498333055526
+  },
+  {
+    "case_id": "eth-075",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.17021091701462865
+  },
+  {
+    "case_id": "eth-073",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.1879095840267837
+  },
+  {
+    "case_id": "eth-073",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.19282154203392565
+  },
+  {
+    "case_id": "eth-073",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3368817080045119
+  },
+  {
+    "case_id": "eth-073",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3167010410106741
+  },
+  {
+    "case_id": "eth-073",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.18283258395968005
+  },
+  {
+    "case_id": "eth-062",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.18951674998970702
+  },
+  {
+    "case_id": "eth-062",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.21491125004831702
+  },
+  {
+    "case_id": "eth-062",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.31239933299366385
+  },
+  {
+    "case_id": "eth-062",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.668851500027813
+  },
+  {
+    "case_id": "eth-062",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.1720330830430612
+  },
+  {
+    "case_id": "eth-009",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1787320835,
+    "finalized": true,
+    "seconds": 1.0901660829549655
+  },
+  {
+    "case_id": "eth-009",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.23267500003566965
+  },
+  {
+    "case_id": "eth-009",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.31265400000847876
+  },
+  {
+    "case_id": "eth-009",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.32348479196662083
+  },
+  {
+    "case_id": "eth-009",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.17785804200684652
+  },
+  {
+    "case_id": "eth-063",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.18091137503506616
+  },
+  {
+    "case_id": "eth-063",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.1793887079693377
+  },
+  {
+    "case_id": "eth-063",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3150448329979554
+  },
+  {
+    "case_id": "eth-063",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.31430999998701736
+  },
+  {
+    "case_id": "eth-063",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.17633662500884384
+  },
+  {
+    "case_id": "eth-007",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1778143487,
+    "finalized": true,
+    "seconds": 1.3979490000056103
+  },
+  {
+    "case_id": "eth-007",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.19526058400515467
+  },
+  {
+    "case_id": "eth-007",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3239382089814171
+  },
+  {
+    "case_id": "eth-007",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.32440670899813995
+  },
+  {
+    "case_id": "eth-007",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.1786553330020979
+  },
+  {
+    "case_id": "eth-044",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.17922708299010992
+  },
+  {
+    "case_id": "eth-044",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.20014858397189528
+  },
+  {
+    "case_id": "eth-044",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.32180116698145866
+  },
+  {
+    "case_id": "eth-044",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.32294762501260266
+  },
+  {
+    "case_id": "eth-044",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.176302665960975
+  },
+  {
+    "case_id": "eth-035",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.33338087500305846
+  },
+  {
+    "case_id": "eth-035",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3133910410106182
+  },
+  {
+    "case_id": "eth-035",
+    "job": "routescan_creation",
+    "state": "verified_observation",
+    "epoch": 1639503446,
+    "finalized": true,
+    "seconds": 0.9197206670069136
+  },
+  {
+    "case_id": "eth-035",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.17328591598197818
+  },
+  {
+    "case_id": "eth-035",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1639503446,
+    "finalized": true,
+    "seconds": 1.4990602500038221
+  },
+  {
+    "case_id": "eth-040",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1602667372,
+    "finalized": true,
+    "seconds": 1.7326730829663575
+  },
+  {
+    "case_id": "eth-040",
+    "job": "routescan_creation",
+    "state": "verified_observation",
+    "epoch": 1602667372,
+    "finalized": true,
+    "seconds": 0.9253219169913791
+  },
+  {
+    "case_id": "eth-040",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3085537910228595
+  },
+  {
+    "case_id": "eth-040",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3038195840199478
+  },
+  {
+    "case_id": "eth-040",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.4352637499687262
+  },
+  {
+    "case_id": "eth-004",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1790780723,
+    "finalized": true,
+    "seconds": 0.881463875004556
+  },
+  {
+    "case_id": "eth-004",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.18537783401552588
+  },
+  {
+    "case_id": "eth-004",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3276149590383284
+  },
+  {
+    "case_id": "eth-004",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3099477909854613
+  },
+  {
+    "case_id": "eth-004",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.5263400410185568
+  },
+  {
+    "case_id": "eth-024",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1573993299,
+    "finalized": true,
+    "seconds": 0.8523397499811836
+  },
+  {
+    "case_id": "eth-024",
+    "job": "routescan_creation",
+    "state": "verified_observation",
+    "epoch": 1573672677,
+    "finalized": true,
+    "seconds": 1.346521582978312
+  },
+  {
+    "case_id": "eth-024",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3155469589983113
+  },
+  {
+    "case_id": "eth-024",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.6150580419925973
+  },
+  {
+    "case_id": "eth-024",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.17229558300459757
+  },
+  {
+    "case_id": "eth-041",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.19024479103973135
+  },
+  {
+    "case_id": "eth-041",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.19429541699355468
+  },
+  {
+    "case_id": "eth-041",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3234231669921428
+  },
+  {
+    "case_id": "eth-041",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3281972919940017
+  },
+  {
+    "case_id": "eth-041",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.18326520797563717
+  },
+  {
+    "case_id": "eth-059",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.17827295802999288
+  },
+  {
+    "case_id": "eth-059",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.22487720800563693
+  },
+  {
+    "case_id": "eth-059",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3397928330232389
+  },
+  {
+    "case_id": "eth-059",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.331249792012386
+  },
+  {
+    "case_id": "eth-059",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.17451283399714157
+  },
+  {
+    "case_id": "eth-039",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1580345034,
+    "finalized": true,
+    "seconds": 1.5032564160064794
+  },
+  {
+    "case_id": "eth-039",
+    "job": "routescan_creation",
+    "state": "verified_observation",
+    "epoch": 1580345034,
+    "finalized": true,
+    "seconds": 1.0311282920301892
+  },
+  {
+    "case_id": "eth-039",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.333480250032153
+  },
+  {
+    "case_id": "eth-039",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.34200929204234853
+  },
+  {
+    "case_id": "eth-039",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.1806615840177983
+  },
+  {
+    "case_id": "eth-055",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.19321295799454674
+  },
+  {
+    "case_id": "eth-055",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.20913629099959508
+  },
+  {
+    "case_id": "eth-055",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.32560683303745463
+  },
+  {
+    "case_id": "eth-055",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3217856250121258
+  },
+  {
+    "case_id": "eth-055",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.19203304196707904
+  },
+  {
+    "case_id": "eth-022",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1533324504,
+    "finalized": true,
+    "seconds": 1.7856770420330577
+  },
+  {
+    "case_id": "eth-022",
+    "job": "routescan_creation",
+    "state": "verified_observation",
+    "epoch": 1533324504,
+    "finalized": true,
+    "seconds": 0.8924710410065018
+  },
+  {
+    "case_id": "eth-022",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3080979170044884
+  },
+  {
+    "case_id": "eth-022",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3028659170377068
+  },
+  {
+    "case_id": "eth-022",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.47686216700822115
+  },
+  {
+    "case_id": "eth-079",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.19326441595330834
+  },
+  {
+    "case_id": "eth-079",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.18974075000733137
+  },
+  {
+    "case_id": "eth-079",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.32137362501816824
+  },
+  {
+    "case_id": "eth-079",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.32331145799253136
+  },
+  {
+    "case_id": "eth-079",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.16977383301127702
+  },
+  {
+    "case_id": "eth-053",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.19109550002031028
+  },
+  {
+    "case_id": "eth-053",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.1826386249740608
+  },
+  {
+    "case_id": "eth-053",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.33630083297612146
+  },
+  {
+    "case_id": "eth-053",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.33290808397578076
+  },
+  {
+    "case_id": "eth-053",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.18014770798617974
+  },
+  {
+    "case_id": "eth-013",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1730734559,
+    "finalized": true,
+    "seconds": 1.3645332499872893
+  },
+  {
+    "case_id": "eth-013",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.17099691601470113
+  },
+  {
+    "case_id": "eth-013",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.31629833299666643
+  },
+  {
+    "case_id": "eth-013",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3178072079899721
+  },
+  {
+    "case_id": "eth-013",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.16849866695702076
+  },
+  {
+    "case_id": "eth-078",
+    "job": "routescan_normal",
+    "state": "empty",
+    "seconds": 0.19202316598966718
+  },
+  {
+    "case_id": "eth-078",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.20909220800967887
+  },
+  {
+    "case_id": "eth-078",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.31143720902036875
+  },
+  {
+    "case_id": "eth-078",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.31555920897517353
+  },
+  {
+    "case_id": "eth-078",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.17330912500619888
+  },
+  {
+    "case_id": "eth-020",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1765201931,
+    "finalized": true,
+    "seconds": 1.3995975829893723
+  },
+  {
+    "case_id": "eth-020",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.17558216699399054
+  },
+  {
+    "case_id": "eth-020",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.492227999959141
+  },
+  {
+    "case_id": "eth-020",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3959530830034055
+  },
+  {
+    "case_id": "eth-020",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.4488654170418158
+  },
+  {
+    "case_id": "eth-017",
+    "job": "routescan_normal",
+    "state": "verified_observation",
+    "epoch": 1730736719,
+    "finalized": true,
+    "seconds": 1.0660752089461312
+  },
+  {
+    "case_id": "eth-017",
+    "job": "routescan_creation",
+    "state": "empty",
+    "seconds": 0.19190162495942786
+  },
+  {
+    "case_id": "eth-017",
+    "job": "blockscout_normal",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.31960429198807105
+  },
+  {
+    "case_id": "eth-017",
+    "job": "blockscout_creation",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.3123304999899119
+  },
+  {
+    "case_id": "eth-017",
+    "job": "blockcypher",
+    "state": "error",
+    "error": "http_429",
+    "seconds": 0.5378911669831723
+  }
+]

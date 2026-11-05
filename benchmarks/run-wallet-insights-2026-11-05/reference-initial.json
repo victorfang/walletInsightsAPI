@@ -1,0 +1,4884 @@
+[
+  {
+    "id": "eth-011",
+    "address": "0x403e2b67f70ee3d10ec88c9b3d6de9eb1c7200d8",
+    "block_number": 26351074,
+    "block_hash": "0x5b7382d7dcaed8886d069d65bf41323f4591c3a782d3a64a0b712239da3a29ec",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.33225004200357944
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "27748984535641579",
+        "reference": "27748984535641579",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "7410",
+        "reference": "7410",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-025",
+    "address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+    "block_number": 26351074,
+    "block_hash": "0x5b7382d7dcaed8886d069d65bf41323f4591c3a782d3a64a0b712239da3a29ec",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.2784160840092227,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.6742172079975717,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "1",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 12567
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "1003288313",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "100000",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "24177194570000000000",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-048",
+    "address": "0xe4ae5f19b13d1b383cb6c950d0dc5c4206402b77",
+    "block_number": 26351074,
+    "block_hash": "0x5b7382d7dcaed8886d069d65bf41323f4591c3a782d3a64a0b712239da3a29ec",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.3574618339771405
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-051",
+    "address": "0xc09cc5c8b959b53d56cab2c78adb00e469490fde",
+    "block_number": 26351074,
+    "block_hash": "0x5b7382d7dcaed8886d069d65bf41323f4591c3a782d3a64a0b712239da3a29ec",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.31794999999692664,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.5093514999607578,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-012",
+    "address": "0x91e33655188280afd5042a1fba723a731a117f1b",
+    "block_number": 26351074,
+    "block_hash": "0x5b7382d7dcaed8886d069d65bf41323f4591c3a782d3a64a0b712239da3a29ec",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.3595332499826327
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "10220567853490082",
+        "reference": "10220567853490082",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "243",
+        "reference": "243",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-065",
+    "address": "0xadc677dc2cdad427d17b921fd158fc454860bf5d",
+    "block_number": 26351074,
+    "block_hash": "0x5b7382d7dcaed8886d069d65bf41323f4591c3a782d3a64a0b712239da3a29ec",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.2138182080234401,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.4774077500333078,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-008",
+    "address": "0xb5e5ba15a5aa58df03d91549496d8cd67a15f858",
+    "block_number": 26351074,
+    "block_hash": "0x5b7382d7dcaed8886d069d65bf41323f4591c3a782d3a64a0b712239da3a29ec",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.3262149579823017
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "445051686915355010",
+        "reference": "445051686915355010",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "7453",
+        "reference": "7453",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "delegated",
+          "delegation_target": "0xb15fe1ca4e5433f292b2dd146289f905223fc5cf",
+          "code_size": 23
+        },
+        "reference": {
+          "kind": "delegated",
+          "delegation_target": "0xb15fe1ca4e5433f292b2dd146289f905223fc5cf",
+          "code_size": 23
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-077",
+    "address": "0xcac36747d1cd34199cab69721cb6163b384ffe33",
+    "block_number": 26351074,
+    "block_hash": "0x5b7382d7dcaed8886d069d65bf41323f4591c3a782d3a64a0b712239da3a29ec",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.37679429195122793
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-038",
+    "address": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+    "block_number": 26351074,
+    "block_hash": "0x5b7382d7dcaed8886d069d65bf41323f4591c3a782d3a64a0b712239da3a29ec",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.3317612499813549
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "1",
+        "reference": "1",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 5346
+        },
+        "reference": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 5346
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-050",
+    "address": "0x55c30b5034ce3e77c6c64eb42946a112287b6a28",
+    "block_number": 26351074,
+    "block_hash": "0x5b7382d7dcaed8886d069d65bf41323f4591c3a782d3a64a0b712239da3a29ec",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.28182362497318536,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.4755570419947617,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-036",
+    "address": "0xc36442b4a4522e871399cd717abdd847ab11fe88",
+    "block_number": 26351074,
+    "block_hash": "0x5b7382d7dcaed8886d069d65bf41323f4591c3a782d3a64a0b712239da3a29ec",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.45862266700714827
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "1",
+        "reference": "1",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 24384
+        },
+        "reference": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 24384
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-070",
+    "address": "0xe1993bd0dc5ba0e38fd4bd6e0907061e96ebaf99",
+    "block_number": 26351075,
+    "block_hash": "0x6ad23d1e9105c30b803617302296674ff736b82ff3726a7aafdef6025475e860",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.3355765829910524
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-001",
+    "address": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
+    "block_number": 26351075,
+    "block_hash": "0x6ad23d1e9105c30b803617302296674ff736b82ff3726a7aafdef6025475e860",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.2154844999895431,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.46620466699823737,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "5780441042197210512",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "5970",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "delegated",
+          "delegation_target": "0x5a7fc11397e9a8ad41bf10bf13f22b0a63f96f6d",
+          "code_size": 23
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "39192124",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "291368220",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "14372082162212001768",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-014",
+    "address": "0x6d14296c706813c642045bc6102ee6e2fcaf8528",
+    "block_number": 26351075,
+    "block_hash": "0x6ad23d1e9105c30b803617302296674ff736b82ff3726a7aafdef6025475e860",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.30775937502039596
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "102714065097147",
+        "reference": "102714065097147",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "98",
+        "reference": "98",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "delegated",
+          "delegation_target": "0x63c0c19a282a1b52b07dd5a65b58948a07dae32b",
+          "code_size": 23
+        },
+        "reference": {
+          "kind": "delegated",
+          "delegation_target": "0x63c0c19a282a1b52b07dd5a65b58948a07dae32b",
+          "code_size": 23
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "2328304",
+        "reference": "2328304",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "23200457",
+        "reference": "23200457",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-057",
+    "address": "0xe63a40cfee31a745de2761daf89905d1c823258a",
+    "block_number": 26351075,
+    "block_hash": "0x6ad23d1e9105c30b803617302296674ff736b82ff3726a7aafdef6025475e860",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.2725538750528358
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-052",
+    "address": "0x34d2ded544ec43d3f76262f346326d9c73c637db",
+    "block_number": 26351075,
+    "block_hash": "0x6ad23d1e9105c30b803617302296674ff736b82ff3726a7aafdef6025475e860",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.2683057499816641,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.4765983750112355,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-030",
+    "address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+    "block_number": 26351075,
+    "block_hash": "0x6ad23d1e9105c30b803617302296674ff736b82ff3726a7aafdef6025475e860",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.37925125000765547
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "1",
+        "reference": "1",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 6795
+        },
+        "reference": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 6795
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "9554209",
+        "reference": "9554209",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "117566459",
+        "reference": "117566459",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "100987736081235538419",
+        "reference": "100987736081235538419",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-068",
+    "address": "0x8af22802dfd21cb8f21736d203a3a142b9edf1ff",
+    "block_number": 26351075,
+    "block_hash": "0x6ad23d1e9105c30b803617302296674ff736b82ff3726a7aafdef6025475e860",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.21488308301195502,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.5539764580316842,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-074",
+    "address": "0xbbe35e12f8779e9162dc31fafe1b12f0a7b12c94",
+    "block_number": 26351075,
+    "block_hash": "0x6ad23d1e9105c30b803617302296674ff736b82ff3726a7aafdef6025475e860",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.3281489999499172
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-032",
+    "address": "0x7a250d5630b4cf539739df2c5dacb4c659f2488d",
+    "block_number": 26351075,
+    "block_hash": "0x6ad23d1e9105c30b803617302296674ff736b82ff3726a7aafdef6025475e860",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.3852117090136744
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "25000000000000000",
+        "reference": "25000000000000000",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "1",
+        "reference": "1",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 21943
+        },
+        "reference": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 21943
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-037",
+    "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+    "block_number": 26351075,
+    "block_hash": "0x6ad23d1e9105c30b803617302296674ff736b82ff3726a7aafdef6025475e860",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.2105662920512259,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.5469321249984205,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "1",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 9152
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "133095872839",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "2",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-045",
+    "address": "0x6d2b789677686865ffe5f493e7737a3953763657",
+    "block_number": 26351075,
+    "block_hash": "0x6ad23d1e9105c30b803617302296674ff736b82ff3726a7aafdef6025475e860",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.29593354201642796
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-066",
+    "address": "0x0b2a274c002b9469cd112ee4842ecaa347e61cb7",
+    "block_number": 26351075,
+    "block_hash": "0x6ad23d1e9105c30b803617302296674ff736b82ff3726a7aafdef6025475e860",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.2139389159856364,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.5138993340078741,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-027",
+    "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+    "block_number": 26351075,
+    "block_hash": "0x6ad23d1e9105c30b803617302296674ff736b82ff3726a7aafdef6025475e860",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.28462341701379046
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "1",
+        "reference": "1",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 4582
+        },
+        "reference": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 4582
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "434733532",
+        "reference": "434733532",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "159519843",
+        "reference": "159519843",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "137001275697911835659",
+        "reference": "137001275697911835659",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-071",
+    "address": "0x48577c94da33e60423f741022e4842d65f5e4954",
+    "block_number": 26351076,
+    "block_hash": "0x5826047e457c3438a31b514db940f6fe07872ad43b64bac4793578e90ea5de7a",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.36129562504356727
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-018",
+    "address": "0x7a0e37f1543d0adb4e7ba7a27ea16b926b35a67c",
+    "block_number": 26351076,
+    "block_hash": "0x5826047e457c3438a31b514db940f6fe07872ad43b64bac4793578e90ea5de7a",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.29584991600131616
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "207017628578806",
+        "reference": "207017628578806",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "74",
+        "reference": "74",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-034",
+    "address": "0xe592427a0aece92de3edee1f18e0157c05861564",
+    "block_number": 26351076,
+    "block_hash": "0x5826047e457c3438a31b514db940f6fe07872ad43b64bac4793578e90ea5de7a",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.20196004095487297,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.4766159169957973,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "1",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 12070
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-067",
+    "address": "0xe3685a40fa74deba76da12d2a3b914cd677f7ed7",
+    "block_number": 26351076,
+    "block_hash": "0x5826047e457c3438a31b514db940f6fe07872ad43b64bac4793578e90ea5de7a",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.30741712503368035
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-060",
+    "address": "0x15dd314a2763474e0d5768c82a88aa686c38f5ae",
+    "block_number": 26351076,
+    "block_hash": "0x5826047e457c3438a31b514db940f6fe07872ad43b64bac4793578e90ea5de7a",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.2296323329792358,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.5581909170141444,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-010",
+    "address": "0x4817a075bb59c1ed2d21e8240ff1561750175515",
+    "block_number": 26351076,
+    "block_hash": "0x5826047e457c3438a31b514db940f6fe07872ad43b64bac4793578e90ea5de7a",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.33063949999632314
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "9895938369944805129",
+        "reference": "9895938369944805129",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "25980",
+        "reference": "25980",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-003",
+    "address": "0xc917c3fa468f2c4b9c84c72caa46420eb9825249",
+    "block_number": 26351076,
+    "block_hash": "0x5826047e457c3438a31b514db940f6fe07872ad43b64bac4793578e90ea5de7a",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.3609457499696873
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "965686589638736356",
+        "reference": "965686589638736356",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "192768",
+        "reference": "192768",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-042",
+    "address": "0xd5ff6dcf5153245be026debac13e4516a91481a7",
+    "block_number": 26351076,
+    "block_hash": "0x5826047e457c3438a31b514db940f6fe07872ad43b64bac4793578e90ea5de7a",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.28140908299246803,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.524515709024854,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-019",
+    "address": "0xaa8ba7d4611437141192e7ceced531bc0a133efb",
+    "block_number": 26351076,
+    "block_hash": "0x5826047e457c3438a31b514db940f6fe07872ad43b64bac4793578e90ea5de7a",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.2591517079854384
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "95056457989327335424",
+        "reference": "95056457989327335424",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "1524257",
+        "reference": "1524257",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "26667446",
+        "reference": "26667446",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "131901249352682",
+        "reference": "131901249352682",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-026",
+    "address": "0x514910771af9ca656af840dff83e8264ecf986ca",
+    "block_number": 26351076,
+    "block_hash": "0x5826047e457c3438a31b514db940f6fe07872ad43b64bac4793578e90ea5de7a",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.3375454170163721
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "1",
+        "reference": "1",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 3153
+        },
+        "reference": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 3153
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "16361977302",
+        "reference": "16361977302",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "467433766",
+        "reference": "467433766",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "745337392965815637",
+        "reference": "745337392965815637",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-005",
+    "address": "0x35f7cff299f48b1b2a542224fd823152e437c654",
+    "block_number": 26351076,
+    "block_hash": "0x5826047e457c3438a31b514db940f6fe07872ad43b64bac4793578e90ea5de7a",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.3374640829861164
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "799966751059078",
+        "reference": "799966751059078",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "2083",
+        "reference": "2083",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-047",
+    "address": "0x0d9f7e0f240d000303b18efdf7cbd7c41049527e",
+    "block_number": 26351077,
+    "block_hash": "0x9ea3b4a164e68afc4be0d2a38c93dd6fad4e8f5d9783ee00b317078de5de9713",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.2098324170219712,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.5643810000037774,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-072",
+    "address": "0x614870240de6379b49a00dd45f3c384939d36964",
+    "block_number": 26351077,
+    "block_hash": "0x9ea3b4a164e68afc4be0d2a38c93dd6fad4e8f5d9783ee00b317078de5de9713",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.3332587080076337
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-033",
+    "address": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "block_number": 26351077,
+    "block_hash": "0x9ea3b4a164e68afc4be0d2a38c93dd6fad4e8f5d9783ee00b317078de5de9713",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.24298354098573327,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.5256952089839615,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "74511",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 24535
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-058",
+    "address": "0xf3c0fb4452bc1ff845f23443f5e5143a649f186f",
+    "block_number": 26351077,
+    "block_hash": "0x9ea3b4a164e68afc4be0d2a38c93dd6fad4e8f5d9783ee00b317078de5de9713",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.2886447080527432
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-046",
+    "address": "0x68a16f5a188af63ff96b847319a37a18a42471d3",
+    "block_number": 26351077,
+    "block_hash": "0x9ea3b4a164e68afc4be0d2a38c93dd6fad4e8f5d9783ee00b317078de5de9713",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.3606070409878157
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-002",
+    "address": "0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae",
+    "block_number": 26351077,
+    "block_hash": "0x9ea3b4a164e68afc4be0d2a38c93dd6fad4e8f5d9783ee00b317078de5de9713",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.2873214169521816
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "5774551794456062094343",
+        "reference": "5774551794456062094343",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 3891
+        },
+        "reference": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 3891
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "1136601177",
+        "reference": "1136601177",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "1083644119",
+        "reference": "1083644119",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-016",
+    "address": "0x07fcdbe8283f1b67cee5d5a4151cec8e8184301f",
+    "block_number": 26351077,
+    "block_hash": "0x9ea3b4a164e68afc4be0d2a38c93dd6fad4e8f5d9783ee00b317078de5de9713",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.22368024999741465,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.5683076249551959,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "103616036962862829",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "33",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "4899714907",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-069",
+    "address": "0x9a33fc9010949bdef4fce8285ce842174592fbc4",
+    "block_number": 26351077,
+    "block_hash": "0x9ea3b4a164e68afc4be0d2a38c93dd6fad4e8f5d9783ee00b317078de5de9713",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.34819545899517834
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-076",
+    "address": "0x084c2026aef4c3ba51736174a1d4f5272f516e90",
+    "block_number": 26351077,
+    "block_hash": "0x9ea3b4a164e68afc4be0d2a38c93dd6fad4e8f5d9783ee00b317078de5de9713",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.269045333028771
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-054",
+    "address": "0xb9e83f94ea3768822f32d529fe98ebf911f09f9f",
+    "block_number": 26351077,
+    "block_hash": "0x9ea3b4a164e68afc4be0d2a38c93dd6fad4e8f5d9783ee00b317078de5de9713",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.20693062501959503,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.5584600000292994,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-023",
+    "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "block_number": 26351077,
+    "block_hash": "0x9ea3b4a164e68afc4be0d2a38c93dd6fad4e8f5d9783ee00b317078de5de9713",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.41765783296432346
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "42",
+        "reference": "42",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "1",
+        "reference": "1",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 11075
+        },
+        "reference": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 11075
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "349837735564",
+        "reference": "349837735564",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "1239330047551",
+        "reference": "1239330047551",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "54887889789776076198",
+        "reference": "54887889789776076198",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-028",
+    "address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+    "block_number": 26351077,
+    "block_hash": "0x9ea3b4a164e68afc4be0d2a38c93dd6fad4e8f5d9783ee00b317078de5de9713",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.2674059590208344,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.4999731249990873,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "1",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 2491
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "1002210166",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "20",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "7200000000000000000",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-029",
+    "address": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
+    "block_number": 26351077,
+    "block_hash": "0x9ea3b4a164e68afc4be0d2a38c93dd6fad4e8f5d9783ee00b317078de5de9713",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.37321387499105185
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "1",
+        "reference": "1",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 3379
+        },
+        "reference": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 3379
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "10054205",
+        "reference": "10054205",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "1000000000000",
+        "reference": "1000000000000",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-031",
+    "address": "0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f",
+    "block_number": 26351077,
+    "block_hash": "0x9ea3b4a164e68afc4be0d2a38c93dd6fad4e8f5d9783ee00b317078de5de9713",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.346714208018966
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "527071",
+        "reference": "527071",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 13859
+        },
+        "reference": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 13859
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "10000",
+        "reference": "10000",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-043",
+    "address": "0x6d8abcc3de765f917d8a0d61a25bfaf84015fab6",
+    "block_number": 26351078,
+    "block_hash": "0xd5f40bb5f9803b9400c32667c9236290dacae50e0385dab9ad0460d0188878ef",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.3289512919727713
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-061",
+    "address": "0x81328784d16a252808fab1b17ca695151eb79729",
+    "block_number": 26351078,
+    "block_hash": "0xd5f40bb5f9803b9400c32667c9236290dacae50e0385dab9ad0460d0188878ef",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.21330079197650775,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.5199027920025401,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-006",
+    "address": "0xccba2faab763603b2894a5f203bd335dc26d16b8",
+    "block_number": 26351078,
+    "block_hash": "0xd5f40bb5f9803b9400c32667c9236290dacae50e0385dab9ad0460d0188878ef",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.2278555830125697
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "4331898663745472",
+        "reference": "4331898663745472",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "4",
+        "reference": "4",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "delegated",
+          "delegation_target": "0xd2e28229f6f2c235e57de2ebc727025a1d0530fb",
+          "code_size": 23
+        },
+        "reference": {
+          "kind": "delegated",
+          "delegation_target": "0xd2e28229f6f2c235e57de2ebc727025a1d0530fb",
+          "code_size": 23
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-056",
+    "address": "0x91fc52dbdacecf60132a46a0f2e72015d37e9e6c",
+    "block_number": 26351078,
+    "block_hash": "0xd5f40bb5f9803b9400c32667c9236290dacae50e0385dab9ad0460d0188878ef",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.31978095800150186
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-080",
+    "address": "0x5d736d69aaf0f48fbe1f4129e2b476991b0ef36d",
+    "block_number": 26351078,
+    "block_hash": "0xd5f40bb5f9803b9400c32667c9236290dacae50e0385dab9ad0460d0188878ef",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.3235892080119811
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-064",
+    "address": "0x2e0fe7a6e908ad05efe54e954a70c022cadd1467",
+    "block_number": 26351078,
+    "block_hash": "0xd5f40bb5f9803b9400c32667c9236290dacae50e0385dab9ad0460d0188878ef",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.21129287499934435,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.4765247919713147,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-015",
+    "address": "0x51649cf810ea9f1f61165044b7149070c67f79c8",
+    "block_number": 26351078,
+    "block_hash": "0xd5f40bb5f9803b9400c32667c9236290dacae50e0385dab9ad0460d0188878ef",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.41347708395915106
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "273977357875149551047",
+        "reference": "273977357875149551047",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "6438",
+        "reference": "6438",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-049",
+    "address": "0x0ec23ed32cc5d9663b4f7052548d3c37264efd4f",
+    "block_number": 26351078,
+    "block_hash": "0xd5f40bb5f9803b9400c32667c9236290dacae50e0385dab9ad0460d0188878ef",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.651102332980372,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.5495817080372944,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-021",
+    "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+    "block_number": 26351078,
+    "block_hash": "0xd5f40bb5f9803b9400c32667c9236290dacae50e0385dab9ad0460d0188878ef",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.3649328750325367
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "2091253202443055346431004",
+        "reference": "2091253202443055346431004",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "1",
+        "reference": "1",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 3124
+        },
+        "reference": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 3124
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "6363774158",
+        "reference": "6363774158",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "22410315981",
+        "reference": "22410315981",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "8245134601730000000000",
+        "reference": "8245134601730000000000",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-075",
+    "address": "0xf8fd1362b19ba5dc5ac2506d9c0e78ff4df6daf7",
+    "block_number": 26351078,
+    "block_hash": "0xd5f40bb5f9803b9400c32667c9236290dacae50e0385dab9ad0460d0188878ef",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.30739262502174824,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.493974499986507,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-073",
+    "address": "0xdcb2afaf2cb6e4f35807e2c996af8f9857518062",
+    "block_number": 26351078,
+    "block_hash": "0xd5f40bb5f9803b9400c32667c9236290dacae50e0385dab9ad0460d0188878ef",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.23148954199859872
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-062",
+    "address": "0x5325fa1c98d091c07d63aa31cfa6abe8b2cb8343",
+    "block_number": 26351078,
+    "block_hash": "0xd5f40bb5f9803b9400c32667c9236290dacae50e0385dab9ad0460d0188878ef",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.3254848749493249
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-009",
+    "address": "0xd82c5660cac4169de051d7df34323f99c21176a7",
+    "block_number": 26351078,
+    "block_hash": "0xd5f40bb5f9803b9400c32667c9236290dacae50e0385dab9ad0460d0188878ef",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.2318802080117166,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.5205543750198558,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "28214932316706821156",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "64088",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-063",
+    "address": "0xc29cbe4dcc1d39b7d18c0c16a6cf43b47e38ba51",
+    "block_number": 26351078,
+    "block_hash": "0xd5f40bb5f9803b9400c32667c9236290dacae50e0385dab9ad0460d0188878ef",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.28609862498706207
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-007",
+    "address": "0xbdc8f547b06f06d38a102217ca28ce7ed9340805",
+    "block_number": 26351079,
+    "block_hash": "0x806705131b527fbaad1cfea93bd6df50c1a3297dd73437341fd5546768c5a714",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.37798170797759667
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "60140951360603591",
+        "reference": "60140951360603591",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "2204",
+        "reference": "2204",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-044",
+    "address": "0x1abdd483a6bedb4a6e8c56d7cc21a472bd322947",
+    "block_number": 26351079,
+    "block_hash": "0x806705131b527fbaad1cfea93bd6df50c1a3297dd73437341fd5546768c5a714",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.4034329999703914
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-035",
+    "address": "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45",
+    "block_number": 26351079,
+    "block_hash": "0x806705131b527fbaad1cfea93bd6df50c1a3297dd73437341fd5546768c5a714",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.27488037501461804,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.5239437500131316,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "1",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 24497
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-040",
+    "address": "0x00000000219ab540356cbb839cbe05303d7705fa",
+    "block_number": 26351079,
+    "block_hash": "0x806705131b527fbaad1cfea93bd6df50c1a3297dd73437341fd5546768c5a714",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.3100950830266811
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "93097607579580077399106838",
+        "reference": "93097607579580077399106838",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "1",
+        "reference": "1",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 6358
+        },
+        "reference": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 6358
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "498563495",
+        "reference": "498563495",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "5006362222",
+        "reference": "5006362222",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "1760000000000000000",
+        "reference": "1760000000000000000",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-004",
+    "address": "0x37c728c153eeb40ee907cb5b41b342d896878846",
+    "block_number": 26351079,
+    "block_hash": "0x806705131b527fbaad1cfea93bd6df50c1a3297dd73437341fd5546768c5a714",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.38686445803614333
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "632785088848139308",
+        "reference": "632785088848139308",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "2436",
+        "reference": "2436",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-024",
+    "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+    "block_number": 26351079,
+    "block_hash": "0x806705131b527fbaad1cfea93bd6df50c1a3297dd73437341fd5546768c5a714",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.2964602090069093,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.46700362500268966,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "1",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 7904
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "12355314477",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "10271954416",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "4436225567137280439130415",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-041",
+    "address": "0x941c9014c10ccf1f90228453b75f6c9f66ab3237",
+    "block_number": 26351079,
+    "block_hash": "0x806705131b527fbaad1cfea93bd6df50c1a3297dd73437341fd5546768c5a714",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.2956233329605311
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-059",
+    "address": "0x4031d3cdd02f329e9af1b494e78270255b724ada",
+    "block_number": 26351079,
+    "block_hash": "0x806705131b527fbaad1cfea93bd6df50c1a3297dd73437341fd5546768c5a714",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.35140841704560444
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-039",
+    "address": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+    "block_number": 26351079,
+    "block_hash": "0x806705131b527fbaad1cfea93bd6df50c1a3297dd73437341fd5546768c5a714",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.3946275839698501
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "1",
+        "reference": "1",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 10542
+        },
+        "reference": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 10542
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "386137788",
+        "reference": "386137788",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "9599614520",
+        "reference": "9599614520",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "26500000000000000000",
+        "reference": "26500000000000000000",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-055",
+    "address": "0xc45a2acbbdec947e5b16a5102098854d516e88cb",
+    "block_number": 26351079,
+    "block_hash": "0x806705131b527fbaad1cfea93bd6df50c1a3297dd73437341fd5546768c5a714",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.22017375001451,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.5270653329789639,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-022",
+    "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    "block_number": 26351079,
+    "block_hash": "0x806705131b527fbaad1cfea93bd6df50c1a3297dd73437341fd5546768c5a714",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.3315357500105165
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "1",
+        "reference": "1",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 2186
+        },
+        "reference": {
+          "kind": "contract_code",
+          "delegation_target": null,
+          "code_size": 2186
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "225986693425",
+        "reference": "225986693425",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "1561406008145662001152",
+        "reference": "1561406008145662001152",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-079",
+    "address": "0xc931ebb8f72fb21d9cc1f72ac847396fcd3e0721",
+    "block_number": 26351079,
+    "block_hash": "0x806705131b527fbaad1cfea93bd6df50c1a3297dd73437341fd5546768c5a714",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.38115700002526864
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-053",
+    "address": "0xa7a024d96066322cd9ef0eb90277263fe1922948",
+    "block_number": 26351079,
+    "block_hash": "0x806705131b527fbaad1cfea93bd6df50c1a3297dd73437341fd5546768c5a714",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.28009537496836856,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.4889716660254635,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-013",
+    "address": "0xc066ac5d385419b1a8c43a0e146fa439837a8b8c",
+    "block_number": 26351080,
+    "block_hash": "0x28ef743e87a442d9283c97fc9e520af2176fc33966c7f80c825f6ee9cc0a3676",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.41893820802215487
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "7268040848064921816",
+        "reference": "7268040848064921816",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "861544",
+        "reference": "861544",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "76996035",
+        "reference": "76996035",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "2250000",
+        "reference": "2250000",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-078",
+    "address": "0x8acd8c981d5e97fb3a1c03afe34548fb3cc6e61d",
+    "block_number": 26351080,
+    "block_hash": "0x28ef743e87a442d9283c97fc9e520af2176fc33966c7f80c825f6ee9cc0a3676",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.2750085410079919
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  },
+  {
+    "id": "eth-020",
+    "address": "0xd37ac934502619cee14908cef22138f4b98e06b4",
+    "block_number": 26351080,
+    "block_hash": "0x28ef743e87a442d9283c97fc9e520af2176fc33966c7f80c825f6ee9cc0a3676",
+    "dut_provider": "alchemy",
+    "provider": null,
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": false,
+        "seconds": 0.3057992499670945,
+        "error": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "provider": "llamarpc_public",
+        "success": false,
+        "seconds": 0.49352216703118756,
+        "error": "HTTPError",
+        "http_status": 525
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "103987765583081894701",
+        "reference": null,
+        "match": null
+      },
+      "account_nonce": {
+        "api": "714092",
+        "reference": null,
+        "match": null
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": null,
+        "match": null
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "91092974019",
+        "reference": null,
+        "match": null
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "2021001977172",
+        "reference": null,
+        "match": null
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "199995635592782697317",
+        "reference": null,
+        "match": null
+      }
+    },
+    "complete_reference": false,
+    "error": "Independent reference unavailable"
+  },
+  {
+    "id": "eth-017",
+    "address": "0xb42f812a44c22cc6b861478900401ee759ebead6",
+    "block_number": 26351080,
+    "block_hash": "0x28ef743e87a442d9283c97fc9e520af2176fc33966c7f80c825f6ee9cc0a3676",
+    "dut_provider": "alchemy",
+    "provider": "tenderly_public",
+    "attempts": [
+      {
+        "provider": "tenderly_public",
+        "success": true,
+        "seconds": 0.35348450002493337
+      }
+    ],
+    "fields": {
+      "native_balance_wei": {
+        "api": "5945696351996854609",
+        "reference": "5945696351996854609",
+        "match": true
+      },
+      "account_nonce": {
+        "api": "860181",
+        "reference": "860181",
+        "match": true
+      },
+      "code_profile": {
+        "api": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "reference": {
+          "kind": "empty_code",
+          "delegation_target": null,
+          "code_size": 0
+        },
+        "match": true
+      },
+      "token:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "symbol": "USDC",
+        "api": "125000000",
+        "reference": "125000000",
+        "match": true
+      },
+      "token:0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "symbol": "USDT",
+        "api": "971832429",
+        "reference": "971832429",
+        "match": true
+      },
+      "token:0x6b175474e89094c44da98b954eedeac495271d0f": {
+        "symbol": "DAI",
+        "api": "0",
+        "reference": "0",
+        "match": true
+      }
+    },
+    "complete_reference": true
+  }
+]

@@ -1,0 +1,1801 @@
+{
+  "metadata": {
+    "schema_version": 1,
+    "network": "ethereum-mainnet",
+    "chain_id": 1,
+    "dataset_date": "2026-11-05",
+    "case_count": 100,
+    "category_counts": {
+      "existing_eoa": 20,
+      "existing_contract": 20,
+      "generated_valid": 40,
+      "malformed": 20
+    },
+    "generated_address_method": "Last 20 bytes of SHA-256(seed); no keys generated or saved.",
+    "classification_limits": "Synthetic absence is an expectation, not absolute historical proof. Existing controls have positive on-chain evidence. Wallet key creation time is not recorded on chain.",
+    "selection_limits": "18 EOAs are convenience samples from one observed block, not a random sample of all Ethereum users; canonical contracts are deliberately popular controls."
+  },
+  "cases": [
+    {
+      "id": "eth-001",
+      "category": "existing_eoa",
+      "label": "Vitalik-associated public EOA",
+      "address": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/address/0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
+      ],
+      "expected_age_note": "No first-use timestamp asserted by this corpus; age controls are separate."
+    },
+    {
+      "id": "eth-002",
+      "category": "existing_eoa",
+      "label": "Ethereum Foundation public EOA",
+      "address": "0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae"
+      ],
+      "expected_age_note": "No first-use timestamp asserted by this corpus; age controls are separate."
+    },
+    {
+      "id": "eth-003",
+      "category": "existing_eoa",
+      "label": "Observed block 26350416 sender 01",
+      "address": "0xc917c3fa468f2c4b9c84c72caa46420eb9825249",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/tx/0xe875086da1da9171d30ed01e00c228d200c68a3dbc351fc067dd3bd15bbe0b09",
+        "https://etherscan.io/block/26350416"
+      ],
+      "proof": {
+        "type": "canonical_transaction_sender",
+        "transaction_hash": "0xe875086da1da9171d30ed01e00c228d200c68a3dbc351fc067dd3bd15bbe0b09",
+        "block_number": 26350416,
+        "block_timestamp": 1793903195,
+        "note": "Inclusion proves prior use, not that this was first activity."
+      }
+    },
+    {
+      "id": "eth-004",
+      "category": "existing_eoa",
+      "label": "Observed block 26350416 sender 02",
+      "address": "0x37c728c153eeb40ee907cb5b41b342d896878846",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/tx/0x8bce43f48849b91e0699d25aad8c939724e20d79ac20a21dabfa6a7a86f8e347",
+        "https://etherscan.io/block/26350416"
+      ],
+      "proof": {
+        "type": "canonical_transaction_sender",
+        "transaction_hash": "0x8bce43f48849b91e0699d25aad8c939724e20d79ac20a21dabfa6a7a86f8e347",
+        "block_number": 26350416,
+        "block_timestamp": 1793903195,
+        "note": "Inclusion proves prior use, not that this was first activity."
+      }
+    },
+    {
+      "id": "eth-005",
+      "category": "existing_eoa",
+      "label": "Observed block 26350416 sender 03",
+      "address": "0x35f7cff299f48b1b2a542224fd823152e437c654",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/tx/0x45e15b7d58eb8438a67a736a7b204eadb7d4168ba3b548b336486f373eb5c07e",
+        "https://etherscan.io/block/26350416"
+      ],
+      "proof": {
+        "type": "canonical_transaction_sender",
+        "transaction_hash": "0x45e15b7d58eb8438a67a736a7b204eadb7d4168ba3b548b336486f373eb5c07e",
+        "block_number": 26350416,
+        "block_timestamp": 1793903195,
+        "note": "Inclusion proves prior use, not that this was first activity."
+      }
+    },
+    {
+      "id": "eth-006",
+      "category": "existing_eoa",
+      "label": "Observed block 26350416 sender 04",
+      "address": "0xccba2faab763603b2894a5f203bd335dc26d16b8",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/tx/0x63a75812a9a15574067c98ed2ce570d5193e1d7579d909788bc0806263d2e7e2",
+        "https://etherscan.io/block/26350416"
+      ],
+      "proof": {
+        "type": "canonical_transaction_sender",
+        "transaction_hash": "0x63a75812a9a15574067c98ed2ce570d5193e1d7579d909788bc0806263d2e7e2",
+        "block_number": 26350416,
+        "block_timestamp": 1793903195,
+        "note": "Inclusion proves prior use, not that this was first activity."
+      }
+    },
+    {
+      "id": "eth-007",
+      "category": "existing_eoa",
+      "label": "Observed block 26350416 sender 05",
+      "address": "0xbdc8f547b06f06d38a102217ca28ce7ed9340805",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/tx/0xcc8a40d088eb13e6ca1e3ec06dfe0b6d01301fd1724c0dab817fb6be3142246c",
+        "https://etherscan.io/block/26350416"
+      ],
+      "proof": {
+        "type": "canonical_transaction_sender",
+        "transaction_hash": "0xcc8a40d088eb13e6ca1e3ec06dfe0b6d01301fd1724c0dab817fb6be3142246c",
+        "block_number": 26350416,
+        "block_timestamp": 1793903195,
+        "note": "Inclusion proves prior use, not that this was first activity."
+      }
+    },
+    {
+      "id": "eth-008",
+      "category": "existing_eoa",
+      "label": "Observed block 26350416 sender 06",
+      "address": "0xb5e5ba15a5aa58df03d91549496d8cd67a15f858",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/tx/0x6f7fb7f428ce69072e91d1f3e255e6502f228a3c8bf045dd0341d66910694073",
+        "https://etherscan.io/block/26350416"
+      ],
+      "proof": {
+        "type": "canonical_transaction_sender",
+        "transaction_hash": "0x6f7fb7f428ce69072e91d1f3e255e6502f228a3c8bf045dd0341d66910694073",
+        "block_number": 26350416,
+        "block_timestamp": 1793903195,
+        "note": "Inclusion proves prior use, not that this was first activity."
+      }
+    },
+    {
+      "id": "eth-009",
+      "category": "existing_eoa",
+      "label": "Observed block 26350416 sender 07",
+      "address": "0xd82c5660cac4169de051d7df34323f99c21176a7",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/tx/0x15f961f36a38754aead92c3dac2365caefda53b07a0224bf7019965173ba5dbc",
+        "https://etherscan.io/block/26350416"
+      ],
+      "proof": {
+        "type": "canonical_transaction_sender",
+        "transaction_hash": "0x15f961f36a38754aead92c3dac2365caefda53b07a0224bf7019965173ba5dbc",
+        "block_number": 26350416,
+        "block_timestamp": 1793903195,
+        "note": "Inclusion proves prior use, not that this was first activity."
+      }
+    },
+    {
+      "id": "eth-010",
+      "category": "existing_eoa",
+      "label": "Observed block 26350416 sender 08",
+      "address": "0x4817a075bb59c1ed2d21e8240ff1561750175515",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/tx/0x590f5b7ee1c3df54b80340a06ae27fecac5fe197af3f706306d8d1466cd5e1df",
+        "https://etherscan.io/block/26350416"
+      ],
+      "proof": {
+        "type": "canonical_transaction_sender",
+        "transaction_hash": "0x590f5b7ee1c3df54b80340a06ae27fecac5fe197af3f706306d8d1466cd5e1df",
+        "block_number": 26350416,
+        "block_timestamp": 1793903195,
+        "note": "Inclusion proves prior use, not that this was first activity."
+      }
+    },
+    {
+      "id": "eth-011",
+      "category": "existing_eoa",
+      "label": "Observed block 26350416 sender 09",
+      "address": "0x403e2b67f70ee3d10ec88c9b3d6de9eb1c7200d8",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/tx/0xc18ff9f840ce40fe1b8d2f0b4be3a9016706df7173dca1d5be2d9773d8b88ece",
+        "https://etherscan.io/block/26350416"
+      ],
+      "proof": {
+        "type": "canonical_transaction_sender",
+        "transaction_hash": "0xc18ff9f840ce40fe1b8d2f0b4be3a9016706df7173dca1d5be2d9773d8b88ece",
+        "block_number": 26350416,
+        "block_timestamp": 1793903195,
+        "note": "Inclusion proves prior use, not that this was first activity."
+      }
+    },
+    {
+      "id": "eth-012",
+      "category": "existing_eoa",
+      "label": "Observed block 26350416 sender 10",
+      "address": "0x91e33655188280afd5042a1fba723a731a117f1b",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/tx/0x89b787f9deafc470b01215226171da4cf669d16a3052777defa52d03ede4fadf",
+        "https://etherscan.io/block/26350416"
+      ],
+      "proof": {
+        "type": "canonical_transaction_sender",
+        "transaction_hash": "0x89b787f9deafc470b01215226171da4cf669d16a3052777defa52d03ede4fadf",
+        "block_number": 26350416,
+        "block_timestamp": 1793903195,
+        "note": "Inclusion proves prior use, not that this was first activity."
+      }
+    },
+    {
+      "id": "eth-013",
+      "category": "existing_eoa",
+      "label": "Observed block 26350416 sender 11",
+      "address": "0xc066ac5d385419b1a8c43a0e146fa439837a8b8c",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/tx/0x824a19bf71648af9a0aed507e09c0b23a9a99e138819b89716f2ddae3c7de6c0",
+        "https://etherscan.io/block/26350416"
+      ],
+      "proof": {
+        "type": "canonical_transaction_sender",
+        "transaction_hash": "0x824a19bf71648af9a0aed507e09c0b23a9a99e138819b89716f2ddae3c7de6c0",
+        "block_number": 26350416,
+        "block_timestamp": 1793903195,
+        "note": "Inclusion proves prior use, not that this was first activity."
+      }
+    },
+    {
+      "id": "eth-014",
+      "category": "existing_eoa",
+      "label": "Observed block 26350416 sender 12",
+      "address": "0x6d14296c706813c642045bc6102ee6e2fcaf8528",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/tx/0xf8b42b9608330a88b1b1b44ea771622d12e919d4f00c4d759c73401e9c4638e1",
+        "https://etherscan.io/block/26350416"
+      ],
+      "proof": {
+        "type": "canonical_transaction_sender",
+        "transaction_hash": "0xf8b42b9608330a88b1b1b44ea771622d12e919d4f00c4d759c73401e9c4638e1",
+        "block_number": 26350416,
+        "block_timestamp": 1793903195,
+        "note": "Inclusion proves prior use, not that this was first activity."
+      }
+    },
+    {
+      "id": "eth-015",
+      "category": "existing_eoa",
+      "label": "Observed block 26350416 sender 13",
+      "address": "0x51649cf810ea9f1f61165044b7149070c67f79c8",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/tx/0x43bfca5f83794c2cce9d3140890b41996dda8b0aadc03ef8925bf0a1f03a3f67",
+        "https://etherscan.io/block/26350416"
+      ],
+      "proof": {
+        "type": "canonical_transaction_sender",
+        "transaction_hash": "0x43bfca5f83794c2cce9d3140890b41996dda8b0aadc03ef8925bf0a1f03a3f67",
+        "block_number": 26350416,
+        "block_timestamp": 1793903195,
+        "note": "Inclusion proves prior use, not that this was first activity."
+      }
+    },
+    {
+      "id": "eth-016",
+      "category": "existing_eoa",
+      "label": "Observed block 26350416 sender 14",
+      "address": "0x07fcdbe8283f1b67cee5d5a4151cec8e8184301f",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/tx/0xa0680246ae7098cacb18162a71a1bd21a1e05e8134fd3ce125849523f59f4101",
+        "https://etherscan.io/block/26350416"
+      ],
+      "proof": {
+        "type": "canonical_transaction_sender",
+        "transaction_hash": "0xa0680246ae7098cacb18162a71a1bd21a1e05e8134fd3ce125849523f59f4101",
+        "block_number": 26350416,
+        "block_timestamp": 1793903195,
+        "note": "Inclusion proves prior use, not that this was first activity."
+      }
+    },
+    {
+      "id": "eth-017",
+      "category": "existing_eoa",
+      "label": "Observed block 26350416 sender 15",
+      "address": "0xb42f812a44c22cc6b861478900401ee759ebead6",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/tx/0x367da3cbbc76b933c7132f4d05955a1d9aba05143554ed7a951f6e19f5a93810",
+        "https://etherscan.io/block/26350416"
+      ],
+      "proof": {
+        "type": "canonical_transaction_sender",
+        "transaction_hash": "0x367da3cbbc76b933c7132f4d05955a1d9aba05143554ed7a951f6e19f5a93810",
+        "block_number": 26350416,
+        "block_timestamp": 1793903195,
+        "note": "Inclusion proves prior use, not that this was first activity."
+      }
+    },
+    {
+      "id": "eth-018",
+      "category": "existing_eoa",
+      "label": "Observed block 26350416 sender 16",
+      "address": "0x7a0e37f1543d0adb4e7ba7a27ea16b926b35a67c",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/tx/0xf27a6f83075374616d906ebe3073afcbf01be2208cf6034cfc08fcd74dfa7a11",
+        "https://etherscan.io/block/26350416"
+      ],
+      "proof": {
+        "type": "canonical_transaction_sender",
+        "transaction_hash": "0xf27a6f83075374616d906ebe3073afcbf01be2208cf6034cfc08fcd74dfa7a11",
+        "block_number": 26350416,
+        "block_timestamp": 1793903195,
+        "note": "Inclusion proves prior use, not that this was first activity."
+      }
+    },
+    {
+      "id": "eth-019",
+      "category": "existing_eoa",
+      "label": "Observed block 26350416 sender 17",
+      "address": "0xaa8ba7d4611437141192e7ceced531bc0a133efb",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/tx/0xe8b91a82d9cc730e82b0b2f47cef924433f2fb23a739bf4740013c34d9c5df3e",
+        "https://etherscan.io/block/26350416"
+      ],
+      "proof": {
+        "type": "canonical_transaction_sender",
+        "transaction_hash": "0xe8b91a82d9cc730e82b0b2f47cef924433f2fb23a739bf4740013c34d9c5df3e",
+        "block_number": 26350416,
+        "block_timestamp": 1793903195,
+        "note": "Inclusion proves prior use, not that this was first activity."
+      }
+    },
+    {
+      "id": "eth-020",
+      "category": "existing_eoa",
+      "label": "Observed block 26350416 sender 18",
+      "address": "0xd37ac934502619cee14908cef22138f4b98e06b4",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/tx/0xaf365350131819637d482836bb10c12b2c05221f73f429864421bbd9db00cc2f",
+        "https://etherscan.io/block/26350416"
+      ],
+      "proof": {
+        "type": "canonical_transaction_sender",
+        "transaction_hash": "0xaf365350131819637d482836bb10c12b2c05221f73f429864421bbd9db00cc2f",
+        "block_number": 26350416,
+        "block_timestamp": 1793903195,
+        "note": "Inclusion proves prior use, not that this was first activity."
+      }
+    },
+    {
+      "id": "eth-021",
+      "category": "existing_contract",
+      "label": "WETH9",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://developers.uniswap.org/deployments",
+        "https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+      ],
+      "proof": {
+        "type": "deployed_code",
+        "block_number": 26350422,
+        "code_bytes": 3124,
+        "note": "Nonempty code was verified via eth_getCode at the stated block; deployment age is verified separately."
+      }
+    },
+    {
+      "id": "eth-022",
+      "category": "existing_contract",
+      "label": "USDC",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://developers.circle.com/stablecoins/usdc-contract-addresses",
+        "https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+      ],
+      "proof": {
+        "type": "deployed_code",
+        "block_number": 26350422,
+        "code_bytes": 2186,
+        "note": "Nonempty code was verified via eth_getCode at the stated block; deployment age is verified separately."
+      }
+    },
+    {
+      "id": "eth-023",
+      "category": "existing_contract",
+      "label": "USDT",
+      "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://tether.to/en/supported-protocols/",
+        "https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7"
+      ],
+      "proof": {
+        "type": "deployed_code",
+        "block_number": 26350422,
+        "code_bytes": 11075,
+        "note": "Nonempty code was verified via eth_getCode at the stated block; deployment age is verified separately."
+      }
+    },
+    {
+      "id": "eth-024",
+      "category": "existing_contract",
+      "label": "DAI",
+      "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/address/0x6b175474e89094c44da98b954eedeac495271d0f"
+      ],
+      "proof": {
+        "type": "deployed_code",
+        "block_number": 26350422,
+        "code_bytes": 7904,
+        "note": "Nonempty code was verified via eth_getCode at the stated block; deployment age is verified separately."
+      }
+    },
+    {
+      "id": "eth-025",
+      "category": "existing_contract",
+      "label": "UNI",
+      "address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://developers.uniswap.org/deployments",
+        "https://etherscan.io/address/0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
+      ],
+      "proof": {
+        "type": "deployed_code",
+        "block_number": 26350422,
+        "code_bytes": 12567,
+        "note": "Nonempty code was verified via eth_getCode at the stated block; deployment age is verified separately."
+      }
+    },
+    {
+      "id": "eth-026",
+      "category": "existing_contract",
+      "label": "LINK",
+      "address": "0x514910771af9ca656af840dff83e8264ecf986ca",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://docs.chain.link/resources/link-token-contracts",
+        "https://etherscan.io/address/0x514910771af9ca656af840dff83e8264ecf986ca"
+      ],
+      "proof": {
+        "type": "deployed_code",
+        "block_number": 26350422,
+        "code_bytes": 3153,
+        "note": "Nonempty code was verified via eth_getCode at the stated block; deployment age is verified separately."
+      }
+    },
+    {
+      "id": "eth-027",
+      "category": "existing_contract",
+      "label": "WBTC",
+      "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/address/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599"
+      ],
+      "proof": {
+        "type": "deployed_code",
+        "block_number": 26350422,
+        "code_bytes": 4582,
+        "note": "Nonempty code was verified via eth_getCode at the stated block; deployment age is verified separately."
+      }
+    },
+    {
+      "id": "eth-028",
+      "category": "existing_contract",
+      "label": "AAVE",
+      "address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/address/0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9"
+      ],
+      "proof": {
+        "type": "deployed_code",
+        "block_number": 26350422,
+        "code_bytes": 2491,
+        "note": "Nonempty code was verified via eth_getCode at the stated block; deployment age is verified separately."
+      }
+    },
+    {
+      "id": "eth-029",
+      "category": "existing_contract",
+      "label": "MKR",
+      "address": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/address/0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2"
+      ],
+      "proof": {
+        "type": "deployed_code",
+        "block_number": 26350422,
+        "code_bytes": 3379,
+        "note": "Nonempty code was verified via eth_getCode at the stated block; deployment age is verified separately."
+      }
+    },
+    {
+      "id": "eth-030",
+      "category": "existing_contract",
+      "label": "COMP",
+      "address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://etherscan.io/address/0xc00e94cb662c3520282e6f5717214004a7f26888"
+      ],
+      "proof": {
+        "type": "deployed_code",
+        "block_number": 26350422,
+        "code_bytes": 6795,
+        "note": "Nonempty code was verified via eth_getCode at the stated block; deployment age is verified separately."
+      }
+    },
+    {
+      "id": "eth-031",
+      "category": "existing_contract",
+      "label": "Uniswap V2 Factory",
+      "address": "0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://developers.uniswap.org/docs/protocols/v2/deployments",
+        "https://etherscan.io/address/0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"
+      ],
+      "proof": {
+        "type": "deployed_code",
+        "block_number": 26350422,
+        "code_bytes": 13859,
+        "note": "Nonempty code was verified via eth_getCode at the stated block; deployment age is verified separately."
+      }
+    },
+    {
+      "id": "eth-032",
+      "category": "existing_contract",
+      "label": "Uniswap V2 Router02",
+      "address": "0x7a250d5630b4cf539739df2c5dacb4c659f2488d",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://developers.uniswap.org/docs/protocols/v2/deployments",
+        "https://etherscan.io/address/0x7a250d5630b4cf539739df2c5dacb4c659f2488d"
+      ],
+      "proof": {
+        "type": "deployed_code",
+        "block_number": 26350422,
+        "code_bytes": 21943,
+        "note": "Nonempty code was verified via eth_getCode at the stated block; deployment age is verified separately."
+      }
+    },
+    {
+      "id": "eth-033",
+      "category": "existing_contract",
+      "label": "Uniswap V3 Factory",
+      "address": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://developers.uniswap.org/deployments",
+        "https://etherscan.io/address/0x1f98431c8ad98523631ae4a59f267346ea31f984"
+      ],
+      "proof": {
+        "type": "deployed_code",
+        "block_number": 26350422,
+        "code_bytes": 24535,
+        "note": "Nonempty code was verified via eth_getCode at the stated block; deployment age is verified separately."
+      }
+    },
+    {
+      "id": "eth-034",
+      "category": "existing_contract",
+      "label": "Uniswap V3 SwapRouter",
+      "address": "0xe592427a0aece92de3edee1f18e0157c05861564",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://developers.uniswap.org/deployments",
+        "https://etherscan.io/address/0xe592427a0aece92de3edee1f18e0157c05861564"
+      ],
+      "proof": {
+        "type": "deployed_code",
+        "block_number": 26350422,
+        "code_bytes": 12070,
+        "note": "Nonempty code was verified via eth_getCode at the stated block; deployment age is verified separately."
+      }
+    },
+    {
+      "id": "eth-035",
+      "category": "existing_contract",
+      "label": "Uniswap SwapRouter02",
+      "address": "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://developers.uniswap.org/deployments",
+        "https://etherscan.io/address/0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45"
+      ],
+      "proof": {
+        "type": "deployed_code",
+        "block_number": 26350422,
+        "code_bytes": 24497,
+        "note": "Nonempty code was verified via eth_getCode at the stated block; deployment age is verified separately."
+      }
+    },
+    {
+      "id": "eth-036",
+      "category": "existing_contract",
+      "label": "Uniswap V3 NonfungiblePositionManager",
+      "address": "0xc36442b4a4522e871399cd717abdd847ab11fe88",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://developers.uniswap.org/deployments",
+        "https://etherscan.io/address/0xc36442b4a4522e871399cd717abdd847ab11fe88"
+      ],
+      "proof": {
+        "type": "deployed_code",
+        "block_number": 26350422,
+        "code_bytes": 24384,
+        "note": "Nonempty code was verified via eth_getCode at the stated block; deployment age is verified separately."
+      }
+    },
+    {
+      "id": "eth-037",
+      "category": "existing_contract",
+      "label": "Permit2",
+      "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://developers.uniswap.org/deployments",
+        "https://etherscan.io/address/0x000000000022d473030f116ddee9f6b43ac78ba3"
+      ],
+      "proof": {
+        "type": "deployed_code",
+        "block_number": 26350422,
+        "code_bytes": 9152,
+        "note": "Nonempty code was verified via eth_getCode at the stated block; deployment age is verified separately."
+      }
+    },
+    {
+      "id": "eth-038",
+      "category": "existing_contract",
+      "label": "ENS Registry",
+      "address": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://docs.ens.domains/learn/deployments/",
+        "https://etherscan.io/address/0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e"
+      ],
+      "proof": {
+        "type": "deployed_code",
+        "block_number": 26350422,
+        "code_bytes": 5346,
+        "note": "Nonempty code was verified via eth_getCode at the stated block; deployment age is verified separately."
+      }
+    },
+    {
+      "id": "eth-039",
+      "category": "existing_contract",
+      "label": "ENS BaseRegistrarImplementation",
+      "address": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://docs.ens.domains/learn/deployments/",
+        "https://etherscan.io/address/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85"
+      ],
+      "proof": {
+        "type": "deployed_code",
+        "block_number": 26350422,
+        "code_bytes": 10542,
+        "note": "Nonempty code was verified via eth_getCode at the stated block; deployment age is verified separately."
+      }
+    },
+    {
+      "id": "eth-040",
+      "category": "existing_contract",
+      "label": "Beacon deposit contract",
+      "address": "0x00000000219ab540356cbb839cbe05303d7705fa",
+      "expected_valid_format": true,
+      "expected_has_appeared": true,
+      "expected_new_address": false,
+      "ground_truth_level": "known_onchain",
+      "reference_urls": [
+        "https://ethereum.org/staking/deposit-contract/",
+        "https://etherscan.io/address/0x00000000219ab540356cbb839cbe05303d7705fa"
+      ],
+      "proof": {
+        "type": "deployed_code",
+        "block_number": 26350422,
+        "code_bytes": 6358,
+        "note": "Nonempty code was verified via eth_getCode at the stated block; deployment age is verified separately."
+      }
+    },
+    {
+      "id": "eth-041",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 01",
+      "address": "0x941c9014c10ccf1f90228453b75f6c9f66ab3237",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:0",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-042",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 02",
+      "address": "0xd5ff6dcf5153245be026debac13e4516a91481a7",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:1",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-043",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 03",
+      "address": "0x6d8abcc3de765f917d8a0d61a25bfaf84015fab6",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:2",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-044",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 04",
+      "address": "0x1abdd483a6bedb4a6e8c56d7cc21a472bd322947",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:3",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-045",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 05",
+      "address": "0x6d2b789677686865ffe5f493e7737a3953763657",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:4",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-046",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 06",
+      "address": "0x68a16f5a188af63ff96b847319a37a18a42471d3",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:5",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-047",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 07",
+      "address": "0x0d9f7e0f240d000303b18efdf7cbd7c41049527e",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:6",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-048",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 08",
+      "address": "0xe4ae5f19b13d1b383cb6c950d0dc5c4206402b77",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:7",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-049",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 09",
+      "address": "0x0ec23ed32cc5d9663b4f7052548d3c37264efd4f",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:8",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-050",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 10",
+      "address": "0x55c30b5034ce3e77c6c64eb42946a112287b6a28",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:9",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-051",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 11",
+      "address": "0xc09cc5c8b959b53d56cab2c78adb00e469490fde",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:10",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-052",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 12",
+      "address": "0x34d2ded544ec43d3f76262f346326d9c73c637db",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:11",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-053",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 13",
+      "address": "0xa7a024d96066322cd9ef0eb90277263fe1922948",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:12",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-054",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 14",
+      "address": "0xb9e83f94ea3768822f32d529fe98ebf911f09f9f",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:13",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-055",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 15",
+      "address": "0xc45a2acbbdec947e5b16a5102098854d516e88cb",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:14",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-056",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 16",
+      "address": "0x91fc52dbdacecf60132a46a0f2e72015d37e9e6c",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:15",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-057",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 17",
+      "address": "0xe63a40cfee31a745de2761daf89905d1c823258a",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:16",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-058",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 18",
+      "address": "0xf3c0fb4452bc1ff845f23443f5e5143a649f186f",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:17",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-059",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 19",
+      "address": "0x4031d3cdd02f329e9af1b494e78270255b724ada",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:18",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-060",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 20",
+      "address": "0x15dd314a2763474e0d5768c82a88aa686c38f5ae",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:19",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-061",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 21",
+      "address": "0x81328784d16a252808fab1b17ca695151eb79729",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:20",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-062",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 22",
+      "address": "0x5325fa1c98d091c07d63aa31cfa6abe8b2cb8343",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:21",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-063",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 23",
+      "address": "0xc29cbe4dcc1d39b7d18c0c16a6cf43b47e38ba51",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:22",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-064",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 24",
+      "address": "0x2e0fe7a6e908ad05efe54e954a70c022cadd1467",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:23",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-065",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 25",
+      "address": "0xadc677dc2cdad427d17b921fd158fc454860bf5d",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:24",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-066",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 26",
+      "address": "0x0b2a274c002b9469cd112ee4842ecaa347e61cb7",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:25",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-067",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 27",
+      "address": "0xe3685a40fa74deba76da12d2a3b914cd677f7ed7",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:26",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-068",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 28",
+      "address": "0x8af22802dfd21cb8f21736d203a3a142b9edf1ff",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:27",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-069",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 29",
+      "address": "0x9a33fc9010949bdef4fce8285ce842174592fbc4",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:28",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-070",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 30",
+      "address": "0xe1993bd0dc5ba0e38fd4bd6e0907061e96ebaf99",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:29",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-071",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 31",
+      "address": "0x48577c94da33e60423f741022e4842d65f5e4954",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:30",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-072",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 32",
+      "address": "0x614870240de6379b49a00dd45f3c384939d36964",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:31",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-073",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 33",
+      "address": "0xdcb2afaf2cb6e4f35807e2c996af8f9857518062",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:32",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-074",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 34",
+      "address": "0xbbe35e12f8779e9162dc31fafe1b12f0a7b12c94",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:33",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-075",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 35",
+      "address": "0xf8fd1362b19ba5dc5ac2506d9c0e78ff4df6daf7",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:34",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-076",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 36",
+      "address": "0x084c2026aef4c3ba51736174a1d4f5272f516e90",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:35",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-077",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 37",
+      "address": "0xcac36747d1cd34199cab69721cb6163b384ffe33",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:36",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-078",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 38",
+      "address": "0x8acd8c981d5e97fb3a1c03afe34548fb3cc6e61d",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:37",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-079",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 39",
+      "address": "0xc931ebb8f72fb21d9cc1f72ac847396fcd3e0721",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:38",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-080",
+      "category": "generated_valid",
+      "label": "Generated unobserved candidate 40",
+      "address": "0x5d736d69aaf0f48fbe1f4129e2b476991b0ef36d",
+      "expected_valid_format": true,
+      "expected_has_appeared": false,
+      "expected_new_address": true,
+      "ground_truth_level": "synthetic_unobserved_candidate",
+      "reference_urls": [
+        "https://ethereum.org/en/developers/docs/accounts/"
+      ],
+      "proof": {
+        "type": "deterministic_synthetic_address",
+        "seed": "eth-wallet-benchmark-2026-11-05:39",
+        "note": "No key was generated. Expected absence is a synthetic test expectation, not proof of never having appeared."
+      }
+    },
+    {
+      "id": "eth-081",
+      "category": "malformed",
+      "label": "Empty input",
+      "address": "",
+      "expected_valid_format": false,
+      "expected_has_appeared": null,
+      "expected_new_address": null,
+      "ground_truth_level": "syntax",
+      "reference_urls": [
+        "https://eips.ethereum.org/EIPS/eip-55"
+      ]
+    },
+    {
+      "id": "eth-082",
+      "category": "malformed",
+      "label": "Prefix only",
+      "address": "0x",
+      "expected_valid_format": false,
+      "expected_has_appeared": null,
+      "expected_new_address": null,
+      "ground_truth_level": "syntax",
+      "reference_urls": [
+        "https://eips.ethereum.org/EIPS/eip-55"
+      ]
+    },
+    {
+      "id": "eth-083",
+      "category": "malformed",
+      "label": "Far too short",
+      "address": "0x1234",
+      "expected_valid_format": false,
+      "expected_has_appeared": null,
+      "expected_new_address": null,
+      "ground_truth_level": "syntax",
+      "reference_urls": [
+        "https://eips.ethereum.org/EIPS/eip-55"
+      ]
+    },
+    {
+      "id": "eth-084",
+      "category": "malformed",
+      "label": "39 hex digits",
+      "address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "expected_valid_format": false,
+      "expected_has_appeared": null,
+      "expected_new_address": null,
+      "ground_truth_level": "syntax",
+      "reference_urls": [
+        "https://eips.ethereum.org/EIPS/eip-55"
+      ]
+    },
+    {
+      "id": "eth-085",
+      "category": "malformed",
+      "label": "41 hex digits",
+      "address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "expected_valid_format": false,
+      "expected_has_appeared": null,
+      "expected_new_address": null,
+      "ground_truth_level": "syntax",
+      "reference_urls": [
+        "https://eips.ethereum.org/EIPS/eip-55"
+      ]
+    },
+    {
+      "id": "eth-086",
+      "category": "malformed",
+      "label": "Missing prefix",
+      "address": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "expected_valid_format": false,
+      "expected_has_appeared": null,
+      "expected_new_address": null,
+      "ground_truth_level": "syntax",
+      "reference_urls": [
+        "https://eips.ethereum.org/EIPS/eip-55"
+      ]
+    },
+    {
+      "id": "eth-087",
+      "category": "malformed",
+      "label": "Uppercase X prefix",
+      "address": "0Xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "expected_valid_format": false,
+      "expected_has_appeared": null,
+      "expected_new_address": null,
+      "ground_truth_level": "syntax",
+      "reference_urls": [
+        "https://eips.ethereum.org/EIPS/eip-55"
+      ]
+    },
+    {
+      "id": "eth-088",
+      "category": "malformed",
+      "label": "All nonhex digits",
+      "address": "0xgggggggggggggggggggggggggggggggggggggggg",
+      "expected_valid_format": false,
+      "expected_has_appeared": null,
+      "expected_new_address": null,
+      "ground_truth_level": "syntax",
+      "reference_urls": [
+        "https://eips.ethereum.org/EIPS/eip-55"
+      ]
+    },
+    {
+      "id": "eth-089",
+      "category": "malformed",
+      "label": "Single nonhex suffix",
+      "address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaz",
+      "expected_valid_format": false,
+      "expected_has_appeared": null,
+      "expected_new_address": null,
+      "ground_truth_level": "syntax",
+      "reference_urls": [
+        "https://eips.ethereum.org/EIPS/eip-55"
+      ]
+    },
+    {
+      "id": "eth-090",
+      "category": "malformed",
+      "label": "Leading space",
+      "address": " 0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "expected_valid_format": false,
+      "expected_has_appeared": null,
+      "expected_new_address": null,
+      "ground_truth_level": "syntax",
+      "reference_urls": [
+        "https://eips.ethereum.org/EIPS/eip-55"
+      ]
+    },
+    {
+      "id": "eth-091",
+      "category": "malformed",
+      "label": "Trailing space",
+      "address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa ",
+      "expected_valid_format": false,
+      "expected_has_appeared": null,
+      "expected_new_address": null,
+      "ground_truth_level": "syntax",
+      "reference_urls": [
+        "https://eips.ethereum.org/EIPS/eip-55"
+      ]
+    },
+    {
+      "id": "eth-092",
+      "category": "malformed",
+      "label": "Trailing newline",
+      "address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "expected_valid_format": false,
+      "expected_has_appeared": null,
+      "expected_new_address": null,
+      "ground_truth_level": "syntax",
+      "reference_urls": [
+        "https://eips.ethereum.org/EIPS/eip-55"
+      ]
+    },
+    {
+      "id": "eth-093",
+      "category": "malformed",
+      "label": "Leading tab",
+      "address": "\t0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "expected_valid_format": false,
+      "expected_has_appeared": null,
+      "expected_new_address": null,
+      "ground_truth_level": "syntax",
+      "reference_urls": [
+        "https://eips.ethereum.org/EIPS/eip-55"
+      ]
+    },
+    {
+      "id": "eth-094",
+      "category": "malformed",
+      "label": "Full-width Unicode digits",
+      "address": "0xＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ",
+      "expected_valid_format": false,
+      "expected_has_appeared": null,
+      "expected_new_address": null,
+      "ground_truth_level": "syntax",
+      "reference_urls": [
+        "https://eips.ethereum.org/EIPS/eip-55"
+      ]
+    },
+    {
+      "id": "eth-095",
+      "category": "malformed",
+      "label": "Emoji suffix",
+      "address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa😀",
+      "expected_valid_format": false,
+      "expected_has_appeared": null,
+      "expected_new_address": null,
+      "ground_truth_level": "syntax",
+      "reference_urls": [
+        "https://eips.ethereum.org/EIPS/eip-55"
+      ]
+    },
+    {
+      "id": "eth-096",
+      "category": "malformed",
+      "label": "Cyrillic x prefix",
+      "address": "0хaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "expected_valid_format": false,
+      "expected_has_appeared": null,
+      "expected_new_address": null,
+      "ground_truth_level": "syntax",
+      "reference_urls": [
+        "https://eips.ethereum.org/EIPS/eip-55"
+      ]
+    },
+    {
+      "id": "eth-097",
+      "category": "malformed",
+      "label": "ENS name",
+      "address": "vitalik.eth",
+      "expected_valid_format": false,
+      "expected_has_appeared": null,
+      "expected_new_address": null,
+      "ground_truth_level": "syntax",
+      "reference_urls": [
+        "https://eips.ethereum.org/EIPS/eip-55"
+      ]
+    },
+    {
+      "id": "eth-098",
+      "category": "malformed",
+      "label": "Explorer URL instead of address",
+      "address": "https://etherscan.io/address/0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "expected_valid_format": false,
+      "expected_has_appeared": null,
+      "expected_new_address": null,
+      "ground_truth_level": "syntax",
+      "reference_urls": [
+        "https://eips.ethereum.org/EIPS/eip-55"
+      ]
+    },
+    {
+      "id": "eth-099",
+      "category": "malformed",
+      "label": "Embedded underscore",
+      "address": "0xaaaaaaaaaaaaaaaaaaaa_aaaaaaaaaaaaaaaaaaa",
+      "expected_valid_format": false,
+      "expected_has_appeared": null,
+      "expected_new_address": null,
+      "ground_truth_level": "syntax",
+      "reference_urls": [
+        "https://eips.ethereum.org/EIPS/eip-55"
+      ]
+    },
+    {
+      "id": "eth-100",
+      "category": "malformed",
+      "label": "Embedded NUL",
+      "address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\u0000",
+      "expected_valid_format": false,
+      "expected_has_appeared": null,
+      "expected_new_address": null,
+      "ground_truth_level": "syntax",
+      "reference_urls": [
+        "https://eips.ethereum.org/EIPS/eip-55"
+      ]
+    }
+  ]
+}

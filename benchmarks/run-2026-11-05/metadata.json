@@ -1,0 +1,55 @@
+{
+  "started_at": "2026-11-05T18:31:00.046106Z",
+  "dataset_sha256": "72d1a2fa26ad76e467e771e60c448aae16b49d319d27243278bdf751fd46dee0",
+  "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+  "cases": 100,
+  "seed": 20261105,
+  "concurrency": 1,
+  "upstream_timeout_seconds": 5,
+  "inter_uncached_request_pause_seconds": 0.3,
+  "additional_cache_hit_passes": 3,
+  "provider_order": [
+    "publicnode",
+    "1rpc",
+    "blockpi"
+  ],
+  "paid_providers_configured": [],
+  "production_sha256": {
+    "eth_wallet_check/__init__.py": "4c32b9edf6b64abb522a8747adc75c6d6a1423f545970ade5fa1e1a91ce55cdd",
+    "eth_wallet_check/__main__.py": "c1fd3b4094bc6ec723fb0f2f6da013faf21b4047f04f9adb3f59c3400fda4818",
+    "eth_wallet_check/api.py": "d2457fc7402a6067ffce2a55ffb348c55724d7a120b451088c166896faf64aaa",
+    "eth_wallet_check/cache.py": "29368aac3fa18344ee25232bf4d4e3e640bad19f696e97cbb3996f8ac8be1cdf",
+    "eth_wallet_check/config.py": "e5b6b5c4c56a0f7e87a2815b4e865758788fe2ed719ce9da2b6b270718df01e2",
+    "eth_wallet_check/history.py": "f6351657b947d17dab9005e6389f15754d323d16a917edeca5a775a1519a48df",
+    "eth_wallet_check/http.py": "ef86c7cdc23aba0c038fb6fcfcd7606498dedfede745c92f5699cc0418f26da1",
+    "eth_wallet_check/rpc.py": "bf8c708edf5f2c6a1410a829b07e8e8561fa38bda36d1d9e7b22a41fa739967a",
+    "eth_wallet_check/server.py": "f0f94a0fa899e7e82db13c750b5fa67e92cb95f55de02b44c446b12febfc08ee",
+    "eth_wallet_check/service.py": "1888f6ef97fa9196cab438085ca1b1b75656df9c85fb436fbcdcfc1f4ea8de7e",
+    "check_eth_wallet.py": "159f7fea5b88a421e7b9c09d688658ad29fe2ddbc0d5ca70485be299f67027b0",
+    "openapi.json": "0ab40926a1a5412968e4e922c5ec0449228ecd0f767e29a2c640f3bffa05a753"
+  },
+  "cohorts": {
+    "existing_eoa": 20,
+    "existing_contract": 20,
+    "generated_valid": 40,
+    "malformed": 20
+  },
+  "notes": [
+    "Cold means empty application cache, not cleared upstream caches.",
+    "Real HTTP requests use the production handler and checker with an isolated SQLite file.",
+    "Benchmarked production source is unchanged throughout the run.",
+    "Detailed and basic requests use different application cache keys.",
+    "Additional warm passes exclude unknown responses because unknown results are not cacheable."
+  ],
+  "local_api": "http://127.0.0.1:53197",
+  "finished_at": "2026-11-05T18:46:47.532468Z",
+  "total_api_requests": 1000,
+  "total_upstream_http_requests": 1282,
+  "total_rpc_methods": 800,
+  "sources_http_requests": {
+    "publicnode": 480,
+    "blockscout": 402,
+    "routescan": 400
+  },
+  "production_unchanged": true
+}

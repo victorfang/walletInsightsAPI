@@ -1,0 +1,372 @@
+{
+  "metadata": {
+    "started_at": "2026-11-05T20:07:13.595126Z",
+    "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+    "seed": 20261105,
+    "pause_seconds": 0.15,
+    "dataset_sha256": "72d1a2fa26ad76e467e771e60c448aae16b49d319d27243278bdf751fd46dee0",
+    "paid_configured": [],
+    "coverage": "ethereum",
+    "namespace": "evm:1:v1",
+    "runtime_sha256": {
+      "wallet_age_days/__init__.py": "93a694b11af7bafd1894b33eaff86e8c49ec4878ab40d7c9d6738ef802bfabb8",
+      "wallet_age_days/__main__.py": "e27ecec7d9ed985a44fcf07477f56e3f1e24e0bd2b240d655d4447076a097223",
+      "wallet_age_days/cli.py": "9c8f6436121a3751bfc9a7bee20aba2ca5e67cc0cd62cc4c223314a08f4dd446",
+      "wallet_age_days/factory.py": "d85757ebc57e62c4f5274706f197df1ca34ea45429fc6119bc503b3f436e2910",
+      "wallet_age_days/providers.py": "7aa3e524fd4f1dceffef4916780523e5f72521f19772981a29205fe4caf15d16",
+      "wallet_age_days/server.py": "8074f1ffecb69ca1ec04b1e2b6e9aa558d2746597f61e733e746b4800bb33027",
+      "wallet_age_days/service.py": "e630e4b82a3a618f791334a76b26797b4b2149a301cc3af6dd11522cc2d5bccf",
+      "wallet_age_days/store.py": "70f2784129625282760f032c8acb038d9eaf679fdd585da04a6169aacb41908f",
+      "eth_wallet_check/config.py": "e5b6b5c4c56a0f7e87a2815b4e865758788fe2ed719ce9da2b6b270718df01e2",
+      "eth_wallet_check/http.py": "a6ed0053e25851ac3802be11c12d27a8f33fd6c84ba15513af9afb64d6fd07c6",
+      "eth_wallet_check/rpc.py": "bf8c708edf5f2c6a1410a829b07e8e8561fa38bda36d1d9e7b22a41fa739967a",
+      "eth_wallet_check/deadline.py": "0d15093bfccf8d8817803e8d41b263b8976e4871e1feed45104ef857d5c4c293"
+    },
+    "initial_cache_rows": 0,
+    "pre_request_misses": 80,
+    "loop_wall_seconds": 85.92872483300744,
+    "finished_at": "2026-11-05T20:08:39.800179Z",
+    "final_cache_rows": 40,
+    "api_seconds": 69.40275332983583,
+    "runtime_unchanged": true,
+    "unfinished_http_calls": 0,
+    "unfinished_jobs": 0,
+    "forbidden_methods": []
+  },
+  "cohorts": {
+    "overall_100": {
+      "inputs": 100,
+      "latency_seconds": {
+        "n": 100,
+        "min": 0.0013481670175679028,
+        "mean": 0.6940275332983583,
+        "median": 0.472215937479632,
+        "p90": 1.5090055000095164,
+        "p95": 1.7448959478613688,
+        "p99": 1.8652451263467087,
+        "max": 1.9461076669977047
+      },
+      "http_statuses": {
+        "400": 20,
+        "200": 40,
+        "503": 40
+      },
+      "integer_ages": 40,
+      "within_3_seconds": 100,
+      "transport_errors": 0,
+      "cache_hits": 0
+    },
+    "valid_uncached_80": {
+      "inputs": 80,
+      "latency_seconds": {
+        "n": 80,
+        "min": 0.30897000001277775,
+        "mean": 0.8660325098375324,
+        "median": 0.8420796669961419,
+        "p90": 1.5773055625206327,
+        "p95": 1.7527786517573987,
+        "p99": 1.8815809931448888,
+        "max": 1.9461076669977047
+      },
+      "http_statuses": {
+        "200": 40,
+        "503": 40
+      },
+      "integer_ages": 40,
+      "within_3_seconds": 80,
+      "transport_errors": 0,
+      "cache_hits": 0
+    },
+    "known_used_40": {
+      "inputs": 40,
+      "latency_seconds": {
+        "n": 40,
+        "min": 0.8283194589894265,
+        "mean": 1.3207460926292698,
+        "median": 1.3740738125052303,
+        "p90": 1.7539054705062882,
+        "p95": 1.8003599368443246,
+        "p99": 1.9142527267412515,
+        "max": 1.9461076669977047
+      },
+      "http_statuses": {
+        "200": 40
+      },
+      "integer_ages": 40,
+      "within_3_seconds": 40,
+      "transport_errors": 0,
+      "cache_hits": 0
+    },
+    "successful_age_lookups": {
+      "inputs": 40,
+      "latency_seconds": {
+        "n": 40,
+        "min": 0.8283194589894265,
+        "mean": 1.3207460926292698,
+        "median": 1.3740738125052303,
+        "p90": 1.7539054705062882,
+        "p95": 1.8003599368443246,
+        "p99": 1.9142527267412515,
+        "max": 1.9461076669977047
+      },
+      "http_statuses": {
+        "200": 40
+      },
+      "integer_ages": 40,
+      "within_3_seconds": 40,
+      "transport_errors": 0,
+      "cache_hits": 0
+    },
+    "synthetic_40": {
+      "inputs": 40,
+      "latency_seconds": {
+        "n": 40,
+        "min": 0.30897000001277775,
+        "mean": 0.41131892704579515,
+        "median": 0.34473756249644794,
+        "p90": 0.564523183577694,
+        "p95": 0.629804454158875,
+        "p99": 0.7979625311132985,
+        "max": 0.8746101249707863
+      },
+      "http_statuses": {
+        "503": 40
+      },
+      "integer_ages": 0,
+      "within_3_seconds": 40,
+      "transport_errors": 0,
+      "cache_hits": 0
+    },
+    "malformed_20": {
+      "inputs": 20,
+      "latency_seconds": {
+        "n": 20,
+        "min": 0.0013481670175679028,
+        "mean": 0.006007627141661942,
+        "median": 0.005021854478400201,
+        "p90": 0.007382374710869053,
+        "p95": 0.014082250013598249,
+        "p99": 0.022206649988074773,
+        "max": 0.024237749981693923
+      },
+      "http_statuses": {
+        "400": 20
+      },
+      "integer_ages": 0,
+      "within_3_seconds": 20,
+      "transport_errors": 0,
+      "cache_hits": 0
+    }
+  },
+  "deployment_controls": [
+    {
+      "id": "eth-021",
+      "label": "WETH9",
+      "reference_epoch": 1513077455,
+      "epoch": 1513077455,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-022",
+      "label": "USDC",
+      "reference_epoch": 1533324504,
+      "epoch": 1533324504,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-023",
+      "label": "USDT",
+      "reference_epoch": 1511829681,
+      "epoch": 1511829681,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-024",
+      "label": "DAI",
+      "reference_epoch": 1573672677,
+      "epoch": 1573672677,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-025",
+      "label": "UNI",
+      "reference_epoch": 1600107086,
+      "epoch": 1600107086,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-026",
+      "label": "LINK",
+      "reference_epoch": 1505597189,
+      "epoch": 1505597189,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-027",
+      "label": "WBTC",
+      "reference_epoch": 1543095952,
+      "epoch": 1543095952,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-028",
+      "label": "AAVE",
+      "reference_epoch": 1600970788,
+      "epoch": 1600970788,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-029",
+      "label": "MKR",
+      "reference_epoch": 1511634257,
+      "epoch": 1511634257,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-030",
+      "label": "COMP",
+      "reference_epoch": 1583280535,
+      "epoch": 1583280535,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-031",
+      "label": "Uniswap V2 Factory",
+      "reference_epoch": 1588610042,
+      "epoch": 1588610042,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-032",
+      "label": "Uniswap V2 Router02",
+      "reference_epoch": 1591388241,
+      "epoch": 1591388241,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-033",
+      "label": "Uniswap V3 Factory",
+      "reference_epoch": 1620156420,
+      "epoch": 1620156420,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-034",
+      "label": "Uniswap V3 SwapRouter",
+      "reference_epoch": 1620156641,
+      "epoch": 1620156641,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-035",
+      "label": "Uniswap SwapRouter02",
+      "reference_epoch": 1639503446,
+      "epoch": 1639503446,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-036",
+      "label": "Uniswap V3 NonfungiblePositionManager",
+      "reference_epoch": 1620156913,
+      "epoch": 1620156913,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-037",
+      "label": "Permit2",
+      "reference_epoch": 1668647879,
+      "epoch": 1668647879,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-038",
+      "label": "ENS Registry",
+      "reference_epoch": 1580344632,
+      "epoch": 1580344632,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-039",
+      "label": "ENS BaseRegistrarImplementation",
+      "reference_epoch": 1580345034,
+      "epoch": 1580345034,
+      "difference_seconds": 0
+    },
+    {
+      "id": "eth-040",
+      "label": "Beacon deposit contract",
+      "reference_epoch": 1602667372,
+      "epoch": 1602667372,
+      "difference_seconds": 0
+    }
+  ],
+  "deployment_agreement": {
+    "eligible": 20,
+    "exact": 20,
+    "missing": 0,
+    "later": 0,
+    "earlier": 0
+  },
+  "syntax": {
+    "valid_inputs": 80,
+    "valid_accepted": 80,
+    "malformed_inputs": 20,
+    "malformed_correct": 20,
+    "malformed_upstream_calls": 0
+  },
+  "age_formula": {
+    "successful": 40,
+    "correct": 40
+  },
+  "providers": {
+    "1rpc": {
+      "http_client_attempts": 30,
+      "json_returned": 30,
+      "errors": {},
+      "locally_expired_attempts": 0
+    },
+    "blockcypher": {
+      "http_client_attempts": 80,
+      "json_returned": 15,
+      "errors": {
+        "http_429": 65
+      },
+      "locally_expired_attempts": 0
+    },
+    "blockpi": {
+      "http_client_attempts": 60,
+      "json_returned": 60,
+      "errors": {},
+      "locally_expired_attempts": 0
+    },
+    "blockscout": {
+      "http_client_attempts": 160,
+      "json_returned": 0,
+      "errors": {
+        "http_429": 160
+      },
+      "locally_expired_attempts": 0
+    },
+    "publicnode": {
+      "http_client_attempts": 98,
+      "json_returned": 98,
+      "errors": {},
+      "locally_expired_attempts": 0
+    },
+    "routescan": {
+      "http_client_attempts": 160,
+      "json_returned": 160,
+      "errors": {},
+      "locally_expired_attempts": 0
+    }
+  },
+  "source_job_states": {
+    "verified_observation": 61,
+    "empty": 106,
+    "error": 233
+  },
+  "verified_observations_by_index": {
+    "routescan": 61
+  },
+  "synthetic_zero_ages": 0
+}

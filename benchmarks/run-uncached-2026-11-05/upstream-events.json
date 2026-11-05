@@ -1,0 +1,7205 @@
+[
+  {
+    "case_id": "eth-011",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.2507360829622485
+  },
+  {
+    "case_id": "eth-011",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.2341640410013497
+  },
+  {
+    "case_id": "eth-011",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.37596816598670557
+  },
+  {
+    "case_id": "eth-011",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3774798749946058
+  },
+  {
+    "case_id": "eth-011",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.22296512499451637
+  },
+  {
+    "case_id": "eth-011",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.43762854201486334
+  },
+  {
+    "case_id": "eth-011",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.30147066700737923
+  },
+  {
+    "case_id": "eth-025",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.20464491698658094
+  },
+  {
+    "case_id": "eth-025",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.21387137495912611
+  },
+  {
+    "case_id": "eth-025",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3159079169854522
+  },
+  {
+    "case_id": "eth-025",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.311176749994047
+  },
+  {
+    "case_id": "eth-025",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.61711762502091
+  },
+  {
+    "case_id": "eth-025",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.34692816698225215
+  },
+  {
+    "case_id": "eth-025",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3864822079776786
+  },
+  {
+    "case_id": "eth-025",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3804404999827966
+  },
+  {
+    "case_id": "eth-025",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.4109830830129795
+  },
+  {
+    "case_id": "eth-048",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.17619154101703316
+  },
+  {
+    "case_id": "eth-048",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19076808303361759
+  },
+  {
+    "case_id": "eth-048",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3012386250193231
+  },
+  {
+    "case_id": "eth-048",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.8694090829812922
+  },
+  {
+    "case_id": "eth-048",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.5081254579708911
+  },
+  {
+    "case_id": "eth-051",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.17171762499492615
+  },
+  {
+    "case_id": "eth-051",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18064354202942923
+  },
+  {
+    "case_id": "eth-051",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.30638895800802857
+  },
+  {
+    "case_id": "eth-051",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.31999333400744945
+  },
+  {
+    "case_id": "eth-051",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.45074545801617205
+  },
+  {
+    "case_id": "eth-012",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.21987870801240206
+  },
+  {
+    "case_id": "eth-012",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.2219073330052197
+  },
+  {
+    "case_id": "eth-012",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3358115839655511
+  },
+  {
+    "case_id": "eth-012",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3375964160077274
+  },
+  {
+    "case_id": "eth-012",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.506064209039323
+  },
+  {
+    "case_id": "eth-012",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.35007979202782735
+  },
+  {
+    "case_id": "eth-012",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3375005410052836
+  },
+  {
+    "case_id": "eth-065",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18817633303115144
+  },
+  {
+    "case_id": "eth-065",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18293929198989645
+  },
+  {
+    "case_id": "eth-065",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.31507962505565956
+  },
+  {
+    "case_id": "eth-065",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3477395420195535
+  },
+  {
+    "case_id": "eth-065",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.17212020803708583
+  },
+  {
+    "case_id": "eth-008",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1783851669752039
+  },
+  {
+    "case_id": "eth-008",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18381575000239536
+  },
+  {
+    "case_id": "eth-008",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.39302362501621246
+  },
+  {
+    "case_id": "eth-008",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3163724999758415
+  },
+  {
+    "case_id": "eth-008",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.1808552909642458
+  },
+  {
+    "case_id": "eth-008",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.22601095802383497
+  },
+  {
+    "case_id": "eth-008",
+    "job": "routescan_normal",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.29343799996422604
+  },
+  {
+    "case_id": "eth-008",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.49842575000366196
+  },
+  {
+    "case_id": "eth-008",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3648648749804124
+  },
+  {
+    "case_id": "eth-077",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18362575001083314
+  },
+  {
+    "case_id": "eth-077",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.2115431659622118
+  },
+  {
+    "case_id": "eth-077",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.32115666702156886
+  },
+  {
+    "case_id": "eth-077",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3260537920286879
+  },
+  {
+    "case_id": "eth-077",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.45646287500858307
+  },
+  {
+    "case_id": "eth-038",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19530033296905458
+  },
+  {
+    "case_id": "eth-038",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1750330840004608
+  },
+  {
+    "case_id": "eth-038",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3187450840487145
+  },
+  {
+    "case_id": "eth-038",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3044417080236599
+  },
+  {
+    "case_id": "eth-038",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.16745458298828453
+  },
+  {
+    "case_id": "eth-038",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.41062074998626485
+  },
+  {
+    "case_id": "eth-038",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3635183330043219
+  },
+  {
+    "case_id": "eth-038",
+    "job": "routescan_normal",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.2317078749765642
+  },
+  {
+    "case_id": "eth-038",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3620206670020707
+  },
+  {
+    "case_id": "eth-038",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3458341250079684
+  },
+  {
+    "case_id": "eth-038",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.34346883301623166
+  },
+  {
+    "case_id": "eth-050",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.23449579201405868
+  },
+  {
+    "case_id": "eth-050",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.21590025001205504
+  },
+  {
+    "case_id": "eth-050",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3115694170119241
+  },
+  {
+    "case_id": "eth-050",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3261495410115458
+  },
+  {
+    "case_id": "eth-050",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.5141210410511121
+  },
+  {
+    "case_id": "eth-036",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18655725003918633
+  },
+  {
+    "case_id": "eth-036",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18708658398827538
+  },
+  {
+    "case_id": "eth-036",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3086162080289796
+  },
+  {
+    "case_id": "eth-036",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.30140491598285735
+  },
+  {
+    "case_id": "eth-036",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.1652391660027206
+  },
+  {
+    "case_id": "eth-036",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3398606249829754
+  },
+  {
+    "case_id": "eth-036",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.22801920800702646
+  },
+  {
+    "case_id": "eth-036",
+    "job": "routescan_creation",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.23808358400128782
+  },
+  {
+    "case_id": "eth-036",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.33518304099561647
+  },
+  {
+    "case_id": "eth-036",
+    "job": "routescan_creation",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3437410829938017
+  },
+  {
+    "case_id": "eth-036",
+    "job": "routescan_creation",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.35702791600488126
+  },
+  {
+    "case_id": "eth-070",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18641374999424443
+  },
+  {
+    "case_id": "eth-070",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1812708749785088
+  },
+  {
+    "case_id": "eth-070",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3198166670044884
+  },
+  {
+    "case_id": "eth-070",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3165252920007333
+  },
+  {
+    "case_id": "eth-070",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.16789499996230006
+  },
+  {
+    "case_id": "eth-001",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.16897408402292058
+  },
+  {
+    "case_id": "eth-001",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.17092008399777114
+  },
+  {
+    "case_id": "eth-001",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.298655916005373
+  },
+  {
+    "case_id": "eth-001",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.325059249997139
+  },
+  {
+    "case_id": "eth-001",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.15656645904527977
+  },
+  {
+    "case_id": "eth-001",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.4601070419885218
+  },
+  {
+    "case_id": "eth-001",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.2799849169678055
+  },
+  {
+    "case_id": "eth-001",
+    "job": "routescan_normal",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.23786508303601295
+  },
+  {
+    "case_id": "eth-001",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3371032499708235
+  },
+  {
+    "case_id": "eth-001",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3695102500496432
+  },
+  {
+    "case_id": "eth-014",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18018274998757988
+  },
+  {
+    "case_id": "eth-014",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.22686212498228997
+  },
+  {
+    "case_id": "eth-014",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.31562204100191593
+  },
+  {
+    "case_id": "eth-014",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3134436249965802
+  },
+  {
+    "case_id": "eth-014",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.1798596250009723
+  },
+  {
+    "case_id": "eth-014",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3275956659927033
+  },
+  {
+    "case_id": "eth-014",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3073189159622416
+  },
+  {
+    "case_id": "eth-057",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1757183749577962
+  },
+  {
+    "case_id": "eth-057",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1816476669628173
+  },
+  {
+    "case_id": "eth-057",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3284825829905458
+  },
+  {
+    "case_id": "eth-057",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.30049812502693385
+  },
+  {
+    "case_id": "eth-057",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.16597629198804498
+  },
+  {
+    "case_id": "eth-052",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.17631558305583894
+  },
+  {
+    "case_id": "eth-052",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.20459937502164394
+  },
+  {
+    "case_id": "eth-052",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.31841812503989786
+  },
+  {
+    "case_id": "eth-052",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.30615066597238183
+  },
+  {
+    "case_id": "eth-052",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.5283659589476883
+  },
+  {
+    "case_id": "eth-030",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.21656554198125377
+  },
+  {
+    "case_id": "eth-030",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18870904203504324
+  },
+  {
+    "case_id": "eth-030",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3211819580174051
+  },
+  {
+    "case_id": "eth-030",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3188332500285469
+  },
+  {
+    "case_id": "eth-030",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.17351650004275143
+  },
+  {
+    "case_id": "eth-030",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3413460000301711
+  },
+  {
+    "case_id": "eth-030",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.38822424999671057
+  },
+  {
+    "case_id": "eth-030",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.35205454198876396
+  },
+  {
+    "case_id": "eth-030",
+    "job": "routescan_normal",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.26644400000805035
+  },
+  {
+    "case_id": "eth-030",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.35842254100134596
+  },
+  {
+    "case_id": "eth-030",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.346237417019438
+  },
+  {
+    "case_id": "eth-068",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1794062500121072
+  },
+  {
+    "case_id": "eth-068",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.29557745897909626
+  },
+  {
+    "case_id": "eth-068",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.17907029099296778
+  },
+  {
+    "case_id": "eth-068",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.1622520840028301
+  },
+  {
+    "case_id": "eth-068",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.6190200410201214
+  },
+  {
+    "case_id": "eth-074",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19115070800762624
+  },
+  {
+    "case_id": "eth-074",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18336399999679998
+  },
+  {
+    "case_id": "eth-074",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.36313387495465577
+  },
+  {
+    "case_id": "eth-074",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3135583749972284
+  },
+  {
+    "case_id": "eth-074",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.1568267080001533
+  },
+  {
+    "case_id": "eth-032",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.20935204200213775
+  },
+  {
+    "case_id": "eth-032",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18956366699421778
+  },
+  {
+    "case_id": "eth-032",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.30667566700140014
+  },
+  {
+    "case_id": "eth-032",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3051757499924861
+  },
+  {
+    "case_id": "eth-032",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.4438638329738751
+  },
+  {
+    "case_id": "eth-032",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3532864159788005
+  },
+  {
+    "case_id": "eth-032",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3356925419648178
+  },
+  {
+    "case_id": "eth-032",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.33268275001319125
+  },
+  {
+    "case_id": "eth-032",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.33298074995400384
+  },
+  {
+    "case_id": "eth-037",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18361675000051036
+  },
+  {
+    "case_id": "eth-037",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3049431670224294
+  },
+  {
+    "case_id": "eth-037",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.17902808298822492
+  },
+  {
+    "case_id": "eth-037",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3147107500117272
+  },
+  {
+    "case_id": "eth-037",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.16468887502560392
+  },
+  {
+    "case_id": "eth-037",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.23804458300583065
+  },
+  {
+    "case_id": "eth-037",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.23699125001439825
+  },
+  {
+    "case_id": "eth-037",
+    "job": "routescan_creation",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.22983254201244563
+  },
+  {
+    "case_id": "eth-037",
+    "job": "routescan_normal",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.22877166705438867
+  },
+  {
+    "case_id": "eth-037",
+    "job": "routescan_creation",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.33858558296924457
+  },
+  {
+    "case_id": "eth-037",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.36701316700782627
+  },
+  {
+    "case_id": "eth-037",
+    "job": "routescan_creation",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.36376658297376707
+  },
+  {
+    "case_id": "eth-037",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.34725824999623
+  },
+  {
+    "case_id": "eth-045",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.21951391699258238
+  },
+  {
+    "case_id": "eth-045",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.21429291705135256
+  },
+  {
+    "case_id": "eth-045",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.33349799999268726
+  },
+  {
+    "case_id": "eth-045",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.36286404205020517
+  },
+  {
+    "case_id": "eth-045",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.1698030830011703
+  },
+  {
+    "case_id": "eth-066",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18100041599245742
+  },
+  {
+    "case_id": "eth-066",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.20299050002358854
+  },
+  {
+    "case_id": "eth-066",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.30733550002332777
+  },
+  {
+    "case_id": "eth-066",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.4741352499695495
+  },
+  {
+    "case_id": "eth-066",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.17147145798662677
+  },
+  {
+    "case_id": "eth-027",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18574233300751075
+  },
+  {
+    "case_id": "eth-027",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19354408397339284
+  },
+  {
+    "case_id": "eth-027",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.640115583955776
+  },
+  {
+    "case_id": "eth-027",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.6377001670189202
+  },
+  {
+    "case_id": "eth-027",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.19175520801218227
+  },
+  {
+    "case_id": "eth-027",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.227414500026498
+  },
+  {
+    "case_id": "eth-027",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.22894841601373628
+  },
+  {
+    "case_id": "eth-027",
+    "job": "routescan_normal",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.2354503749520518
+  },
+  {
+    "case_id": "eth-027",
+    "job": "routescan_creation",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.2336390840355307
+  },
+  {
+    "case_id": "eth-027",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3611307499813847
+  },
+  {
+    "case_id": "eth-027",
+    "job": "routescan_creation",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.35774274996947497
+  },
+  {
+    "case_id": "eth-027",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.35414958297042176
+  },
+  {
+    "case_id": "eth-027",
+    "job": "routescan_creation",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.35176808398682624
+  },
+  {
+    "case_id": "eth-071",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1970381669816561
+  },
+  {
+    "case_id": "eth-071",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.16915899998275563
+  },
+  {
+    "case_id": "eth-071",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3115630419924855
+  },
+  {
+    "case_id": "eth-071",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.302525750012137
+  },
+  {
+    "case_id": "eth-071",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.16138500004308298
+  },
+  {
+    "case_id": "eth-018",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.2038888749666512
+  },
+  {
+    "case_id": "eth-018",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.20591108402004465
+  },
+  {
+    "case_id": "eth-018",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3364110830007121
+  },
+  {
+    "case_id": "eth-018",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3259396670036949
+  },
+  {
+    "case_id": "eth-018",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.592361124989111
+  },
+  {
+    "case_id": "eth-018",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.24618258397094905
+  },
+  {
+    "case_id": "eth-018",
+    "job": "routescan_normal",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.23159358400152996
+  },
+  {
+    "case_id": "eth-018",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3448140000109561
+  },
+  {
+    "case_id": "eth-018",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.35813437501201406
+  },
+  {
+    "case_id": "eth-034",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1899475420359522
+  },
+  {
+    "case_id": "eth-034",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.21038912504445761
+  },
+  {
+    "case_id": "eth-034",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3471889579668641
+  },
+  {
+    "case_id": "eth-034",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.34493604104500264
+  },
+  {
+    "case_id": "eth-034",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.1740139169851318
+  },
+  {
+    "case_id": "eth-034",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.38928837497951463
+  },
+  {
+    "case_id": "eth-034",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.21898762497585267
+  },
+  {
+    "case_id": "eth-034",
+    "job": "routescan_creation",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.23823962500318885
+  },
+  {
+    "case_id": "eth-034",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.22680579195730388
+  },
+  {
+    "case_id": "eth-034",
+    "job": "routescan_creation",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.33705845900112763
+  },
+  {
+    "case_id": "eth-034",
+    "job": "routescan_normal",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.24068608303787187
+  },
+  {
+    "case_id": "eth-034",
+    "job": "routescan_creation",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3763199999812059
+  },
+  {
+    "case_id": "eth-034",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.33543350000400096
+  },
+  {
+    "case_id": "eth-034",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.35287358303321525
+  },
+  {
+    "case_id": "eth-067",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19300604099407792
+  },
+  {
+    "case_id": "eth-067",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.20383437495911494
+  },
+  {
+    "case_id": "eth-067",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3499896250432357
+  },
+  {
+    "case_id": "eth-067",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.6051329580368474
+  },
+  {
+    "case_id": "eth-067",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.18621837499085814
+  },
+  {
+    "case_id": "eth-060",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.17361366603290662
+  },
+  {
+    "case_id": "eth-060",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.2221329999738373
+  },
+  {
+    "case_id": "eth-060",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3084324999945238
+  },
+  {
+    "case_id": "eth-060",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.30015866697067395
+  },
+  {
+    "case_id": "eth-060",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.17906116700032726
+  },
+  {
+    "case_id": "eth-010",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.198534875002224
+  },
+  {
+    "case_id": "eth-010",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19862824998563156
+  },
+  {
+    "case_id": "eth-010",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.6295511249918491
+  },
+  {
+    "case_id": "eth-010",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.6291121669928543
+  },
+  {
+    "case_id": "eth-010",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.5310174999758601
+  },
+  {
+    "case_id": "eth-010",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.22229725000215694
+  },
+  {
+    "case_id": "eth-010",
+    "job": "routescan_normal",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.23227145802229643
+  },
+  {
+    "case_id": "eth-010",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.35018020804272965
+  },
+  {
+    "case_id": "eth-010",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3556459159590304
+  },
+  {
+    "case_id": "eth-003",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19197350001195446
+  },
+  {
+    "case_id": "eth-003",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1953192919609137
+  },
+  {
+    "case_id": "eth-003",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3143560419557616
+  },
+  {
+    "case_id": "eth-003",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3128701669629663
+  },
+  {
+    "case_id": "eth-003",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.5274247910128906
+  },
+  {
+    "case_id": "eth-003",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.35308270901441574
+  },
+  {
+    "case_id": "eth-003",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3296729589928873
+  },
+  {
+    "case_id": "eth-042",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.17828545800875872
+  },
+  {
+    "case_id": "eth-042",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18698179099010304
+  },
+  {
+    "case_id": "eth-042",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3156317080138251
+  },
+  {
+    "case_id": "eth-042",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.19790841697249562
+  },
+  {
+    "case_id": "eth-042",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3088647090480663
+  },
+  {
+    "case_id": "eth-019",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18940920900786296
+  },
+  {
+    "case_id": "eth-019",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.20347066700924188
+  },
+  {
+    "case_id": "eth-019",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3057554999832064
+  },
+  {
+    "case_id": "eth-019",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3051382499979809
+  },
+  {
+    "case_id": "eth-019",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.4950318749761209
+  },
+  {
+    "case_id": "eth-019",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.33145758300088346
+  },
+  {
+    "case_id": "eth-019",
+    "job": "routescan_normal",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.23238570801913738
+  },
+  {
+    "case_id": "eth-019",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.34402374998899177
+  },
+  {
+    "case_id": "eth-019",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.38246475002961233
+  },
+  {
+    "case_id": "eth-026",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.20692062500165775
+  },
+  {
+    "case_id": "eth-026",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.20253283402416855
+  },
+  {
+    "case_id": "eth-026",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.33566033304668963
+  },
+  {
+    "case_id": "eth-026",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.32210120803210884
+  },
+  {
+    "case_id": "eth-026",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.18722054199315608
+  },
+  {
+    "case_id": "eth-026",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3296118750004098
+  },
+  {
+    "case_id": "eth-026",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3589312080293894
+  },
+  {
+    "case_id": "eth-026",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.31530508399009705
+  },
+  {
+    "case_id": "eth-026",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.334812083048746
+  },
+  {
+    "case_id": "eth-005",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19565162499202415
+  },
+  {
+    "case_id": "eth-005",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18556700000772253
+  },
+  {
+    "case_id": "eth-005",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.44122204201994464
+  },
+  {
+    "case_id": "eth-005",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.16786745801800862
+  },
+  {
+    "case_id": "eth-005",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3087614580290392
+  },
+  {
+    "case_id": "eth-005",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.312624667014461
+  },
+  {
+    "case_id": "eth-005",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.33541862497804686
+  },
+  {
+    "case_id": "eth-047",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18050283304182813
+  },
+  {
+    "case_id": "eth-047",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.21016512502683327
+  },
+  {
+    "case_id": "eth-047",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3050394579768181
+  },
+  {
+    "case_id": "eth-047",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3165482920012437
+  },
+  {
+    "case_id": "eth-047",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.17397737497230992
+  },
+  {
+    "case_id": "eth-072",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.22972445900086313
+  },
+  {
+    "case_id": "eth-072",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18698079197201878
+  },
+  {
+    "case_id": "eth-072",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3110557090258226
+  },
+  {
+    "case_id": "eth-072",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.33408937498461455
+  },
+  {
+    "case_id": "eth-072",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.4489372919779271
+  },
+  {
+    "case_id": "eth-033",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1952478329767473
+  },
+  {
+    "case_id": "eth-033",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.2175040839938447
+  },
+  {
+    "case_id": "eth-033",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.30957004200899974
+  },
+  {
+    "case_id": "eth-033",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.44368616701103747
+  },
+  {
+    "case_id": "eth-033",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.1730696249869652
+  },
+  {
+    "case_id": "eth-033",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3507706669624895
+  },
+  {
+    "case_id": "eth-033",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3416808340116404
+  },
+  {
+    "case_id": "eth-033",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.38563095801509917
+  },
+  {
+    "case_id": "eth-033",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3704935419955291
+  },
+  {
+    "case_id": "eth-058",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.20181449997471645
+  },
+  {
+    "case_id": "eth-058",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.17891162500018254
+  },
+  {
+    "case_id": "eth-058",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.30221920902840793
+  },
+  {
+    "case_id": "eth-058",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.5506177920033224
+  },
+  {
+    "case_id": "eth-058",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.4431437500170432
+  },
+  {
+    "case_id": "eth-046",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18368387501686811
+  },
+  {
+    "case_id": "eth-046",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1919117079814896
+  },
+  {
+    "case_id": "eth-046",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3105412499862723
+  },
+  {
+    "case_id": "eth-046",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.40872499998658895
+  },
+  {
+    "case_id": "eth-046",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.5281578750000335
+  },
+  {
+    "case_id": "eth-002",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.21924850001232699
+  },
+  {
+    "case_id": "eth-002",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18643629201687872
+  },
+  {
+    "case_id": "eth-002",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.30526437499793246
+  },
+  {
+    "case_id": "eth-002",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3501064999727532
+  },
+  {
+    "case_id": "eth-002",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.17181550001259893
+  },
+  {
+    "case_id": "eth-002",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3477487500058487
+  },
+  {
+    "case_id": "eth-002",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3335831669974141
+  },
+  {
+    "case_id": "eth-002",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.32149162504356354
+  },
+  {
+    "case_id": "eth-002",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.29832041601184756
+  },
+  {
+    "case_id": "eth-002",
+    "job": "routescan_normal",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.22957437497098
+  },
+  {
+    "case_id": "eth-002",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.35242733295308426
+  },
+  {
+    "case_id": "eth-002",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.33300749998306856
+  },
+  {
+    "case_id": "eth-016",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.17645529098808765
+  },
+  {
+    "case_id": "eth-016",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1766742910258472
+  },
+  {
+    "case_id": "eth-016",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.2929499589954503
+  },
+  {
+    "case_id": "eth-016",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3230980000225827
+  },
+  {
+    "case_id": "eth-016",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.15154229203471914
+  },
+  {
+    "case_id": "eth-016",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.21942741598468274
+  },
+  {
+    "case_id": "eth-016",
+    "job": "routescan_normal",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.24491158296586946
+  },
+  {
+    "case_id": "eth-016",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.33606995799345896
+  },
+  {
+    "case_id": "eth-016",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.36605812498601153
+  },
+  {
+    "case_id": "eth-069",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.22892970801331103
+  },
+  {
+    "case_id": "eth-069",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18513891601469368
+  },
+  {
+    "case_id": "eth-069",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.31357900000875816
+  },
+  {
+    "case_id": "eth-069",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.30777370900614187
+  },
+  {
+    "case_id": "eth-069",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.5528131250175647
+  },
+  {
+    "case_id": "eth-076",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1824437910108827
+  },
+  {
+    "case_id": "eth-076",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.20545429200865328
+  },
+  {
+    "case_id": "eth-076",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3076867089839652
+  },
+  {
+    "case_id": "eth-076",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3166751250391826
+  },
+  {
+    "case_id": "eth-076",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.16618887498043478
+  },
+  {
+    "case_id": "eth-054",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19622683298075572
+  },
+  {
+    "case_id": "eth-054",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1920789169962518
+  },
+  {
+    "case_id": "eth-054",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.32659104198683053
+  },
+  {
+    "case_id": "eth-054",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.31744887499371544
+  },
+  {
+    "case_id": "eth-054",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.19019983295584098
+  },
+  {
+    "case_id": "eth-023",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.20497687498573214
+  },
+  {
+    "case_id": "eth-023",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.20381229202030227
+  },
+  {
+    "case_id": "eth-023",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.33769762504380196
+  },
+  {
+    "case_id": "eth-023",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3086054159794003
+  },
+  {
+    "case_id": "eth-023",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.18806854099966586
+  },
+  {
+    "case_id": "eth-023",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.39899324998259544
+  },
+  {
+    "case_id": "eth-023",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3700983750168234
+  },
+  {
+    "case_id": "eth-023",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3904468750115484
+  },
+  {
+    "case_id": "eth-023",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.30031529103871435
+  },
+  {
+    "case_id": "eth-023",
+    "job": "routescan_creation",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.2857747080270201
+  },
+  {
+    "case_id": "eth-023",
+    "job": "routescan_creation",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.351387667004019
+  },
+  {
+    "case_id": "eth-023",
+    "job": "routescan_creation",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.38810062501579523
+  },
+  {
+    "case_id": "eth-028",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.20816741598537192
+  },
+  {
+    "case_id": "eth-028",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1843793330481276
+  },
+  {
+    "case_id": "eth-028",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.33094025001628324
+  },
+  {
+    "case_id": "eth-028",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3283254159614444
+  },
+  {
+    "case_id": "eth-028",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.17832241603173316
+  },
+  {
+    "case_id": "eth-028",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3447207079734653
+  },
+  {
+    "case_id": "eth-028",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3416269580484368
+  },
+  {
+    "case_id": "eth-028",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.36381349997827783
+  },
+  {
+    "case_id": "eth-028",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.32780441700015217
+  },
+  {
+    "case_id": "eth-029",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1871304580126889
+  },
+  {
+    "case_id": "eth-029",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.17616612499114126
+  },
+  {
+    "case_id": "eth-029",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.31406183302169666
+  },
+  {
+    "case_id": "eth-029",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.40693079197080806
+  },
+  {
+    "case_id": "eth-029",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.45789804199011996
+  },
+  {
+    "case_id": "eth-029",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.21669912501238286
+  },
+  {
+    "case_id": "eth-029",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.36611329100560397
+  },
+  {
+    "case_id": "eth-029",
+    "job": "routescan_creation",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.24561962502775714
+  },
+  {
+    "case_id": "eth-029",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.41550374997314066
+  },
+  {
+    "case_id": "eth-029",
+    "job": "routescan_creation",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3358636249904521
+  },
+  {
+    "case_id": "eth-029",
+    "job": "routescan_creation",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.34885908296564594
+  },
+  {
+    "case_id": "eth-031",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19547741702990606
+  },
+  {
+    "case_id": "eth-031",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19266837497707456
+  },
+  {
+    "case_id": "eth-031",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.31512062496040016
+  },
+  {
+    "case_id": "eth-031",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.324021750013344
+  },
+  {
+    "case_id": "eth-031",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.17288762499811128
+  },
+  {
+    "case_id": "eth-031",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.31872383295558393
+  },
+  {
+    "case_id": "eth-031",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3263091249973513
+  },
+  {
+    "case_id": "eth-031",
+    "job": "routescan_creation",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.23952262505190447
+  },
+  {
+    "case_id": "eth-031",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3551632500020787
+  },
+  {
+    "case_id": "eth-031",
+    "job": "routescan_creation",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.36117474996717647
+  },
+  {
+    "case_id": "eth-031",
+    "job": "routescan_creation",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3465602090000175
+  },
+  {
+    "case_id": "eth-043",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1903011659742333
+  },
+  {
+    "case_id": "eth-043",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1852229999494739
+  },
+  {
+    "case_id": "eth-043",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.320273042016197
+  },
+  {
+    "case_id": "eth-043",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.32286100002238527
+  },
+  {
+    "case_id": "eth-043",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.17163383396109566
+  },
+  {
+    "case_id": "eth-061",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.17903679102892056
+  },
+  {
+    "case_id": "eth-061",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18150220799725503
+  },
+  {
+    "case_id": "eth-061",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3794362919870764
+  },
+  {
+    "case_id": "eth-061",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.31194425001740456
+  },
+  {
+    "case_id": "eth-061",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.1655651670298539
+  },
+  {
+    "case_id": "eth-006",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.2017615420045331
+  },
+  {
+    "case_id": "eth-006",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19115037500159815
+  },
+  {
+    "case_id": "eth-006",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.32450049999170005
+  },
+  {
+    "case_id": "eth-006",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.32320941594662145
+  },
+  {
+    "case_id": "eth-006",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.1713984159869142
+  },
+  {
+    "case_id": "eth-006",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.23354966699844226
+  },
+  {
+    "case_id": "eth-006",
+    "job": "routescan_normal",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.23618137498851866
+  },
+  {
+    "case_id": "eth-006",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3422713750042021
+  },
+  {
+    "case_id": "eth-006",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.354952541005332
+  },
+  {
+    "case_id": "eth-056",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.17836970899952576
+  },
+  {
+    "case_id": "eth-056",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18333783297566697
+  },
+  {
+    "case_id": "eth-056",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3108711670502089
+  },
+  {
+    "case_id": "eth-056",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3085050420486368
+  },
+  {
+    "case_id": "eth-056",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.16694112500408664
+  },
+  {
+    "case_id": "eth-080",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19715829199412838
+  },
+  {
+    "case_id": "eth-080",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.21051687496947125
+  },
+  {
+    "case_id": "eth-080",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3557672909810208
+  },
+  {
+    "case_id": "eth-080",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.33875654195435345
+  },
+  {
+    "case_id": "eth-080",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.1935773749719374
+  },
+  {
+    "case_id": "eth-064",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.21879945800174028
+  },
+  {
+    "case_id": "eth-064",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18254762497963384
+  },
+  {
+    "case_id": "eth-064",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3095829169615172
+  },
+  {
+    "case_id": "eth-064",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3078445830033161
+  },
+  {
+    "case_id": "eth-064",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.17468187503982335
+  },
+  {
+    "case_id": "eth-015",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19332341599510983
+  },
+  {
+    "case_id": "eth-015",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19357850000960752
+  },
+  {
+    "case_id": "eth-015",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.41104187502060086
+  },
+  {
+    "case_id": "eth-015",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.30906783300451934
+  },
+  {
+    "case_id": "eth-015",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.5010733330273069
+  },
+  {
+    "case_id": "eth-015",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3247686669928953
+  },
+  {
+    "case_id": "eth-015",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3488142910064198
+  },
+  {
+    "case_id": "eth-049",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19502337503945455
+  },
+  {
+    "case_id": "eth-049",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.20446199999423698
+  },
+  {
+    "case_id": "eth-049",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3011997080175206
+  },
+  {
+    "case_id": "eth-049",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.30233629199210554
+  },
+  {
+    "case_id": "eth-049",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.17626920901238918
+  },
+  {
+    "case_id": "eth-021",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.43546112498734146
+  },
+  {
+    "case_id": "eth-021",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18518920801579952
+  },
+  {
+    "case_id": "eth-021",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3107350000063889
+  },
+  {
+    "case_id": "eth-021",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3075950830243528
+  },
+  {
+    "case_id": "eth-021",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.16287950001424178
+  },
+  {
+    "case_id": "eth-021",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.22482537501491606
+  },
+  {
+    "case_id": "eth-021",
+    "job": "routescan_creation",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.24145887501072139
+  },
+  {
+    "case_id": "eth-021",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.23102520796237513
+  },
+  {
+    "case_id": "eth-021",
+    "job": "routescan_creation",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3338992079952732
+  },
+  {
+    "case_id": "eth-021",
+    "job": "routescan_normal",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.22395420901011676
+  },
+  {
+    "case_id": "eth-021",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.4111256669857539
+  },
+  {
+    "case_id": "eth-021",
+    "job": "routescan_creation",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.34270120901055634
+  },
+  {
+    "case_id": "eth-021",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3537543750135228
+  },
+  {
+    "case_id": "eth-075",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1859929590136744
+  },
+  {
+    "case_id": "eth-075",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.2127616669749841
+  },
+  {
+    "case_id": "eth-075",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3339622089988552
+  },
+  {
+    "case_id": "eth-075",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.34438399999635294
+  },
+  {
+    "case_id": "eth-075",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.17009391699684784
+  },
+  {
+    "case_id": "eth-073",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1877387500135228
+  },
+  {
+    "case_id": "eth-073",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19271637499332428
+  },
+  {
+    "case_id": "eth-073",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.335648707987275
+  },
+  {
+    "case_id": "eth-073",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.316586000029929
+  },
+  {
+    "case_id": "eth-073",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.18272729200543836
+  },
+  {
+    "case_id": "eth-062",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18933195795398206
+  },
+  {
+    "case_id": "eth-062",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.21476341702509671
+  },
+  {
+    "case_id": "eth-062",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.31221229198854417
+  },
+  {
+    "case_id": "eth-062",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.6686971670133062
+  },
+  {
+    "case_id": "eth-062",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.17196145799243823
+  },
+  {
+    "case_id": "eth-009",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1856340829981491
+  },
+  {
+    "case_id": "eth-009",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.23253554198890924
+  },
+  {
+    "case_id": "eth-009",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3124621669994667
+  },
+  {
+    "case_id": "eth-009",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3233564579859376
+  },
+  {
+    "case_id": "eth-009",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.17777716601267457
+  },
+  {
+    "case_id": "eth-009",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.36239387502428144
+  },
+  {
+    "case_id": "eth-009",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.5410372919868678
+  },
+  {
+    "case_id": "eth-063",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18071950000012293
+  },
+  {
+    "case_id": "eth-063",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.17925729096168652
+  },
+  {
+    "case_id": "eth-063",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.31486029201187193
+  },
+  {
+    "case_id": "eth-063",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.314202125009615
+  },
+  {
+    "case_id": "eth-063",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.17621225002221763
+  },
+  {
+    "case_id": "eth-007",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.2085757500026375
+  },
+  {
+    "case_id": "eth-007",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19512120902072638
+  },
+  {
+    "case_id": "eth-007",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.32374066597549245
+  },
+  {
+    "case_id": "eth-007",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3242914169677533
+  },
+  {
+    "case_id": "eth-007",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.17856833297992125
+  },
+  {
+    "case_id": "eth-007",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.2242727080010809
+  },
+  {
+    "case_id": "eth-007",
+    "job": "routescan_normal",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.24239262496121228
+  },
+  {
+    "case_id": "eth-007",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3416909169754945
+  },
+  {
+    "case_id": "eth-007",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3798385830014013
+  },
+  {
+    "case_id": "eth-044",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.17903699999442324
+  },
+  {
+    "case_id": "eth-044",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.20001504197716713
+  },
+  {
+    "case_id": "eth-044",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3216392079484649
+  },
+  {
+    "case_id": "eth-044",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.32286045799264684
+  },
+  {
+    "case_id": "eth-044",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.17621487501310185
+  },
+  {
+    "case_id": "eth-035",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.33330558298621327
+  },
+  {
+    "case_id": "eth-035",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.31330516695743427
+  },
+  {
+    "case_id": "eth-035",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1959884999669157
+  },
+  {
+    "case_id": "eth-035",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.17324641696177423
+  },
+  {
+    "case_id": "eth-035",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18899308401159942
+  },
+  {
+    "case_id": "eth-035",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.37104454095242545
+  },
+  {
+    "case_id": "eth-035",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.36856329103466123
+  },
+  {
+    "case_id": "eth-035",
+    "job": "routescan_normal",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.2297371249878779
+  },
+  {
+    "case_id": "eth-035",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.35477379098301753
+  },
+  {
+    "case_id": "eth-035",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.34363800002029166
+  },
+  {
+    "case_id": "eth-035",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.36353933304781094
+  },
+  {
+    "case_id": "eth-040",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18156079202890396
+  },
+  {
+    "case_id": "eth-040",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1877335419994779
+  },
+  {
+    "case_id": "eth-040",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.308412040991243
+  },
+  {
+    "case_id": "eth-040",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3037341660237871
+  },
+  {
+    "case_id": "eth-040",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.4351983339875005
+  },
+  {
+    "case_id": "eth-040",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.38032887503504753
+  },
+  {
+    "case_id": "eth-040",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.4127085829968564
+  },
+  {
+    "case_id": "eth-040",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.23823487502522767
+  },
+  {
+    "case_id": "eth-040",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.32252858398715034
+  },
+  {
+    "case_id": "eth-040",
+    "job": "routescan_normal",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.22647229197900742
+  },
+  {
+    "case_id": "eth-040",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3494642499717884
+  },
+  {
+    "case_id": "eth-040",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3550084590096958
+  },
+  {
+    "case_id": "eth-004",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18752370798029006
+  },
+  {
+    "case_id": "eth-004",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18526020896388218
+  },
+  {
+    "case_id": "eth-004",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.32749158301157877
+  },
+  {
+    "case_id": "eth-004",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3097542090108618
+  },
+  {
+    "case_id": "eth-004",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.5262674579862505
+  },
+  {
+    "case_id": "eth-004",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.34210379101568833
+  },
+  {
+    "case_id": "eth-004",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3510424999985844
+  },
+  {
+    "case_id": "eth-024",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18840691697550938
+  },
+  {
+    "case_id": "eth-024",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1830015839659609
+  },
+  {
+    "case_id": "eth-024",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3153719590045512
+  },
+  {
+    "case_id": "eth-024",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.614952500036452
+  },
+  {
+    "case_id": "eth-024",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.17221200000494719
+  },
+  {
+    "case_id": "eth-024",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.22959291597362608
+  },
+  {
+    "case_id": "eth-024",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.336244749953039
+  },
+  {
+    "case_id": "eth-024",
+    "job": "routescan_creation",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.23726695799268782
+  },
+  {
+    "case_id": "eth-024",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3271801249939017
+  },
+  {
+    "case_id": "eth-024",
+    "job": "routescan_creation",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3455824170378037
+  },
+  {
+    "case_id": "eth-024",
+    "job": "routescan_creation",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3502297090017237
+  },
+  {
+    "case_id": "eth-041",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19010479195276275
+  },
+  {
+    "case_id": "eth-041",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19420904200524092
+  },
+  {
+    "case_id": "eth-041",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.32329687499441206
+  },
+  {
+    "case_id": "eth-041",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.328132959024515
+  },
+  {
+    "case_id": "eth-041",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.1831867909641005
+  },
+  {
+    "case_id": "eth-059",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.17813241702970117
+  },
+  {
+    "case_id": "eth-059",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.22460545896319672
+  },
+  {
+    "case_id": "eth-059",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.33965749997878447
+  },
+  {
+    "case_id": "eth-059",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3311379160149954
+  },
+  {
+    "case_id": "eth-059",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.17443625000305474
+  },
+  {
+    "case_id": "eth-039",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.2344303330173716
+  },
+  {
+    "case_id": "eth-039",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.21560804196633399
+  },
+  {
+    "case_id": "eth-039",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3333425829769112
+  },
+  {
+    "case_id": "eth-039",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.34186245797900483
+  },
+  {
+    "case_id": "eth-039",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.1805835830164142
+  },
+  {
+    "case_id": "eth-039",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3318212500307709
+  },
+  {
+    "case_id": "eth-039",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3521609589806758
+  },
+  {
+    "case_id": "eth-039",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.48277187504572794
+  },
+  {
+    "case_id": "eth-039",
+    "job": "routescan_normal",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.23812970804283395
+  },
+  {
+    "case_id": "eth-039",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.33619045797968283
+  },
+  {
+    "case_id": "eth-039",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.341360040998552
+  },
+  {
+    "case_id": "eth-055",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19302095798775554
+  },
+  {
+    "case_id": "eth-055",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.2089933329843916
+  },
+  {
+    "case_id": "eth-055",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3254160829819739
+  },
+  {
+    "case_id": "eth-055",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3216682500205934
+  },
+  {
+    "case_id": "eth-055",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.1919280419824645
+  },
+  {
+    "case_id": "eth-022",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1798105839989148
+  },
+  {
+    "case_id": "eth-022",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1964677919750102
+  },
+  {
+    "case_id": "eth-022",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3079284579725936
+  },
+  {
+    "case_id": "eth-022",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3027552920393646
+  },
+  {
+    "case_id": "eth-022",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.47674374998314306
+  },
+  {
+    "case_id": "eth-022",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3659670419874601
+  },
+  {
+    "case_id": "eth-022",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.34709391702199355
+  },
+  {
+    "case_id": "eth-022",
+    "job": "routescan_creation",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.34828383300919086
+  },
+  {
+    "case_id": "eth-022",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.301559665997047
+  },
+  {
+    "case_id": "eth-022",
+    "job": "routescan_normal",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.24146108300192282
+  },
+  {
+    "case_id": "eth-022",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.33827820798614994
+  },
+  {
+    "case_id": "eth-022",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3559419160010293
+  },
+  {
+    "case_id": "eth-079",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19308004196500406
+  },
+  {
+    "case_id": "eth-079",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1896000420092605
+  },
+  {
+    "case_id": "eth-079",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.32115833403076977
+  },
+  {
+    "case_id": "eth-079",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3231907089939341
+  },
+  {
+    "case_id": "eth-079",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.16970758402021602
+  },
+  {
+    "case_id": "eth-053",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19090370798949152
+  },
+  {
+    "case_id": "eth-053",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18251474999124184
+  },
+  {
+    "case_id": "eth-053",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3361548339598812
+  },
+  {
+    "case_id": "eth-053",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3328159580123611
+  },
+  {
+    "case_id": "eth-053",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.18003529199631885
+  },
+  {
+    "case_id": "eth-013",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1858922090032138
+  },
+  {
+    "case_id": "eth-013",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1708873329916969
+  },
+  {
+    "case_id": "eth-013",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.31614008301403373
+  },
+  {
+    "case_id": "eth-013",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3176973750232719
+  },
+  {
+    "case_id": "eth-013",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.16842762497253716
+  },
+  {
+    "case_id": "eth-013",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.23532237496692687
+  },
+  {
+    "case_id": "eth-013",
+    "job": "routescan_normal",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.23599929199554026
+  },
+  {
+    "case_id": "eth-013",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.34390195802552626
+  },
+  {
+    "case_id": "eth-013",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3624347500153817
+  },
+  {
+    "case_id": "eth-078",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.19180408399552107
+  },
+  {
+    "case_id": "eth-078",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.20894229202531278
+  },
+  {
+    "case_id": "eth-078",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.31118766695726663
+  },
+  {
+    "case_id": "eth-078",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3154159580008127
+  },
+  {
+    "case_id": "eth-078",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.17322270799195394
+  },
+  {
+    "case_id": "eth-020",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.21455729100853205
+  },
+  {
+    "case_id": "eth-020",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.17542991699883714
+  },
+  {
+    "case_id": "eth-020",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.49204508296679705
+  },
+  {
+    "case_id": "eth-020",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3958568749949336
+  },
+  {
+    "case_id": "eth-020",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.44880029099294916
+  },
+  {
+    "case_id": "eth-020",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.23583812499418855
+  },
+  {
+    "case_id": "eth-020",
+    "job": "routescan_normal",
+    "source": "1rpc",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.22560679097659886
+  },
+  {
+    "case_id": "eth-020",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.3504333750461228
+  },
+  {
+    "case_id": "eth-020",
+    "job": "routescan_normal",
+    "source": "blockpi",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.37206429097568616
+  },
+  {
+    "case_id": "eth-017",
+    "job": "routescan_normal",
+    "source": "routescan",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.18641299998853356
+  },
+  {
+    "case_id": "eth-017",
+    "job": "routescan_creation",
+    "source": "routescan",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.1917740839999169
+  },
+  {
+    "case_id": "eth-017",
+    "job": "blockscout_normal",
+    "source": "blockscout",
+    "methods": [],
+    "action": "txlist",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.31940487504471093
+  },
+  {
+    "case_id": "eth-017",
+    "job": "blockscout_creation",
+    "source": "blockscout",
+    "methods": [],
+    "action": "getcontractcreation",
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.3122117500170134
+  },
+  {
+    "case_id": "eth-017",
+    "job": "blockcypher",
+    "source": "blockcypher",
+    "methods": [],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": false,
+    "error": "http_429",
+    "seconds": 0.5378127080039121
+  },
+  {
+    "case_id": "eth-017",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_getTransactionReceipt"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.39556320902192965
+  },
+  {
+    "case_id": "eth-017",
+    "job": "routescan_normal",
+    "source": "publicnode",
+    "methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber",
+      "eth_getBlockByNumber"
+    ],
+    "action": null,
+    "finished": true,
+    "deadline_expired_before_call": false,
+    "json_returned": true,
+    "seconds": 0.4834219169570133
+  }
+]

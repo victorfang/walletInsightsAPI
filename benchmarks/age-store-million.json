@@ -1,0 +1,33 @@
+{
+  "started_at": "2026-11-05T19:28:51.150589+00:00",
+  "finished_at": "2026-11-05T19:28:58.082477+00:00",
+  "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+  "platform": "darwin",
+  "row_count": 1000000,
+  "load_seconds": 6.34230766701512,
+  "load_rows_per_second": 157671.31657783955,
+  "database_bytes": 292589568,
+  "bytes_per_record": 292.589568,
+  "sqlite_page_count": 71433,
+  "sqlite_page_size": 4096,
+  "peak_rss_before_bytes": 19341312,
+  "peak_rss_after_bytes": 25821184,
+  "additional_peak_rss_bytes": 6479872,
+  "lookup_seconds": {
+    "n": 1000,
+    "mean": 0.0005177168917143717,
+    "median": 0.0004937915073242038,
+    "p95": 0.0006256437685806304,
+    "p99": 0.0007083799794781951,
+    "max": 0.0013151669991202652
+  },
+  "missing_lookup_seconds": 0.00046387501060962677,
+  "notes": [
+    "Real rows in the production WITHOUT ROWID schema, including 64-hex transaction hashes and scope metadata.",
+    "Synthetic offline records; no blockchain lookup or private key generation.",
+    "Bulk insert throughput differs from observe() throughput; lookups use actual get().",
+    "RSS is process peak memory, not a claim about total OS filesystem cache.",
+    "Lookups run after population; filesystem/provider cold-cache behavior is not measured.",
+    "A Python dict is not constructed; SQLite keeps the million records on disk."
+  ]
+}

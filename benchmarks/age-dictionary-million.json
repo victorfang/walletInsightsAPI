@@ -1,0 +1,38 @@
+{
+  "started_at": "2026-11-05T19:32:15.703408+00:00",
+  "finished_at": "2026-11-05T19:32:17.516738+00:00",
+  "python": "3.13.7",
+  "platform": "darwin",
+  "row_count": 1000000,
+  "key_format": "(chain: str, address: str); shared chain string eth:mainnet, 42-character ETH address",
+  "value_format": "distinct integer first_seen_timestamp per record",
+  "load_seconds": 0.8491207080078311,
+  "load_rows_per_second": 1177688.8616297618,
+  "reachable_python_object_bytes": 212943180,
+  "python_object_bytes_per_record": 212.94318,
+  "peak_rss_before_bytes": 16785408,
+  "peak_rss_after_bytes": 308248576,
+  "additional_peak_rss_bytes": 291463168,
+  "lookup_seconds": {
+    "n": 1000,
+    "mean": 1.0909849661402404e-06,
+    "median": 1.00000761449337e-06,
+    "p95": 1.667009200900793e-06,
+    "p99": 2.299064653925591e-06,
+    "max": 8.25000461190939e-06
+  },
+  "tracemalloc": {
+    "status": "aborted_before_measurement_to_limit_instrumentation_memory",
+    "rss_safety_limit_bytes": 513802240,
+    "note": "A separate fresh-process run with tracemalloc enabled hit the RSS safety threshold and exited. The successful full-million baseline uses exact reachable object sizes and uninstrumented RSS, not an extrapolation."
+  },
+  "notes": [
+    "Real 1,000,000-entry Python dictionary constructed in a fresh process, with no SQLite imports or retained database allocation.",
+    "Synthetic offline addresses and timestamps; no private keys, blockchain queries, or funding.",
+    "Object memory is the sum of sys.getsizeof over all actual distinct reachable dict, tuple, address-string and integer objects. It excludes Python allocator fragmentation and interpreter overhead.",
+    "The shared chain string is stored once; each address string, tuple key and epoch integer is distinct.",
+    "Only the integer epoch is stored per value: no completeness, finality, provenance, block hashes, transaction hashes, or durable storage.",
+    "Lookup key construction is outside each timed interval.",
+    "RSS is process peak resident memory and cannot be compared directly to SQLite disk size."
+  ]
+}
