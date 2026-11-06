@@ -7,7 +7,28 @@ Eighteen existing-account controls were transaction senders from one block;
 popular contracts were chosen deliberately. Historical account-type labels were
 not independently revalidated.
 
-## Summary
+## Latest stopping-policy experiment
+
+The [new one-second soft-deadline comparison and vendor study](../benchmarks/FIRST_RESPONSE_BENCHMARK_2026-11-05.md)
+uses the persistent LRU and current configured providers. Production remains unchanged.
+Both primary arms ran all 100 cold inputs with separate empty databases.
+
+| Known-used controls, 40 addresses | Current policy | Experimental first-response policy |
+| --- | ---: | ---: |
+| Ages returned | 40/40 | 40/40 |
+| Median uncached HTTP | 1.478 s | 1.182 s |
+| p95 uncached HTTP | 2.475 s | 1.473 s |
+| Maximum uncached HTTP | 2.476 s | 1.763 s |
+
+The candidate's 40 positive cached repeats had median 3.322 ms, p95 5.044 ms and
+zero upstream calls. Four initial epochs were later than baseline, including one
+55-day result that refined to 71 days. Background MIN updates corrected all four.
+All positive candidate replies used the one-provider soft-deadline path; the
+two-provider branch did not trigger in this live sample. Both policies matched
+17/20 deployment controls, so exact universal age accuracy is not established.
+The separate vendor study made 200 requests across ten vendor/workload cohorts.
+
+## Historical runs and storage measurements
 
 | Measurement | Median | p95 | Maximum | Coverage / agreement |
 | --- | --- | --- | --- | --- |
@@ -16,13 +37,13 @@ not independently revalidated.
 | WalletInsights immediate warm hits, pre-LRU | 3.315 ms | 4.4 ms | 9.613 ms | 80/80 both components cached |
 | Current LRU age store, actual 1M records | 1.071 ms | 1.822 ms | 15.132 ms | Read timings include persisted LRU touches |
 
-The full HTTP benchmark runs **predate the LRU recency index and writes**. They
+The historical HTTP runs in this table **predate the LRU recency index and writes**. They
 are historical network/API measurements, not a fresh end-to-end benchmark of the
 current LRU implementation. Current LRU tests and the million-row experiment
 verify the new storage behavior. No old report or raw response was rewritten to
 pretend it used the new cache policy.
 
-The current LRU revision passed **308 standard-library tests**, covering migration,
+The initial LRU revision passed **308 standard-library tests**, covering migration,
 recency, concurrent capacity, TTL preservation and both endpoint contracts.
 
 The application uses a 2.6-second budget, reserving time for persistence and JSON

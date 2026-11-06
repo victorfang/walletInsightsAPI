@@ -1,0 +1,56 @@
+{
+  "started_at": "2026-11-06T05:23:20.625176Z",
+  "seed": 20261105,
+  "dataset_sha256": "72d1a2fa26ad76e467e771e60c448aae16b49d319d27243278bdf751fd46dee0",
+  "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+  "platform": "macOS-27.0.1-x86_64-i386-64bit-Mach-O",
+  "clock": "perf_counter elapsed; epoch UTC seconds",
+  "coverage": "ethereum",
+  "paid_configured": [
+    "alchemy",
+    "quicknode"
+  ],
+  "etherscan_configured": true,
+  "soft_deadline_seconds": 1.0,
+  "primary_hard_deadline_seconds": 2.6,
+  "sensitivity_hard_deadline_seconds": 5.0,
+  "minimum_start_interval_seconds": 1.05,
+  "runtime_sha256": {
+    "wallet_age_days/__init__.py": "93a694b11af7bafd1894b33eaff86e8c49ec4878ab40d7c9d6738ef802bfabb8",
+    "wallet_age_days/__main__.py": "a1614bd17b4d5f73c04ae11afd02c94bd63756beb2baef40d5e0b3a9fc76ad5c",
+    "wallet_age_days/cli.py": "5c8628b55391705c6c599571e091948815037ae13b4811493c5609ce5f5744c3",
+    "wallet_age_days/config.py": "c36cf1146e2e8340da8cec5efa36504d4b2161f0c5c94f2b4fbcd001a093fa52",
+    "wallet_age_days/factory.py": "09818cdfa6f7f927c3080aedf0bd80c082818b3b275193d1cace11296acb6bdb",
+    "wallet_age_days/providers.py": "12b0beedf6c205681d4e08abab135e2a5266c31a6d3e49b3282d8f43f2e9cfb6",
+    "wallet_age_days/server.py": "8cc03a6be4297bdc499fc79f61b3509368e843c872c19693f6d67cb1b779b3b7",
+    "wallet_age_days/service.py": "e0aee9859bb83e0dbafc60c8a9f1f5c77018f24c69e1baa1f0d925b4307eb7e7",
+    "wallet_age_days/store.py": "4cddcc17c02c98238c8b5a73a300ddf51009cfa2bdd591d401aa72fdfdaf7ba7",
+    "eth_wallet_check/http.py": "2be2e76d124d2e8aba55cf01404f58539659638e3dffa9cd6099ec2cbf421e77",
+    "benchmarks/first_response_policy.py": "45f0f113ef4e3458d3ab7b36721107907cfbab70491ebd3439963f000d0590df"
+  },
+  "initial_cache_rows": {
+    "baseline": 0,
+    "candidate_2_6": 0,
+    "candidate_5_0": 0
+  },
+  "pre_request_cold_misses": {
+    "baseline": 80,
+    "candidate_2_6": 80,
+    "candidate_5_0": 30
+  },
+  "network_phase_lock": "exclusive; separate vendor benchmark must finish first",
+  "finished_at": "2026-11-06T05:28:20.613520Z",
+  "loop_wall_seconds": 299.91419379098807,
+  "final_cache_rows": {
+    "baseline": 40,
+    "candidate_2_6": 40,
+    "candidate_5_0": 20
+  },
+  "runtime_unchanged": true,
+  "unfinished_http_calls": 0,
+  "unfinished_jobs": 0,
+  "forbidden_methods": [],
+  "baseline_source_wait_seconds": 2.45,
+  "baseline_response_budget_seconds": 2.6,
+  "implementation_note": "The baseline reserves150ms for persistence; the candidate hard deadline is2.6s. Source inputs were unchanged during capture. Post-hoc reporting fields added after capture."
+}

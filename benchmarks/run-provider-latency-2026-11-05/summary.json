@@ -1,0 +1,339 @@
+{
+  "metadata": {
+    "started_at": "2026-11-06T05:20:08.554668Z",
+    "finished_at": "2026-11-06T05:20:55.878322Z",
+    "wall_seconds": 47.323,
+    "samples_per_provider": 20,
+    "total_http_requests": 200,
+    "total_rpc_methods": 340,
+    "timeout_seconds": 5.0,
+    "concurrency": 6,
+    "etherscan_min_spacing_seconds": 0.55,
+    "routescan_min_spacing_seconds": 0.55,
+    "corpus_sha256": "72d1a2fa26ad76e467e771e60c448aae16b49d319d27243278bdf751fd46dee0",
+    "application_cache": "none",
+    "provider_cache": "not controlled",
+    "runtime": "Python 3.13.7",
+    "platform": "Darwin",
+    "network_context": "development machine normal HTTPS route; no provider regions asserted",
+    "methodology": "20 distinct existing addresses per provider, 10 EOAs+10 contracts; measured dispatch-to-JSON/body time excludes scheduler queue and local validation. Discovery is not canonical first-appearance proof; RPC cohort measures chain/receipt/finalized-head retrieval, not indexed history. RPC request payload for a case is identical across vendors. No transactions submitted.",
+    "one_inflight_per_provider_workload": true,
+    "physical_vendor_overlap_limits": {
+      "alchemy": 2,
+      "other_vendors": 1
+    },
+    "concurrency_note": "Independent named workload loops; Alchemy history and Alchemy RPC may overlap. Not a serial isolated-vendor test."
+  },
+  "providers": {
+    "alchemy_history": {
+      "role": "history",
+      "requests": 20,
+      "usable_results": 20,
+      "outcomes": {
+        "usable_candidate": 20
+      },
+      "transport": {
+        "json_response": 20
+      },
+      "timeouts_censored": 0,
+      "latency_all": {
+        "n": 20,
+        "p50_ms": 602.543,
+        "p95_ms": 691.747,
+        "max_ms": 832.516
+      },
+      "latency_usable": {
+        "n": 20,
+        "p50_ms": 602.543,
+        "p95_ms": 691.747,
+        "max_ms": 832.516
+      },
+      "json_response_latency": {
+        "n": 20,
+        "p50_ms": 602.543,
+        "p95_ms": 691.747,
+        "max_ms": 832.516
+      }
+    },
+    "etherscan_history": {
+      "role": "history",
+      "requests": 20,
+      "usable_results": 20,
+      "outcomes": {
+        "usable_candidate": 20
+      },
+      "transport": {
+        "json_response": 20
+      },
+      "timeouts_censored": 0,
+      "latency_all": {
+        "n": 20,
+        "p50_ms": 450.288,
+        "p95_ms": 677.431,
+        "max_ms": 791.655
+      },
+      "latency_usable": {
+        "n": 20,
+        "p50_ms": 450.288,
+        "p95_ms": 677.431,
+        "max_ms": 791.655
+      },
+      "json_response_latency": {
+        "n": 20,
+        "p50_ms": 450.288,
+        "p95_ms": 677.431,
+        "max_ms": 791.655
+      }
+    },
+    "routescan_history": {
+      "role": "history",
+      "requests": 20,
+      "usable_results": 19,
+      "outcomes": {
+        "usable_candidate": 19,
+        "timeout": 1
+      },
+      "transport": {
+        "json_response": 19,
+        "timeout": 1
+      },
+      "timeouts_censored": 1,
+      "latency_all": {
+        "n": 20,
+        "p50_ms": 2018.651,
+        "p95_ms": 4963.84,
+        "max_ms": 5181.635
+      },
+      "latency_usable": {
+        "n": 19,
+        "p50_ms": 1959.991,
+        "p95_ms": 4963.84,
+        "max_ms": 4963.84
+      },
+      "json_response_latency": {
+        "n": 19,
+        "p50_ms": 1959.991,
+        "p95_ms": 4963.84,
+        "max_ms": 4963.84
+      }
+    },
+    "blockscout_history": {
+      "role": "history",
+      "requests": 20,
+      "usable_results": 8,
+      "outcomes": {
+        "usable_candidate": 8,
+        "rate_limited": 12
+      },
+      "transport": {
+        "json_response": 8,
+        "http_error": 12
+      },
+      "timeouts_censored": 0,
+      "latency_all": {
+        "n": 20,
+        "p50_ms": 426.703,
+        "p95_ms": 623.554,
+        "max_ms": 696.416
+      },
+      "latency_usable": {
+        "n": 8,
+        "p50_ms": 481.37,
+        "p95_ms": 623.554,
+        "max_ms": 623.554
+      },
+      "json_response_latency": {
+        "n": 8,
+        "p50_ms": 481.37,
+        "p95_ms": 623.554,
+        "max_ms": 623.554
+      }
+    },
+    "blockcypher_history": {
+      "role": "history",
+      "requests": 20,
+      "usable_results": 1,
+      "outcomes": {
+        "truncated_history": 19,
+        "usable_candidate": 1
+      },
+      "transport": {
+        "json_response": 20
+      },
+      "timeouts_censored": 0,
+      "latency_all": {
+        "n": 20,
+        "p50_ms": 364.127,
+        "p95_ms": 663.16,
+        "max_ms": 670.209
+      },
+      "latency_usable": {
+        "n": 1,
+        "p50_ms": 574.662,
+        "p95_ms": 574.662,
+        "max_ms": 574.662
+      },
+      "json_response_latency": {
+        "n": 20,
+        "p50_ms": 364.127,
+        "p95_ms": 663.16,
+        "max_ms": 670.209
+      }
+    },
+    "alchemy_rpc": {
+      "role": "verification_rpc",
+      "requests": 20,
+      "usable_results": 20,
+      "outcomes": {
+        "usable_rpc_response": 20
+      },
+      "transport": {
+        "json_response": 20
+      },
+      "timeouts_censored": 0,
+      "latency_all": {
+        "n": 20,
+        "p50_ms": 410.382,
+        "p95_ms": 511.132,
+        "max_ms": 609.681
+      },
+      "latency_usable": {
+        "n": 20,
+        "p50_ms": 410.382,
+        "p95_ms": 511.132,
+        "max_ms": 609.681
+      },
+      "json_response_latency": {
+        "n": 20,
+        "p50_ms": 410.382,
+        "p95_ms": 511.132,
+        "max_ms": 609.681
+      }
+    },
+    "quicknode_rpc": {
+      "role": "verification_rpc",
+      "requests": 20,
+      "usable_results": 20,
+      "outcomes": {
+        "usable_rpc_response": 20
+      },
+      "transport": {
+        "json_response": 20
+      },
+      "timeouts_censored": 0,
+      "latency_all": {
+        "n": 20,
+        "p50_ms": 400.678,
+        "p95_ms": 533.35,
+        "max_ms": 576.075
+      },
+      "latency_usable": {
+        "n": 20,
+        "p50_ms": 400.678,
+        "p95_ms": 533.35,
+        "max_ms": 576.075
+      },
+      "json_response_latency": {
+        "n": 20,
+        "p50_ms": 400.678,
+        "p95_ms": 533.35,
+        "max_ms": 576.075
+      }
+    },
+    "publicnode_rpc": {
+      "role": "verification_rpc",
+      "requests": 20,
+      "usable_results": 8,
+      "outcomes": {
+        "invalid_payload": 12,
+        "usable_rpc_response": 8
+      },
+      "transport": {
+        "json_response": 20
+      },
+      "timeouts_censored": 0,
+      "latency_all": {
+        "n": 20,
+        "p50_ms": 386.318,
+        "p95_ms": 503.129,
+        "max_ms": 553.865
+      },
+      "latency_usable": {
+        "n": 8,
+        "p50_ms": 397.3,
+        "p95_ms": 553.865,
+        "max_ms": 553.865
+      },
+      "json_response_latency": {
+        "n": 20,
+        "p50_ms": 386.318,
+        "p95_ms": 503.129,
+        "max_ms": 553.865
+      }
+    },
+    "1rpc_rpc": {
+      "role": "verification_rpc",
+      "requests": 20,
+      "usable_results": 11,
+      "outcomes": {
+        "rate_limited": 2,
+        "usable_rpc_response": 11,
+        "http_error": 4,
+        "invalid_payload": 3
+      },
+      "transport": {
+        "http_error": 6,
+        "json_response": 14
+      },
+      "timeouts_censored": 0,
+      "latency_all": {
+        "n": 20,
+        "p50_ms": 424.568,
+        "p95_ms": 752.924,
+        "max_ms": 3576.621
+      },
+      "latency_usable": {
+        "n": 11,
+        "p50_ms": 493.015,
+        "p95_ms": 3576.621,
+        "max_ms": 3576.621
+      },
+      "json_response_latency": {
+        "n": 14,
+        "p50_ms": 428.304,
+        "p95_ms": 3576.621,
+        "max_ms": 3576.621
+      }
+    },
+    "blockpi_rpc": {
+      "role": "verification_rpc",
+      "requests": 20,
+      "usable_results": 20,
+      "outcomes": {
+        "usable_rpc_response": 20
+      },
+      "transport": {
+        "json_response": 20
+      },
+      "timeouts_censored": 0,
+      "latency_all": {
+        "n": 20,
+        "p50_ms": 454.371,
+        "p95_ms": 532.823,
+        "max_ms": 596.435
+      },
+      "latency_usable": {
+        "n": 20,
+        "p50_ms": 454.371,
+        "p95_ms": 532.823,
+        "max_ms": 596.435
+      },
+      "json_response_latency": {
+        "n": 20,
+        "p50_ms": 454.371,
+        "p95_ms": 532.823,
+        "max_ms": 596.435
+      }
+    }
+  }
+}

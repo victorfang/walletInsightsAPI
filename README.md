@@ -11,7 +11,7 @@ standard library, including SQLite. No Redis, Node.js or frontend build is neede
 
 ## Tests and optional CI
 
-Run `python3 -m unittest discover -s tests -q`; the current revision passes 326 tests.
+Run `python3 -m unittest discover -s tests -q`; the current revision passes 344 tests.
 The [CI workflow template](docs/ci-tests.yml.example) runs Python 3.10 and 3.13
 without provider keys or pip dependencies. To activate it, copy the template to
 `.github/workflows/tests.yml` using a GitHub credential with workflow permission
@@ -42,6 +42,7 @@ produces `riskLabels.status: "not_configured"`, never a safe verdict.
 - [Code architecture and cache design](docs/ARCHITECTURE.md)
 - [Third-party providers, API keys and configuration](docs/PROVIDERS.md)
 - [Benchmark summary, raw evidence and reproduction](docs/BENCHMARKS.md)
+- [New stopping-policy comparison and provider latency](benchmarks/FIRST_RESPONSE_BENCHMARK_2026-11-05.md)
 - [Seven-chain EVM age research and live provider capabilities](EVM_WALLET_AGE_RESEARCH.md)
 - [Concurrent age lookup, provider agreement and credential probe](docs/PROVIDER_AGREEMENT.md)
 - [OpenAPI specification](openapi.json)
