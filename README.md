@@ -41,6 +41,7 @@ produces `riskLabels.status: "not_configured"`, never a safe verdict.
 - [Code architecture and cache design](docs/ARCHITECTURE.md)
 - [Third-party providers, API keys and configuration](docs/PROVIDERS.md)
 - [Benchmark summary, raw evidence and reproduction](docs/BENCHMARKS.md)
+- [Seven-chain EVM age research and live provider capabilities](EVM_WALLET_AGE_RESEARCH.md)
 - [OpenAPI specification](openapi.json)
 
 Run the unit suite with `python3 -m unittest discover -s tests -q`. Live

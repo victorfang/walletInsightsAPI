@@ -1,0 +1,311 @@
+{
+  "checked_at_utc": "2026-11-06T04:49:35.749886+00:00",
+  "purpose": "Read-only one-address provider capability probe with candidate receipt/block checks; not an exhaustive earliest-activity accuracy benchmark or an end-to-end API latency benchmark",
+  "address": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
+  "total_attempted_http_requests_including_initial_parser_retry": 23,
+  "legacy_rpc_batches": [
+    {
+      "chain": "ethereum",
+      "expected_chain_id": 1,
+      "http": 200,
+      "elapsed_ms": 659.4,
+      "returned_chain_id": 1,
+      "from": {
+        "status": "found",
+        "hash": "0x6ff0860e202c61189cb2a3a38286bffd694acbc50577df6cb5a7ff40e21ea074",
+        "block": "0x4dc40",
+        "block_timestamp": "2015-10-01T18:08:05.000Z",
+        "category": "external",
+        "from_matches": true,
+        "to_matches": false
+      },
+      "to": {
+        "status": "found",
+        "hash": "0x9b629147b75dc0b275d478fa34d97c5d4a26926457540b15a5ce871df36c23fd",
+        "block": "0x49c06",
+        "block_timestamp": "2015-09-28T08:24:43.000Z",
+        "category": "external",
+        "from_matches": false,
+        "to_matches": true
+      }
+    },
+    {
+      "chain": "base",
+      "expected_chain_id": 8453,
+      "http": 200,
+      "elapsed_ms": 619.5,
+      "returned_chain_id": 8453,
+      "from": {
+        "status": "found",
+        "hash": "0x88594f43f7079362a7342c7e38e0b9a44e9f8331690f313ec6c183e4c0cc2466",
+        "block": "0x1e085a",
+        "block_timestamp": "2023-07-30T14:03:03.000Z",
+        "category": "erc20",
+        "from_matches": true,
+        "to_matches": false
+      },
+      "to": {
+        "status": "found",
+        "hash": "0x5d86550c77ff357acf91ec33ec1cfe5025dab34ccb4fe3e0d160cdf60e3f691e",
+        "block": "0x1dfeb2",
+        "block_timestamp": "2023-07-30T12:40:39.000Z",
+        "category": "erc20",
+        "from_matches": false,
+        "to_matches": true
+      }
+    },
+    {
+      "chain": "arbitrum",
+      "expected_chain_id": 42161,
+      "http": 200,
+      "elapsed_ms": 630.1,
+      "returned_chain_id": 42161,
+      "from": {
+        "status": "found",
+        "hash": "0x55db8b5a8900edb247f6b5a5d34e62447fe62f397bb8c03e27616f3830aa5e4e",
+        "block": "0x4418bc",
+        "block_timestamp": "2022-01-07T19:54:56.000Z",
+        "category": "external",
+        "from_matches": true,
+        "to_matches": false
+      },
+      "to": {
+        "status": "found",
+        "hash": "0x23e4326fdf90263d533b578f12d9ca11cb00d6881deb235ef702d7ba0bab41ef",
+        "block": "0x33ac8f",
+        "block_timestamp": "2021-11-27T20:28:58.000Z",
+        "category": "external",
+        "from_matches": false,
+        "to_matches": true
+      }
+    },
+    {
+      "chain": "optimism",
+      "expected_chain_id": 10,
+      "http": 200,
+      "elapsed_ms": 619.7,
+      "returned_chain_id": 10,
+      "from": {
+        "status": "found",
+        "hash": "0xaf073f5a034e8f2ee3ee4ea3a13bb5e91fffcf7a104693ff8c47e65a97a70fbc",
+        "block": "0x1f6aff",
+        "block_timestamp": "2022-01-07T15:28:59.000Z",
+        "category": "external",
+        "from_matches": true,
+        "to_matches": false
+      },
+      "to": {
+        "status": "found",
+        "hash": "0x7bd800525c7c2a5a773df59d91a4ba4a118bb6311d27974fc27afd08427ced6a",
+        "block": "0x138f87",
+        "block_timestamp": "2021-12-17T15:15:45.000Z",
+        "category": "erc20",
+        "from_matches": false,
+        "to_matches": true
+      }
+    },
+    {
+      "chain": "polygon",
+      "expected_chain_id": 137,
+      "http": 200,
+      "elapsed_ms": 619.3,
+      "returned_chain_id": 137,
+      "from": {
+        "status": "found",
+        "hash": "0x65cf708741540c84b6634589ee2f2a2bc985d55efdd97a701352f31f7131b6b0",
+        "block": "0x1d3e797",
+        "block_timestamp": "2022-07-13T02:57:03.000Z",
+        "category": "erc20",
+        "from_matches": true,
+        "to_matches": false
+      },
+      "to": {
+        "status": "found",
+        "hash": "0xa4f706c9dc0fd5c905f204f40c463cbac0285fcbee65605b358ea8f875154574",
+        "block": "0xb093a1",
+        "block_timestamp": "2021-03-03T23:43:11.000Z",
+        "category": "erc721",
+        "from_matches": false,
+        "to_matches": true
+      }
+    },
+    {
+      "chain": "bsc",
+      "expected_chain_id": 56,
+      "http": 200,
+      "elapsed_ms": 655.4,
+      "returned_chain_id": 56,
+      "from": {
+        "status": "found",
+        "hash": "0x05ff4b280199ab918dfc0834e3178447454d538abcf98c85261e636ce5c65010",
+        "block": "0x15553d0",
+        "block_timestamp": "2022-10-21T13:52:11.000Z",
+        "category": "erc20",
+        "from_matches": true,
+        "to_matches": false
+      },
+      "to": {
+        "status": "found",
+        "hash": "0x0c93295bbe941c5cc0c98c5e4eb3bde5181e79bc36a5972ce6b20ebbf255cafa",
+        "block": "0x6bddb4",
+        "block_timestamp": "2021-05-02T09:39:21.000Z",
+        "category": "erc20",
+        "from_matches": false,
+        "to_matches": true
+      }
+    },
+    {
+      "chain": "avalanche",
+      "expected_chain_id": 43114,
+      "http": 200,
+      "elapsed_ms": 488.8,
+      "returned_chain_id": 43114,
+      "from": {
+        "status": "found",
+        "hash": "0x474754f7975f976599eb29d677c53091de199d505eb38a4be21d7df9f1cd1fc3",
+        "block": "0x251c178",
+        "block_timestamp": null,
+        "category": "erc20",
+        "from_matches": true,
+        "to_matches": false
+      },
+      "to": {
+        "status": "found",
+        "hash": "0xc9754d519a8031de43a73df3742550eb058d3bf938a1f647b6fd94e2754d8339",
+        "block": "0x96b3ec",
+        "block_timestamp": null,
+        "category": "external",
+        "from_matches": false,
+        "to_matches": true
+      }
+    }
+  ],
+  "portfolio_batches": [
+    {
+      "networks": [
+        "eth-mainnet",
+        "base-mainnet",
+        "matic-mainnet",
+        "arb-mainnet",
+        "opt-mainnet"
+      ],
+      "http": 200,
+      "elapsed_ms": 519.8,
+      "transfer_count": 1,
+      "candidate": {
+        "network": "eth-mainnet",
+        "hash": "0x9b629147b75dc0b275d478fa34d97c5d4a26926457540b15a5ce871df36c23fd",
+        "blockNum": "0x49c06",
+        "blockTimestamp": "2015-09-28T08:24:43.000Z",
+        "category": "external"
+      },
+      "has_error": false
+    },
+    {
+      "networks": [
+        "bnb-mainnet",
+        "avax-mainnet"
+      ],
+      "http": 200,
+      "elapsed_ms": 513.8,
+      "transfer_count": 1,
+      "candidate": {
+        "network": "bnb-mainnet",
+        "hash": "0x0c93295bbe941c5cc0c98c5e4eb3bde5181e79bc36a5972ce6b20ebbf255cafa",
+        "blockNum": "0x6bddb4",
+        "blockTimestamp": "2021-05-02T09:39:21.000Z",
+        "category": "erc20"
+      },
+      "has_error": true,
+      "partial_error_count": 1,
+      "partial_errors": [
+        {
+          "network": "avax-mainnet",
+          "category": null,
+          "code": null
+        }
+      ]
+    }
+  ],
+  "verification_batches": [
+    {
+      "chain": "ethereum",
+      "http": 200,
+      "elapsed_ms": 452.5,
+      "candidate_hash": "0x9b629147b75dc0b275d478fa34d97c5d4a26926457540b15a5ce871df36c23fd",
+      "receipt_hash_matches": true,
+      "receipt_block_matches": true,
+      "transaction_in_block": true,
+      "block_epoch": 1443428683,
+      "candidate_is_finalized": true
+    },
+    {
+      "chain": "base",
+      "http": 200,
+      "elapsed_ms": 355.1,
+      "candidate_hash": "0x5d86550c77ff357acf91ec33ec1cfe5025dab34ccb4fe3e0d160cdf60e3f691e",
+      "receipt_hash_matches": true,
+      "receipt_block_matches": true,
+      "transaction_in_block": true,
+      "block_epoch": 1690720839,
+      "candidate_is_finalized": true
+    },
+    {
+      "chain": "arbitrum",
+      "http": 200,
+      "elapsed_ms": 354.2,
+      "candidate_hash": "0x23e4326fdf90263d533b578f12d9ca11cb00d6881deb235ef702d7ba0bab41ef",
+      "receipt_hash_matches": true,
+      "receipt_block_matches": true,
+      "transaction_in_block": true,
+      "block_epoch": 1638044938,
+      "candidate_is_finalized": true
+    },
+    {
+      "chain": "optimism",
+      "http": 200,
+      "elapsed_ms": 416.5,
+      "candidate_hash": "0x7bd800525c7c2a5a773df59d91a4ba4a118bb6311d27974fc27afd08427ced6a",
+      "receipt_hash_matches": true,
+      "receipt_block_matches": true,
+      "transaction_in_block": true,
+      "block_epoch": 1639754145,
+      "candidate_is_finalized": true
+    },
+    {
+      "chain": "polygon",
+      "http": 200,
+      "elapsed_ms": 460.0,
+      "candidate_hash": "0xa4f706c9dc0fd5c905f204f40c463cbac0285fcbee65605b358ea8f875154574",
+      "receipt_hash_matches": true,
+      "receipt_block_matches": true,
+      "transaction_in_block": true,
+      "block_epoch": 1614814991,
+      "candidate_is_finalized": true
+    },
+    {
+      "chain": "bsc",
+      "http": 200,
+      "elapsed_ms": 561.7,
+      "candidate_hash": "0x0c93295bbe941c5cc0c98c5e4eb3bde5181e79bc36a5972ce6b20ebbf255cafa",
+      "receipt_hash_matches": true,
+      "receipt_block_matches": true,
+      "transaction_in_block": true,
+      "block_epoch": 1619948361,
+      "candidate_is_finalized": true
+    },
+    {
+      "chain": "avalanche",
+      "http": 200,
+      "elapsed_ms": 661.5,
+      "candidate_hash": "0xc9754d519a8031de43a73df3742550eb058d3bf938a1f647b6fd94e2754d8339",
+      "receipt_hash_matches": true,
+      "receipt_block_matches": true,
+      "transaction_in_block": true,
+      "block_epoch": 1642796012,
+      "candidate_is_finalized": true
+    }
+  ],
+  "recorded_discovery_http_requests": 9,
+  "recorded_discovery_wall_ms": 1185.8
+}
