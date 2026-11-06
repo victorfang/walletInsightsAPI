@@ -1,0 +1,15 @@
+{
+  "started_at": "2026-11-06T14:26:22.778304Z",
+  "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+  "seed": 20261105,
+  "coverage": "ethereum",
+  "cache_capacity": 1000000,
+  "dataset_sha256": "72d1a2fa26ad76e467e771e60c448aae16b49d319d27243278bdf751fd46dee0",
+  "runtime_sha256": {
+    "app.py": "0ac19c12d31afef7d041d577f96f77158d09a66440a908ca8ee93f3e372918f4",
+    "cache.py": "feff37ea587032ef7420775777c3c84bbc89723d0eef777bd33e47ea4ed1b389",
+    "feeds.py": "0f3385ac826b95989a3f6baf3dcd84c45fec93e667713612f8c7284bf17f5c24",
+    "service.py": "6c170665fd27c3a9a6c241ac7c38b584d250f0543e500d4b8463d7081c8a36e7"
+  },
+  "methodology": "one client; isolated cache; cold responses then bounded refinement; positive warm repeats"
+}

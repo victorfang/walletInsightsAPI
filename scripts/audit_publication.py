@@ -24,6 +24,7 @@ PLACEHOLDERS = re.compile(r"(?:your|example|placeholder|test|private|secret|dumm
 LOCAL_PATH = re.compile(r"/Users/[A-Za-z0-9_.-]+/")
 SYNTHETIC_PROVIDER_URLS = {
     "https://eth-mainnet.g.alchemy.com/v2/a%2Fb%3Fc%23d%20e%2Bf%25",
+    "https://eth-mainnet.g.alchemy.com/v2/{key}",
 }
 
 

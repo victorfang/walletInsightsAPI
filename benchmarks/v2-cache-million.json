@@ -1,0 +1,41 @@
+{
+  "measured_at": "2026-11-06T14:25:42.613532+00:00",
+  "fixture": "synthetic epochs and addresses; offline, not blockchain ground truth",
+  "entries": 1000000,
+  "metadata_entries": 1000000,
+  "access_counter": 1003005,
+  "seed_seconds": 4.767951708985493,
+  "timings": {
+    "cache_hit": {
+      "samples": 1000,
+      "median_ms": 0.1236454991158098,
+      "p95_ms": 0.17212500097230077,
+      "max_ms": 2.0403750240802765
+    },
+    "minimum_upsert_at_capacity": {
+      "samples": 1000,
+      "median_ms": 0.12074998812749982,
+      "p95_ms": 0.16954197781160474,
+      "max_ms": 1.409791992045939
+    },
+    "insert_with_lru_eviction": {
+      "samples": 1000,
+      "median_ms": 0.15643751248717308,
+      "p95_ms": 0.2181250019930303,
+      "max_ms": 1.6338329878635705
+    }
+  },
+  "database_bytes": {
+    "main": 157855744,
+    "wal": 0,
+    "shm": 0,
+    "total": 157855744
+  },
+  "checks": {
+    "capacity": true,
+    "metadata": true,
+    "minimum_epoch": true,
+    "lru_eviction": true,
+    "persistent_recency": true
+  }
+}

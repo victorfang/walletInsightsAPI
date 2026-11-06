@@ -7,7 +7,31 @@ Eighteen existing-account controls were transaction senders from one block;
 popular contracts were chosen deliberately. Historical account-type labels were
 not independently revalidated.
 
-## Latest stopping-policy experiment
+## V2 aiohttp service — November 6
+
+The [V2 report](../benchmarks/run-v2-final-2026-11-06/REPORT.md) uses the same
+100 inputs, a fresh V2 SQLite LRU and the pinned runtime. All 40 known-used
+controls returned ages; all 20 malformed inputs returned `400`; all 40 synthetic
+candidates returned `503 unknown`. No absence or age-zero claim is made for them.
+
+| V2 cohort | Median | p95 | Maximum |
+| --- | ---: | ---: | ---: |
+| Known-used uncached, 40 | 0.723 s | 0.996 s | 1.004 s |
+| All uncached, 100 | 0.693 s | 0.979 s | 1.017 s |
+| Positive cache repeats, 40 | 0.790 ms | 1.756 ms | 5.781 ms |
+
+Exact deployment-epoch agreement was 17/20 both initially and after refinement;
+one other epoch improved in the background. Formula checks passed 80/80 successful
+cold/warm results. These are observed-history controls, not universal age or fraud
+accuracy. Provider caches cannot be reset, and this run followed a qualification
+run, so it is not a controlled speed comparison with earlier implementations.
+
+The [V2 million-entry SQLite check](../benchmarks/v2-cache-million.md) verifies
+the full capacity, LRU replacement, epoch minimums and recency after reopening.
+Its synthetic local hit median/p95 were 0.124/0.172 ms; the database was 151 MiB.
+It does not measure HTTP or provider latency.
+
+## V1 stopping-policy experiment — November 5
 
 The [new one-second soft-deadline comparison and vendor study](../benchmarks/FIRST_RESPONSE_BENCHMARK_2026-11-05.md)
 uses the persistent LRU and current configured providers. Production remains unchanged.

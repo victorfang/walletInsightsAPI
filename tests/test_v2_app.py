@@ -1,0 +1,265 @@
+"""Exercise version dispatch and the existing wire contract without upstream I/O."""
+
+import asyncio
+import threading
+from types import SimpleNamespace
+import unittest
+from unittest.mock import AsyncMock, Mock
+
+from aiohttp.test_utils import TestClient, TestServer
+
+from v2.app import VERSIONS, create_app
+
+
+ADDRESS = "0x" + "a" * 40
+INPUT = {"blockchain": "ETH", "address": ADDRESS}
+KEY = {"x-api-key": "test-key"}
+
+
+class V2HTTPTests(unittest.IsolatedAsyncioTestCase):
+    async def asyncSetUp(self):
+        self.service = SimpleNamespace(
+            coverage="ethereum", close=AsyncMock(),
+            check=AsyncMock(return_value=SimpleNamespace(
+                days=0, epoch=1700000000, cache="hit", finalized=True,
+                evidence="cached-canonical", positive_sources=0)),
+        )
+        self.legacy_age = Mock(coverage="ethereum")
+        self.legacy_age.check.return_value = SimpleNamespace(
+            days=365, epoch=1600000000, cache="miss", finalized=True,
+            evidence="single-source", positive_sources=1,
+        )
+        self.insights_body = {
+            "status": "partial", "address": ADDRESS, "chainId": 1,
+            "riskLabels": {"status": "unavailable", "labels": None},
+            "cache": {"snapshot": {"hit": True}, "riskLabels": {"hit": False}},
+        }
+        self.insights = Mock()
+        self.insights.check.return_value = (200, self.insights_body)
+        self.config = {
+            "server": {"api_key": "test-key"}, "api": {"latest": "v2"},
+            "legacy": {"enabled": True}, "wallet_age": {}, "chains": {}, "feeds": {},
+        }
+        app = await create_app(self.config, service=self.service, legacy={
+            "walletAgeDays": self.legacy_age, "WalletInsights": self.insights,
+        })
+        self.client = TestClient(TestServer(app, handler_cancellation=True))
+        await self.client.start_server()
+
+    async def asyncTearDown(self):
+        await self.client.close()
+
+    async def call(self, path, *, method="GET", auth=True, **kwargs):
+        headers = dict(KEY if auth else {})
+        headers.update(kwargs.pop("headers", {}))
+        async with self.client.request(method, path, headers=headers, **kwargs) as response:
+            return response.status, await response.json(), response.headers.copy()
+
+    def assert_no_checks(self):
+        self.service.check.assert_not_awaited()
+        self.legacy_age.check.assert_not_called()
+        self.insights.check.assert_not_called()
+
+    async def test_default_latest_and_pinned_v2_use_same_integer_contract(self):
+        for prefix in ("", "/latest", "/v2"):
+            for method in ("GET", "POST"):
+                options = {"params": INPUT} if method == "GET" else {"json": INPUT}
+                status, body, headers = await self.call(prefix + "/walletAgeDays", method=method, **options)
+                self.assertEqual((status, type(body), body), (200, int, 0))
+                self.assertEqual(headers["X-API-Version"], "v2")
+                self.assertEqual(headers["Cache-Control"], "no-store")
+                expected = {
+                    "Coverage": "ethereum", "Cache": "hit", "Basis": "first-observed-activity",
+                    "Quality": "lower-bound", "Finalized": "true",
+                    "Evidence": "cached-canonical", "Sources": "0",
+                }
+                for suffix, value in expected.items():
+                    self.assertEqual(headers["X-Wallet-Age-" + suffix], value)
+                self.assertNotIn("X-Wallet-Insights-Cache", headers)
+        self.assertEqual(self.service.check.await_count, 6)
+        self.legacy_age.check.assert_not_called()
+        self.insights.check.assert_not_called()
+
+    async def test_pinned_v1_uses_unchanged_legacy_checker(self):
+        for method in ("GET", "POST"):
+            options = {"params": INPUT} if method == "GET" else {"json": INPUT}
+            status, body, headers = await self.call("/v1/walletAgeDays", method=method, **options)
+            self.assertEqual((status, type(body), body), (200, int, 365))
+            self.assertEqual(headers["X-API-Version"], "v1")
+            self.assertEqual(headers["X-Wallet-Age-Sources"], "1")
+        self.assertEqual(self.legacy_age.check.call_count, 2)
+        self.service.check.assert_not_awaited()
+
+    async def test_legacy_insights_calls_keep_their_object_and_headers(self):
+        for prefix in ("", "/latest", "/v1"):
+            status, body, headers = await self.call(prefix + "/WalletInsights", params=INPUT)
+            self.assertEqual((status, body), (200, self.insights_body))
+            self.assertEqual(headers["X-API-Version"], "v1")
+            self.assertEqual(headers["X-Wallet-Insights-Coverage"], "ethereum")
+            self.assertEqual(headers["X-Wallet-Insights-Cache"], "mixed")
+            self.assertNotIn("X-Wallet-Age-Quality", headers)
+        self.service.check.assert_not_awaited()
+        self.legacy_age.check.assert_not_called()
+
+    async def test_v2_does_not_silently_implement_legacy_insights(self):
+        status, body, headers = await self.call("/v2/WalletInsights", params=INPUT)
+        self.assertEqual((status, body), (501, "coming soon contact info@anchain.ai"))
+        self.assertEqual(headers["X-API-Version"], "v2")
+        self.assert_no_checks()
+
+    async def test_authentication_precedes_checking(self):
+        for path in ("/walletAgeDays", "/v1/walletAgeDays", "/WalletInsights"):
+            for auth_headers in ({}, {"x-api-key": "wrong"}):
+                status, body, headers = await self.call(path, params=INPUT, auth=False, headers=auth_headers)
+                self.assertEqual((status, body), (401, "unauthorized"))
+                self.assertEqual(headers["Cache-Control"], "no-store")
+        self.assert_no_checks()
+
+    async def test_public_health_and_specs_need_no_key(self):
+        for prefix in ("", "/latest", "/v1", "/v2"):
+            self.assertEqual((await self.call(prefix + "/health", auth=False))[:2], (200, "ok"))
+            status, body, _ = await self.call(prefix + "/openapi.json", auth=False)
+            self.assertEqual(status, 200)
+            self.assertEqual(body["openapi"], "3.1.0")
+            self.assertIn("/walletAgeDays", body["paths"])
+        self.assert_no_checks()
+
+    async def test_latest_setting_resolves_to_newest_registered_version(self):
+        config = {**self.config, "api": {"latest": "latest"}}
+        app = await create_app(config, service=self.service, legacy={
+            "walletAgeDays": self.legacy_age, "WalletInsights": self.insights,
+        })
+        async with TestClient(TestServer(app)) as client:
+            for path in ("/walletAgeDays", "/latest/walletAgeDays"):
+                async with client.get(path, params=INPUT, headers=KEY) as response:
+                    self.assertEqual((response.status, await response.json()), (200, 0))
+                    self.assertEqual(response.headers["X-API-Version"], VERSIONS[-1])
+        self.legacy_age.check.assert_not_called()
+
+    async def test_pinned_specs_use_their_version_base_and_v2_excludes_insights(self):
+        for version in ("v1", "v2"):
+            status, spec, headers = await self.call(f"/{version}/openapi.json", auth=False)
+            self.assertEqual(status, 200)
+            self.assertEqual(spec["servers"], [{"url": f"/{version}"}])
+            self.assertEqual(headers["X-API-Version"], version)
+            self.assertEqual("/WalletInsights" in spec["paths"], version == "v1")
+        _, spec, _ = await self.call("/openapi.json", auth=False)
+        operation_ids = [operation["operationId"] for path in spec["paths"].values()
+                         for operation in path.values()
+                         if isinstance(operation, dict) and "operationId" in operation]
+        self.assertTrue(operation_ids)
+        self.assertEqual(len(operation_ids), len(set(operation_ids)))
+        self.assert_no_checks()
+
+    async def test_trailing_slash_cannot_fall_back_to_legacy_insights(self):
+        self.assertEqual((await self.call("/v2/WalletInsights/", params=INPUT))[:2],
+                         (404, "not_found"))
+        self.assert_no_checks()
+
+    async def test_missing_extra_and_duplicate_query_inputs_are_invalid(self):
+        paths = [
+            "/walletAgeDays", "/walletAgeDays?blockchain=ETH",
+            f"/walletAgeDays?blockchain=ETH&address={ADDRESS}&details=true",
+            f"/walletAgeDays?blockchain=ETH&blockchain=ETH&address={ADDRESS}",
+            f"/walletAgeDays?blockchain=ETH&address={ADDRESS}&address={ADDRESS}",
+        ]
+        for path in paths:
+            self.assertEqual((await self.call(path))[:2], (400, "invalid request"))
+        self.assert_no_checks()
+
+    async def test_post_rejects_duplicate_keys_wrong_type_and_large_body(self):
+        bad_bodies = [
+            "", "{", "[]", "null", "{}",
+            '{"blockchain":"ETH","blockchain":"EVM","address":"' + ADDRESS + '"}',
+            '{"blockchain":"ETH","address":"' + ADDRESS + '","details":true}',
+            " " * 1025,
+        ]
+        for body in bad_bodies:
+            self.assertEqual((await self.call("/walletAgeDays", method="POST", data=body,
+                headers={"Content-Type": "application/json"}))[:2], (400, "invalid request"))
+        self.assert_no_checks()
+
+    async def test_post_rejects_query_and_wrong_content_type_but_accepts_charset(self):
+        self.assertEqual((await self.call("/walletAgeDays?extra=1", method="POST", json=INPUT))[:2],
+                         (400, "invalid request"))
+        self.assertEqual((await self.call("/walletAgeDays", method="POST", data="{}",
+            headers={"Content-Type": "text/plain"}))[:2], (400, "invalid request"))
+        self.assert_no_checks()
+        status, body, _ = await self.call("/walletAgeDays", method="POST", json=INPUT,
+            headers={"Content-Type": "application/json; charset=utf-8"})
+        self.assertEqual((status, body), (200, 0))
+
+    async def test_unsupported_methods_and_routes_return_json_errors(self):
+        for method in ("PUT", "PATCH", "DELETE"):
+            self.assertEqual((await self.call("/walletAgeDays", method=method))[:2],
+                             (405, "method not allowed"))
+        for path in ("/v99/walletAgeDays", "/missing"):
+            self.assertEqual((await self.call(path))[:2], (404, "not_found"))
+        self.assert_no_checks()
+
+    async def test_service_errors_preserve_status_and_string_body(self):
+        from v2.service import AgeError
+        for status, message in ((400, "invalid"), (404, "not_found"),
+                                (501, "coming soon contact info@anchain.ai"), (503, "unknown")):
+            self.service.check.side_effect = AgeError(status, message)
+            response_status, body, headers = await self.call("/walletAgeDays", params=INPUT)
+            self.assertEqual((response_status, body), (status, message))
+            self.assertEqual(headers["Cache-Control"], "no-store")
+        self.legacy_age.check.assert_not_called()
+
+    async def test_unexpected_errors_do_not_leak_upstream_configuration(self):
+        for error in (RuntimeError, ValueError):
+            self.service.check.side_effect = error("https://private.example/SECRET")
+            status, body, _ = await self.call("/walletAgeDays", params=INPUT)
+            self.assertEqual((status, body), (503, "unknown"))
+
+    async def test_legacy_error_and_unavailable_insights_status_are_preserved(self):
+        from wallet_age_days.service import WalletAgeError
+        self.legacy_age.check.side_effect = WalletAgeError(400, "invalid")
+        self.assertEqual((await self.call("/v1/walletAgeDays", params=INPUT))[:2], (400, "invalid"))
+        self.insights.check.return_value = (503, self.insights_body)
+        self.assertEqual((await self.call("/WalletInsights", params=INPUT))[:2], (503, self.insights_body))
+        self.service.check.assert_not_awaited()
+
+    async def test_shutdown_waits_for_legacy_thread_after_client_cancellation(self):
+        started, release, completed = threading.Event(), threading.Event(), threading.Event()
+        result = self.legacy_age.check.return_value
+
+        def blocking_check(*_args):
+            started.set()
+            if not release.wait(2):
+                raise RuntimeError("Test did not release the legacy worker")
+            completed.set()
+            return result
+
+        self.legacy_age.check.side_effect = blocking_check
+        request = asyncio.create_task(self.call("/v1/walletAgeDays", params=INPUT))
+        cleanup = None
+        try:
+            self.assertTrue(await asyncio.to_thread(started.wait, 1))
+            request.cancel()
+            with self.assertRaises(asyncio.CancelledError):
+                await request
+            cleanup = asyncio.create_task(self.client.close())
+            for _ in range(100):
+                if self.service.close.await_count:
+                    break
+                await asyncio.sleep(.001)
+            self.service.close.assert_awaited()
+            self.assertFalse(cleanup.done())
+            self.legacy_age.close.assert_not_called()
+            release.set()
+            await asyncio.wait_for(cleanup, 1)
+            self.assertTrue(completed.is_set())
+            self.legacy_age.close.assert_called_once()
+        finally:
+            release.set()
+            if not request.done():
+                request.cancel()
+                await asyncio.gather(request, return_exceptions=True)
+            if cleanup is not None:
+                await asyncio.gather(cleanup, return_exceptions=True)
+
+
+if __name__ == "__main__":
+    unittest.main()

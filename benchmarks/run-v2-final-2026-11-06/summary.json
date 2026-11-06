@@ -1,0 +1,242 @@
+{
+  "metadata": {
+    "started_at": "2026-11-06T14:26:22.778304Z",
+    "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+    "seed": 20261105,
+    "coverage": "ethereum",
+    "cache_capacity": 1000000,
+    "dataset_sha256": "72d1a2fa26ad76e467e771e60c448aae16b49d319d27243278bdf751fd46dee0",
+    "runtime_sha256": {
+      "app.py": "0ac19c12d31afef7d041d577f96f77158d09a66440a908ca8ee93f3e372918f4",
+      "cache.py": "feff37ea587032ef7420775777c3c84bbc89723d0eef777bd33e47ea4ed1b389",
+      "feeds.py": "0f3385ac826b95989a3f6baf3dcd84c45fec93e667713612f8c7284bf17f5c24",
+      "service.py": "6c170665fd27c3a9a6c241ac7c38b584d250f0543e500d4b8463d7081c8a36e7"
+    },
+    "methodology": "one client; isolated cache; cold responses then bounded refinement; positive warm repeats"
+  },
+  "cohorts": {
+    "uncached_known_used": {
+      "latency_seconds": {
+        "count": 40,
+        "median": 0.7226116665115114,
+        "p95": 0.9960196249885485,
+        "max": 1.0036526250187308
+      },
+      "statuses": {
+        "200": 40
+      },
+      "age_results": 40,
+      "over_three_seconds": 0
+    },
+    "uncached_format_valid": {
+      "latency_seconds": {
+        "count": 80,
+        "median": 0.6978258334856946,
+        "p95": 0.9895683330250904,
+        "max": 1.0168687499826774
+      },
+      "statuses": {
+        "200": 40,
+        "503": 40
+      },
+      "age_results": 40,
+      "over_three_seconds": 0
+    },
+    "uncached_overall": {
+      "latency_seconds": {
+        "count": 100,
+        "median": 0.6932747705141082,
+        "p95": 0.9794522920274176,
+        "max": 1.0168687499826774
+      },
+      "statuses": {
+        "400": 20,
+        "200": 40,
+        "503": 40
+      },
+      "age_results": 40,
+      "over_three_seconds": 0
+    },
+    "cached_positive_repeats": {
+      "latency_seconds": {
+        "count": 40,
+        "median": 0.0007897499890532345,
+        "p95": 0.0017560409614816308,
+        "max": 0.005781417014077306
+      },
+      "statuses": {
+        "200": 40
+      },
+      "age_results": 40,
+      "over_three_seconds": 0
+    }
+  },
+  "deployment_controls": [
+    {
+      "id": "eth-021",
+      "reference_epoch": 1513077455,
+      "initial_epoch": 1513077455,
+      "refined_epoch": 1513077455,
+      "initial_difference_seconds": 0,
+      "refined_difference_seconds": 0
+    },
+    {
+      "id": "eth-022",
+      "reference_epoch": 1533324504,
+      "initial_epoch": 1533324504,
+      "refined_epoch": 1533324504,
+      "initial_difference_seconds": 0,
+      "refined_difference_seconds": 0
+    },
+    {
+      "id": "eth-023",
+      "reference_epoch": 1511829681,
+      "initial_epoch": 1511829681,
+      "refined_epoch": 1511829681,
+      "initial_difference_seconds": 0,
+      "refined_difference_seconds": 0
+    },
+    {
+      "id": "eth-024",
+      "reference_epoch": 1573672677,
+      "initial_epoch": 1573993299,
+      "refined_epoch": 1573993299,
+      "initial_difference_seconds": 320622,
+      "refined_difference_seconds": 320622
+    },
+    {
+      "id": "eth-025",
+      "reference_epoch": 1600107086,
+      "initial_epoch": 1600107086,
+      "refined_epoch": 1600107086,
+      "initial_difference_seconds": 0,
+      "refined_difference_seconds": 0
+    },
+    {
+      "id": "eth-026",
+      "reference_epoch": 1505597189,
+      "initial_epoch": 1505597189,
+      "refined_epoch": 1505597189,
+      "initial_difference_seconds": 0,
+      "refined_difference_seconds": 0
+    },
+    {
+      "id": "eth-027",
+      "reference_epoch": 1543095952,
+      "initial_epoch": 1543095952,
+      "refined_epoch": 1543095952,
+      "initial_difference_seconds": 0,
+      "refined_difference_seconds": 0
+    },
+    {
+      "id": "eth-028",
+      "reference_epoch": 1600970788,
+      "initial_epoch": 1600970788,
+      "refined_epoch": 1600970788,
+      "initial_difference_seconds": 0,
+      "refined_difference_seconds": 0
+    },
+    {
+      "id": "eth-029",
+      "reference_epoch": 1511634257,
+      "initial_epoch": 1511637118,
+      "refined_epoch": 1511637118,
+      "initial_difference_seconds": 2861,
+      "refined_difference_seconds": 2861
+    },
+    {
+      "id": "eth-030",
+      "reference_epoch": 1583280535,
+      "initial_epoch": 1583280535,
+      "refined_epoch": 1583280535,
+      "initial_difference_seconds": 0,
+      "refined_difference_seconds": 0
+    },
+    {
+      "id": "eth-031",
+      "reference_epoch": 1588610042,
+      "initial_epoch": 1588610042,
+      "refined_epoch": 1588610042,
+      "initial_difference_seconds": 0,
+      "refined_difference_seconds": 0
+    },
+    {
+      "id": "eth-032",
+      "reference_epoch": 1591388241,
+      "initial_epoch": 1591388241,
+      "refined_epoch": 1591388241,
+      "initial_difference_seconds": 0,
+      "refined_difference_seconds": 0
+    },
+    {
+      "id": "eth-033",
+      "reference_epoch": 1620156420,
+      "initial_epoch": 1620156420,
+      "refined_epoch": 1620156420,
+      "initial_difference_seconds": 0,
+      "refined_difference_seconds": 0
+    },
+    {
+      "id": "eth-034",
+      "reference_epoch": 1620156641,
+      "initial_epoch": 1620156641,
+      "refined_epoch": 1620156641,
+      "initial_difference_seconds": 0,
+      "refined_difference_seconds": 0
+    },
+    {
+      "id": "eth-035",
+      "reference_epoch": 1639503446,
+      "initial_epoch": 1639503446,
+      "refined_epoch": 1639503446,
+      "initial_difference_seconds": 0,
+      "refined_difference_seconds": 0
+    },
+    {
+      "id": "eth-036",
+      "reference_epoch": 1620156913,
+      "initial_epoch": 1620156913,
+      "refined_epoch": 1620156913,
+      "initial_difference_seconds": 0,
+      "refined_difference_seconds": 0
+    },
+    {
+      "id": "eth-037",
+      "reference_epoch": 1668647879,
+      "initial_epoch": 1668653243,
+      "refined_epoch": 1668653243,
+      "initial_difference_seconds": 5364,
+      "refined_difference_seconds": 5364
+    },
+    {
+      "id": "eth-038",
+      "reference_epoch": 1580344632,
+      "initial_epoch": 1580344632,
+      "refined_epoch": 1580344632,
+      "initial_difference_seconds": 0,
+      "refined_difference_seconds": 0
+    },
+    {
+      "id": "eth-039",
+      "reference_epoch": 1580345034,
+      "initial_epoch": 1580345034,
+      "refined_epoch": 1580345034,
+      "initial_difference_seconds": 0,
+      "refined_difference_seconds": 0
+    },
+    {
+      "id": "eth-040",
+      "reference_epoch": 1602667372,
+      "initial_epoch": 1602667372,
+      "refined_epoch": 1602667372,
+      "initial_difference_seconds": 0,
+      "refined_difference_seconds": 0
+    }
+  ],
+  "initial_deployment_matches": 17,
+  "refined_deployment_matches": 17,
+  "background_epoch_corrections": 1,
+  "warm_cache_hits": 40,
+  "age_formula_matches": 80,
+  "age_formula_eligible": 80
+}

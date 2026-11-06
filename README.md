@@ -1,19 +1,24 @@
 # WalletInsights API
 
+**V2 is implemented:** an age-first aiohttp service with latest-by-default routing, pinned `/v1` and `/v2` age routes, and a separate one-million-entry SQLite LRU. See the [V2 quick start and API](v2/README.md) and [architecture](v2/ARCHITECTURE.md). Legacy Insights remains available for backward compatibility. The documentation below describes the original V1 service; its Python/CLI entry points remain unchanged. V2 requires Python 3.11+ and its pinned aiohttp dependency.
+
 Two separate endpoints share a small Python standard-library service:
 
 - `walletAgeDays`: one integer, with a bounded LRU first-observation epoch cache and no TTL.
 - `WalletInsights`: balances, raw nonce, code profile, and AnChain labels, with short independent component caches.
 
-Python 3.10+ is sufficient. Insights never adds fields to the age response.
-The runtime and unit tests have **no required pip packages**: they use Python's
-standard library, including SQLite. No Redis, Node.js or frontend build is needed.
+Python 3.10+ is sufficient for the original V1 runtime. Insights never adds fields
+to the age response. V1 uses Python's standard library, including SQLite;
+the new V2 runtime and full repository test suite require Python 3.11+ and aiohttp.
+No Redis, Node.js or frontend build is needed.
 
 ## Tests and optional CI
 
-Run `python3 -m unittest discover -s tests -q`; the current revision passes 344 tests.
-The [CI workflow template](docs/ci-tests.yml.example) runs Python 3.10 and 3.13
-without provider keys or pip dependencies. To activate it, copy the template to
+After the [V2 dependency setup](v2/README.md#run), run
+`v2/.venv/bin/python -m unittest discover -s tests -q` for the complete V1/V2 suite.
+The current complete suite passes **419 tests**.
+The [CI workflow template](docs/ci-tests.yml.example) runs Python 3.11 and 3.13
+with the pinned dependency and no provider keys. To activate it, copy the template to
 `.github/workflows/tests.yml` using a GitHub credential with workflow permission
 or the repository web editor. The publishing credential did not have that
 permission, so no active workflow was installed.
@@ -42,12 +47,13 @@ produces `riskLabels.status: "not_configured"`, never a safe verdict.
 - [Code architecture and cache design](docs/ARCHITECTURE.md)
 - [Third-party providers, API keys and configuration](docs/PROVIDERS.md)
 - [Benchmark summary, raw evidence and reproduction](docs/BENCHMARKS.md)
+- [V2 100-address benchmark](benchmarks/run-v2-final-2026-11-06/REPORT.md) and [V2 million-entry SQLite measurement](benchmarks/v2-cache-million.md)
 - [New stopping-policy comparison and provider latency](benchmarks/FIRST_RESPONSE_BENCHMARK_2026-11-05.md)
 - [Seven-chain EVM age research and live provider capabilities](EVM_WALLET_AGE_RESEARCH.md)
 - [Concurrent age lookup, provider agreement and credential probe](docs/PROVIDER_AGREEMENT.md)
 - [OpenAPI specification](openapi.json)
 
-Run the unit suite with `python3 -m unittest discover -s tests -q`. Live
+Run the full suite with `v2/.venv/bin/python -m unittest discover -s tests -q`. Live
 benchmarks are separate commands and can consume provider quota. Historical
 HTTP timings predate LRU; the current million-entry LRU store measurement is
 identified separately in the benchmark documentation.

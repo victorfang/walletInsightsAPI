@@ -1,0 +1,81 @@
+# Public configuration only. Secrets and private URLs belong in .env / environment.
+[server]
+host = "127.0.0.1"
+port = 8787
+
+[api]
+latest = "latest"  # Newest registered compatible version; can explicitly pin for rollback.
+
+[legacy]
+enabled = true
+max_inflight = 4
+
+[wallet_age]
+database = "data/wallet-age.sqlite3"
+max_entries = 1_000_000
+soft_deadline_ms = 1000
+provider_deadline_ms = 2400
+deadline_ms = 2600
+max_inflight = 32
+max_provider_requests = 32
+
+[chains.eth]
+name = "ethereum"
+family = "evm"
+chain_id = 1
+coverage_version = "history-v1"
+aliases = ["ethereum", "eth-mainnet"]
+history = ["alchemy_eth", "etherscan_eth", "routescan_eth", "blockscout_eth"]
+rpc = ["quicknode_eth", "alchemy_eth", "blockpi_eth", "publicnode_eth"]
+
+# Legacy EVM aliases retain the existing Ethereum-only coverage, explicitly reported.
+# Add actual chain entries and expand this list only after validating those feeds.
+[scopes.evm]
+chains = ["eth"]
+aliases = ["polygon", "matic", "polygon-mainnet", "matic-mainnet", "base", "arbitrum", "arb", "optimism", "op", "bsc", "bnb", "avalanche", "avax"]
+
+[feeds.alchemy_eth]
+adapter = "alchemy"
+group = "alchemy"
+url = "https://eth-mainnet.g.alchemy.com/v2/{key}"
+url_env = "ALCHEMY_RPC_URL"
+key_env = "ALCHEMY_API_KEY"
+
+[feeds.etherscan_eth]
+adapter = "etherscan_compatible"
+group = "etherscan"
+url = "https://api.etherscan.io/v2/api"
+key_env = "ETHERSCAN_API_KEY"
+key_param = "apikey"
+required_key = true
+min_interval_ms = 550
+params = { chainid = "1" }
+
+[feeds.quicknode_eth]
+adapter = "evm_rpc"
+group = "quicknode"
+url_env = ["QUICKNODE_ETH_URL", "QUICKNODE_RPC_URL"]
+token_env = "QUICKNODE_ETH_AUTH_TOKEN"
+token_header = "x-token"
+
+[feeds.routescan_eth]
+adapter = "etherscan_compatible"
+group = "routescan"
+url = "https://api.routescan.io/v2/network/mainnet/evm/1/etherscan"
+min_interval_ms = 550
+
+[feeds.blockscout_eth]
+adapter = "etherscan_compatible"
+group = "blockscout"
+url = "https://eth.blockscout.com/api"
+min_interval_ms = 250
+
+[feeds.blockpi_eth]
+adapter = "evm_rpc"
+group = "blockpi"
+url = "https://ethereum.blockpi.network/v1/rpc/public"
+
+[feeds.publicnode_eth]
+adapter = "evm_rpc"
+group = "publicnode"
+url = "https://ethereum-rpc.publicnode.com"

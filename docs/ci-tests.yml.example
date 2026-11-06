@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.10", "3.13"]
+        python-version: ["3.11", "3.13"]
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
@@ -26,10 +26,12 @@ jobs:
         uses: actions/setup-python@v7
         with:
           python-version: ${{ matrix.python-version }}
-      # Runtime and unit tests use only Python's standard library. The tests
-      # mock external providers; local HTTP tests bind ephemeral loopback ports.
+      # V2 needs aiohttp; V1 remains standard-library-only. The tests mock
+      # external providers; local HTTP tests bind ephemeral loopback ports.
       # Live provider benchmarks are manual and never consume CI credentials.
+      - name: Install V2 dependency
+        run: python -m pip install -r v2/requirements.txt
       - name: Check Python syntax
-        run: python -m compileall -q wallet_age_days wallet_insights eth_wallet_check examples
+        run: python -m compileall -q wallet_age_days wallet_insights eth_wallet_check examples v2
       - name: Run unit and local HTTP tests
         run: python -m unittest discover -s tests -v
