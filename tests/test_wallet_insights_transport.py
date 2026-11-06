@@ -28,6 +28,28 @@ class WalletInsightsTransportTests(unittest.TestCase):
         self.assertEqual(sending.call_args_list[0].kwargs['headers'], {'x-token': 'PRIVATE'})
         self.assertIsNone(sending.call_args_list[1].kwargs['headers'])
 
+    def test_query_string_credentials_also_disable_redirects(self):
+        http = JSONHTTP()
+        opener = Mock()
+        opener.open.side_effect = HTTPError('https://api.etherscan.io/v2/api?apikey=TEST_SECRET',
+                                           302, 'redirect', {}, None)
+        with patch('eth_wallet_check.http.build_opener', return_value=opener) as building:
+            with self.assertRaises(SourceError) as result:
+                http('https://api.etherscan.io/v2/api?apikey=TEST_SECRET')
+        self.assertEqual(str(result.exception), 'HTTP 302')
+        self.assertIsInstance(building.call_args.args[0], _NoRedirect)
+
+    def test_cancelled_losing_job_cannot_start_another_network_call(self):
+        import threading
+        cancelled = threading.Event()
+        cancelled.set()
+        http = JSONHTTP()
+        with http.deadline_at(9999999999, cancelled=cancelled), \
+             patch('eth_wallet_check.http.urlopen') as opening:
+            with self.assertRaisesRegex(SourceError, 'Request cancelled'):
+                http('https://ethereum-rpc.publicnode.com', {})
+        opening.assert_not_called()
+
 
 if __name__ == '__main__':
     unittest.main()

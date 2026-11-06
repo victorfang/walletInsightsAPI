@@ -6,13 +6,18 @@ import json
 import threading
 import time
 from urllib.error import HTTPError, URLError
-from urllib.request import HTTPRedirectHandler, Request, build_opener, urlopen
+from urllib.request import HTTPRedirectHandler, Request, build_opener
 
 
 class _NoRedirect(HTTPRedirectHandler):
     def redirect_request(self, req, fp, code, msg, headers, newurl):
         # Authenticated provider calls must never forward keys to a redirect.
         return None
+
+
+def urlopen(request, timeout):
+    """A non-redirecting opener, including keys embedded in URLs/query strings."""
+    return build_opener(_NoRedirect()).open(request, timeout=timeout)
 
 
 class SourceError(Exception):
@@ -27,16 +32,22 @@ class JSONHTTP:
         self._headers_by_url = dict(headers_by_url or {})
 
     @contextmanager
-    def deadline_at(self, deadline):
+    def deadline_at(self, deadline, cancelled=None):
         """Apply a monotonic deadline to HTTP calls in this worker thread."""
         previous = getattr(self._request_context, "deadline", None)
+        previous_cancelled = getattr(self._request_context, "cancelled", None)
         self._request_context.deadline = deadline
+        self._request_context.cancelled = cancelled
         try:
             yield
         finally:
             self._request_context.deadline = previous
+            self._request_context.cancelled = previous_cancelled
 
     def _timeout(self):
+        cancelled = getattr(self._request_context, "cancelled", None)
+        if cancelled is not None and cancelled.is_set():
+            raise SourceError("Request cancelled")
         deadline = getattr(self._request_context, "deadline", None)
         if deadline is None:
             return self.timeout
@@ -57,7 +68,9 @@ class JSONHTTP:
             **dict(headers or {}),
         })
         try:
-            opening = build_opener(_NoRedirect()).open if headers else urlopen
+            # RPC URLs and explorer query strings can contain credentials even
+            # when no authentication header is present. Reject every redirect.
+            opening = urlopen
             with opening(request, timeout=self._timeout()) as response:
                 body = response.read(self.max_bytes + 1)
         except HTTPError as exc:

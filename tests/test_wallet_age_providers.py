@@ -88,6 +88,21 @@ class AppearanceSourceTests(unittest.TestCase):
         self.assertNotIn("eth_getBalance", methods)
         self.assertEqual(len(http.calls), 3)
 
+    def test_etherscan_key_enables_v2_index_jobs_and_verified_candidate(self):
+        http = HTTP()
+        sources = AppearanceSources(http, RPC, etherscan_key="TEST_SCAN_KEY")
+        self.assertIn("etherscan_normal", [name for name, _ in sources.jobs(ADDRESS)])
+        self.assertIn("etherscan_creation", [name for name, _ in sources.jobs(ADDRESS)])
+        result = sources._indexed("etherscan", ADDRESS, "normal")
+        self.assertEqual(result, Observation(EPOCH, True, "etherscan"))
+        url = urlsplit(http.calls[0][0])
+        self.assertEqual((url.hostname, url.path), ("api.etherscan.io", "/v2/api"))
+        params = parse_qs(url.query)
+        self.assertEqual(params["chainid"], ["1"])
+        self.assertEqual(params["apikey"], ["TEST_SCAN_KEY"])
+        self.assertEqual(params["sort"], ["asc"])
+        self.assertEqual(params["offset"], ["1"])
+
     def test_empty_oldest_history_stays_unknown(self):
         http = HTTP()
         http.index = {"status": "0", "message": "No transactions found", "result": []}
@@ -141,6 +156,13 @@ class AppearanceSourceTests(unittest.TestCase):
         http = HTTP()
         http.index = {"status": "1", "result": [{"contractAddress": ADDRESS, "txHash": TX}]}
         http.receipt["contractAddress"] = OTHER
+        with self.assertRaises(SourceError):
+            AppearanceSources(http, RPC)._indexed("routescan", ADDRESS, "creation")
+
+    def test_creation_index_cannot_attribute_a_null_contract_receipt(self):
+        http = HTTP()
+        http.index = {"status": "1", "result": [{"contractAddress": ADDRESS, "txHash": TX}]}
+        http.receipt["contractAddress"] = None
         with self.assertRaises(SourceError):
             AppearanceSources(http, RPC)._indexed("routescan", ADDRESS, "creation")
 

@@ -45,6 +45,8 @@ class WalletAgeHTTPTests(unittest.TestCase):
                 self.assertEqual((status, type(body), body), (200, int, 365))
                 self.assertEqual(headers['X-Wallet-Age-Coverage'], 'ethereum')
                 self.assertEqual(headers['X-Wallet-Age-Cache'], 'hit')
+                self.assertEqual(headers['X-Wallet-Age-Evidence'], 'single-source')
+                self.assertEqual(headers['X-Wallet-Age-Sources'], '1')
                 self.assertEqual(headers['Cache-Control'], 'no-store')
             self.assertEqual(checker.check.call_count, 2)
 

@@ -11,7 +11,7 @@ standard library, including SQLite. No Redis, Node.js or frontend build is neede
 
 ## Tests and optional CI
 
-Run `python3 -m unittest discover -s tests -q`; the current revision passes 308 tests.
+Run `python3 -m unittest discover -s tests -q`; the current revision passes 326 tests.
 The [CI workflow template](docs/ci-tests.yml.example) runs Python 3.10 and 3.13
 without provider keys or pip dependencies. To activate it, copy the template to
 `.github/workflows/tests.yml` using a GitHub credential with workflow permission
@@ -34,14 +34,16 @@ ignored local `.env`, replace or comment out its placeholders, then run:
 python3 -m wallet_insights --port 8787 --env-file .env
 ```
 
-`--env-file` configures WalletInsights only; walletAgeDays paid-provider settings
-must be exported through the shell or a secret manager. A missing AnChain key
+`--env-file` configures both endpoints; shell settings take precedence over the
+same file settings. Example RPC URL placeholders are ignored so they cannot mask
+real Alchemy keys or QuickNode ETH URLs. A missing AnChain key
 produces `riskLabels.status: "not_configured"`, never a safe verdict.
 
 - [Code architecture and cache design](docs/ARCHITECTURE.md)
 - [Third-party providers, API keys and configuration](docs/PROVIDERS.md)
 - [Benchmark summary, raw evidence and reproduction](docs/BENCHMARKS.md)
 - [Seven-chain EVM age research and live provider capabilities](EVM_WALLET_AGE_RESEARCH.md)
+- [Concurrent age lookup, provider agreement and credential probe](docs/PROVIDER_AGREEMENT.md)
 - [OpenAPI specification](openapi.json)
 
 Run the unit suite with `python3 -m unittest discover -s tests -q`. Live

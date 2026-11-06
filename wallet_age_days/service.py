@@ -2,8 +2,10 @@
 
 from concurrent.futures import FIRST_COMPLETED, wait
 from dataclasses import dataclass
+from collections import Counter
 import re
 import sqlite3
+import threading
 import time
 
 from eth_wallet_check.deadline import REQUEST_BUDGET_SECONDS, shared_executor
@@ -43,6 +45,16 @@ class AgeResult:
     epoch: int
     cache: str
     finalized: bool
+    evidence: str = "single-source"
+    positive_sources: int = 1
+
+
+def _provider_group(job_name):
+    """Directions/lookup kinds from one company are one history provider."""
+    for suffix in ("_from", "_to", "_normal", "_creation"):
+        if job_name.endswith(suffix):
+            return job_name[:-len(suffix)]
+    return job_name
 
 
 class WalletAgeService:
@@ -59,12 +71,13 @@ class WalletAgeService:
         self.namespace = "evm:" + ",".join(str(chain_id) for chain_id, _ in self.chains) + ":v1"
         self.coverage = ",".join(name for _, name in self.chains)
 
-    def _run(self, deadline, fn):
-        with self.http.deadline_at(deadline):
+    def _run(self, deadline, fn, cancelled):
+        with self.http.deadline_at(deadline, cancelled=cancelled):
             return fn()
 
-    def _result(self, epoch, cache, finalized):
-        return AgeResult(max(0, (int(self.clock()) - epoch) // 86400), epoch, cache, finalized)
+    def _result(self, epoch, cache, finalized, evidence="single-source", positive_sources=1):
+        return AgeResult(max(0, (int(self.clock()) - epoch) // 86400), epoch, cache,
+                         finalized, evidence, positive_sources)
 
     def check(self, blockchain, address):
         start = time.monotonic()
@@ -75,21 +88,27 @@ class WalletAgeService:
         except sqlite3.Error:
             epoch, cache_state = None, "bypass"
         if epoch is not None:
-            return self._result(epoch, "hit", True)
+            return self._result(epoch, "hit", True, "cached-canonical", 0)
 
         # Leave headroom for a 50ms SQLite lock and response serialization. The
         # caller never waits for abandoned jobs to exit. Workers do not write.
         deadline = start + self.budget - min(0.15, self.budget / 10)
         pending, observations = {}, []
+        cancelled = threading.Event()
+        jobs = list(self.sources.jobs(address))
+        groups = {group: {"remaining": count, "failed": False, "epochs": []}
+                  for group, count in Counter(_provider_group(name) for name, _fn in jobs).items()}
         failed, finished, total = False, 0, 0
-        for name, fn in self.sources.jobs(address):
+        for name, fn in jobs:
             total += 1
             if time.monotonic() >= deadline:
                 failed = True
+                groups[_provider_group(name)]["failed"] = True
                 continue
-            future = self.executor.submit(self._run, deadline, fn)
+            future = self.executor.submit(self._run, deadline, fn, cancelled)
             if future is None:
                 failed = True
+                groups[_provider_group(name)]["failed"] = True
             else:
                 pending[future] = name
         while pending:
@@ -100,7 +119,8 @@ class WalletAgeService:
             if not done:
                 break
             for future in done:
-                pending.pop(future)
+                group = groups[_provider_group(pending.pop(future))]
+                group["remaining"] -= 1
                 try:
                     observation = future.result()
                     if observation is not None:
@@ -108,11 +128,31 @@ class WalletAgeService:
                         if type(epoch) is not int or not 0 < epoch <= int(self.clock()):
                             raise ValueError("Invalid observation epoch")
                         observations.append(observation)
+                        if observation.finalized is True:
+                            group["epochs"].append(epoch)
+                        else:
+                            group["failed"] = True
                     finished += 1
                 except Exception:
                     # Do not put configured URLs, keys or exception text in the
                     # response. Provider failure never means age zero.
                     failed = True
+                    group["failed"] = True
+            # One direction alone is not Alchemy's oldest observed history.
+            # Count a provider only after every job for it has completed, and
+            # never count empty/error/provisional responses as positive votes.
+            votes = Counter(min(group["epochs"]) for group in groups.values()
+                            if not group["remaining"] and not group["failed"] and group["epochs"])
+            verified_epochs = [row.epoch for row in observations if row.finalized is True]
+            # Normal-transaction indexes can agree before Alchemy's older NFT
+            # or incoming transfer arrives. Its configured full group must
+            # settle before an early return can truncate that coverage.
+            alchemy_settled = "alchemy" not in groups or not groups["alchemy"]["remaining"]
+            if alchemy_settled and verified_epochs and votes[min(verified_epochs)] >= 2:
+                break
+        # Running I/O cannot be forcibly interrupted by urllib, but cancellation
+        # prevents a losing job from starting additional HTTP proof calls.
+        cancelled.set()
         if pending:
             failed = True
             for future in pending:
@@ -130,18 +170,26 @@ class WalletAgeService:
         chosen = min(verified, key=lambda row: row.epoch)
         finalized = True
         epoch = chosen.epoch
+        positive_sources = sum(bool(group["epochs"]) for group in groups.values())
+        votes = Counter(min(group["epochs"]) for group in groups.values()
+                        if not group["remaining"] and not group["failed"] and group["epochs"])
+        alchemy_settled = "alchemy" not in groups or not groups["alchemy"]["remaining"]
+        evidence = ("corroborated" if alchemy_settled and votes[epoch] >= 2 else
+                    "multiple-sources" if positive_sources >= 2 else "single-source")
         if finalized:
             try:
                 stored = self.store.put_min(self.namespace, address, epoch)
                 if stored:
                     # Another request/process may have discovered an earlier
                     # event while this request was waiting for its providers.
-                    epoch = self.store.get(self.namespace, address) or epoch
+                    cached_epoch = self.store.get(self.namespace, address) or epoch
+                    if cached_epoch < epoch:
+                        epoch, evidence, positive_sources = cached_epoch, "cached-canonical", 0
                 else:
                     cache_state = "bypass"
             except sqlite3.Error:
                 cache_state = "bypass"
-        return self._result(epoch, cache_state, finalized)
+        return self._result(epoch, cache_state, finalized, evidence, positive_sources)
 
     def walletAgeDays(self, blockchain, address):
         return self.check(blockchain, address).days

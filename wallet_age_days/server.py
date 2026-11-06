@@ -42,6 +42,8 @@ class WalletAgeHandler(BaseHTTPRequestHandler):
             if result is not None:
                 self.send_header("X-Wallet-Age-Cache", result.cache)
                 self.send_header("X-Wallet-Age-Finalized", "true" if result.finalized else "false")
+                self.send_header("X-Wallet-Age-Evidence", result.evidence)
+                self.send_header("X-Wallet-Age-Sources", str(result.positive_sources))
         self.end_headers()
         self.wfile.write(payload)
 

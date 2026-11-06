@@ -85,6 +85,25 @@
                   "type": "string",
                   "const": "true"
                 }
+              },
+              "X-Wallet-Age-Evidence": {
+                "description": "Source agreement for this live lookup, or cached canonical evidence. Cached epochs do not retain quorum counts.",
+                "schema": {
+                  "type": "string",
+                  "enum": [
+                    "corroborated",
+                    "multiple-sources",
+                    "single-source",
+                    "cached-canonical"
+                  ]
+                }
+              },
+              "X-Wallet-Age-Sources": {
+                "description": "Distinct live positive history providers; zero on cached-canonical because the compact cache stores epochs only.",
+                "schema": {
+                  "type": "integer",
+                  "minimum": 0
+                }
               }
             },
             "content": {
@@ -488,6 +507,25 @@
                 "schema": {
                   "type": "string",
                   "const": "true"
+                }
+              },
+              "X-Wallet-Age-Evidence": {
+                "description": "Source agreement for this live lookup, or cached canonical evidence. Cached epochs do not retain quorum counts.",
+                "schema": {
+                  "type": "string",
+                  "enum": [
+                    "corroborated",
+                    "multiple-sources",
+                    "single-source",
+                    "cached-canonical"
+                  ]
+                }
+              },
+              "X-Wallet-Age-Sources": {
+                "description": "Distinct live positive history providers; zero on cached-canonical because the compact cache stores epochs only.",
+                "schema": {
+                  "type": "integer",
+                  "minimum": 0
                 }
               }
             },

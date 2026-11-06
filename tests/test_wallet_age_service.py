@@ -226,6 +226,102 @@ class WalletAgeServiceTests(unittest.TestCase):
         self.assertEqual(self.sources.jobs.call_count, 2)
         self.assertEqual(self.store.size(), 2)
 
+    def test_two_completed_independent_providers_agree_before_slow_fallback(self):
+        def slow():
+            time.sleep(0.2)
+            return Observation(FIRST - 1000, True, "slow")
+        self.sources.jobs.return_value = [
+            ("etherscan_normal", lambda: Observation(FIRST, True, "etherscan")),
+            ("etherscan_creation", lambda: None),
+            ("routescan_normal", lambda: Observation(FIRST, True, "routescan")),
+            ("routescan_creation", lambda: None), ("slow", slow)]
+        started = time.monotonic()
+        result = self.service(budget=0.4).check("eth", ADDRESS)
+        self.assertLess(time.monotonic() - started, 0.15)
+        self.assertEqual((result.epoch, result.evidence, result.positive_sources),
+                         (FIRST, "corroborated", 2))
+        self.executor.shutdown(wait=True)
+        self.assertEqual(self.store.get("evm:1:v1", ADDRESS), FIRST)
+
+    def test_alchemy_directions_are_one_source_and_do_not_trigger_quorum(self):
+        def older():
+            time.sleep(0.06)
+            return Observation(FIRST - 1000, True, "routescan")
+        self.sources.jobs.return_value = [
+            ("alchemy_from", lambda: Observation(FIRST, True, "alchemy")),
+            ("alchemy_to", lambda: Observation(FIRST, True, "alchemy")),
+            ("routescan_normal", older)]
+        result = self.service(budget=0.3).check("eth", ADDRESS)
+        self.assertEqual((result.epoch, result.evidence, result.positive_sources),
+                         (FIRST - 1000, "multiple-sources", 2))
+
+    def test_fast_normal_index_agreement_waits_for_older_alchemy_incoming(self):
+        def incoming_nft():
+            time.sleep(0.06)
+            return Observation(FIRST - 1000, True, "alchemy")
+        self.sources.jobs.return_value = [
+            ("alchemy_from", lambda: Observation(FIRST, True, "alchemy")),
+            ("alchemy_to", incoming_nft),
+            ("etherscan_normal", lambda: Observation(FIRST, True, "etherscan")),
+            ("routescan_normal", lambda: Observation(FIRST, True, "routescan"))]
+        result = self.service(budget=0.3).check("eth", ADDRESS)
+        self.assertEqual((result.epoch, result.evidence), (FIRST - 1000, "multiple-sources"))
+        self.assertEqual(self.store.get("evm:1:v1", ADDRESS), FIRST - 1000)
+
+    def test_two_later_votes_do_not_discard_an_already_observed_earlier_event(self):
+        def later(source):
+            time.sleep(0.01)
+            return Observation(FIRST, True, source)
+        def confirm_earlier():
+            time.sleep(0.06)
+            return Observation(FIRST - 1000, True, "earlier2")
+        self.sources.jobs.return_value = [
+            ("later1", lambda: later("later1")),
+            ("later2", lambda: later("later2")),
+            ("earlier1", lambda: Observation(FIRST - 1000, True, "earlier1")),
+            ("earlier2", confirm_earlier)]
+        result = self.service(budget=0.3).check("eth", ADDRESS)
+        self.assertEqual((result.epoch, result.evidence), (FIRST - 1000, "corroborated"))
+
+    def test_timed_out_alchemy_does_not_borrow_two_normal_index_votes(self):
+        def stalled_incoming():
+            time.sleep(0.2)
+            return Observation(FIRST - 1000, True, "alchemy")
+        self.sources.jobs.return_value = [
+            ("alchemy_from", lambda: Observation(FIRST, True, "alchemy")),
+            ("alchemy_to", stalled_incoming),
+            ("etherscan_normal", lambda: Observation(FIRST, True, "etherscan")),
+            ("routescan_normal", lambda: Observation(FIRST, True, "routescan"))]
+        result = self.service(budget=0.05).check("eth", ADDRESS)
+        self.assertEqual((result.epoch, result.evidence), (FIRST, "multiple-sources"))
+
+    def test_empty_or_failed_provider_does_not_count_as_a_positive_vote(self):
+        def fail():
+            raise OSError("PRIVATE_KEY_URL")
+        self.sources.jobs.return_value = [
+            ("alchemy_from", lambda: Observation(FIRST, True, "alchemy")),
+            ("alchemy_to", lambda: None), ("etherscan_normal", lambda: None),
+            ("routescan_normal", fail)]
+        result = self.service().check("eth", ADDRESS)
+        self.assertEqual((result.evidence, result.positive_sources), ("single-source", 1))
+
+    def test_epoch_only_cache_does_not_claim_a_fresh_quorum(self):
+        service = self.service()
+        service.check("eth", ADDRESS)
+        result = service.check("eth", ADDRESS)
+        self.assertEqual((result.evidence, result.positive_sources), ("cached-canonical", 0))
+
+    def test_concurrent_earlier_cache_epoch_does_not_borrow_current_proof_votes(self):
+        store = Mock()
+        store.get.side_effect = [None, FIRST - 1000]
+        store.put_min.return_value = True
+        self.sources.jobs.return_value = [
+            ("one", lambda: Observation(FIRST, True, "one")),
+            ("two", lambda: Observation(FIRST, True, "two"))]
+        result = self.service(store=store).check("eth", ADDRESS)
+        self.assertEqual((result.epoch, result.evidence, result.positive_sources),
+                         (FIRST - 1000, "cached-canonical", 0))
+
 
 if __name__ == "__main__":
     unittest.main()

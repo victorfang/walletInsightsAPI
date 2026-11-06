@@ -81,7 +81,8 @@ class AppearanceSources:
     events and is never presented as an arbitrary-address history index.
     """
 
-    def __init__(self, http, rpc_endpoints, alchemy_endpoint=None, quicknode_history_enabled=False):
+    def __init__(self, http, rpc_endpoints, alchemy_endpoint=None, quicknode_history_enabled=False,
+                 etherscan_key=""):
         self.http = http
         self.rpc_endpoints = tuple(rpc_endpoints)
         self.alchemy_endpoint = alchemy_endpoint or next(
@@ -89,6 +90,7 @@ class AppearanceSources:
         self.quicknode_endpoint = next(
             (url for name, url in self.rpc_endpoints if name == "quicknode"), None)
         self.quicknode_history_enabled = quicknode_history_enabled
+        self.etherscan_key = etherscan_key
 
     def jobs(self, address):
         jobs = []
@@ -97,6 +99,9 @@ class AppearanceSources:
                         for direction in ("from", "to"))
         if self.quicknode_endpoint and self.quicknode_history_enabled:
             jobs.append(("quicknode", partial(self._quicknode, address)))
+        if self.etherscan_key:
+            jobs.extend((f"etherscan_{kind}", partial(self._indexed, "etherscan", address, kind))
+                        for kind in ("normal", "creation"))
         for provider in _BASES:
             jobs.extend((f"{provider}_{kind}", partial(self._indexed, provider, address, kind))
                         for kind in ("normal", "creation"))
@@ -108,7 +113,14 @@ class AppearanceSources:
                   if kind == "creation" else
                   {"module": "account", "action": "txlist", "address": address,
                    "startblock": 0, "endblock": 99999999, "page": 1, "offset": 1, "sort": "asc"})
-        data = _object(self.http(_BASES[provider] + "?" + urlencode(params)))
+        if provider == "etherscan":
+            if not self.etherscan_key:
+                raise SourceError("Etherscan is not configured")
+            params.update(chainid=1, apikey=self.etherscan_key)
+            base = "https://api.etherscan.io/v2/api"
+        else:
+            base = _BASES[provider]
+        data = _object(self.http(base + "?" + urlencode(params)))
         rows, status = data.get("result"), data.get("status")
         if not isinstance(rows, list) or status not in ("0", "1"):
             raise SourceError("Invalid indexed history result")
@@ -228,7 +240,7 @@ class AppearanceSources:
             raise SourceError("Receipt block mismatch")
         direct = _matches(receipt, address, ("contractAddress",))
         if candidate.get("deployment"):
-            if receipt.get("contractAddress") is not None and not direct:
+            if not direct:
                 raise SourceError("Deployment address mismatch")
             if "status" in receipt and _quantity(receipt["status"]) != 1:
                 raise SourceError("Failed contract deployment")

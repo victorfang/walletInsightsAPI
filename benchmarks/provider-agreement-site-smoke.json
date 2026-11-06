@@ -1,0 +1,96 @@
+{
+  "checked_at_utc": "2026-11-06T05:05:06.652719+00:00",
+  "purpose": "Deployed credential/early-agreement smoke; not a100-addressbenchmark or fraud accuracy test",
+  "rows": [
+    {
+      "case": "binance",
+      "phase": "cold",
+      "address": "0x28c6c06298d514db089934071355e5743bf21d60",
+      "status": 200,
+      "elapsed_ms": 2256.2,
+      "body": 2023,
+      "application_ms": "910.0",
+      "cache": "miss",
+      "evidence": "multiple-sources",
+      "sources": "2"
+    },
+    {
+      "case": "binance",
+      "phase": "warm",
+      "address": "0x28c6c06298d514db089934071355e5743bf21d60",
+      "status": 200,
+      "elapsed_ms": 557.3,
+      "body": 2023,
+      "application_ms": "88.0",
+      "cache": "hit",
+      "evidence": "cached-canonical",
+      "sources": "0"
+    },
+    {
+      "case": "bitfinex",
+      "phase": "cold",
+      "address": "0x742d35cc6634c0532925a3b844bc454e4438f44e",
+      "status": 200,
+      "elapsed_ms": 1160.0,
+      "body": 3113,
+      "application_ms": "741.0",
+      "cache": "miss",
+      "evidence": "multiple-sources",
+      "sources": "2"
+    },
+    {
+      "case": "bitfinex",
+      "phase": "warm",
+      "address": "0x742d35cc6634c0532925a3b844bc454e4438f44e",
+      "status": 200,
+      "elapsed_ms": 524.6,
+      "body": 3113,
+      "application_ms": "92.0",
+      "cache": "hit",
+      "evidence": "cached-canonical",
+      "sources": "0"
+    },
+    {
+      "case": "format_valid_candidate",
+      "phase": "cold",
+      "address": "0x47ac0fb4f2d84898e4d9b4dab3c24507a6d5038a",
+      "status": 503,
+      "elapsed_ms": 1090.7,
+      "body": "unknown",
+      "application_ms": "577.0",
+      "cache": null,
+      "evidence": null,
+      "sources": null
+    },
+    {
+      "case": "format_valid_candidate",
+      "phase": "warm",
+      "address": "0x47ac0fb4f2d84898e4d9b4dab3c24507a6d5038a",
+      "status": 503,
+      "elapsed_ms": 1364.5,
+      "body": "unknown",
+      "application_ms": "614.0",
+      "cache": null,
+      "evidence": null,
+      "sources": null
+    },
+    {
+      "case": "synthetic",
+      "phase": "uncached",
+      "status": 503,
+      "elapsed_ms": 946.3,
+      "body": "unknown",
+      "application_ms": "551.0"
+    },
+    {
+      "case": "insights",
+      "status": 200,
+      "elapsed_ms": 1007.7,
+      "application_ms": "527.0",
+      "components": {
+        "snapshot": "complete",
+        "riskLabels": "available"
+      }
+    }
+  ]
+}

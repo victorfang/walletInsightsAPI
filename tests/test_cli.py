@@ -50,6 +50,14 @@ class CLITests(unittest.TestCase):
             self.assertEqual(main(['ETH', ADDRESS]), 3)
         self.assertEqual(json.loads(output.getvalue()), 'unknown')
 
+    def test_explicit_provider_file_and_timeout_reach_the_shared_factory(self):
+        output, service = io.StringIO(), Mock()
+        service.walletAgeDays.return_value = 123
+        with patch('wallet_age_days.cli.build_service', return_value=service) as build, redirect_stdout(output):
+            self.assertEqual(main(['ETH', ADDRESS, '--env-file', 'provider.env', '--timeout', '1.5']), 0)
+        self.assertEqual(build.call_args.kwargs['env_file'], 'provider.env')
+        self.assertEqual(build.call_args.kwargs['http'].timeout, 1.5)
+
 
 if __name__ == '__main__':
     unittest.main()

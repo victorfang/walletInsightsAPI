@@ -3,7 +3,7 @@
 import argparse
 import os
 
-from .factory import DEFAULT_DB, build_service
+from .factory import build_service
 from .server import WalletAgeHTTPServer
 from wallet_insights.factory import build_service as build_insights
 
@@ -12,12 +12,12 @@ def main():
     parser = argparse.ArgumentParser(description="walletAgeDays: blockchain + address -> integer days")
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", default=8787, type=int)
-    parser.add_argument("--cache-db", default=os.environ.get("WALLET_AGE_DB") or DEFAULT_DB)
+    parser.add_argument("--cache-db")
     parser.add_argument("--insights-cache-db", default=os.environ.get("WALLET_INSIGHTS_DB"))
-    parser.add_argument("--env-file", help="Explicit provider config file for WalletInsights; shell settings take precedence")
+    parser.add_argument("--env-file", help="Explicit provider config file for both endpoints; shell settings take precedence")
     args = parser.parse_args()
     try:
-        service = build_service(args.cache_db)
+        service = build_service(args.cache_db, env_file=args.env_file)
         insights = build_insights(args.insights_cache_db, env_file=args.env_file)
     except (ValueError, OSError) as exc:
         # Configuration errors identify the setting, never credential values.
