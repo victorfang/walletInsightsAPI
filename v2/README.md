@@ -4,6 +4,8 @@
 
 V2 is implemented as four Python files with aiohttp. It runs locally or on your server; this change does not update the deployed demo Site. See the [architecture](ARCHITECTURE.md), [public configuration](config.toml) and [dependency pin](requirements.txt).
 
+For client staging, use the [Railway and Route 53 deployment guide](DEPLOY_RAILWAY.md). The repository includes a Dockerfile; Railway can manage HTTPS for `api-staging.anchainai.com`.
+
 ## Run
 
 Use Python 3.11 or newer, from the repository root:
