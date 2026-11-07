@@ -16,7 +16,7 @@ No Redis, Node.js or frontend build is needed.
 
 After the [V2 dependency setup](v2/README.md#run), run
 `v2/.venv/bin/python -m unittest discover -s tests -q` for the complete V1/V2 suite.
-The current complete suite passes **419 tests**.
+The current complete suite passes **423 tests**.
 The [CI workflow template](docs/ci-tests.yml.example) runs Python 3.11 and 3.13
 with the pinned dependency and no provider keys. To activate it, copy the template to
 `.github/workflows/tests.yml` using a GitHub credential with workflow permission

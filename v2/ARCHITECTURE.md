@@ -11,7 +11,7 @@ Implemented November 6, 2026. V2 is an age-only aiohttp implementation with a sm
 | [feeds.py](feeds.py) | Provider formats, indexed discovery and canonical finalized-event verification | 250 |
 | [cache.py](cache.py) | SQLite schema, minimum epochs and atomic persisted LRU | 115 |
 
-The implementation totals **774 physical lines**, including comments and blank lines. The earlier 400–600-line figure was a planning estimate; legacy/version compatibility and cleanup account for additional code. Tests and benchmark tools live outside V2. Runtime files do not include a plugin framework, generic cache-payload layer or extra wrappers.
+The initial release totaled **774 physical lines**, including comments and blank lines. The earlier 400–600-line figure was a planning estimate; legacy/version compatibility and cleanup account for additional code. Tests and benchmark tools live outside V2. Runtime files do not include a plugin framework, generic cache-payload layer or extra wrappers.
 
 ```text
 app → service → feeds
@@ -41,7 +41,7 @@ Promoting a later implementation to latest requires passing the published contra
 
 [config.toml](config.toml) owns public URLs, enabled chains, aliases/scopes, provider selection, time budgets, concurrency limits and database capacity. [.env.example](.env.example) lists optional secret names; the existing root `.env` can be reused with `--env-file .env`. Process environment overrides file values. Secret-file lines are read as data, never evaluated as shell code.
 
-Provider URLs use HTTPS; authenticated redirects are disabled. Alchemy keys are substituted into a configured endpoint, Etherscan keys into its configured parameter, and QuickNode's optional token into `x-token`. Private endpoint URLs can be supplied entirely through environment variables. Incoming `WALLET_CHECK_API_KEY` authentication is separate from provider authentication. Configuration is loaded once; database paths resolve relative to the configuration file.
+Provider URLs use HTTPS; authenticated redirects are disabled. Alchemy keys are substituted into a configured endpoint, Etherscan keys into its configured parameter, and QuickNode's optional token into `x-token`. Private endpoint URLs can be supplied entirely through environment variables. The HTTP handler authenticates named clients with `WALLET_CLIENT_KEY_<ID>` and accepts the original `WALLET_CHECK_API_KEY` as `legacy`. It writes one JSON access event to stdout per handled request. Configuration is loaded once; database paths resolve relative to the configuration file.
 
 The supplied history sources are Alchemy, Etherscan, Routescan and Blockscout. RPC verification uses QuickNode, Alchemy, BlockPI and PublicNode. Missing optional credentials disable the affected feed. Ordinary RPC nodes verify events and blocks but do not provide general address-history discovery. Provider-specific formats remain small explicit adapters in `feeds.py`, not executable parsing rules in TOML.
 

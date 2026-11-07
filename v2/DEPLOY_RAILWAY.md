@@ -18,7 +18,8 @@ Under service **Variables**, add these values from your existing local configura
 
 | Variable | Value |
 | --- | --- |
-| `WALLET_CHECK_API_KEY` | A new staging key to share with the client |
+| `WALLET_CLIENT_KEY_ACME` | A unique secret for the client identified as `acme`. Repeat with a different suffix and secret for each client. |
+| `WALLET_CHECK_API_KEY` | Optional existing shared key for legacy callers |
 | `ALCHEMY_API_KEY` | Your Alchemy key; alternatively use `ALCHEMY_RPC_URL` |
 | `ETHERSCAN_API_KEY` | Your Etherscan key |
 | `QUICKNODE_ETH_URL` | Your private Ethereum endpoint; `QUICKNODE_RPC_URL` also works |
@@ -87,6 +88,24 @@ curl -i --get 'https://api-staging.anchainai.com/walletAgeDays' \
 Success is a bare JSON integer. `X-API-Version: v2` identifies the selected release; repeating a successful call should show `X-Wallet-Age-Cache: hit`. The latest route follows the newest compatible version. Clients can explicitly use `/v2/walletAgeDays` or `/v1/walletAgeDays` to pin behavior. Unknown history remains an error, not age zero.
 
 After a successful check, redeploy once and repeat it to confirm the same volume retained the cache. Hosted client latency includes networking and TLS; the local benchmark is not a Railway latency guarantee.
+
+## Client keys and access logs
+
+In the Railway service's Variables, add `WALLET_CLIENT_KEY_ACME` and store a fresh secret generated with `openssl rand -hex 32`. Give that secret to Acme. For another client, add a separate variable such as `WALLET_CLIENT_KEY_PARTNER_B` with a different secret. Apply the changes and redeploy. Both clients send their assigned secret as `x-api-key`. Client IDs come from the variable suffix and appear in lowercase in the logs. Use letters, digits and underscores for IDs. The labels `legacy`, `anonymous` and `unauthenticated` are reserved.
+
+The existing shared key continues to identify callers as `legacy`. Configuring any key requires authentication on all data routes, including V1 compatibility routes. With zero configured keys the service accepts anonymous calls. Health and OpenAPI stay public. Rotate a client's secret by replacing its value and redeploying, or revoke it by removing that variable and redeploying. Keep at least one configured key if the service should require authentication.
+
+Open the service's **Deploy Logs** or **Observability → Log Explorer**. Each handled request emits a single JSON event with message `wallet.access`, UTC start time, client ID, IP, method, endpoint, HTTP status, blockchain and wallet address. For Railway public traffic, the app uses the edge's `X-Real-IP` and includes the available `X-Railway-Request-Id` for correlation with HTTP Logs. Local runs use the connection's peer IP. An IP can belong to a proxy or a client's backend. [Railway request headers](https://docs.railway.com/networking/public-networking/specs-and-limits).
+
+Try these filters separately in the Log Explorer. [Railway structured logging](https://docs.railway.com/observability/logs#structured-logs).
+
+```text
+@clientId:acme AND @endpoint:/walletAgeDays
+@clientIp:203.0.113.10
+@wallet:0xd8da6bf26964af9d7eed9e03e53415d37aa96045
+```
+
+Wallets are lowercase. A rejected key produces status 401 with client ID `unauthenticated` and a null wallet because authentication precedes input parsing. Unrecognized paths use `unknown`. The access event excludes raw request URLs, unparsed inputs, headers, bodies and credentials.
 
 ## If the exact production hostname is required
 

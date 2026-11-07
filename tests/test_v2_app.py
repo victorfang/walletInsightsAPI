@@ -1,6 +1,10 @@
 """Exercise version dispatch and the existing wire contract without upstream I/O."""
 
 import asyncio
+from contextlib import redirect_stdout
+from datetime import datetime, timedelta
+import io
+import json
 import threading
 from types import SimpleNamespace
 import unittest
@@ -9,6 +13,7 @@ from unittest.mock import AsyncMock, Mock
 from aiohttp.test_utils import TestClient, TestServer
 
 from v2.app import VERSIONS, create_app
+from v2.service import AgeError
 
 
 ADDRESS = "0x" + "a" * 40
@@ -18,6 +23,7 @@ KEY = {"x-api-key": "test-key"}
 
 class V2HTTPTests(unittest.IsolatedAsyncioTestCase):
     async def asyncSetUp(self):
+        self.log = self.enterContext(redirect_stdout(io.StringIO()))
         self.service = SimpleNamespace(
             coverage="ethereum", close=AsyncMock(),
             check=AsyncMock(return_value=SimpleNamespace(
@@ -38,6 +44,9 @@ class V2HTTPTests(unittest.IsolatedAsyncioTestCase):
         self.insights.check.return_value = (200, self.insights_body)
         self.config = {
             "server": {"api_key": "test-key"}, "api": {"latest": "v2"},
+            "_env": {"WALLET_CLIENT_KEY_ACME": "acme-test-secret",
+                     "WALLET_CLIENT_KEY_BETA": "beta-test-secret",
+                     "RAILWAY_ENVIRONMENT_ID": "test-environment"},
             "legacy": {"enabled": True}, "wallet_age": {}, "chains": {}, "feeds": {},
         }
         app = await create_app(self.config, service=self.service, legacy={
@@ -59,6 +68,75 @@ class V2HTTPTests(unittest.IsolatedAsyncioTestCase):
         self.service.check.assert_not_awaited()
         self.legacy_age.check.assert_not_called()
         self.insights.check.assert_not_called()
+
+    async def test_client_identity_ip_wallet_and_time_for_get_and_post(self):
+        for path, method, key, identity in [
+            ("/walletAgeDays", "GET", "acme-test-secret", "acme"),
+            ("/v2/walletAgeDays", "POST", "beta-test-secret", "beta"),
+            ("/v1/walletAgeDays", "POST", "test-key", "legacy"),
+            ("/latest/WalletInsights", "GET", "acme-test-secret", "acme"),
+        ]:
+            values = {**INPUT, "address": "0x" + "A" * 40}
+            headers = {"x-api-key": key, "X-Real-IP": "2001:db8::2",
+                       "X-Forwarded-For": "192.0.2.44", "X-Railway-Request-Id": "req-example"}
+            status, _, _ = await self.call(path, method=method, headers=headers,
+                                          **({"params": values} if method == "GET" else {"json": values}))
+            self.assertEqual(status, 200)
+            row = json.loads(self.log.getvalue().splitlines()[-1])
+            self.assertEqual((row["clientId"], row["clientIp"], row["endpoint"], row["method"],
+                              row["blockchain"], row["wallet"], row["requestId"], row["status"]),
+                             (identity, "2001:db8::2", path, method, "eth", ADDRESS, "req-example", 200))
+            self.assertEqual(datetime.fromisoformat(row["timestamp"]).utcoffset(), timedelta(0))
+            self.assertEqual(row["ipSource"], "railway")
+            self.assertNotIn(key, self.log.getvalue())
+        self.assertEqual(len(self.log.getvalue().splitlines()), 4)
+
+    async def test_access_errors_do_not_echo_credentials_or_raw_inputs(self):
+        secret = "acme-test-secret"
+        self.service.check.side_effect = AgeError(400, "invalid")
+        for path, options, expected in [
+            ("/walletAgeDays", {"params": INPUT, "headers": {"x-api-key": "bad-token"}}, 401),
+            ("/walletAgeDays", {"params": {**INPUT, "address": secret}}, 400),
+            ("/v2/" + secret, {}, 404),
+            ("/walletAgeDays", {"params": {**INPUT, "extra": secret}}, 400),
+        ]:
+            self.assertEqual((await self.call(path, **options))[0], expected)
+        # Even a syntactically valid correlation ID containing a credential is omitted.
+        await self.call("/health", headers={"X-Railway-Request-Id": "id-" + secret})
+        rows = list(map(json.loads, self.log.getvalue().splitlines()))
+        self.assertEqual(rows[0]["clientId"], "unauthenticated")
+        self.assertIsNone(rows[0]["wallet"])
+        self.assertIsNone(rows[1]["wallet"])
+        self.assertEqual(rows[2]["endpoint"], "unknown")
+        self.assertIsNone(rows[-1]["requestId"])
+        for value in (secret, "bad-token", "test-key", "beta-test-secret"):
+            self.assertNotIn(value, self.log.getvalue())
+
+    async def test_named_only_requires_key_and_no_keys_preserves_open_access(self):
+        for env, expected in [({"WALLET_CLIENT_KEY_ACME": "named-only"}, 401), ({}, 200)]:
+            config = {**self.config, "_env": env, "server": {}}
+            app = await create_app(config, service=self.service)
+            async with TestClient(TestServer(app)) as client:
+                async with client.get("/walletAgeDays", params=INPUT,
+                                      headers={"X-Real-IP": "203.0.113.8"}) as response:
+                    self.assertEqual(response.status, expected)
+                row = json.loads(self.log.getvalue().splitlines()[-1])
+                self.assertEqual(row["clientIp"], "127.0.0.1")
+                self.assertEqual(row["ipSource"], "peer")
+                self.assertEqual(row["clientId"], "anonymous" if expected == 200 else "unauthenticated")
+                if env:
+                    async with client.get("/walletAgeDays", params=INPUT,
+                                          headers={"x-api-key": "named-only"}) as response:
+                        self.assertEqual(response.status, 200)
+
+    async def test_ambiguous_client_configuration_fails_without_exposing_values(self):
+        for name, key in [("OTHER", "test-key"), ("SECOND", "first-example"), ("LEGACY", "key-example"),
+                          ("", "key-example"), ("ACME", ""), ("acme", "key-example")]:
+            env = {"WALLET_CLIENT_KEY_ACME": "first-example", "WALLET_CLIENT_KEY_" + name: key}
+            with self.assertRaises(ValueError) as caught:
+                await create_app({**self.config, "_env": env}, service=self.service)
+            for value in ("test-key", "key-example", "first-example"):
+                self.assertNotIn(value, str(caught.exception))
 
     async def test_default_latest_and_pinned_v2_use_same_integer_contract(self):
         for prefix in ("", "/latest", "/v2"):
@@ -252,6 +330,7 @@ class V2HTTPTests(unittest.IsolatedAsyncioTestCase):
             await asyncio.wait_for(cleanup, 1)
             self.assertTrue(completed.is_set())
             self.legacy_age.close.assert_called_once()
+            self.assertEqual(json.loads(self.log.getvalue().splitlines()[-1])["status"], 499)
         finally:
             release.set()
             if not request.done():

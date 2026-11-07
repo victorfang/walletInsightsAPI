@@ -39,6 +39,7 @@ def known_secrets(path):
         key, value = line.removeprefix("export ").split("=", 1)
         key, value = key.strip(), value.strip().strip("\"'")
         sensitive = any(part in key.upper() for part in ("API_KEY", "TOKEN", "PASSWORD", "SECRET", "RPC_URL"))
+        sensitive |= key.startswith("WALLET_CLIENT_KEY_")
         sensitive |= key.startswith(("QUICKNODE_", "ALCHEMY_")) and key.endswith("_URL")
         if not sensitive or len(value) < 8:
             continue

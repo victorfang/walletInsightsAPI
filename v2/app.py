@@ -2,10 +2,13 @@
 
 import argparse
 import asyncio
+from datetime import datetime, timezone
 import hmac
+import ipaddress
 import json
 import os
 from pathlib import Path
+import re
 import tomllib
 from urllib.parse import quote, urlsplit
 
@@ -19,6 +22,47 @@ from .service import AgeError, Service
 ROOT = Path(__file__).resolve().parent
 SERVICE = web.AppKey("service", object)
 VERSIONS = ("v1", "v2")
+ROUTES = {"health", "openapi.json", "walletAgeDays", "WalletInsights"}
+
+
+def _client_keys(env, legacy):
+    clients = {"legacy": legacy} if legacy else {}
+    for name, key in env.items():
+        if not name.startswith("WALLET_CLIENT_KEY_"):
+            continue
+        client = name.removeprefix("WALLET_CLIENT_KEY_").lower()
+        if (not re.fullmatch(r"[a-z0-9][a-z0-9_-]{0,63}", client)
+                or client in {"anonymous", "unauthenticated", "legacy"} or client in clients
+                or not key.strip() or key.strip() != key or key in clients.values()):
+            raise ValueError("Client keys must have unique IDs and unique nonempty values")
+        clients[client] = key
+    return clients
+
+
+def _access_log(request, event, railway, secrets):
+    # Log only validated fields. The raw path, headers and body may contain secrets.
+    ip = request.remote
+    event["ipSource"] = "peer"
+    if railway:
+        raw = request.headers.get("X-Real-IP", "")
+        try:
+            if "%" not in raw:
+                ip = str(ipaddress.ip_address(raw))
+                event["ipSource"] = "railway"
+        except ValueError:
+            pass
+        request_id = request.headers.get("X-Railway-Request-Id", "")
+        if re.fullmatch(r"[A-Za-z0-9_-]{1,80}", request_id):
+            event["requestId"] = request_id
+    event["clientIp"] = ip
+    for field in ("clientId", "wallet", "blockchain", "clientIp", "requestId"):
+        value = event.get(field)
+        if value and any(key and key.casefold() in value.casefold() for key in secrets):
+            event[field] = None
+    try:
+        print(json.dumps(event, separators=(",", ":")), flush=True)
+    except (OSError, ValueError):
+        pass  # An unavailable log stream must not change the HTTP response.
 
 
 def load_config(path=ROOT / "config.toml", env_file=None, environ=None):
@@ -87,6 +131,10 @@ async def create_app(config=None, *, service=None, legacy=None):
     latest = VERSIONS[-1] if selected == "latest" else selected
     if latest not in VERSIONS:
         raise ValueError("Unknown latest API version")
+    env = config.get("_env", {})
+    clients = _client_keys(env, config.get("server", {}).get("api_key", ""))
+    credentials = [(name, key.encode()) for name, key in clients.items()]
+    railway = bool(env.get("RAILWAY_ENVIRONMENT_ID"))
     app = web.Application(client_max_size=1024)
     session = None
     if service is None:
@@ -160,6 +208,19 @@ async def create_app(config=None, *, service=None, legacy=None):
         version, route = (latest, parts[0]) if len(parts) == 1 else (parts[0], parts[-1])
         version = latest if version == "latest" else version
         known = len(parts) <= 2 and version in VERSIONS
+        supplied = request.headers.getall("x-api-key", [])
+        client = None
+        if len(supplied) == 1:
+            token = supplied[0].encode("utf-8", errors="surrogateescape")
+            client = next((name for name, key in credentials if hmac.compare_digest(key, token)), None)
+        event = {
+            "message": "wallet.access", "level": "info",
+            "timestamp": datetime.now(timezone.utc).isoformat(timespec="milliseconds"),
+            "clientId": client or "anonymous",
+            "method": request.method if request.method in {"GET", "POST", "HEAD", "PUT", "PATCH", "OPTIONS", "DELETE"} else "OTHER",
+            "endpoint": request.path if known and route in ROUTES else "unknown",
+            "blockchain": None, "wallet": None,
+        }
         insights = route == "WalletInsights"
         if insights and known and pinned != "v2":
             version = "v1"  # Latest available Insights remains the legacy API.
@@ -180,8 +241,8 @@ async def create_app(config=None, *, service=None, legacy=None):
             else:
                 if route not in {"walletAgeDays", "WalletInsights"}:
                     raise AgeError(404, "not_found")
-                expected = config.get("server", {}).get("api_key", "")
-                if expected and not hmac.compare_digest(expected.encode(), request.headers.get("x-api-key", "").encode()):
+                if clients and not client:
+                    event["clientId"] = "unauthenticated"
                     raise AgeError(401, "unauthorized")
                 try:
                     if request.method == "GET":
@@ -199,6 +260,11 @@ async def create_app(config=None, *, service=None, legacy=None):
                     raise AgeError(400, "invalid request")
                 if insights and version == "v2":
                     raise AgeError(501, "coming soon contact info@anchain.ai")
+                address, chain = values["address"], values["blockchain"]
+                if isinstance(address, str) and re.fullmatch(r"0x[0-9a-fA-F]{40}", address):
+                    event["wallet"] = address.lower()
+                if isinstance(chain, str) and re.fullmatch(r"[A-Za-z][A-Za-z0-9_-]{0,31}", chain):
+                    event["blockchain"] = chain.lower()
                 result = (await legacy_check(route, values) if version == "v1" else
                           await service.check(values["blockchain"], values["address"]))
                 if insights:
@@ -211,6 +277,9 @@ async def create_app(config=None, *, service=None, legacy=None):
                     headers.update({"X-Wallet-Age-Coverage": getattr(result, "coverage", headers["X-Wallet-Age-Coverage"]),
                         "X-Wallet-Age-Cache": result.cache, "X-Wallet-Age-Finalized": str(result.finalized).lower(),
                         "X-Wallet-Age-Evidence": result.evidence, "X-Wallet-Age-Sources": str(result.positive_sources)})
+        except asyncio.CancelledError:
+            status = 499
+            raise
         except AgeError as exc:
             status, body = exc.status, exc.message
             if exc.coverage:
@@ -220,6 +289,9 @@ async def create_app(config=None, *, service=None, legacy=None):
                 status, body = exc.status, exc.message
             else:
                 status, body = 503, "unknown"
+        finally:
+            event["status"] = status
+            _access_log(request, event, railway, (*clients.values(), *supplied))
         return web.json_response(body, status=status, headers=headers)
 
     async def cleanup(_app):

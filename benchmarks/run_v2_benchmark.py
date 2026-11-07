@@ -15,6 +15,7 @@ import json
 import math
 from pathlib import Path
 import random
+import secrets
 import sqlite3
 import statistics
 import sys
@@ -118,6 +119,9 @@ async def run(args):
     references = json.loads((ROOT / "benchmarks/references.json").read_text())
     assert len(cases) == 100
     config = load_config(args.config, env_file=args.env_file)
+    # This isolated loopback client also works with a named-key-only configuration.
+    if not config["server"]["api_key"]:
+        config["server"]["api_key"] = secrets.token_hex(32)
     database = args.output.resolve() / "wallet-age.sqlite3"
     config["wallet_age"]["database"] = str(database)
     config.setdefault("legacy", {})["enabled"] = False
