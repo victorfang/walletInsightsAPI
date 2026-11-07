@@ -2,6 +2,7 @@
 [server]
 host = "127.0.0.1"
 port = 8787
+requests_per_minute = 60  # Per authenticated client across all data routes and versions.
 
 [api]
 latest = "latest"  # Newest registered compatible version; can explicitly pin for rollback.

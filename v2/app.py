@@ -2,13 +2,17 @@
 
 import argparse
 import asyncio
+from collections import defaultdict, deque
 from datetime import datetime, timezone
+from functools import lru_cache
 import hmac
 import ipaddress
 import json
+from math import ceil
 import os
 from pathlib import Path
 import re
+from time import monotonic
 import tomllib
 from urllib.parse import quote, urlsplit
 
@@ -23,6 +27,7 @@ ROOT = Path(__file__).resolve().parent
 SERVICE = web.AppKey("service", object)
 VERSIONS = ("v1", "v2")
 ROUTES = {"health", "openapi.json", "walletAgeDays", "WalletInsights"}
+DEMO_KEY = "demo_wallet_age_test_key_replace_me"
 
 
 def _client_keys(env, legacy):
@@ -133,9 +138,32 @@ async def create_app(config=None, *, service=None, legacy=None):
         raise ValueError("Unknown latest API version")
     env = config.get("_env", {})
     clients = _client_keys(env, config.get("server", {}).get("api_key", ""))
-    credentials = [(name, key.encode()) for name, key in clients.items()]
+    secret_names = {"ANCHAIN_DATA_API_KEY", "ANCHAIN_API_KEY"}
+    for feed in config.get("feeds", {}).values():
+        secret_names.update(feed.get(field) for field in ("key_env", "token_env"))
+    log_secrets = (*clients.values(), *(env[name] for name in secret_names if env.get(name)))
     railway = bool(env.get("RAILWAY_ENVIRONMENT_ID"))
-    app = web.Application(client_max_size=1024)
+    require_key = railway or bool(clients)
+    credentials = [(name, key.encode()) for name, key in clients.items()
+                   if not railway or key != DEMO_KEY]
+    quota = config.get("server", {}).get("requests_per_minute", 60)
+    if type(quota) is not int or not 1 <= quota <= 100_000:
+        raise ValueError("Invalid requests_per_minute")
+    recent = defaultdict(deque)
+
+    def retry_after(bucket):
+        # Only configured identities and two shared buckets can allocate state.
+        hits, now = recent[bucket], monotonic()
+        while hits and hits[0] <= now - 60:
+            hits.popleft()
+        if len(hits) >= quota:
+            return max(1, ceil(60 - (now - hits[0])))
+        hits.append(now)
+        return 0
+
+    app = web.Application(client_max_size=1024, handler_args={
+        "auto_decompress": False, "max_headers": 64, "lingering_time": 0,
+    })
     session = None
     if service is None:
         session = ClientSession(timeout=ClientTimeout(total=2.6), connector=TCPConnector(limit=64))
@@ -178,8 +206,20 @@ async def create_app(config=None, *, service=None, legacy=None):
         task.add_done_callback(finished)
         return await asyncio.shield(task)
 
+    @lru_cache(maxsize=4)
     def spec(version, pinned):
         doc = json.loads((ROOT.parent / "openapi.json").read_text())
+        if require_key:
+            doc["security"] = [{"HeaderApiKeyAuth": []}]
+        for path, operations in doc["paths"].items():
+            if path in {"/walletAgeDays", "/WalletInsights", "/openapi.json"}:
+                for method in ("get", "post"):
+                    if method in operations:
+                        operations[method]["responses"]["429"] = {
+                            "description": "Request limit reached. Retry after the Retry-After interval in seconds.",
+                            "headers": {"Retry-After": {"schema": {"type": "integer"}}},
+                            "content": {"application/json": {"schema": {"const": "rate limited"}}},
+                        }
         doc["servers"] = [{"url": f"/{version}" if pinned else "/"}]
         if pinned:
             if version == "v2":
@@ -187,7 +227,7 @@ async def create_app(config=None, *, service=None, legacy=None):
                 doc["info"]["version"] = "2.0.0"
                 doc["info"]["description"] = "Age-only screening API. Verified observed activity; Ethereum coverage first."
                 doc["paths"].pop("/WalletInsights", None)
-            return doc
+            return json.dumps(doc, separators=(",", ":")).encode()
         original = doc["paths"].copy()
         doc["info"]["version"] = "2.0.0"
         doc["info"]["description"] = "Latest compatible API by default; /v1 pins legacy, /v2 pins age V2."
@@ -200,7 +240,7 @@ async def create_app(config=None, *, service=None, legacy=None):
                             operation["operationId"] += "_" + prefix
                     doc["paths"][f"/{prefix}{route}"] = copy
         doc["x-latest-age-version"] = latest
-        return doc
+        return json.dumps(doc, separators=(",", ":")).encode()
 
     async def handle(request):
         parts = request.path.removeprefix("/").split("/")
@@ -224,7 +264,8 @@ async def create_app(config=None, *, service=None, legacy=None):
         insights = route == "WalletInsights"
         if insights and known and pinned != "v2":
             version = "v1"  # Latest available Insights remains the legacy API.
-        headers = {"Cache-Control": "no-store", "X-API-Version": version if known else latest}
+        headers = {"Cache-Control": "no-store", "X-Content-Type-Options": "nosniff",
+                   "X-API-Version": version if known else latest}
         if not insights:
             headers.update({"X-Wallet-Age-Coverage": "ethereum" if version == "v1" else service.coverage,
                             "X-Wallet-Age-Basis": "first-observed-activity", "X-Wallet-Age-Quality": "lower-bound"})
@@ -236,17 +277,28 @@ async def create_app(config=None, *, service=None, legacy=None):
                 raise AgeError(405, "method not allowed")
             if not known:
                 raise AgeError(404, "not_found")
+            data_route = route in {"walletAgeDays", "WalletInsights"}
+            if data_route and require_key and not client:
+                event["clientId"] = "unauthenticated"
+            if data_route or (route == "openapi.json" and request.method == "GET"):
+                wait = retry_after(client or ("@data" if data_route else "@docs"))
+                if wait:
+                    headers["Retry-After"] = str(wait)
+                    raise AgeError(429, "rate limited")
             if route in {"health", "openapi.json"} and request.method == "GET":
-                body = "ok" if route == "health" else spec(version, pinned)
+                if route == "openapi.json":
+                    return web.Response(body=spec(version, pinned), content_type="application/json", headers=headers)
+                body = "ok"
             else:
                 if route not in {"walletAgeDays", "WalletInsights"}:
                     raise AgeError(404, "not_found")
-                if clients and not client:
-                    event["clientId"] = "unauthenticated"
+                if require_key and not client:
                     raise AgeError(401, "unauthorized")
                 try:
+                    if request.headers.getall("Content-Encoding", []) not in ([], ["identity"]):
+                        raise ValueError("Unsupported content encoding")
                     if request.method == "GET":
-                        if len(request.query) != 2:
+                        if request.can_read_body or len(request.rel_url.raw_query_string) > 1024 or len(request.query) != 2:
                             raise ValueError("Invalid input count")
                         values = dict(request.query)
                     else:
@@ -291,7 +343,7 @@ async def create_app(config=None, *, service=None, legacy=None):
                 status, body = 503, "unknown"
         finally:
             event["status"] = status
-            _access_log(request, event, railway, (*clients.values(), *supplied))
+            _access_log(request, event, railway, (*log_secrets, *supplied))
         return web.json_response(body, status=status, headers=headers)
 
     async def cleanup(_app):

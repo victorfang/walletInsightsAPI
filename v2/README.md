@@ -18,7 +18,7 @@ v2/.venv/bin/python -m v2.app --env-file .env
 
 This reuses your existing root `.env` without modifying it. Runtime dependency: `aiohttp==3.14.5` and its dependencies; SQLite and TOML support come with Python. The default address is `http://127.0.0.1:8787`; use `--host` and `--port` to change it. Stop the old service first if it already occupies that port.
 
-For a separate demo configuration, copy [`.env.example`](.env.example) to an ignored `v2/.env` and start with `--env-file v2/.env`. The example includes a public test key. For client testing, set one `WALLET_CLIENT_KEY_<ID>` variable per client and send its value in the existing `x-api-key` header. The existing `WALLET_CHECK_API_KEY` still works. When neither form of key is configured, calls remain open. See [client setup and log filters](DEPLOY_RAILWAY.md#client-keys-and-access-logs).
+For a separate demo configuration, copy [`.env.example`](.env.example) to an ignored `v2/.env` and start with `--env-file v2/.env`. The example includes a public test key. For client testing, set one `WALLET_CLIENT_KEY_<ID>` variable per client and send its value in the existing `x-api-key` header. The existing `WALLET_CHECK_API_KEY` still works. Railway requires a configured key for data routes. A local run with no keys accepts anonymous calls. See [client setup and log filters](DEPLOY_RAILWAY.md#client-keys-and-access-logs).
 
 ## Calls and versions
 
@@ -105,7 +105,7 @@ v2/.venv/bin/python benchmarks/run_v2_benchmark.py \
   --env-file .env --output benchmarks/run-v2-new
 ```
 
-The complete suite passes **423 tests**, including 79 V2 tests. Tests use local fixtures and need no provider credentials. The [V2 benchmark runner](../benchmarks/run_v2_benchmark.py) makes live calls, consumes provider quota, uses the same 100 addresses, and creates an isolated database and Markdown report in a fresh output directory. It records cold and warm HTTP timing, initial/refined epochs and deployment-control agreement.
+The complete suite passes **427 tests**, including 83 V2 tests. Tests use local fixtures and need no provider credentials. The [V2 benchmark runner](../benchmarks/run_v2_benchmark.py) makes live calls, consumes provider quota, uses the same 100 addresses, and creates an isolated database and Markdown report in a fresh output directory. It records cold and warm HTTP timing, initial/refined epochs and deployment-control agreement.
 
 The [November 6 V2 benchmark](../benchmarks/run-v2-final-2026-11-06/REPORT.md) returned ages for all 40 known-used controls, rejected all 20 malformed inputs and returned `503 "unknown"` for the 40 synthetic candidates. Known-used uncached median/p95 were **0.723/0.996 seconds**. Maximum across all 100 cold requests was **1.017 seconds**. The 40 positive cache repeats had median **0.790 ms**. The measured build predates per-client access logs. This is local HTTP with a fresh application cache, one client and provider caches outside our control; it is not a hosted latency SLA.
 

@@ -93,7 +93,7 @@ After a successful check, redeploy once and repeat it to confirm the same volume
 
 In the Railway service's Variables, add `WALLET_CLIENT_KEY_ACME` and store a fresh secret generated with `openssl rand -hex 32`. Give that secret to Acme. For another client, add a separate variable such as `WALLET_CLIENT_KEY_PARTNER_B` with a different secret. Apply the changes and redeploy. Both clients send their assigned secret as `x-api-key`. Client IDs come from the variable suffix and appear in lowercase in the logs. Use letters, digits and underscores for IDs. The labels `legacy`, `anonymous` and `unauthenticated` are reserved.
 
-The existing shared key continues to identify callers as `legacy`. Configuring any key requires authentication on all data routes, including V1 compatibility routes. With zero configured keys the service accepts anonymous calls. Health and OpenAPI stay public. Rotate a client's secret by replacing its value and redeploying, or revoke it by removing that variable and redeploying. Keep at least one configured key if the service should require authentication.
+The existing shared key continues to identify callers as `legacy`. Configuring any key requires authentication on all data routes, including V1 compatibility routes. On Railway, removing the last key closes all data routes with HTTP 401. The published local demo key is also denied on Railway. A local process with no keys still accepts anonymous calls. Health and OpenAPI stay public. Rotate a client's secret by replacing its value and redeploying, or revoke it by removing that variable and redeploying. Generate a random secret for each real client. Rotate any short or disclosed example value before client use.
 
 Open the service's **Deploy Logs** or **Observability → Log Explorer**. Each handled request emits a single JSON event with message `wallet.access`, UTC start time, client ID, IP, method, endpoint, HTTP status, blockchain and wallet address. For Railway public traffic, the app uses the edge's `X-Real-IP` and includes the available `X-Railway-Request-Id` for correlation with HTTP Logs. Local runs use the connection's peer IP. An IP can belong to a proxy or a client's backend. [Railway request headers](https://docs.railway.com/networking/public-networking/specs-and-limits).
 
@@ -107,9 +107,15 @@ Try these filters separately in the Log Explorer. [Railway structured logging](h
 
 Wallets are lowercase. A rejected key produces status 401 with client ID `unauthenticated` and a null wallet because authentication precedes input parsing. Unrecognized paths use `unknown`. The access event excludes raw request URLs, unparsed inputs, headers, bodies and credentials.
 
+The service admits **60 requests per client in a rolling 60-second window** by default, shared across API versions and routes. Adjust `server.requests_per_minute` in `v2/config.toml` to suit the provider budget. Excess requests receive HTTP 429, JSON `"rate limited"`, and a `Retry-After` delay in seconds. Rejected credentials share a bounded quota. The public OpenAPI document has a separate allowance for anonymous readers, and `/health` stays available. Counters are in memory per process and reset on restart. Source IP is used for logging only.
+
+Use GET query strings up to 1,024 encoded characters or plain JSON POST bodies up to 1,024 bytes. Requests carrying compressed data are rejected. The HTTP server disables request decompression before authentication. Address validation runs before cache or provider lookup, SQLite statements bind caller data as parameters, and upstream destinations come from server configuration.
+
 ## If the exact production hostname is required
 
 DNS selects hosts, not URL paths. A CNAME change for `api.anchainai.com` would move traffic for that hostname, including existing API routes. For `api.anchainai.com/staging/...` or a single new route alongside the AWS API, configure routing in the existing AWS HTTP front door to a Railway origin. The exact setup depends on whether AWS currently uses API Gateway, CloudFront or another proxy. A dedicated staging hostname avoids that extra routing work. [CloudFront path/origin routing](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CacheBehavior.html).
+
+If adding `insights.anchainai.com/api/walletAgeDays` to the Insights service, allow exactly GET and POST on that path and configure one fixed upstream URL ending in `/walletAgeDays`. Forward the wallet API key and the two validated inputs. Disable redirects, enforce size and time limits, and exclude Insights session cookies and authorization tokens from upstream requests. Record the client IP at the first trusted edge. A second public proxy hop can show the proxy's outbound IP at the wallet service.
 
 ## Local container check (optional)
 

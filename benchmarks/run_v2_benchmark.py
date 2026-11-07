@@ -119,6 +119,8 @@ async def run(args):
     references = json.loads((ROOT / "benchmarks/references.json").read_text())
     assert len(cases) == 100
     config = load_config(args.config, env_file=args.env_file)
+    # The sequential latency experiment also sends all warm repeats back-to-back.
+    config["server"]["requests_per_minute"] = max(config["server"].get("requests_per_minute", 60), 2 * len(cases))
     # This isolated loopback client also works with a named-key-only configuration.
     if not config["server"]["api_key"]:
         config["server"]["api_key"] = secrets.token_hex(32)
@@ -140,6 +142,7 @@ async def run(args):
 
     service.check = capture
     metadata = {"started_at": stamp(), "python": sys.version, "seed": args.seed,
+                "requests_per_minute": config["server"]["requests_per_minute"],
                 "coverage": service.coverage, "cache_capacity": config["wallet_age"].get("max_entries", 1_000_000),
                 "dataset_sha256": hashlib.sha256(dataset.read_bytes()).hexdigest(),
                 "runtime_sha256": {path.name: hashlib.sha256(path.read_bytes()).hexdigest()
