@@ -9,7 +9,7 @@ from wallet_insights.factory import build_service
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(description="WalletInsights: balances, nonce, code and sourced labels")
+    parser = argparse.ArgumentParser(description="walletInsights: balances, nonce, code and sourced labels")
     parser.add_argument("blockchain")
     parser.add_argument("address")
     parser.add_argument("--env-file")

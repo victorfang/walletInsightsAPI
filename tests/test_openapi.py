@@ -89,8 +89,9 @@ class OpenAPIContractTests(unittest.TestCase):
         self.assertEqual((scheme['in'], scheme['name']), ('header', 'x-api-key'))
 
     def test_insights_is_a_separate_object_response_with_two_inputs(self):
-        for method in ['get', 'post']:
+        for method, operation_id in [('get', 'walletInsights'), ('post', 'walletInsightsPost')]:
             operation = self.spec['paths']['/walletInsights'][method]
+            self.assertEqual(operation['operationId'], operation_id)
             content = operation['responses']['200']['content']['application/json']
             self.assertNotEqual(content['schema'], {'$ref': '#/components/schemas/WalletAgeDays'})
             self.assertIn('X-Wallet-Insights-Cache', operation['responses']['200']['headers'])

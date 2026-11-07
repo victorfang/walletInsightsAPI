@@ -1439,7 +1439,7 @@
           "ethereum",
           "eth-mainnet"
         ],
-        "operationId": "WalletInsights",
+        "operationId": "walletInsights",
         "parameters": [
           {
             "in": "query",
@@ -1958,7 +1958,7 @@
           "ethereum",
           "eth-mainnet"
         ],
-        "operationId": "WalletInsightsPost",
+        "operationId": "walletInsightsPost",
         "requestBody": {
           "required": true,
           "content": {

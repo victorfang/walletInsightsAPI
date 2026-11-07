@@ -35,6 +35,8 @@ For a separate demo configuration, copy [`.env.example`](.env.example) to an ign
 
 `[api].latest = "latest"` selects the newest registered compatible age implementation automatically; currently V2. An explicit version can override this for rollback. The original `/WalletInsights` spelling is also accepted for existing callers. Pinned routes do not move when the latest alias changes. Future latest implementations must keep published inputs, response bodies and error semantics compatible; regression tests guard that contract. Existing Python/CLI entry points also remain available. Versioned OpenAPI documents use versioned server bases, so generated clients remain pinned.
 
+The canonical Insights operations are `GET /walletInsights` (OpenAPI ID `walletInsights`) and `POST /walletInsights` (ID `walletInsightsPost`). Regenerating an SDK may change the corresponding method names. Previously generated clients can continue to call the uppercase HTTP alias.
+
 These examples use the public key from `v2/.env.example`. Replace it with your configured key, or omit the header when incoming authentication is disabled.
 
 ```bash

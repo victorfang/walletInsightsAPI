@@ -25,7 +25,7 @@ def main():
     try:
         with WalletAgeHTTPServer((args.host, args.port), service,
                                  os.environ.get("WALLET_CHECK_API_KEY") or None, insights=insights) as server:
-            print(f"walletAgeDays and WalletInsights listening on http://{args.host}:{server.server_port}; coverage={service.coverage}", flush=True)
+            print(f"walletAgeDays and walletInsights listening on http://{args.host}:{server.server_port}; coverage={service.coverage}", flush=True)
             try:
                 server.serve_forever()
             except KeyboardInterrupt:
