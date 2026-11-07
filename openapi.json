@@ -35,7 +35,7 @@
           "Wallet age"
         ],
         "summary": "Check the destination’s observed age",
-        "description": "Send the withdrawal destination as the address. Use ETH for Ethereum mainnet. Read the HTTP status first. A 200 result of 0 means the earliest observed activity was less than 24 hours ago. For example, a first observed transfer six hours ago returns 0. Earlier activity may exist. A 404 or 503 means the age is unknown. Apply an under-three-days rule only to successful values of 0, 1 or 2.",
+        "description": "Send the withdrawal destination as the address. Use ETH for Ethereum mainnet. Read the HTTP status separately from the JSON body. HTTP 200 with body `404` means 404 full days since the earliest observed activity. HTTP 404 with body `\"not_found\"` means no age is available. HTTP 503 with body `\"unknown\"` means the age is temporarily unavailable. Apply an under-three-days rule only to HTTP 200 bodies of `0`, `1`, or `2`.",
         "responses": {
           "200": {
             "description": "Full days since the earliest observed Ethereum activity. The response body is one integer.",
@@ -117,6 +117,10 @@
                   },
                   "lessThanOneDay": {
                     "value": 0
+                  },
+                  "fourHundredFourDays": {
+                    "summary": "Wallet age of 404 days (HTTP 200)",
+                    "value": 404
                   }
                 }
               }
@@ -458,7 +462,7 @@
           "Wallet age"
         ],
         "summary": "Check the destination’s observed age",
-        "description": "Send the withdrawal destination as the address. Use ETH for Ethereum mainnet. Read the HTTP status first. A 200 result of 0 means the earliest observed activity was less than 24 hours ago. For example, a first observed transfer six hours ago returns 0. Earlier activity may exist. A 404 or 503 means the age is unknown. Apply an under-three-days rule only to successful values of 0, 1 or 2.",
+        "description": "Send the withdrawal destination as the address. Use ETH for Ethereum mainnet. Read the HTTP status separately from the JSON body. HTTP 200 with body `404` means 404 full days since the earliest observed activity. HTTP 404 with body `\"not_found\"` means no age is available. HTTP 503 with body `\"unknown\"` means the age is temporarily unavailable. Apply an under-three-days rule only to HTTP 200 bodies of `0`, `1`, or `2`.",
         "responses": {
           "200": {
             "description": "Full days since the earliest observed Ethereum activity. The response body is one integer.",
@@ -540,6 +544,10 @@
                   },
                   "lessThanOneDay": {
                     "value": 0
+                  },
+                  "fourHundredFourDays": {
+                    "summary": "Wallet age of 404 days (HTTP 200)",
+                    "value": 404
                   }
                 }
               }

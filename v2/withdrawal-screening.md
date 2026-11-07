@@ -6,12 +6,13 @@ Keep a withdrawal profile in your own application. For each customer, track prev
 
 ### Zero days and unknown age
 
-Read the HTTP status before using the response body. A successful lookup returns a whole number of days. **Unknown age** means the API could not establish when the address first appeared on Ethereum.
+The HTTP status code and the JSON response body are separate. Check the status first. With HTTP 200, the body is an integer age in days, so a body of `404` means **404 days old**. With HTTP 404, the body is the string `"not_found"` and the age is unknown.
 
 | HTTP status | JSON body | Example and action |
 | --- | --- | --- |
+| 200 | `404` | The earliest observed Ethereum activity was 404 full days ago. Use 404 as the wallet age. |
+| 404 | `"not_found"` | No activity was found to date the address. For example, a customer may request a withdrawal to an address awaiting its first transfer. Record its age as unknown. |
 | 200 | `0` | The first observed transfer was six hours ago. Less than one full day has elapsed. Count this destination as under three days old. |
-| 404 | `"not_found"` | A customer generates a valid address and requests its first withdrawal before it has any observed on-chain activity. It could have been generated today or months ago. Record its age as unknown. |
 | 503 | `"unknown"` | The lookup is temporarily unavailable, even for an active address. Record its age as unknown for this decision and retry later. |
 
 Apply an **age under three days** rule only to HTTP 200 results of `0`, `1`, or `2`. Keep unknown ages separate. For example, if a customer requests an unusually large withdrawal to an unfamiliar destination with unknown age, hold it for review under your missing-data policy.

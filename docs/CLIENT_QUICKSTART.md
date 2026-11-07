@@ -26,15 +26,16 @@ Use the API key AnChain supplied to your team. Send `blockchain` and `address` t
 HTTP 200
 ```
 
-The response body is a single JSON integer. `0` means the earliest verified observation was less than 24 hours ago. The age is a lower bound because earlier activity may exist.
+Read the HTTP status separately from the JSON body. With HTTP 200, use the body as the age in full days. For example, `404` means the earliest verified observation was 404 days ago, and `0` means it was less than 24 hours ago. Earlier activity may exist.
 
-| Status | What to do |
-| --- | --- |
-| 400 | Send exactly the two fields shown above. An ETH address starts with `0x` followed by 40 hex digits. |
-| 401 | Check that the `x-api-key` header contains your assigned staging key. |
-| 404 `"not_found"` | No activity was found to date the address. Record unknown age. A valid address awaiting its first transfer can return this result. |
-| 503 `"unknown"` | The lookup is temporarily unavailable. Record unknown age and retry later. |
-| 429 | Wait the number of seconds in the `Retry-After` response header before retrying. |
+| HTTP status | JSON body | What to do |
+| --- | --- | --- |
+| 200 | `404` | Use 404 as the wallet age. |
+| 404 | `"not_found"` | No activity was found to date the address. Record unknown age. |
+| 503 | `"unknown"` | The lookup is temporarily unavailable. Record unknown age and retry later. |
+| 400 | `"invalid"` or `"invalid request"` | Send exactly the two fields shown above. An ETH address starts with `0x` followed by 40 hex digits. |
+| 401 | `"unauthorized"` | Check that the `x-api-key` header contains your assigned staging key. |
+| 429 | `"rate limited"` | Wait the number of seconds in the `Retry-After` response header before retrying. |
 
 Apply an under-three-days rule only to successful ages of `0`, `1`, or `2`. [See examples of zero days and unknown age](https://walletinsightsapi-production.up.railway.app/docs#description/zero-days-and-unknown-age).
 
