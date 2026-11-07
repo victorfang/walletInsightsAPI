@@ -3,7 +3,7 @@
   "info": {
     "title": "AnChain.AI Wallet Insights API (Beta)",
     "version": "2.1.0",
-    "description": "**Request a test API key:** [info@anchain.ai](mailto:info@anchain.ai)\n\n**Available for client testing.** Use this API to screen Ethereum withdrawal destinations for potential fraud before releasing funds. Send the same two fields, `blockchain` and `address`, to either endpoint. Both accept GET query parameters or a POST JSON body.",
+    "description": "**Request a test API key:** [info@anchain.ai](mailto:info@anchain.ai)\n\n**Available for client testing.** Screen Ethereum withdrawal destinations using wallet age and account activity.",
     "contact": {
       "email": "info@anchain.ai"
     }
@@ -35,7 +35,7 @@
           "Wallet age"
         ],
         "summary": "Check the destination’s observed age",
-        "description": "Send the withdrawal destination as the address. Use ETH for Ethereum mainnet. Read the HTTP status separately from the JSON body. HTTP 200 with body `404` means 404 full days since the earliest observed activity. HTTP 404 with body `\"not_found\"` means no age is available. HTTP 503 with body `\"unknown\"` means the age is temporarily unavailable. Apply an under-three-days rule only to HTTP 200 bodies of `0`, `1`, or `2`.",
+        "description": "Returns full days since the earliest observed Ethereum activity.\n\n- HTTP 200 with body `404` means 404 days old.\n- HTTP 404 with `\"not_found\"` or HTTP 503 with `\"unknown\"` means the age is unknown.",
         "responses": {
           "200": {
             "description": "Full days since the earliest observed Ethereum activity. The response body is one integer.",
@@ -462,7 +462,7 @@
           "Wallet age"
         ],
         "summary": "Check the destination’s observed age",
-        "description": "Send the withdrawal destination as the address. Use ETH for Ethereum mainnet. Read the HTTP status separately from the JSON body. HTTP 200 with body `404` means 404 full days since the earliest observed activity. HTTP 404 with body `\"not_found\"` means no age is available. HTTP 503 with body `\"unknown\"` means the age is temporarily unavailable. Apply an under-three-days rule only to HTTP 200 bodies of `0`, `1`, or `2`.",
+        "description": "Returns full days since the earliest observed Ethereum activity.\n\n- HTTP 200 with body `404` means 404 days old.\n- HTTP 404 with `\"not_found\"` or HTTP 503 with `\"unknown\"` means the age is unknown.",
         "responses": {
           "200": {
             "description": "Full days since the earliest observed Ethereum activity. The response body is one integer.",
@@ -963,7 +963,7 @@
           "Wallet insights"
         ],
         "summary": "Review balances, account activity and risk labels",
-        "description": "Send the same ETH address you used for the age check. Use ETH and the selected USDC, USDT and DAI balances, account nonce, code profile and available labels as context for a withdrawal review. Read status and components before using individual fields. HTTP 200 can include a partial result. A missing balance or label is unknown. A large balance alone does not establish that a withdrawal is authorized.",
+        "description": "Returns ETH and USDC, USDT and DAI balances, account nonce, code profile, and risk labels when available.\n\n- Check `status` and `components` before reading individual fields. HTTP 200 can include a partial result.\n- Treat missing balances and labels as unknown.",
         "responses": {
           "200": {
             "description": "Wallet details. Read status and components before using the values. The examples are illustrative.",
@@ -1478,7 +1478,7 @@
           "Wallet insights"
         ],
         "summary": "Review balances, account activity and risk labels",
-        "description": "Send the same ETH address you used for the age check. Use ETH and the selected USDC, USDT and DAI balances, account nonce, code profile and available labels as context for a withdrawal review. Read status and components before using individual fields. HTTP 200 can include a partial result. A missing balance or label is unknown. A large balance alone does not establish that a withdrawal is authorized.",
+        "description": "Returns ETH and USDC, USDT and DAI balances, account nonce, code profile, and risk labels when available.\n\n- Check `status` and `components` before reading individual fields. HTTP 200 can include a partial result.\n- Treat missing balances and labels as unknown.",
         "responses": {
           "200": {
             "description": "Wallet details. Read status and components before using the values. The examples are illustrative.",

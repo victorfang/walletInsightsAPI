@@ -1,6 +1,7 @@
 ## Response times
 
-Our service targets are a **p95 of about 1 second or less for successful queries** and a **response in under 3 seconds for each request**, including when data is unavailable. P95 means 95% of the measured requests finished within the time shown. These are service targets during testing. Client round-trip times can exceed them under load or with network delays.
+- **Successful queries** — p95 target of about 1 second or less.
+- **All requests** — Target response time under 3 seconds, including unavailable results. Network delays and load can increase client latency.
 
 | Endpoint | Lookup | Average | p95 | Observed maximum |
 | --- | --- | ---: | ---: | ---: |
@@ -9,41 +10,44 @@ Our service targets are a **p95 of about 1 second or less for successful queries
 | `/walletInsights` | Fully cached | 3 ms | 4 ms | 10 ms |
 | `/walletInsights` | Uncached | 690 ms | 807 ms | 884 ms |
 
-The table shows local HTTP benchmarks from November 5–6, 2026, measured one request at a time. Each age row covers 40 successful lookups. Each Insights row covers 80 complete responses. The measurements exclude the network round trip from your client to Railway.
+Local HTTP measurements, November 5–6, 2026, one request at a time. Each age row includes 40 successful responses. Each Insights row includes 80 complete responses. Client-to-Railway network time is excluded.
 
-Allow more time when an age is unknown. In a separate test with eight requests in flight, all 16 age lookups returned HTTP 503 with body `"unknown"`. Their p95 was **2.42 seconds**.
+**Concurrent unknown-age test** — 16 requests, eight in flight. All returned HTTP 503 with body `"unknown"`. Measured p95 was 2.42 seconds.
 
 ## Zero days and unknown age
 
-The HTTP status code and the JSON response body are separate. Check the status first. With HTTP 200, the body is an integer age in days, so a body of `404` means **404 days old**. With HTTP 404, the body is the string `"not_found"` and the age is unknown.
+Check the HTTP status before parsing the body. Only HTTP 200 returns an integer age. The result is a lower bound on Ethereum activity.
 
-| HTTP status | JSON body | Example and action |
+| HTTP | JSON body | Interpretation |
 | --- | --- | --- |
-| 200 | `404` | The earliest observed Ethereum activity was 404 full days ago. Use 404 as the wallet age. |
-| 404 | `"not_found"` | No activity was found to date the address. For example, a customer may request a withdrawal to an address awaiting its first transfer. Record its age as unknown. |
-| 200 | `0` | The first observed transfer was six hours ago. Less than one full day has elapsed. Count this destination as under three days old. |
-| 503 | `"unknown"` | The lookup is temporarily unavailable, even for an active address. Record its age as unknown for this decision and retry later. |
+| 200 | `404` | Earliest observed activity was 404 full days ago. |
+| 404 | `"not_found"` | No Ethereum activity found for the address. An address awaiting its first transfer can return this. Age is unknown. |
+| 200 | `0` | Earliest observed activity was less than 24 hours ago, e.g., six hours ago. |
+| 503 | `"unknown"` | Age temporarily unavailable. Retry later. |
 
-Apply an **age under three days** rule only to HTTP 200 results of `0`, `1`, or `2`. Keep unknown ages separate. For example, if a customer requests an unusually large withdrawal to an unfamiliar destination with unknown age, hold it for review under your missing-data policy.
+Apply a **less-than-three-days** rule only when HTTP status is 200 and the body is `0`, `1`, or `2`. Route unknown ages through your missing-data policy.
 
 ## Use Case - DeFi Anti Fraud
 
-Check the **destination address** before your service signs or releases a withdrawal. Send `blockchain: "ETH"` and the destination to `/walletAgeDays`. Wallet age measures time since the earliest observed activity on Ethereum mainnet. Earlier activity may exist.
+Screen the destination **before signing or releasing funds**. Your application enforces the hold or cap.
 
-Keep a withdrawal profile in your own application. For each customer, track previously approved destinations, the median amount of completed withdrawals over the past 30 days, and the total sent or pending in the past 24 hours. Compare amounts in the same currency. If the customer has too little history for a baseline, use your new-customer limit. For a flagged request, call `/walletInsights` on the same destination. Save the available labels and account details with the reason for review. Your service enforces the hold or cap.
+1. **Build the customer baseline.** Track approved destinations, median completed withdrawal amount over 30 days, and total paid or pending over 24 hours. Use one currency. Apply your new-customer limit when history is insufficient.
+2. **Check the destination.** Call `/walletAgeDays`. For flagged requests, call `/walletInsights` with the same address.
+3. **Record the decision.** Log the destination, amount, baseline, age or unknown status, available labels, and reason for review.
 
-In May 2019, Binance reported that attackers withdrew 7,000 BTC in a single transaction that passed its checks. That incident involved Bitcoin. The three Ethereum examples below illustrate how to set withdrawal policies for your own customers. [Binance incident report](https://www.binance.com/en-AU/support/announcement/detail/360028031711)
-
-The thresholds in these examples are illustrative.
+In 2019, Binance reported that one fraudulent withdrawal of 7,000 BTC passed its checks. The Ethereum thresholds below are illustrative. [Binance incident report](https://www.binance.com/en-AU/support/announcement/detail/360028031711)
 
 ### Case 1. Hold an unusually large withdrawal
 
-A customer whose median withdrawal is 2,000 USDC requests 80,000 USDC to an address they have never used. `/walletAgeDays` returns `1`. The destination is new to the customer, has less than three days of observed activity, and the request is 40 times their usual amount. An example policy would block release pending review. Send the risk team the destination, age, amount, usual amount, and any available risk labels so they can verify the request with the customer.
+- **Trigger** — First withdrawal to this destination, observed age `1` day, amount 80,000 USDC against a 2,000 USDC median (40×).
+- **Action** — Hold before release. Route to the risk team for customer verification.
 
 ### Case 2. Cap repeated withdrawals to fresh addresses
 
-Three requests for 4,000 USDC each arrive within an hour, all from one customer to different destinations with observed ages of `0`, `1`, and `2`. Suppose your policy caps withdrawals to these destinations at 10,000 USDC per customer in a rolling 24-hour period. If the first two requests are already paid or pending, only 2,000 USDC of capacity remains. Hold the third request for review. Count pending amounts when applying the cap so concurrent requests cannot each use the same allowance.
+- **Trigger** — Three 4,000 USDC requests in one hour to destinations aged `0`, `1`, and `2` days. The per-customer cap for these destinations is 10,000 USDC per rolling 24 hours.
+- **Action** — Count paid and pending withdrawals together. After two requests, 2,000 USDC remains. Hold the third request. Reserve capacity atomically when approving concurrent requests.
 
 ### Case 3. Review an older wallet when the customer’s behavior changes
 
-A destination is 600 days old and holds substantial ETH, but the customer has never paid it and has requested ten times their usual amount shortly after changing account credentials. Keep the withdrawal on hold for independent confirmation. Wallet age and balance alone cannot establish who controls the address. If `/walletInsights` returns `partial`, use the available fields and mark the rest unknown.
+- **Trigger** — First withdrawal to a 600-day-old destination with substantial ETH. The requested amount is 10× the customer’s median after a credential change.
+- **Action** — Hold for independent confirmation. Age and balance alone cannot establish ownership.
