@@ -3,7 +3,7 @@
   "info": {
     "title": "AnChain.AI Wallet Insights API (Beta)",
     "version": "2.1.0",
-    "description": "**Request a test API key:** [info@anchain.ai](mailto:info@anchain.ai)\n\n**This beta is available for client testing.** Use it to screen Ethereum withdrawal destinations for potential fraud before releasing funds. Send the same two fields, `blockchain` and `address`, to either endpoint. Both accept GET query parameters or a POST JSON body.",
+    "description": "**Request a test API key:** [info@anchain.ai](mailto:info@anchain.ai)\n\n**Available for client testing.** Use this API to screen Ethereum withdrawal destinations for potential fraud before releasing funds. Send the same two fields, `blockchain` and `address`, to either endpoint. Both accept GET query parameters or a POST JSON body.",
     "contact": {
       "email": "info@anchain.ai"
     }
