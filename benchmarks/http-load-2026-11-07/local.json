@@ -1,0 +1,367 @@
+{
+  "target": "local",
+  "start_utc": "2026-11-07T13:29:49.506900+00:00",
+  "finish_utc": "2026-11-07T13:30:44.640296+00:00",
+  "python": "3.13.7",
+  "aiohttp": "3.14.5",
+  "platform": "macOS-27.0.1-x86_64-i386-64bit-Mach-O",
+  "cpu_count": 10,
+  "rows": [
+    {
+      "stage": "seeded-cache",
+      "route": "walletAgeDays",
+      "concurrency": 1,
+      "requests": 14190,
+      "success": 14190,
+      "elapsed_s": 8.0005,
+      "success_tps": 1773.63,
+      "total_rps": 1773.63,
+      "status": {
+        "200": 14190
+      },
+      "results": {
+        "integer-age": 14190
+      },
+      "cache": {
+        "hit": 14190
+      },
+      "success_ms": {
+        "p50": 0.52,
+        "p95": 0.71,
+        "p99": 1.04,
+        "max": 7.79
+      },
+      "all_ms": {
+        "p50": 0.52,
+        "p95": 0.71,
+        "p99": 1.04,
+        "max": 7.79
+      },
+      "over_3s": 0
+    },
+    {
+      "stage": "seeded-cache",
+      "route": "walletAgeDays",
+      "concurrency": 8,
+      "requests": 21103,
+      "success": 21103,
+      "elapsed_s": 8.0017,
+      "success_tps": 2637.3,
+      "total_rps": 2637.3,
+      "status": {
+        "200": 21103
+      },
+      "results": {
+        "integer-age": 21103
+      },
+      "cache": {
+        "hit": 21103
+      },
+      "success_ms": {
+        "p50": 2.82,
+        "p95": 3.97,
+        "p99": 5.26,
+        "max": 114.54
+      },
+      "all_ms": {
+        "p50": 2.82,
+        "p95": 3.97,
+        "p99": 5.26,
+        "max": 114.54
+      },
+      "over_3s": 0
+    },
+    {
+      "stage": "seeded-cache",
+      "route": "walletAgeDays",
+      "concurrency": 32,
+      "requests": 21949,
+      "success": 21949,
+      "elapsed_s": 8.0075,
+      "success_tps": 2741.07,
+      "total_rps": 2741.07,
+      "status": {
+        "200": 21949
+      },
+      "results": {
+        "integer-age": 21949
+      },
+      "cache": {
+        "hit": 21949
+      },
+      "success_ms": {
+        "p50": 11.44,
+        "p95": 20.08,
+        "p99": 26.34,
+        "max": 46.88
+      },
+      "all_ms": {
+        "p50": 11.44,
+        "p95": 20.08,
+        "p99": 26.34,
+        "max": 46.88
+      },
+      "over_3s": 0
+    },
+    {
+      "stage": "seeded-cache",
+      "route": "walletAgeDays",
+      "concurrency": 64,
+      "requests": 22086,
+      "success": 22086,
+      "elapsed_s": 8.0157,
+      "success_tps": 2755.34,
+      "total_rps": 2755.34,
+      "status": {
+        "200": 22086
+      },
+      "results": {
+        "integer-age": 22086
+      },
+      "cache": {
+        "hit": 22086
+      },
+      "success_ms": {
+        "p50": 22.93,
+        "p95": 32.16,
+        "p99": 39.04,
+        "max": 62.78
+      },
+      "all_ms": {
+        "p50": 22.93,
+        "p95": 32.16,
+        "p99": 39.04,
+        "max": 62.78
+      },
+      "over_3s": 0
+    },
+    {
+      "stage": "fresh-database-keys",
+      "route": "walletAgeDays",
+      "concurrency": 1,
+      "requests": 4,
+      "success": 4,
+      "elapsed_s": 1.9328,
+      "success_tps": 2.07,
+      "total_rps": 2.07,
+      "status": {
+        "200": 4
+      },
+      "results": {
+        "integer-age": 4
+      },
+      "cache": {
+        "miss": 4
+      },
+      "success_ms": {
+        "p50": 460.14,
+        "p95": 512.89,
+        "p99": 512.89,
+        "max": 512.89
+      },
+      "all_ms": {
+        "p50": 460.14,
+        "p95": 512.89,
+        "p99": 512.89,
+        "max": 512.89
+      },
+      "over_3s": 0
+    },
+    {
+      "stage": "fresh-database-keys",
+      "route": "walletAgeDays",
+      "concurrency": 4,
+      "requests": 12,
+      "success": 12,
+      "elapsed_s": 3.0246,
+      "success_tps": 3.97,
+      "total_rps": 3.97,
+      "status": {
+        "200": 12
+      },
+      "results": {
+        "integer-age": 12
+      },
+      "cache": {
+        "miss": 12
+      },
+      "success_ms": {
+        "p50": 1006.62,
+        "p95": 1014.89,
+        "p99": 1014.89,
+        "max": 1014.89
+      },
+      "all_ms": {
+        "p50": 1006.62,
+        "p95": 1014.89,
+        "p99": 1014.89,
+        "max": 1014.89
+      },
+      "over_3s": 0
+    },
+    {
+      "stage": "fresh-database-keys",
+      "route": "walletAgeDays",
+      "concurrency": 8,
+      "requests": 16,
+      "success": 16,
+      "elapsed_s": 2.0138,
+      "success_tps": 7.95,
+      "total_rps": 7.95,
+      "status": {
+        "200": 16
+      },
+      "results": {
+        "integer-age": 16
+      },
+      "cache": {
+        "miss": 16
+      },
+      "success_ms": {
+        "p50": 1004.91,
+        "p95": 1009.66,
+        "p99": 1009.66,
+        "max": 1009.66
+      },
+      "all_ms": {
+        "p50": 1004.91,
+        "p95": 1009.66,
+        "p99": 1009.66,
+        "max": 1009.66
+      },
+      "over_3s": 0
+    },
+    {
+      "stage": "first-lookup",
+      "route": "walletInsights",
+      "concurrency": 4,
+      "requests": 16,
+      "success": 16,
+      "elapsed_s": 1.5507,
+      "success_tps": 10.32,
+      "total_rps": 10.32,
+      "status": {
+        "200": 16
+      },
+      "results": {
+        "partial": 16
+      },
+      "cache": {
+        "miss": 16
+      },
+      "success_ms": {
+        "p50": 361.65,
+        "p95": 454.78,
+        "p99": 454.78,
+        "max": 454.78
+      },
+      "all_ms": {
+        "p50": 361.65,
+        "p95": 454.78,
+        "p99": 454.78,
+        "max": 454.78
+      },
+      "over_3s": 0
+    },
+    {
+      "stage": "burst",
+      "route": "walletInsights",
+      "concurrency": 8,
+      "requests": 8,
+      "success": 4,
+      "elapsed_s": 0.4938,
+      "success_tps": 8.1,
+      "total_rps": 16.2,
+      "status": {
+        "503": 4,
+        "200": 4
+      },
+      "results": {
+        "503": 4,
+        "partial": 4
+      },
+      "cache": {
+        "none": 4,
+        "miss": 4
+      },
+      "success_ms": {
+        "p50": 422.78,
+        "p95": 492.96,
+        "p99": 492.96,
+        "max": 492.96
+      },
+      "all_ms": {
+        "p50": 3.03,
+        "p95": 492.96,
+        "p99": 492.96,
+        "max": 492.96
+      },
+      "over_3s": 0
+    },
+    {
+      "stage": "prime",
+      "route": "walletInsights",
+      "concurrency": 4,
+      "requests": 4,
+      "success": 4,
+      "elapsed_s": 0.3734,
+      "success_tps": 10.71,
+      "total_rps": 10.71,
+      "status": {
+        "200": 4
+      },
+      "results": {
+        "partial": 4
+      },
+      "cache": {
+        "miss": 4
+      },
+      "success_ms": {
+        "p50": 368.22,
+        "p95": 372.83,
+        "p99": 372.83,
+        "max": 372.83
+      },
+      "all_ms": {
+        "p50": 368.22,
+        "p95": 372.83,
+        "p99": 372.83,
+        "max": 372.83
+      },
+      "over_3s": 0
+    },
+    {
+      "stage": "repeat",
+      "route": "walletInsights",
+      "concurrency": 4,
+      "requests": 4732,
+      "success": 4732,
+      "elapsed_s": 5.0144,
+      "success_tps": 943.68,
+      "total_rps": 943.68,
+      "status": {
+        "200": 4732
+      },
+      "results": {
+        "partial": 4732
+      },
+      "cache": {
+        "mixed": 4724,
+        "miss": 8
+      },
+      "success_ms": {
+        "p50": 1.98,
+        "p95": 8.82,
+        "p99": 29.28,
+        "max": 388.01
+      },
+      "all_ms": {
+        "p50": 1.98,
+        "p95": 8.82,
+        "p99": 29.28,
+        "max": 388.01
+      },
+      "over_3s": 0
+    }
+  ]
+}
