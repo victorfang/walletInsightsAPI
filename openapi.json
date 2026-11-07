@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "AnChain.AI Wallet API",
+    "title": "AnChain.AI Wallet Insights Anti Fraud API",
     "version": "2.1.0",
     "description": "Check an Ethereum withdrawal destination before releasing funds. Send the same two fields, `blockchain` and `address`, to either endpoint. Both accept GET query parameters or a POST JSON body.\n\n| Endpoint | When to use it |\n| --- | --- |\n| `/walletAgeDays` | Get the number of full days since the earliest observed Ethereum activity. |\n| `/walletInsights` | Check ETH and selected token balances, account nonce, code profile and available risk labels. |",
     "contact": {

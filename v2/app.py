@@ -235,7 +235,7 @@ async def create_app(config=None, *, service=None, legacy=None):
         if client_view:
             doc["paths"] = {path: doc["paths"][path] for path in ("/walletAgeDays", "/walletInsights")}
             doc["info"].update(
-                title="AnChain.AI Wallet API", version="latest",
+                version="latest",
                 description=(
                     doc["info"]["description"] + "\n\n"
                     + doc["components"]["securitySchemes"]["HeaderApiKeyAuth"]["description"] + "\n\n"
