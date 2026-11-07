@@ -30,8 +30,8 @@ The app uses Python 3.11+, pinned [aiohttp==3.14.5](requirements.txt), and stand
 | `/walletAgeDays`, `/latest/walletAgeDays` | `[api].latest`; `v2` by default |
 | `/v2/walletAgeDays` | V2 permanently pinned |
 | `/v1/walletAgeDays` | Original V1 checker |
-| `/WalletInsights`, `/latest/WalletInsights`, `/v1/WalletInsights` | Original V1 Insights contract |
-| `/v2/WalletInsights` | Explicit `501` coming-soon error |
+| `/walletInsights`, `/latest/walletInsights`, `/v1/walletInsights` | Original V1 Insights contract |
+| `/v2/walletInsights` | Explicit `501` coming-soon error |
 
 `[api].latest = "latest"` selects the newest registered compatible release; V2 is currently newest. An explicit version can override that setting for rollback. `X-API-Version` identifies the selected implementation. Inputs remain exactly `blockchain` and `address`; age success is a bare integer and errors remain the existing JSON strings/statuses. No envelope or renamed field is introduced. Existing age/Insights headers are retained. Health and OpenAPI are public, also under version prefixes. The root V1 OpenAPI file stays intact; pinned specifications set their server base to `/v1` or `/v2`, so generated clients keep the selected version.
 

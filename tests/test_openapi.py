@@ -33,7 +33,7 @@ class OpenAPIContractTests(unittest.TestCase):
         visit(self.spec)
 
     def test_only_new_route_and_support_endpoints_are_advertised(self):
-        self.assertEqual(set(self.spec['paths']), {'/walletAgeDays', '/WalletInsights', '/health', '/openapi.json'})
+        self.assertEqual(set(self.spec['paths']), {'/walletAgeDays', '/walletInsights', '/health', '/openapi.json'})
         self.assertEqual(self.spec['paths']['/walletAgeDays']['get']['operationId'], 'walletAgeDays')
 
     def test_success_has_no_envelope_or_enrichment(self):
@@ -90,12 +90,12 @@ class OpenAPIContractTests(unittest.TestCase):
 
     def test_insights_is_a_separate_object_response_with_two_inputs(self):
         for method in ['get', 'post']:
-            operation = self.spec['paths']['/WalletInsights'][method]
+            operation = self.spec['paths']['/walletInsights'][method]
             content = operation['responses']['200']['content']['application/json']
             self.assertNotEqual(content['schema'], {'$ref': '#/components/schemas/WalletAgeDays'})
             self.assertIn('X-Wallet-Insights-Cache', operation['responses']['200']['headers'])
             self.assertNotIn('X-Wallet-Age-Quality', operation['responses']['200']['headers'])
-        inputs = self.spec['paths']['/WalletInsights']['get']['parameters']
+        inputs = self.spec['paths']['/walletInsights']['get']['parameters']
         self.assertEqual({value['name'] for value in inputs}, {'blockchain', 'address'})
 
 

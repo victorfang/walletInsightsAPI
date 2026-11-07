@@ -27,7 +27,7 @@ from .service import AgeError, Service
 ROOT = Path(__file__).resolve().parent
 SERVICE = web.AppKey("service", object)
 VERSIONS = ("v1", "v2")
-ROUTES = {"health", "docs", "openapi.json", "walletAgeDays", "WalletInsights"}
+ROUTES = {"health", "docs", "openapi.json", "walletAgeDays", "walletInsights"}
 DEMO_KEY = "demo_wallet_age_test_key_replace_me"
 
 
@@ -175,7 +175,10 @@ async def create_app(config=None, *, service=None, legacy=None):
             await session.close()
             raise
     app[SERVICE] = service
-    old, legacy_lock, legacy_active = ({} if legacy is None else legacy), asyncio.Lock(), 0
+    old = dict(legacy or {})
+    if "WalletInsights" in old:
+        old["walletInsights"] = old.pop("WalletInsights")
+    legacy_lock, legacy_active = asyncio.Lock(), 0
     legacy_tasks = set()
 
     async def legacy_check(route, values):
@@ -219,7 +222,7 @@ async def create_app(config=None, *, service=None, legacy=None):
         if require_key:
             doc["security"] = [{"HeaderApiKeyAuth": []}]
         for path, operations in doc["paths"].items():
-            if path in {"/walletAgeDays", "/WalletInsights", "/openapi.json", "/docs"}:
+            if path in {"/walletAgeDays", "/walletInsights", "/openapi.json", "/docs"}:
                 for method in ("get", "post"):
                     if method in operations:
                         operations[method]["responses"]["429"] = {
@@ -233,14 +236,14 @@ async def create_app(config=None, *, service=None, legacy=None):
                 doc["info"]["title"] = "WalletAgeDays API"
                 doc["info"]["version"] = "2.0.0"
                 doc["info"]["description"] = "Age-only screening API. Verified observed activity; Ethereum coverage first."
-                doc["paths"].pop("/WalletInsights", None)
+                doc["paths"].pop("/walletInsights", None)
             return json.dumps(doc, separators=(",", ":")).encode()
         original = doc["paths"].copy()
         doc["info"]["version"] = "2.0.0"
         doc["info"]["description"] = "Latest compatible API by default; /v1 pins legacy, /v2 pins age V2."
         for prefix in ("v1", "v2", "latest"):
             for route, definition in original.items():
-                if prefix != "v2" or route != "/WalletInsights":
+                if prefix != "v2" or route != "/walletInsights":
                     copy = json.loads(json.dumps(definition))
                     for operation in copy.values():
                         if isinstance(operation, dict) and "operationId" in operation:
@@ -279,6 +282,8 @@ async def create_app(config=None, *, service=None, legacy=None):
         parts = request.path.removeprefix("/").split("/")
         pinned = parts[0] if len(parts) == 2 and parts[0] != "latest" else None
         version, route = (latest, parts[0]) if len(parts) == 1 else (parts[0], parts[-1])
+        if route == "WalletInsights":
+            route = "walletInsights"
         version = latest if version == "latest" else version
         known = len(parts) <= 2 and version in VERSIONS
         supplied = request.headers.getall("x-api-key", [])
@@ -294,7 +299,7 @@ async def create_app(config=None, *, service=None, legacy=None):
             "endpoint": request.path if known and route in ROUTES else "unknown",
             "blockchain": None, "wallet": None,
         }
-        insights = route == "WalletInsights"
+        insights = route == "walletInsights"
         if insights and known and pinned != "v2":
             version = "v1"  # Latest available Insights remains the legacy API.
         headers = {"Cache-Control": "no-store", "X-Content-Type-Options": "nosniff",
@@ -310,7 +315,7 @@ async def create_app(config=None, *, service=None, legacy=None):
                 raise AgeError(405, "method not allowed")
             if not known:
                 raise AgeError(404, "not_found")
-            data_route = route in {"walletAgeDays", "WalletInsights"}
+            data_route = route in {"walletAgeDays", "walletInsights"}
             if data_route and require_key and not client:
                 event["clientId"] = "unauthenticated"
             if data_route or (route in {"openapi.json", "docs"} and request.method == "GET"):
@@ -326,7 +331,7 @@ async def create_app(config=None, *, service=None, legacy=None):
                     return web.Response(body=spec(version, pinned), content_type="application/json", headers=headers)
                 body = "ok"
             else:
-                if route not in {"walletAgeDays", "WalletInsights"}:
+                if route not in {"walletAgeDays", "walletInsights"}:
                     raise AgeError(404, "not_found")
                 if require_key and not client:
                     raise AgeError(401, "unauthorized")

@@ -245,12 +245,15 @@ class V2HTTPTests(unittest.IsolatedAsyncioTestCase):
 
     async def test_legacy_insights_calls_keep_their_object_and_headers(self):
         for prefix in ("", "/latest", "/v1"):
-            status, body, headers = await self.call(prefix + "/WalletInsights", params=INPUT)
-            self.assertEqual((status, body), (200, self.insights_body))
-            self.assertEqual(headers["X-API-Version"], "v1")
-            self.assertEqual(headers["X-Wallet-Insights-Coverage"], "ethereum")
-            self.assertEqual(headers["X-Wallet-Insights-Cache"], "mixed")
-            self.assertNotIn("X-Wallet-Age-Quality", headers)
+            for name in ("walletInsights", "WalletInsights"):
+                for method in ("GET", "POST"):
+                    options = {"params": INPUT} if method == "GET" else {"json": INPUT}
+                    status, body, headers = await self.call(prefix + "/" + name, method=method, **options)
+                    self.assertEqual((status, body), (200, self.insights_body))
+                    self.assertEqual(headers["X-API-Version"], "v1")
+                    self.assertEqual(headers["X-Wallet-Insights-Coverage"], "ethereum")
+                    self.assertEqual(headers["X-Wallet-Insights-Cache"], "mixed")
+                    self.assertNotIn("X-Wallet-Age-Quality", headers)
         self.service.check.assert_not_awaited()
         self.legacy_age.check.assert_not_called()
 
@@ -284,7 +287,8 @@ class V2HTTPTests(unittest.IsolatedAsyncioTestCase):
                 page = await response.text()
             self.assertIn('href="openapi.json"', page)
             self.assertIn("walletAgeDays", page)
-            self.assertEqual("/WalletInsights" in page, prefix != "/v2")
+            self.assertEqual("/walletInsights" in page, prefix != "/v2")
+            self.assertNotIn("/WalletInsights", page)
             self.assertIn("x-api-key", page)
             self.assertIn("429", page)
             self.assertNotIn("test-key", page)
@@ -308,7 +312,8 @@ class V2HTTPTests(unittest.IsolatedAsyncioTestCase):
             self.assertEqual(status, 200)
             self.assertEqual(spec["servers"], [{"url": f"/{version}"}])
             self.assertEqual(headers["X-API-Version"], version)
-            self.assertEqual("/WalletInsights" in spec["paths"], version == "v1")
+            self.assertEqual("/walletInsights" in spec["paths"], version == "v1")
+            self.assertNotIn("/WalletInsights", spec["paths"])
         _, spec, _ = await self.call("/openapi.json", auth=False)
         operation_ids = [operation["operationId"] for path in spec["paths"].values()
                          for operation in path.values()

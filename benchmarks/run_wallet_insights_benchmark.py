@@ -326,7 +326,7 @@ def write_report(path, summary, rows, *, validation_note=None):
     completed = datetime.fromisoformat(meta['finished_at'].replace('Z', '+00:00')).astimezone(ZoneInfo('America/Chicago'))
     lines = ['# WalletInsights: 100-address benchmark', '',
              f"Completed: {completed.strftime('%Y-%m-%d %H:%M:%S %Z')} (America/Chicago)", '',
-             'The same 100-input corpus is exercised through the production factory and real local `/WalletInsights` HTTP endpoint. '
+             'The same 100-input corpus is exercised through the production factory and real local `/walletInsights` HTTP endpoint. '
              'Each address gets a fresh-cache cold lookup followed immediately by a warm lookup so a short snapshot TTL does not expire during a full corpus pass.', '',
              f"**Cold valid-address latency:** median **{fmt(valid['latency_seconds']['median'])}s**, "
              f"p95 **{fmt(valid['latency_seconds']['p95'])}s**, maximum **{fmt(valid['latency_seconds']['max'])}s**. "
@@ -520,7 +520,7 @@ def main():
         with WalletAgeHTTPServer(('127.0.0.1', 0), age, insights=service) as server:
             worker = threading.Thread(target=server.serve_forever, daemon=True)
             worker.start()
-            base = f'http://127.0.0.1:{server.server_port}/WalletInsights?'
+            base = f'http://127.0.0.1:{server.server_port}/walletInsights?'
             loop_started = time.perf_counter()
             with (args.output/'results.jsonl').open('w', buffering=1) as out:
                 for index, case in enumerate(shuffled, 1):

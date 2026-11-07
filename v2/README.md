@@ -30,10 +30,10 @@ For a separate demo configuration, copy [`.env.example`](.env.example) to an ign
 | `/latest/walletAgeDays` | Same latest alias |
 | `/v2/walletAgeDays` | Pinned V2 |
 | `/v1/walletAgeDays` | Original V1 checker |
-| `/WalletInsights`, `/latest/WalletInsights`, `/v1/WalletInsights` | Original V1 compatibility endpoint |
-| `/v2/WalletInsights` | `501`, `"coming soon contact info@anchain.ai"` |
+| `/walletInsights`, `/latest/walletInsights`, `/v1/walletInsights` | Original V1 compatibility endpoint |
+| `/v2/walletInsights` | `501`, `"coming soon contact info@anchain.ai"` |
 
-`[api].latest = "latest"` selects the newest registered compatible age implementation automatically; currently V2. An explicit version can override this for rollback. Pinned routes do not move when the latest alias changes. Future latest implementations must keep published inputs, response bodies and error semantics compatible; regression tests guard that contract. Existing Python/CLI entry points also remain available. Versioned OpenAPI documents use versioned server bases, so generated clients remain pinned.
+`[api].latest = "latest"` selects the newest registered compatible age implementation automatically; currently V2. An explicit version can override this for rollback. The original `/WalletInsights` spelling is also accepted for existing callers. Pinned routes do not move when the latest alias changes. Future latest implementations must keep published inputs, response bodies and error semantics compatible; regression tests guard that contract. Existing Python/CLI entry points also remain available. Versioned OpenAPI documents use versioned server bases, so generated clients remain pinned.
 
 These examples use the public key from `v2/.env.example`. Replace it with your configured key, or omit the header when incoming authentication is disabled.
 

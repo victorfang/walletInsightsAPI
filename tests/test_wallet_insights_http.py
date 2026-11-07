@@ -49,7 +49,9 @@ class WalletInsightsHTTPTests(unittest.TestCase):
             return response.status, json.load(response), response.headers
 
     def test_insights_get_and_post_preserve_explicit_partial_risk(self):
-        for path, body in [(f"/WalletInsights?blockchain=ETH&address={ADDRESS}", None),
+        for path, body in [(f"/walletInsights?blockchain=ETH&address={ADDRESS}", None),
+                           ("/walletInsights", {"blockchain": "ETH", "address": ADDRESS}),
+                           (f"/WalletInsights?blockchain=ETH&address={ADDRESS}", None),
                            ("/WalletInsights", {"blockchain": "ETH", "address": ADDRESS})]:
             status, result, headers = self.call(path, body)
             self.assertEqual(status, 200)
@@ -58,7 +60,7 @@ class WalletInsightsHTTPTests(unittest.TestCase):
             self.assertEqual(headers["X-Wallet-Insights-Cache"], "mixed")
             self.assertEqual(headers["X-Wallet-Insights-Coverage"], "ethereum")
             self.assertIsNone(headers.get("X-Wallet-Age-Quality"))
-        self.assertEqual(self.insights.check.call_count, 2)
+        self.assertEqual(self.insights.check.call_count, 4)
         self.age.check.assert_not_called()
 
     def test_age_remains_bare_integer_with_separate_checker(self):

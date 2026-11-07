@@ -5,7 +5,7 @@
 Two separate endpoints share a small Python standard-library service:
 
 - `walletAgeDays`: one integer, with a bounded LRU first-observation epoch cache and no TTL.
-- `WalletInsights`: balances, raw nonce, code profile, and AnChain labels, with short independent component caches.
+- `walletInsights`: balances, raw nonce, code profile, and AnChain labels, with short independent component caches.
 
 Python 3.10+ is sufficient for the original V1 runtime. Insights never adds fields
 to the age response. V1 uses Python's standard library, including SQLite;
@@ -128,7 +128,7 @@ Metadata lives in headers, keeping the successful body an integer:
 describes this local standalone service; it is not a deployment to
 `data.anchainai.com`.
 
-## WalletInsights
+## walletInsights
 
 The [pre-LRU 100-address WalletInsights benchmark](benchmarks/run-wallet-insights-2026-11-05/REPORT.md)
 used configured Alchemy, QuickNode, and AnChain providers. All 80 valid uncached
@@ -139,7 +139,7 @@ is measured separately from label accuracy or safety; no labeled fraud truth
 set is asserted. The report includes warm-cache timings and supplemental RPC
 failure controls. These measurements predate the LRU recency index and writes.
 
-`GET /WalletInsights` and `POST /WalletInsights` accept exactly `blockchain`
+`GET /walletInsights` and `POST /walletInsights` accept exactly `blockchain`
 and `address`. Unlike the age endpoint's family aliases, this endpoint only
 accepts actual Ethereum selectors: `eth`, `ethereum`, and `eth-mainnet`, case
 insensitively. `EVM`, `Polygon`, and all other chains return `501` with the JSON
@@ -160,9 +160,9 @@ sent only to the official HTTPS `api.anchainai.com` origin; authenticated
 redirects are rejected.
 
 ```bash
-curl -sS 'http://127.0.0.1:8787/WalletInsights?blockchain=ETH&address=0xd8da6bf26964af9d7eed9e03e53415d37aa96045'
+curl -sS 'http://127.0.0.1:8787/walletInsights?blockchain=ETH&address=0xd8da6bf26964af9d7eed9e03e53415d37aa96045'
 
-curl -sS -X POST 'http://127.0.0.1:8787/WalletInsights' \
+curl -sS -X POST 'http://127.0.0.1:8787/walletInsights' \
   -H 'Content-Type: application/json' \
   -d '{"blockchain":"ETH","address":"0xd8da6bf26964af9d7eed9e03e53415d37aa96045"}'
 

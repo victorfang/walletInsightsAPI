@@ -1,9 +1,9 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Wallet APIs: walletAgeDays and WalletInsights",
+    "title": "Wallet APIs: walletAgeDays and walletInsights",
     "version": "2.1.0",
-    "description": "Two inputs, one integer. Earliest finalized verified observation in explicitly covered histories. Ethereum mainnet is the only chain searched today; the accepted EVM-family aliases are not additional-chain coverage. The compact age cache admits at most 1,000,000 entries with persistent LRU eviction. Retained epochs have no TTL; a full cache replaces the least recently used entry on insertion. WalletInsights is a separate Ethereum-only endpoint returning short-lived pinned balances, raw nonce, code profile and provenance-preserving AnChain labels. It does not include age or authorize withdrawals. Both cache databases default to a one-million-entry limit; successful reads and writes refresh recency. Insights snapshot and label rows share their database limit and keep their existing 15-second and 300-second TTLs.",
+    "description": "Two inputs, one integer. Earliest finalized verified observation in explicitly covered histories. Ethereum mainnet is the only chain searched today; the accepted EVM-family aliases are not additional-chain coverage. The compact age cache admits at most 1,000,000 entries with persistent LRU eviction. Retained epochs have no TTL; a full cache replaces the least recently used entry on insertion. walletInsights is a separate Ethereum-only endpoint returning short-lived pinned balances, raw nonce, code profile and provenance-preserving AnChain labels. It does not include age or authorize withdrawals. Both cache databases default to a one-million-entry limit; successful reads and writes refresh recency. Insights snapshot and label rows share their database limit and keep their existing 15-second and 300-second TTLs.",
     "contact": {
       "email": "info@anchain.ai"
     }
@@ -949,7 +949,7 @@
         }
       }
     },
-    "/WalletInsights": {
+    "/walletInsights": {
       "get": {
         "tags": [
           "Wallet insights"

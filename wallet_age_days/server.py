@@ -10,6 +10,8 @@ from .service import WalletAgeError
 
 
 MAX_BODY = 1024
+INSIGHTS_PATHS = {"/walletInsights", "/WalletInsights"}
+DATA_PATHS = {"/walletAgeDays"} | INSIGHTS_PATHS
 
 
 class WalletAgeHTTPServer(ThreadingHTTPServer):
@@ -30,7 +32,7 @@ class WalletAgeHandler(BaseHTTPRequestHandler):
         self.send_header("Content-Type", "application/json")
         self.send_header("Content-Length", str(len(payload)))
         self.send_header("Cache-Control", "no-store")
-        if urlsplit(self.path).path == "/WalletInsights":
+        if urlsplit(self.path).path in INSIGHTS_PATHS:
             self.send_header("X-Wallet-Insights-Coverage", "ethereum")
             if isinstance(value, dict) and "cache" in value:
                 hits = [entry["hit"] for entry in value["cache"].values()]
@@ -59,7 +61,7 @@ class WalletAgeHandler(BaseHTTPRequestHandler):
             self._json(400, "invalid request")
             return
         try:
-            if urlsplit(self.path).path == "/WalletInsights":
+            if urlsplit(self.path).path in INSIGHTS_PATHS:
                 if self.server.insights is None:
                     self._json(503, "unknown")
                     return
@@ -82,7 +84,7 @@ class WalletAgeHandler(BaseHTTPRequestHandler):
         if url.path == "/openapi.json":
             self._json(200, json.loads((Path(__file__).resolve().parent.parent / "openapi.json").read_text()))
             return
-        if url.path not in {"/walletAgeDays", "/WalletInsights"}:
+        if url.path not in DATA_PATHS:
             self._json(404, "not_found")
             return
         if not self._authorized():
@@ -98,7 +100,7 @@ class WalletAgeHandler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         url = urlsplit(self.path)
-        if url.path not in {"/walletAgeDays", "/WalletInsights"}:
+        if url.path not in DATA_PATHS:
             self._json(404, "not_found")
             return
         if not self._authorized():
