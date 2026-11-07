@@ -60,7 +60,7 @@ Cache-Control: no-store
 365
 ```
 
-GET and POST accept exactly `blockchain` and `address`. Duplicate or extra fields are rejected. Successful age bodies remain bare integers; errors retain the existing JSON strings, including `400 "invalid"`, `404 "not_found"`, `503 "unknown"` and the unsupported-chain message above. Existing cache, finalized, evidence and source-count headers are preserved. `/health` and `/openapi.json` are public, including their `/v1`, `/v2` and `/latest` variants.
+GET and POST accept exactly `blockchain` and `address`. Duplicate or extra fields are rejected. Successful age bodies remain bare integers; errors retain the existing JSON strings, including `400 "invalid"`, `404 "not_found"`, `503 "unknown"` and the unsupported-chain message above. Existing cache, finalized, evidence and source-count headers are preserved. [The browser API reference](https://walletinsightsapi-production.up.railway.app/docs), `/health` and `/openapi.json` are public, including their `/v1`, `/v2` and `/latest` variants.
 
 ## Age semantics and provider setup
 
@@ -107,7 +107,7 @@ v2/.venv/bin/python benchmarks/run_v2_benchmark.py \
   --env-file .env --output benchmarks/run-v2-new
 ```
 
-The complete suite passes **427 tests**, including 83 V2 tests. Tests use local fixtures and need no provider credentials. The [V2 benchmark runner](../benchmarks/run_v2_benchmark.py) makes live calls, consumes provider quota, uses the same 100 addresses, and creates an isolated database and Markdown report in a fresh output directory. It records cold and warm HTTP timing, initial/refined epochs and deployment-control agreement.
+The complete suite passes **428 tests**, including 84 V2 tests. Tests use local fixtures and need no provider credentials. The [V2 benchmark runner](../benchmarks/run_v2_benchmark.py) makes live calls, consumes provider quota, uses the same 100 addresses, and creates an isolated database and Markdown report in a fresh output directory. It records cold and warm HTTP timing, initial/refined epochs and deployment-control agreement.
 
 The [November 6 V2 benchmark](../benchmarks/run-v2-final-2026-11-06/REPORT.md) returned ages for all 40 known-used controls, rejected all 20 malformed inputs and returned `503 "unknown"` for the 40 synthetic candidates. Known-used uncached median/p95 were **0.723/0.996 seconds**. Maximum across all 100 cold requests was **1.017 seconds**. The 40 positive cache repeats had median **0.790 ms**. The measured build predates per-client access logs. This is local HTTP with a fresh application cache, one client and provider caches outside our control; it is not a hosted latency SLA.
 

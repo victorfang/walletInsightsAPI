@@ -5,6 +5,7 @@ import asyncio
 from collections import defaultdict, deque
 from datetime import datetime, timezone
 from functools import lru_cache
+from html import escape
 import hmac
 import ipaddress
 import json
@@ -26,7 +27,7 @@ from .service import AgeError, Service
 ROOT = Path(__file__).resolve().parent
 SERVICE = web.AppKey("service", object)
 VERSIONS = ("v1", "v2")
-ROUTES = {"health", "openapi.json", "walletAgeDays", "WalletInsights"}
+ROUTES = {"health", "docs", "openapi.json", "walletAgeDays", "WalletInsights"}
 DEMO_KEY = "demo_wallet_age_test_key_replace_me"
 
 
@@ -209,10 +210,16 @@ async def create_app(config=None, *, service=None, legacy=None):
     @lru_cache(maxsize=4)
     def spec(version, pinned):
         doc = json.loads((ROOT.parent / "openapi.json").read_text())
+        doc["paths"]["/docs"] = {"get": {"operationId": "apiReference", "summary": "Read the API reference",
+            "security": [], "responses": {"200": {"description": "Browser-readable OpenAPI documentation.",
+            "content": {"text/html": {"schema": {"type": "string"}}}}}}}
+        doc["components"]["securitySchemes"]["HeaderApiKeyAuth"]["description"] = (
+            "Send your assigned client key in the x-api-key header." if require_key else
+            "This local service accepts requests without a key.")
         if require_key:
             doc["security"] = [{"HeaderApiKeyAuth": []}]
         for path, operations in doc["paths"].items():
-            if path in {"/walletAgeDays", "/WalletInsights", "/openapi.json"}:
+            if path in {"/walletAgeDays", "/WalletInsights", "/openapi.json", "/docs"}:
                 for method in ("get", "post"):
                     if method in operations:
                         operations[method]["responses"]["429"] = {
@@ -241,6 +248,32 @@ async def create_app(config=None, *, service=None, legacy=None):
                     doc["paths"][f"/{prefix}{route}"] = copy
         doc["x-latest-age-version"] = latest
         return json.dumps(doc, separators=(",", ":")).encode()
+
+    @lru_cache(maxsize=4)
+    def docs(version, pinned):
+        document = json.loads(spec(version, pinned))
+        base = document["servers"][0]["url"].rstrip("/")
+        sections = []
+        for path, operations in document["paths"].items():
+            if path.count("/") != 1 or "post" not in operations:
+                continue
+            get, post = operations["get"], operations["post"]
+            example = next(iter(post["requestBody"]["content"]["application/json"]["examples"].values()))["value"]
+            fields = "".join(f'<li><code>{escape(param["name"])}</code> {escape(param["schema"]["description"])}</li>'
+                             for param in get["parameters"])
+            rows = "".join(f'<tr><th scope="row">{escape(code)}</th><td>{escape(info["description"])}</td></tr>'
+                           for code, info in post["responses"].items())
+            ok = post["responses"]["200"]["content"]["application/json"].get("examples", {})
+            sample = next(iter(ok.values()))["value"] if ok else None
+            sections.append(f"""
+              <section><h2><code>{escape(base + path)}</code></h2><p>{escape(get["summary"])}</p>
+              <h3>GET parameters</h3><ul>{fields}</ul>
+              <h3>POST JSON body</h3><pre>{escape(json.dumps(example, indent=2))}</pre>
+              <details><summary>Example success response</summary><pre>{escape(json.dumps(sample, indent=2))}</pre></details>
+              <details><summary>Response codes</summary><table><tbody>{rows}</tbody></table></details></section>""")
+        template = (ROOT / "docs.html").read_text(encoding="utf-8")
+        return template.replace("<!-- operations -->", "".join(sections)).replace(
+            "<!-- authentication -->", escape(document["components"]["securitySchemes"]["HeaderApiKeyAuth"]["description"]))
 
     async def handle(request):
         parts = request.path.removeprefix("/").split("/")
@@ -280,12 +313,15 @@ async def create_app(config=None, *, service=None, legacy=None):
             data_route = route in {"walletAgeDays", "WalletInsights"}
             if data_route and require_key and not client:
                 event["clientId"] = "unauthenticated"
-            if data_route or (route == "openapi.json" and request.method == "GET"):
+            if data_route or (route in {"openapi.json", "docs"} and request.method == "GET"):
                 wait = retry_after(client or ("@data" if data_route else "@docs"))
                 if wait:
                     headers["Retry-After"] = str(wait)
                     raise AgeError(429, "rate limited")
-            if route in {"health", "openapi.json"} and request.method == "GET":
+            if route in {"health", "openapi.json", "docs"} and request.method == "GET":
+                if route == "docs":
+                    headers["Content-Security-Policy"] = "default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; frame-ancestors 'none'"
+                    return web.Response(text=docs(version, pinned), content_type="text/html", headers=headers)
                 if route == "openapi.json":
                     return web.Response(body=spec(version, pinned), content_type="application/json", headers=headers)
                 body = "ok"

@@ -1,5 +1,7 @@
 # Test walletAgeDays on staging
 
+[Browse the API reference](https://walletinsightsapi-production.up.railway.app/docs)
+
 Use the API key AnChain supplied to your team. Send `blockchain` and `address` to get the number of full days since the earliest verified activity we observed for that address on Ethereum mainnet.
 
 **Run one request.** Paste this block into Bash or Zsh. At the prompt, enter your assigned key and press Return. The key stays hidden as you type.

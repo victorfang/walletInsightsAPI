@@ -277,6 +277,19 @@ class V2HTTPTests(unittest.IsolatedAsyncioTestCase):
             self.assertIn("/walletAgeDays", body["paths"])
         self.assert_no_checks()
 
+    async def test_public_docs_match_versioned_spec(self):
+        for prefix in ("", "/latest", "/v1", "/v2"):
+            async with self.client.get(prefix + "/docs") as response:
+                self.assertEqual((response.status, response.content_type), (200, "text/html"))
+                page = await response.text()
+            self.assertIn('href="openapi.json"', page)
+            self.assertIn("walletAgeDays", page)
+            self.assertEqual("/WalletInsights" in page, prefix != "/v2")
+            self.assertIn("x-api-key", page)
+            self.assertIn("429", page)
+            self.assertNotIn("test-key", page)
+        self.assert_no_checks()
+
     async def test_latest_setting_resolves_to_newest_registered_version(self):
         config = {**self.config, "api": {"latest": "latest"}}
         app = await create_app(config, service=self.service, legacy={
