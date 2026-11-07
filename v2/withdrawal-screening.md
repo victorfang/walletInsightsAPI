@@ -1,3 +1,18 @@
+## Beta response times
+
+Our beta service targets are a **p95 of about 1 second or less for successful queries** and a **response in under 3 seconds for each request**, including when data is unavailable. P95 means 95% of the measured requests finished within the time shown. These are service targets during testing. Client round-trip times can exceed them under load or with network delays.
+
+| Endpoint | Lookup | Average | p95 | Observed maximum |
+| --- | --- | ---: | ---: | ---: |
+| `/walletAgeDays` | Cached | 1.01 ms | 1.76 ms | 5.78 ms |
+| `/walletAgeDays` | Uncached | 760 ms | 996 ms | 1,004 ms |
+| `/walletInsights` | Fully cached | 3.42 ms | 4.37 ms | 9.61 ms |
+| `/walletInsights` | Uncached | 690 ms | 807 ms | 884 ms |
+
+The table shows local HTTP benchmarks from November 5–6, 2026, measured one request at a time. Each age row covers 40 successful lookups. Each Insights row covers 80 complete responses. The measurements exclude the network round trip from your client to Railway.
+
+Allow more time when an age is unknown. In a separate test with eight requests in flight, all 16 age lookups returned HTTP 503 with body `"unknown"`. Their p95 was **2.42 seconds**.
+
 ## Screen a DeFi withdrawal
 
 Check the **destination address** before your service signs or releases a withdrawal. Send `blockchain: "ETH"` and the destination to `/walletAgeDays`. Wallet age measures time since the earliest observed activity on Ethereum mainnet. Earlier activity may exist.
