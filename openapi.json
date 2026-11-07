@@ -1,9 +1,9 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Wallet APIs: walletAgeDays and walletInsights",
+    "title": "AnChain.AI Wallet API",
     "version": "2.1.0",
-    "description": "Two inputs, one integer. Earliest finalized verified observation in explicitly covered histories. Ethereum mainnet is the only chain searched today; the accepted EVM-family aliases are not additional-chain coverage. The compact age cache admits at most 1,000,000 entries with persistent LRU eviction. Retained epochs have no TTL; a full cache replaces the least recently used entry on insertion. walletInsights is a separate Ethereum-only endpoint returning short-lived pinned balances, raw nonce, code profile and provenance-preserving AnChain labels. It does not include age or authorize withdrawals. Both cache databases default to a one-million-entry limit; successful reads and writes refresh recency. Insights snapshot and label rows share their database limit and keep their existing 15-second and 300-second TTLs.",
+    "description": "Check an Ethereum withdrawal destination before releasing funds. Send the same two fields, `blockchain` and `address`, to either endpoint. Both accept GET query parameters or a POST JSON body.\n\n| Endpoint | When to use it |\n| --- | --- |\n| `/walletAgeDays` | Get the number of full days since the earliest observed Ethereum activity. |\n| `/walletInsights` | Check ETH and selected token balances, account nonce, code profile and available risk labels. |",
     "contact": {
       "email": "info@anchain.ai"
     }
@@ -11,7 +11,7 @@
   "servers": [
     {
       "url": "http://127.0.0.1:8787",
-      "description": "Local standalone service; not deployed to the AnChain production API"
+      "description": "Local development"
     }
   ],
   "security": [
@@ -34,42 +34,42 @@
         "tags": [
           "Wallet age"
         ],
-        "summary": "Return completed days since first observed blockchain activity",
-        "description": "Select an EVM address family. Current coverage is Ethereum mainnet only, including when blockchain=polygon, base, or another accepted EVM alias. Successful output is one JSON integer based on a finalized verified observation. The minimum is over available covered histories and remains a lower bound, not a globally complete birthday. An uncached request uses a shared 2.6-second application budget; missing data returns an error instead of extending the wait. Cached age epochs have no TTL but can be evicted by LRU at the one-million-entry database limit. Successful reads or writes refresh recency; an evicted address requires discovery again.",
+        "summary": "Check the destination’s observed age",
+        "description": "Send the withdrawal destination as the address. Use ETH for Ethereum mainnet. The result is a JSON integer. For example, 2 means the earliest observed activity was at least 48 and less than 72 hours ago. Earlier activity may exist. A 404 or 503 means age is unknown. Only a successful response can give an age of zero.",
         "responses": {
           "200": {
-            "description": "A bare integer: completed days since the earliest finalized verified observation found in covered histories. No balance, count, nonce or response envelope.",
+            "description": "Full days since the earliest observed Ethereum activity. The response body is one integer.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-managed epoch caching; HTTP intermediaries must not cache responses.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Age-Coverage": {
-                "description": "Chains actually searched by this family namespace. Every accepted selector currently covers Ethereum mainnet only.",
+                "description": "Blockchain covered by the age result.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
                 }
               },
               "X-Wallet-Age-Basis": {
-                "description": "Age of observed blockchain activity, not private-key creation.",
+                "description": "The age measures observed activity.",
                 "schema": {
                   "type": "string",
                   "const": "first-observed-activity"
                 }
               },
               "X-Wallet-Age-Quality": {
-                "description": "Earliest verified observed activity is a lower bound on age; complete first occurrence is not proven.",
+                "description": "The age is a lower bound. Earlier activity may exist.",
                 "schema": {
                   "type": "string",
                   "const": "lower-bound"
                 }
               },
               "X-Wallet-Age-Cache": {
-                "description": "hit reuses a retained epoch with zero provider calls; miss performs discovery and admits the new entry, evicting the least recently used entry if full; bypass serves without caching when storage is temporarily unavailable. Successful reads and writes refresh recency. Recency alone does not alter the epoch; an earlier verified observation may still improve it.",
+                "description": "Whether this response reused a previous observation.",
                 "schema": {
                   "type": "string",
                   "enum": [
@@ -80,14 +80,14 @@
                 }
               },
               "X-Wallet-Age-Finalized": {
-                "description": "Successful ages require a finalized verified canonical observation.",
+                "description": "Whether the observed activity is finalized.",
                 "schema": {
                   "type": "string",
                   "const": "true"
                 }
               },
               "X-Wallet-Age-Evidence": {
-                "description": "Source agreement for this live lookup, or cached canonical evidence. Cached epochs do not retain quorum counts.",
+                "description": "Evidence category for the returned age.",
                 "schema": {
                   "type": "string",
                   "enum": [
@@ -99,7 +99,7 @@
                 }
               },
               "X-Wallet-Age-Sources": {
-                "description": "Distinct live positive history providers; zero on cached-canonical because the compact cache stores epochs only.",
+                "description": "Number of sources counted for this response. A zero count can accompany a valid age.",
                 "schema": {
                   "type": "integer",
                   "minimum": 0
@@ -123,31 +123,31 @@
             }
           },
           "400": {
-            "description": "Invalid address format or malformed request. Values are JSON strings, not error envelopes.",
+            "description": "Check the address format and send exactly blockchain and address.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-managed epoch caching; HTTP intermediaries must not cache responses.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Age-Coverage": {
-                "description": "Chains actually searched by this family namespace. Every accepted selector currently covers Ethereum mainnet only.",
+                "description": "Blockchain covered by the age result.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
                 }
               },
               "X-Wallet-Age-Basis": {
-                "description": "Age of observed blockchain activity, not private-key creation.",
+                "description": "The age measures observed activity.",
                 "schema": {
                   "type": "string",
                   "const": "first-observed-activity"
                 }
               },
               "X-Wallet-Age-Quality": {
-                "description": "Earliest verified observed activity is a lower bound on age; complete first occurrence is not proven.",
+                "description": "The age is a lower bound. Earlier activity may exist.",
                 "schema": {
                   "type": "string",
                   "const": "lower-bound"
@@ -171,31 +171,31 @@
             }
           },
           "401": {
-            "description": "Required local API key is missing or incorrect.",
+            "description": "Send your assigned key in the x-api-key header.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-managed epoch caching; HTTP intermediaries must not cache responses.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Age-Coverage": {
-                "description": "Chains actually searched by this family namespace. Every accepted selector currently covers Ethereum mainnet only.",
+                "description": "Blockchain covered by the age result.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
                 }
               },
               "X-Wallet-Age-Basis": {
-                "description": "Age of observed blockchain activity, not private-key creation.",
+                "description": "The age measures observed activity.",
                 "schema": {
                   "type": "string",
                   "const": "first-observed-activity"
                 }
               },
               "X-Wallet-Age-Quality": {
-                "description": "Earliest verified observed activity is a lower bound on age; complete first occurrence is not proven.",
+                "description": "The age is a lower bound. Earlier activity may exist.",
                 "schema": {
                   "type": "string",
                   "const": "lower-bound"
@@ -217,31 +217,31 @@
             }
           },
           "404": {
-            "description": "Completed source jobs did not find a usable observation in their supported histories. This is not proof of never appearing globally.",
+            "description": "No age is available for this address. Treat it as unknown.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-managed epoch caching; HTTP intermediaries must not cache responses.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Age-Coverage": {
-                "description": "Chains actually searched by this family namespace. Every accepted selector currently covers Ethereum mainnet only.",
+                "description": "Blockchain covered by the age result.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
                 }
               },
               "X-Wallet-Age-Basis": {
-                "description": "Age of observed blockchain activity, not private-key creation.",
+                "description": "The age measures observed activity.",
                 "schema": {
                   "type": "string",
                   "const": "first-observed-activity"
                 }
               },
               "X-Wallet-Age-Quality": {
-                "description": "Earliest verified observed activity is a lower bound on age; complete first occurrence is not proven.",
+                "description": "The age is a lower bound. Earlier activity may exist.",
                 "schema": {
                   "type": "string",
                   "const": "lower-bound"
@@ -263,31 +263,31 @@
             }
           },
           "405": {
-            "description": "Method is unsupported.",
+            "description": "Use GET or POST.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-managed epoch caching; HTTP intermediaries must not cache responses.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Age-Coverage": {
-                "description": "Chains actually searched by this family namespace. Every accepted selector currently covers Ethereum mainnet only.",
+                "description": "Blockchain covered by the age result.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
                 }
               },
               "X-Wallet-Age-Basis": {
-                "description": "Age of observed blockchain activity, not private-key creation.",
+                "description": "The age measures observed activity.",
                 "schema": {
                   "type": "string",
                   "const": "first-observed-activity"
                 }
               },
               "X-Wallet-Age-Quality": {
-                "description": "Earliest verified observed activity is a lower bound on age; complete first occurrence is not proven.",
+                "description": "The age is a lower bound. Earlier activity may exist.",
                 "schema": {
                   "type": "string",
                   "const": "lower-bound"
@@ -309,31 +309,31 @@
             }
           },
           "501": {
-            "description": "The blockchain selector is not implemented.",
+            "description": "The requested blockchain is unsupported.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-managed epoch caching; HTTP intermediaries must not cache responses.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Age-Coverage": {
-                "description": "Chains actually searched by this family namespace. Every accepted selector currently covers Ethereum mainnet only.",
+                "description": "Blockchain covered by the age result.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
                 }
               },
               "X-Wallet-Age-Basis": {
-                "description": "Age of observed blockchain activity, not private-key creation.",
+                "description": "The age measures observed activity.",
                 "schema": {
                   "type": "string",
                   "const": "first-observed-activity"
                 }
               },
               "X-Wallet-Age-Quality": {
-                "description": "Earliest verified observed activity is a lower bound on age; complete first occurrence is not proven.",
+                "description": "The age is a lower bound. Earlier activity may exist.",
                 "schema": {
                   "type": "string",
                   "const": "lower-bound"
@@ -355,31 +355,31 @@
             }
           },
           "503": {
-            "description": "No finalized usable epoch before the deadline: provider error, incomplete history, provisional-only evidence or unavailable capacity. Never represented as integer zero.",
+            "description": "Age is temporarily unavailable. Treat it as unknown and retry later.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-managed epoch caching; HTTP intermediaries must not cache responses.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Age-Coverage": {
-                "description": "Chains actually searched by this family namespace. Every accepted selector currently covers Ethereum mainnet only.",
+                "description": "Blockchain covered by the age result.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
                 }
               },
               "X-Wallet-Age-Basis": {
-                "description": "Age of observed blockchain activity, not private-key creation.",
+                "description": "The age measures observed activity.",
                 "schema": {
                   "type": "string",
                   "const": "first-observed-activity"
                 }
               },
               "X-Wallet-Age-Quality": {
-                "description": "Earliest verified observed activity is a lower bound on age; complete first occurrence is not proven.",
+                "description": "The age is a lower bound. Earlier activity may exist.",
                 "schema": {
                   "type": "string",
                   "const": "lower-bound"
@@ -434,7 +434,7 @@
               "minLength": 1,
               "maxLength": 32,
               "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,31}$",
-              "description": "Case-insensitive family selector. Accepted EVM aliases share one Ethereum-only coverage namespace today; unknown well-formed selectors return 501. A polygon value is not a Polygon-specific lookup."
+              "description": "Use ETH for Ethereum mainnet. Accepted EVM aliases, including Polygon, also return Ethereum activity only."
             },
             "example": "eth"
           },
@@ -447,7 +447,7 @@
               "minLength": 42,
               "maxLength": 42,
               "pattern": "^0x[0-9a-fA-F]{40}$",
-              "description": "Regex-only EVM address validation. EIP-55 checksum and ownership are not checked. Normalized to lowercase after validation."
+              "description": "An Ethereum address starting with 0x followed by 40 hexadecimal characters. Uppercase and lowercase hexadecimal digits are accepted."
             },
             "example": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
           }
@@ -457,42 +457,42 @@
         "tags": [
           "Wallet age"
         ],
-        "summary": "Return completed days since first observed blockchain activity",
-        "description": "Select an EVM address family. Current coverage is Ethereum mainnet only, including when blockchain=polygon, base, or another accepted EVM alias. Successful output is one JSON integer based on a finalized verified observation. The minimum is over available covered histories and remains a lower bound, not a globally complete birthday. An uncached request uses a shared 2.6-second application budget; missing data returns an error instead of extending the wait. Cached age epochs have no TTL but can be evicted by LRU at the one-million-entry database limit. Successful reads or writes refresh recency; an evicted address requires discovery again.",
+        "summary": "Check the destination’s observed age",
+        "description": "Send the withdrawal destination as the address. Use ETH for Ethereum mainnet. The result is a JSON integer. For example, 2 means the earliest observed activity was at least 48 and less than 72 hours ago. Earlier activity may exist. A 404 or 503 means age is unknown. Only a successful response can give an age of zero.",
         "responses": {
           "200": {
-            "description": "A bare integer: completed days since the earliest finalized verified observation found in covered histories. No balance, count, nonce or response envelope.",
+            "description": "Full days since the earliest observed Ethereum activity. The response body is one integer.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-managed epoch caching; HTTP intermediaries must not cache responses.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Age-Coverage": {
-                "description": "Chains actually searched by this family namespace. Every accepted selector currently covers Ethereum mainnet only.",
+                "description": "Blockchain covered by the age result.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
                 }
               },
               "X-Wallet-Age-Basis": {
-                "description": "Age of observed blockchain activity, not private-key creation.",
+                "description": "The age measures observed activity.",
                 "schema": {
                   "type": "string",
                   "const": "first-observed-activity"
                 }
               },
               "X-Wallet-Age-Quality": {
-                "description": "Earliest verified observed activity is a lower bound on age; complete first occurrence is not proven.",
+                "description": "The age is a lower bound. Earlier activity may exist.",
                 "schema": {
                   "type": "string",
                   "const": "lower-bound"
                 }
               },
               "X-Wallet-Age-Cache": {
-                "description": "hit reuses a retained epoch with zero provider calls; miss performs discovery and admits the new entry, evicting the least recently used entry if full; bypass serves without caching when storage is temporarily unavailable. Successful reads and writes refresh recency. Recency alone does not alter the epoch; an earlier verified observation may still improve it.",
+                "description": "Whether this response reused a previous observation.",
                 "schema": {
                   "type": "string",
                   "enum": [
@@ -503,14 +503,14 @@
                 }
               },
               "X-Wallet-Age-Finalized": {
-                "description": "Successful ages require a finalized verified canonical observation.",
+                "description": "Whether the observed activity is finalized.",
                 "schema": {
                   "type": "string",
                   "const": "true"
                 }
               },
               "X-Wallet-Age-Evidence": {
-                "description": "Source agreement for this live lookup, or cached canonical evidence. Cached epochs do not retain quorum counts.",
+                "description": "Evidence category for the returned age.",
                 "schema": {
                   "type": "string",
                   "enum": [
@@ -522,7 +522,7 @@
                 }
               },
               "X-Wallet-Age-Sources": {
-                "description": "Distinct live positive history providers; zero on cached-canonical because the compact cache stores epochs only.",
+                "description": "Number of sources counted for this response. A zero count can accompany a valid age.",
                 "schema": {
                   "type": "integer",
                   "minimum": 0
@@ -546,31 +546,31 @@
             }
           },
           "400": {
-            "description": "Invalid address format or malformed request. Values are JSON strings, not error envelopes.",
+            "description": "Check the address format and send exactly blockchain and address.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-managed epoch caching; HTTP intermediaries must not cache responses.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Age-Coverage": {
-                "description": "Chains actually searched by this family namespace. Every accepted selector currently covers Ethereum mainnet only.",
+                "description": "Blockchain covered by the age result.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
                 }
               },
               "X-Wallet-Age-Basis": {
-                "description": "Age of observed blockchain activity, not private-key creation.",
+                "description": "The age measures observed activity.",
                 "schema": {
                   "type": "string",
                   "const": "first-observed-activity"
                 }
               },
               "X-Wallet-Age-Quality": {
-                "description": "Earliest verified observed activity is a lower bound on age; complete first occurrence is not proven.",
+                "description": "The age is a lower bound. Earlier activity may exist.",
                 "schema": {
                   "type": "string",
                   "const": "lower-bound"
@@ -594,31 +594,31 @@
             }
           },
           "401": {
-            "description": "Required local API key is missing or incorrect.",
+            "description": "Send your assigned key in the x-api-key header.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-managed epoch caching; HTTP intermediaries must not cache responses.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Age-Coverage": {
-                "description": "Chains actually searched by this family namespace. Every accepted selector currently covers Ethereum mainnet only.",
+                "description": "Blockchain covered by the age result.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
                 }
               },
               "X-Wallet-Age-Basis": {
-                "description": "Age of observed blockchain activity, not private-key creation.",
+                "description": "The age measures observed activity.",
                 "schema": {
                   "type": "string",
                   "const": "first-observed-activity"
                 }
               },
               "X-Wallet-Age-Quality": {
-                "description": "Earliest verified observed activity is a lower bound on age; complete first occurrence is not proven.",
+                "description": "The age is a lower bound. Earlier activity may exist.",
                 "schema": {
                   "type": "string",
                   "const": "lower-bound"
@@ -640,31 +640,31 @@
             }
           },
           "404": {
-            "description": "Completed source jobs did not find a usable observation in their supported histories. This is not proof of never appearing globally.",
+            "description": "No age is available for this address. Treat it as unknown.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-managed epoch caching; HTTP intermediaries must not cache responses.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Age-Coverage": {
-                "description": "Chains actually searched by this family namespace. Every accepted selector currently covers Ethereum mainnet only.",
+                "description": "Blockchain covered by the age result.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
                 }
               },
               "X-Wallet-Age-Basis": {
-                "description": "Age of observed blockchain activity, not private-key creation.",
+                "description": "The age measures observed activity.",
                 "schema": {
                   "type": "string",
                   "const": "first-observed-activity"
                 }
               },
               "X-Wallet-Age-Quality": {
-                "description": "Earliest verified observed activity is a lower bound on age; complete first occurrence is not proven.",
+                "description": "The age is a lower bound. Earlier activity may exist.",
                 "schema": {
                   "type": "string",
                   "const": "lower-bound"
@@ -686,31 +686,31 @@
             }
           },
           "405": {
-            "description": "Method is unsupported.",
+            "description": "Use GET or POST.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-managed epoch caching; HTTP intermediaries must not cache responses.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Age-Coverage": {
-                "description": "Chains actually searched by this family namespace. Every accepted selector currently covers Ethereum mainnet only.",
+                "description": "Blockchain covered by the age result.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
                 }
               },
               "X-Wallet-Age-Basis": {
-                "description": "Age of observed blockchain activity, not private-key creation.",
+                "description": "The age measures observed activity.",
                 "schema": {
                   "type": "string",
                   "const": "first-observed-activity"
                 }
               },
               "X-Wallet-Age-Quality": {
-                "description": "Earliest verified observed activity is a lower bound on age; complete first occurrence is not proven.",
+                "description": "The age is a lower bound. Earlier activity may exist.",
                 "schema": {
                   "type": "string",
                   "const": "lower-bound"
@@ -732,31 +732,31 @@
             }
           },
           "501": {
-            "description": "The blockchain selector is not implemented.",
+            "description": "The requested blockchain is unsupported.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-managed epoch caching; HTTP intermediaries must not cache responses.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Age-Coverage": {
-                "description": "Chains actually searched by this family namespace. Every accepted selector currently covers Ethereum mainnet only.",
+                "description": "Blockchain covered by the age result.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
                 }
               },
               "X-Wallet-Age-Basis": {
-                "description": "Age of observed blockchain activity, not private-key creation.",
+                "description": "The age measures observed activity.",
                 "schema": {
                   "type": "string",
                   "const": "first-observed-activity"
                 }
               },
               "X-Wallet-Age-Quality": {
-                "description": "Earliest verified observed activity is a lower bound on age; complete first occurrence is not proven.",
+                "description": "The age is a lower bound. Earlier activity may exist.",
                 "schema": {
                   "type": "string",
                   "const": "lower-bound"
@@ -778,31 +778,31 @@
             }
           },
           "503": {
-            "description": "No finalized usable epoch before the deadline: provider error, incomplete history, provisional-only evidence or unavailable capacity. Never represented as integer zero.",
+            "description": "Age is temporarily unavailable. Treat it as unknown and retry later.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-managed epoch caching; HTTP intermediaries must not cache responses.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Age-Coverage": {
-                "description": "Chains actually searched by this family namespace. Every accepted selector currently covers Ethereum mainnet only.",
+                "description": "Blockchain covered by the age result.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
                 }
               },
               "X-Wallet-Age-Basis": {
-                "description": "Age of observed blockchain activity, not private-key creation.",
+                "description": "The age measures observed activity.",
                 "schema": {
                   "type": "string",
                   "const": "first-observed-activity"
                 }
               },
               "X-Wallet-Age-Quality": {
-                "description": "Earliest verified observed activity is a lower bound on age; complete first occurrence is not proven.",
+                "description": "The age is a lower bound. Earlier activity may exist.",
                 "schema": {
                   "type": "string",
                   "const": "lower-bound"
@@ -849,7 +849,7 @@
         "operationId": "walletAgeDaysPost",
         "requestBody": {
           "required": true,
-          "description": "A JSON object containing exactly blockchain and address. Maximum HTTP request body is 1,024 bytes; no query string or extra fields.",
+          "description": "Send a JSON object with exactly blockchain and address, up to 1,024 bytes. Omit query parameters.",
           "content": {
             "application/json": {
               "schema": {
@@ -878,35 +878,35 @@
     "/health": {
       "get": {
         "operationId": "health",
-        "summary": "Local liveness check",
+        "summary": "Check service availability",
         "security": [],
         "responses": {
           "200": {
-            "description": "Service is running. Does not query upstream providers.",
+            "description": "The service is running.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-managed epoch caching; HTTP intermediaries must not cache responses.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Age-Coverage": {
-                "description": "Chains actually searched by this family namespace. Every accepted selector currently covers Ethereum mainnet only.",
+                "description": "Blockchain covered by the age result.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
                 }
               },
               "X-Wallet-Age-Basis": {
-                "description": "Age of observed blockchain activity, not private-key creation.",
+                "description": "The age measures observed activity.",
                 "schema": {
                   "type": "string",
                   "const": "first-observed-activity"
                 }
               },
               "X-Wallet-Age-Quality": {
-                "description": "Earliest verified observed activity is a lower bound on age; complete first occurrence is not proven.",
+                "description": "The age is a lower bound. Earlier activity may exist.",
                 "schema": {
                   "type": "string",
                   "const": "lower-bound"
@@ -954,28 +954,28 @@
         "tags": [
           "Wallet insights"
         ],
-        "summary": "Return pinned balances, nonce, code profile and AnChain labels",
-        "description": "Ethereum mainnet only. Accepts eth, ethereum and eth-mainnet case-insensitively. Runs pinned RPC snapshot discovery and AnChain labels concurrently under a 2.6-second application budget. Paid Alchemy/QuickNode are preferred with three public RPC fallbacks. Native ETH and the fixed USDC/USDT/DAI balances are exact raw strings. HTTP 200 may be partial; inspect status and components. This endpoint never includes wallet age or an authorization to withdraw. Unknown labels are not a safe verdict. Snapshot and label entries share a persistent LRU cache with a default one-million-entry database limit. Expired entries are removed before fresh LRU victims. Reads refresh recency without extending component TTLs or capture times.",
+        "summary": "Review balances, account activity and risk labels",
+        "description": "Send the same ETH address you used for the age check. Use ETH and the selected USDC, USDT and DAI balances, account nonce, code profile and available labels as context for a withdrawal review. Read status and components before using individual fields. HTTP 200 can include a partial result. A missing balance or label is unknown. A large balance alone does not establish that a withdrawal is authorized.",
         "responses": {
           "200": {
-            "description": "Complete or partial insights. Partial data is explicit; no missing value becomes zero. All example values are illustrative, not live results.",
+            "description": "Wallet details. Read status and components before using the values. The examples are illustrative.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-controlled short caches; intermediaries do not cache this result.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Insights-Coverage": {
-                "description": "Actual chain coverage. No EVM-family folding for mutable insights.",
+                "description": "Blockchain covered by these insights.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
                 }
               },
               "X-Wallet-Insights-Cache": {
-                "description": "hit means both component caches hit; mixed means exactly one; miss means neither.",
+                "description": "Whether this response reused all, some or none of a previous result.",
                 "schema": {
                   "type": "string",
                   "enum": [
@@ -1003,7 +1003,7 @@
                         "number": 26350000,
                         "hash": "0x1111111111111111111111111111111111111111111111111111111111111111",
                         "timestamp": 1793908800,
-                        "source": "alchemy"
+                        "source": "example"
                       },
                       "balances": {
                         "native": {
@@ -1093,7 +1093,7 @@
                         "number": 26350000,
                         "hash": "0x1111111111111111111111111111111111111111111111111111111111111111",
                         "timestamp": 1793908800,
-                        "source": "alchemy"
+                        "source": "example"
                       },
                       "balances": {
                         "native": {
@@ -1158,9 +1158,7 @@
                           "expiresAt": null
                         }
                       },
-                      "warnings": [
-                        "Risk labels unavailable within request budget."
-                      ]
+                      "warnings": []
                     }
                   }
                 }
@@ -1168,24 +1166,24 @@
             }
           },
           "503": {
-            "description": "Normal component unavailability returns the insights object with status unavailable. An unexpected framework failure or an unconfigured route handler can return the JSON string unknown. Neither is a safe verdict.",
+            "description": "Insights are temporarily unavailable. The body can be an object with status unavailable or the string unknown. Retry later.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-controlled short caches; intermediaries do not cache this result.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Insights-Coverage": {
-                "description": "Actual chain coverage. No EVM-family folding for mutable insights.",
+                "description": "Blockchain covered by these insights.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
                 }
               },
               "X-Wallet-Insights-Cache": {
-                "description": "hit means both component caches hit; mixed means exactly one; miss means neither.",
+                "description": "Whether this response reused all, some or none of a previous result.",
                 "schema": {
                   "type": "string",
                   "enum": [
@@ -1277,13 +1275,11 @@
                           "expiresAt": null
                         }
                       },
-                      "warnings": [
-                        "Risk labels unavailable within request budget."
-                      ]
+                      "warnings": []
                     }
                   },
-                  "frameworkFailure": {
-                    "summary": "Unexpected framework failure or unavailable handler",
+                  "unknown": {
+                    "summary": "Insights temporarily unavailable",
                     "value": "unknown"
                   }
                 }
@@ -1291,17 +1287,17 @@
             }
           },
           "400": {
-            "description": "Invalid address or request.",
+            "description": "Check the address format and send exactly blockchain and address.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-controlled short caches; intermediaries do not cache this result.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Insights-Coverage": {
-                "description": "Actual chain coverage. No EVM-family folding for mutable insights.",
+                "description": "Blockchain covered by these insights.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
@@ -1329,17 +1325,17 @@
             }
           },
           "401": {
-            "description": "Optional local API key missing or incorrect.",
+            "description": "Send your assigned key in the x-api-key header.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-controlled short caches; intermediaries do not cache this result.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Insights-Coverage": {
-                "description": "Actual chain coverage. No EVM-family folding for mutable insights.",
+                "description": "Blockchain covered by these insights.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
@@ -1363,17 +1359,17 @@
             }
           },
           "405": {
-            "description": "Unsupported HTTP method.",
+            "description": "Use GET or POST.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-controlled short caches; intermediaries do not cache this result.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Insights-Coverage": {
-                "description": "Actual chain coverage. No EVM-family folding for mutable insights.",
+                "description": "Blockchain covered by these insights.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
@@ -1397,17 +1393,17 @@
             }
           },
           "501": {
-            "description": "Only actual Ethereum chain selectors are implemented.",
+            "description": "Use ETH, ethereum or eth-mainnet for this endpoint.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-controlled short caches; intermediaries do not cache this result.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Insights-Coverage": {
-                "description": "Actual chain coverage. No EVM-family folding for mutable insights.",
+                "description": "Blockchain covered by these insights.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
@@ -1450,7 +1446,7 @@
               "minLength": 1,
               "maxLength": 32,
               "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,31}$",
-              "description": "Actual chain selector. Only eth, ethereum and eth-mainnet are implemented, case-insensitively. EVM and Polygon aliases accepted by walletAgeDays are deliberately unsupported here."
+              "description": "Use ETH, ethereum, or eth-mainnet. Values are case-insensitive. This endpoint covers Ethereum mainnet."
             },
             "example": "ETH"
           },
@@ -1463,7 +1459,7 @@
               "minLength": 42,
               "maxLength": 42,
               "pattern": "^0x[0-9a-fA-F]{40}$",
-              "description": "Regex-only EVM address validation. EIP-55 checksum and ownership are not checked. Normalized to lowercase after validation."
+              "description": "An Ethereum address starting with 0x followed by 40 hexadecimal characters. Uppercase and lowercase hexadecimal digits are accepted."
             },
             "example": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
           }
@@ -1473,28 +1469,28 @@
         "tags": [
           "Wallet insights"
         ],
-        "summary": "Return pinned balances, nonce, code profile and AnChain labels",
-        "description": "Ethereum mainnet only. Accepts eth, ethereum and eth-mainnet case-insensitively. Runs pinned RPC snapshot discovery and AnChain labels concurrently under a 2.6-second application budget. Paid Alchemy/QuickNode are preferred with three public RPC fallbacks. Native ETH and the fixed USDC/USDT/DAI balances are exact raw strings. HTTP 200 may be partial; inspect status and components. This endpoint never includes wallet age or an authorization to withdraw. Unknown labels are not a safe verdict. Snapshot and label entries share a persistent LRU cache with a default one-million-entry database limit. Expired entries are removed before fresh LRU victims. Reads refresh recency without extending component TTLs or capture times.",
+        "summary": "Review balances, account activity and risk labels",
+        "description": "Send the same ETH address you used for the age check. Use ETH and the selected USDC, USDT and DAI balances, account nonce, code profile and available labels as context for a withdrawal review. Read status and components before using individual fields. HTTP 200 can include a partial result. A missing balance or label is unknown. A large balance alone does not establish that a withdrawal is authorized.",
         "responses": {
           "200": {
-            "description": "Complete or partial insights. Partial data is explicit; no missing value becomes zero. All example values are illustrative, not live results.",
+            "description": "Wallet details. Read status and components before using the values. The examples are illustrative.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-controlled short caches; intermediaries do not cache this result.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Insights-Coverage": {
-                "description": "Actual chain coverage. No EVM-family folding for mutable insights.",
+                "description": "Blockchain covered by these insights.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
                 }
               },
               "X-Wallet-Insights-Cache": {
-                "description": "hit means both component caches hit; mixed means exactly one; miss means neither.",
+                "description": "Whether this response reused all, some or none of a previous result.",
                 "schema": {
                   "type": "string",
                   "enum": [
@@ -1522,7 +1518,7 @@
                         "number": 26350000,
                         "hash": "0x1111111111111111111111111111111111111111111111111111111111111111",
                         "timestamp": 1793908800,
-                        "source": "alchemy"
+                        "source": "example"
                       },
                       "balances": {
                         "native": {
@@ -1612,7 +1608,7 @@
                         "number": 26350000,
                         "hash": "0x1111111111111111111111111111111111111111111111111111111111111111",
                         "timestamp": 1793908800,
-                        "source": "alchemy"
+                        "source": "example"
                       },
                       "balances": {
                         "native": {
@@ -1677,9 +1673,7 @@
                           "expiresAt": null
                         }
                       },
-                      "warnings": [
-                        "Risk labels unavailable within request budget."
-                      ]
+                      "warnings": []
                     }
                   }
                 }
@@ -1687,24 +1681,24 @@
             }
           },
           "503": {
-            "description": "Normal component unavailability returns the insights object with status unavailable. An unexpected framework failure or an unconfigured route handler can return the JSON string unknown. Neither is a safe verdict.",
+            "description": "Insights are temporarily unavailable. The body can be an object with status unavailable or the string unknown. Retry later.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-controlled short caches; intermediaries do not cache this result.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Insights-Coverage": {
-                "description": "Actual chain coverage. No EVM-family folding for mutable insights.",
+                "description": "Blockchain covered by these insights.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
                 }
               },
               "X-Wallet-Insights-Cache": {
-                "description": "hit means both component caches hit; mixed means exactly one; miss means neither.",
+                "description": "Whether this response reused all, some or none of a previous result.",
                 "schema": {
                   "type": "string",
                   "enum": [
@@ -1796,13 +1790,11 @@
                           "expiresAt": null
                         }
                       },
-                      "warnings": [
-                        "Risk labels unavailable within request budget."
-                      ]
+                      "warnings": []
                     }
                   },
-                  "frameworkFailure": {
-                    "summary": "Unexpected framework failure or unavailable handler",
+                  "unknown": {
+                    "summary": "Insights temporarily unavailable",
                     "value": "unknown"
                   }
                 }
@@ -1810,17 +1802,17 @@
             }
           },
           "400": {
-            "description": "Invalid address or request.",
+            "description": "Check the address format and send exactly blockchain and address.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-controlled short caches; intermediaries do not cache this result.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Insights-Coverage": {
-                "description": "Actual chain coverage. No EVM-family folding for mutable insights.",
+                "description": "Blockchain covered by these insights.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
@@ -1848,17 +1840,17 @@
             }
           },
           "401": {
-            "description": "Optional local API key missing or incorrect.",
+            "description": "Send your assigned key in the x-api-key header.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-controlled short caches; intermediaries do not cache this result.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Insights-Coverage": {
-                "description": "Actual chain coverage. No EVM-family folding for mutable insights.",
+                "description": "Blockchain covered by these insights.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
@@ -1882,17 +1874,17 @@
             }
           },
           "405": {
-            "description": "Unsupported HTTP method.",
+            "description": "Use GET or POST.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-controlled short caches; intermediaries do not cache this result.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Insights-Coverage": {
-                "description": "Actual chain coverage. No EVM-family folding for mutable insights.",
+                "description": "Blockchain covered by these insights.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
@@ -1916,17 +1908,17 @@
             }
           },
           "501": {
-            "description": "Only actual Ethereum chain selectors are implemented.",
+            "description": "Use ETH, ethereum or eth-mainnet for this endpoint.",
             "headers": {
               "Cache-Control": {
-                "description": "Application-controlled short caches; intermediaries do not cache this result.",
+                "description": "Do not store this response in an HTTP cache.",
                 "schema": {
                   "type": "string",
                   "const": "no-store"
                 }
               },
               "X-Wallet-Insights-Coverage": {
-                "description": "Actual chain coverage. No EVM-family folding for mutable insights.",
+                "description": "Blockchain covered by these insights.",
                 "schema": {
                   "type": "string",
                   "const": "ethereum"
@@ -1975,7 +1967,8 @@
                 }
               }
             }
-          }
+          },
+          "description": "Send a JSON object with exactly blockchain and address, up to 1,024 bytes. Omit query parameters."
         }
       }
     }
@@ -1986,7 +1979,7 @@
         "type": "apiKey",
         "in": "header",
         "name": "x-api-key",
-        "description": "Required only when WALLET_CHECK_API_KEY is configured on the local service. Otherwise age requests do not require authentication."
+        "description": "Send your assigned client key in the x-api-key header."
       }
     },
     "schemas": {
@@ -2003,14 +1996,14 @@
             "minLength": 1,
             "maxLength": 32,
             "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,31}$",
-            "description": "Case-insensitive family selector. Accepted EVM aliases share one Ethereum-only coverage namespace today; unknown well-formed selectors return 501. A polygon value is not a Polygon-specific lookup."
+            "description": "Use ETH for Ethereum mainnet. Accepted EVM aliases, including Polygon, also return Ethereum activity only."
           },
           "address": {
             "type": "string",
             "minLength": 42,
             "maxLength": 42,
             "pattern": "^0x[0-9a-fA-F]{40}$",
-            "description": "Regex-only EVM address validation. EIP-55 checksum and ownership are not checked. Normalized to lowercase after validation."
+            "description": "An Ethereum address starting with 0x followed by 40 hexadecimal characters. Uppercase and lowercase hexadecimal digits are accepted."
           }
         }
       },
@@ -2018,7 +2011,7 @@
         "type": "integer",
         "format": "int64",
         "minimum": 0,
-        "description": "floor((current_epoch_seconds - first_observed_epoch_seconds) / 86400), recomputed on every response. The retained epoch has no TTL and the number of days grows; LRU can evict the entry, causing a later lookup to rediscover an observation. Zero requires a real finalized observation less than one day old, not missing history.",
+        "description": "Number of full days since the earliest observed Ethereum activity. Zero means activity was observed less than 24 hours ago. An unknown age is returned as an error.",
         "examples": [
           0,
           4056
@@ -2044,14 +2037,14 @@
             "minLength": 1,
             "maxLength": 32,
             "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,31}$",
-            "description": "Actual chain selector. Only eth, ethereum and eth-mainnet are implemented, case-insensitively. EVM and Polygon aliases accepted by walletAgeDays are deliberately unsupported here."
+            "description": "Use ETH, ethereum, or eth-mainnet. Values are case-insensitive. This endpoint covers Ethereum mainnet."
           },
           "address": {
             "type": "string",
             "minLength": 42,
             "maxLength": 42,
             "pattern": "^0x[0-9a-fA-F]{40}$",
-            "description": "Regex-only EVM address validation. EIP-55 checksum and ownership are not checked. Normalized to lowercase after validation."
+            "description": "An Ethereum address starting with 0x followed by 40 hexadecimal characters. Uppercase and lowercase hexadecimal digits are accepted."
           }
         }
       },
@@ -2080,7 +2073,7 @@
             "type": "string"
           }
         },
-        "description": "One pinned chain state; balance, nonce, code and token calls use this block. Cached snapshots retain the original block."
+        "description": "Ethereum block for the reported balances, nonce and code profile. Use its timestamp to check when these values applied."
       },
       "InsightsTokenBalance": {
         "type": "object",
@@ -2119,7 +2112,7 @@
             ]
           }
         },
-        "description": "Fixed configured token: USDC, USDT or DAI on Ethereum mainnet. No arbitrary-token discovery or portfolio valuation."
+        "description": "Balance for USDC, USDT or DAI on Ethereum. Divide balanceRaw by 10 raised to decimals to display the token amount."
       },
       "InsightsCodeProfile": {
         "type": "object",
@@ -2149,7 +2142,7 @@
             "pattern": "^0x[0-9a-fA-F]{40}$"
           }
         },
-        "description": "Descriptive execution profile, not an ownership or safety classification. Empty code does not prove an EOA; EIP-7702 EOAs can have delegation code."
+        "description": "Indicates whether the address has empty, delegated or contract code. Use this to interpret the account type. It does not establish ownership."
       },
       "InsightsLabel": {
         "type": "object",
@@ -2200,7 +2193,7 @@
             }
           }
         },
-        "description": "Source-provided category with provenance. OSINT association is not a verified malicious verdict; no risk score or safe verdict is derived."
+        "description": "Category and supporting information for review. An association alone does not establish fraud."
       },
       "InsightsAttribution": {
         "type": "object",
@@ -2286,13 +2279,13 @@
               "number",
               "null"
             ],
-            "description": "Provider-supplied verdict time if present. The local fetch does not invent one."
+            "description": "Time associated with the label, when available."
           },
           "error": {
             "type": "string"
           }
         },
-        "description": "AnChain GET /api/intel/address/label, proto=eth. Empty explicit labels or unaffiliated attribution never imply safe; provider/config/deadline failures retain null labels."
+        "description": "Read status before using labels. Missing or empty labels do not establish that the destination is safe."
       },
       "InsightsCacheComponent": {
         "type": "object",
@@ -2328,7 +2321,7 @@
             "description": "UTC ISO timestamp, or null when unavailable."
           }
         },
-        "description": "Independent component freshness in a shared, bounded LRU database. Snapshots keep a 15-second TTL and labels keep a 300-second TTL. Successful reads refresh recency but do not extend expiresAt or change capturedAt. Expired entries are removed before fresh LRU eviction; one address may use two entries. checkedAt on the overall response does not replace capturedAt or block time."
+        "description": "Use capturedAt to see when this part of the result was observed. A null timestamp means it is unavailable."
       },
       "WalletInsightsResponse": {
         "type": "object",
@@ -2432,7 +2425,7 @@
               "null"
             ],
             "pattern": "^[0-9]+$",
-            "description": "Raw account nonce as an exact decimal string. It is not total transactions, incoming transactions, or an exact outgoing count; EIP-7702 authorization processing can also increment it."
+            "description": "Account nonce as a decimal string, or null if unknown. Use it as account context. It is not a count of all transfers."
           },
           "codeProfile": {
             "anyOf": [
@@ -2494,7 +2487,7 @@
             }
           }
         },
-        "description": "Separate from walletAgeDays: no age field, derived risk score, or allow-withdrawal verdict. HTTP 200 may be partial; clients must inspect component status. Native/token balances and raw nonce remain exact decimal strings."
+        "description": "Check status and components before using balances, account information or labels. For observed wallet age, call /walletAgeDays."
       }
     }
   }

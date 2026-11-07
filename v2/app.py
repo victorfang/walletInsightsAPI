@@ -237,13 +237,9 @@ async def create_app(config=None, *, service=None, legacy=None):
             doc["info"].update(
                 title="AnChain.AI Wallet API", version="latest",
                 description=(
-                    "Screen Ethereum withdrawal destinations with two wallet signals.\n\n"
-                    "| Endpoint | Result |\n| --- | --- |\n"
-                    "| `/walletAgeDays` | Full days since the earliest verified activity observed on Ethereum. "
-                    "A result of `0` means less than 24 hours. |\n"
-                    "| `/walletInsights` | ETH and selected token balances, account nonce, code profile "
-                    "and available risk labels. Check the component status when a result is partial. |\n\n"
-                    + doc["components"]["securitySchemes"]["HeaderApiKeyAuth"]["description"]
+                    doc["info"]["description"] + "\n\n"
+                    + doc["components"]["securitySchemes"]["HeaderApiKeyAuth"]["description"] + "\n\n"
+                    + (ROOT / "withdrawal-screening.md").read_text(encoding="utf-8")
                 ),
             )
             return json.dumps(doc, separators=(",", ":")).encode()

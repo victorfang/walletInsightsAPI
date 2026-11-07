@@ -1,4 +1,4 @@
-# Test walletAgeDays on staging
+# Screen a withdrawal destination on staging
 
 [Browse the API reference](https://walletinsightsapi-production.up.railway.app/docs)
 
@@ -34,5 +34,9 @@ The response body is a single JSON integer. `0` means the earliest verified obse
 | 401 | Check that the `x-api-key` header contains your assigned staging key. |
 | 404 or 503 | Treat the age as unknown. Retry later for a 503. |
 | 429 | Wait the number of seconds in the `Retry-After` response header before retrying. |
+
+**Screen a flagged destination.** Send the same JSON body and key to `POST /walletInsights` for balances, account activity and available risk labels. When `status` is `partial`, check `components` to see which signals you can use.
+
+For examples of holds, rolling withdrawal caps and customer behavior profiles, see [Screen a DeFi withdrawal](../v2/withdrawal-screening.md).
 
 For support, include the HTTP status and `x-railway-request-id`. Add `-i` to curl to see response headers. [Service health](https://walletinsightsapi-production.up.railway.app/health) · [OpenAPI specification](https://walletinsightsapi-production.up.railway.app/openapi.json?view=latest)
