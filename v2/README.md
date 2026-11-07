@@ -2,6 +2,8 @@
 
 **Fast address-history signals for security and anti-fraud review.** This small API helps DeFi clients screen withdrawal destinations, adjust outflow limits and send suspicious cases to their risk team. It is designed for risk triage rather than exact portfolio accounting.
 
+Clients can make their first authenticated staging call using the [client quick start](../docs/CLIENT_QUICKSTART.md).
+
 V2 is implemented as four Python files with aiohttp. It runs locally or on your server; this change does not update the deployed demo Site. See the [architecture](ARCHITECTURE.md), [public configuration](config.toml) and [dependency pin](requirements.txt).
 
 For client staging, use the [Railway and Route 53 deployment guide](DEPLOY_RAILWAY.md). The repository includes a Dockerfile; Railway can manage HTTPS for `api-staging.anchainai.com`.
