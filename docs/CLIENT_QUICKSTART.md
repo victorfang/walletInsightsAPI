@@ -1,46 +1,62 @@
-# Screen a withdrawal destination on staging
+## Quick start
 
-[Browse the API reference](https://walletinsightsapi-production.up.railway.app/docs)
-
-The Wallet Insights API is in beta for client testing. Use the API key AnChain supplied to your team. Send `blockchain` and `address` to get the number of full days since the earliest verified activity we observed for that address on Ethereum mainnet.
-
-**Run one request.** Paste this block into Bash or Zsh. At the prompt, enter your assigned key and press Return. The key stays hidden as you type.
+In Bash or Zsh, run this once and paste your assigned test key at the prompt. The key stays hidden as you type. Run either curl command below in the same terminal.
 
 ```bash
-{
-  printf 'Staging API key: '
-  IFS= read -rs CLIENT_API_KEY
-  printf '\n'
-  curl -sS --max-time 10 --write-out '\nHTTP %{http_code}\n' \
-    'https://walletinsightsapi-production.up.railway.app/walletAgeDays' \
-    -H "x-api-key: $CLIENT_API_KEY" \
-    -H 'Content-Type: application/json' \
-    --data '{"blockchain":"ETH","address":"0xd8da6bf26964af9d7eed9e03e53415d37aa96045"}'
-}
+{ printf 'Test API key: '; IFS= read -rs CLIENT_API_KEY; printf '\n'; }
 ```
 
-**Read the result.** The example wallet returned the following in staging. Its age increases over time. The second line is the status printed by curl.
+### Check wallet age
+
+```bash
+curl -sS --max-time 10 --write-out '\nHTTP %{http_code}\n' \
+  'https://walletinsightsapi-production.up.railway.app/walletAgeDays' \
+  -H "x-api-key: $CLIENT_API_KEY" \
+  -H 'Content-Type: application/json' \
+  --data '{"blockchain":"ETH","address":"0xd8da6bf26964af9d7eed9e03e53415d37aa96045"}'
+```
+
+Example output. The first line is the response body in full days. Curl prints the HTTP status on the second line. The age increases over time.
 
 ```text
-4057
+4058
 HTTP 200
 ```
 
-Read the HTTP status separately from the JSON body. With HTTP 200, use the body as the age in full days. For example, `404` means the earliest verified observation was 404 days ago, and `0` means it was less than 24 hours ago. Earlier activity may exist.
+### Check wallet insights
+
+```bash
+curl -sS --max-time 10 --write-out '\nHTTP %{http_code}\n' \
+  'https://walletinsightsapi-production.up.railway.app/walletInsights' \
+  -H "x-api-key: $CLIENT_API_KEY" \
+  -H 'Content-Type: application/json' \
+  --data '{"blockchain":"ETH","address":"0xd8da6bf26964af9d7eed9e03e53415d37aa96045"}'
+```
+
+Example HTTP 200 response, showing selected JSON fields for this address. Balances, nonce and labels can change between requests.
+
+```json
+{
+  "status": "complete",
+  "address": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
+  "balances": {
+    "native": {"symbol": "ETH", "decimals": 18, "balanceRaw": "5780441042197210512"}
+  },
+  "accountNonce": "5970",
+  "components": {"snapshot": "complete", "riskLabels": "available"}
+}
+```
+
+If `status` is `partial`, check `components` to see which data is available. [Full walletInsights response reference](https://walletinsightsapi-production.up.railway.app/docs#tag/wallet-insights/POST/walletInsights)
 
 | HTTP status | JSON body | What to do |
 | --- | --- | --- |
-| 200 | `404` | Use 404 as the wallet age. |
-| 404 | `"not_found"` | No activity was found to date the address. Record unknown age. |
-| 503 | `"unknown"` | The lookup is temporarily unavailable. Record unknown age and retry later. |
-| 400 | `"invalid"` or `"invalid request"` | Send exactly the two fields shown above. An ETH address starts with `0x` followed by 40 hex digits. |
-| 401 | `"unauthorized"` | Check that the `x-api-key` header contains your assigned staging key. |
+| 400 | `"invalid"` or `"invalid request"` | Send exactly `blockchain` and `address`. An ETH address starts with `0x` followed by 40 hex digits. |
+| 401 | `"unauthorized"` | Enter your assigned test key again and retry. |
+| 404 | `"not_found"` | For an age lookup, record the age as unknown. |
 | 429 | `"rate limited"` | Wait the number of seconds in the `Retry-After` response header before retrying. |
+| 503 | `"unknown"` or an unavailable result | Record the result as unavailable and retry later. |
 
-Apply an under-three-days rule only to successful ages of `0`, `1`, or `2`. [See examples of zero days and unknown age](https://walletinsightsapi-production.up.railway.app/docs#description/zero-days-and-unknown-age).
+Read the HTTP status separately from the body. An HTTP 200 age response with body `404` means 404 days old. [Zero days and unknown age](https://walletinsightsapi-production.up.railway.app/docs#description/zero-days-and-unknown-age)
 
-**Screen a flagged destination.** Send the same JSON body and key to `POST /walletInsights` for balances, account activity and available risk labels. When `status` is `partial`, check `components` to see which signals you can use.
-
-For examples of holds, rolling withdrawal caps and customer behavior profiles, see [Screen a DeFi withdrawal](../v2/withdrawal-screening.md).
-
-For support, include the HTTP status and `x-railway-request-id`. Add `-i` to curl to see response headers. [Service health](https://walletinsightsapi-production.up.railway.app/health) · [OpenAPI specification](https://walletinsightsapi-production.up.railway.app/openapi.json?view=latest)
+For support, include the HTTP status and `x-railway-request-id`. Add `-i` to curl to see the response headers.

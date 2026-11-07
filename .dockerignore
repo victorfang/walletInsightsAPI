@@ -12,6 +12,7 @@
 **/*.db*
 benchmarks
 tests
-docs
+docs/*
 *.md
 !v2/withdrawal-screening.md
+!docs/CLIENT_QUICKSTART.md

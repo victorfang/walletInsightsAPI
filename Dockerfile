@@ -14,6 +14,7 @@ RUN gzip -k v2/static/scalar-*.js
 COPY wallet_age_days/ wallet_age_days/
 COPY wallet_insights/ wallet_insights/
 COPY eth_wallet_check/ eth_wallet_check/
+COPY docs/CLIENT_QUICKSTART.md docs/
 COPY openapi.json .
 
 # Railway supplies PORT; exec forwards shutdown signals to aiohttp.

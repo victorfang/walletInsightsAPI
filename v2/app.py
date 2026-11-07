@@ -238,7 +238,7 @@ async def create_app(config=None, *, service=None, legacy=None):
                 version="latest",
                 description=(
                     doc["info"]["description"] + "\n\n"
-                    + doc["components"]["securitySchemes"]["HeaderApiKeyAuth"]["description"] + "\n\n"
+                    + (ROOT.parent / "docs" / "CLIENT_QUICKSTART.md").read_text(encoding="utf-8") + "\n\n"
                     + (ROOT / "withdrawal-screening.md").read_text(encoding="utf-8")
                 ),
             )
