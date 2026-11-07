@@ -62,7 +62,9 @@ Cache-Control: no-store
 365
 ```
 
-GET and POST accept exactly `blockchain` and `address`. Duplicate or extra fields are rejected. Successful age bodies remain bare integers; errors retain the existing JSON strings, including `400 "invalid"`, `404 "not_found"`, `503 "unknown"` and the unsupported-chain message above. Existing cache, finalized, evidence and source-count headers are preserved. [The browser API reference](https://walletinsightsapi-production.up.railway.app/docs), `/health` and `/openapi.json` are public, including their `/v1`, `/v2` and `/latest` variants.
+GET and POST accept exactly `blockchain` and `address`. Duplicate or extra fields are rejected. Successful age bodies remain bare integers; errors retain the existing JSON strings, including `400 "invalid"`, `404 "not_found"`, `503 "unknown"` and the unsupported-chain message above. Existing cache, finalized, evidence and source-count headers are preserved. [The browser API reference](https://walletinsightsapi-production.up.railway.app/docs) documents the two current client endpoints. All documentation URLs display the same latest reference. Its [OpenAPI schema](https://walletinsightsapi-production.up.railway.app/openapi.json?view=latest) contains their unversioned GET and POST operations. Existing versioned API and schema URLs remain available.
+
+Railway serves the Scalar renderer and the AnChain favicon from `v2/static/`. The browser needs only the wallet API host. To update Scalar, copy `dist/browser/standalone.js` from the verified npm package, update the versioned filename in `docs.html`, and include the upstream license. Docker precompresses the bundle for browsers that accept gzip. [Scalar package 1.77.0](https://www.npmjs.com/package/@scalar/api-reference/v/1.77.0) · [MIT license](static/Scalar-LICENSE)
 
 ## Age semantics and provider setup
 

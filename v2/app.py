@@ -5,7 +5,6 @@ import asyncio
 from collections import defaultdict, deque
 from datetime import datetime, timezone
 from functools import lru_cache
-from html import escape
 import hmac
 import ipaddress
 import json
@@ -210,8 +209,10 @@ async def create_app(config=None, *, service=None, legacy=None):
         task.add_done_callback(finished)
         return await asyncio.shield(task)
 
+    docs_page = (ROOT / "docs.html").read_text(encoding="utf-8")
+
     @lru_cache(maxsize=4)
-    def spec(version, pinned):
+    def spec(version, pinned, client_view=False):
         doc = json.loads((ROOT.parent / "openapi.json").read_text())
         doc["paths"]["/docs"] = {"get": {"operationId": "apiReference", "summary": "Read the API reference",
             "security": [], "responses": {"200": {"description": "Browser-readable OpenAPI documentation.",
@@ -231,6 +232,21 @@ async def create_app(config=None, *, service=None, legacy=None):
                             "content": {"application/json": {"schema": {"const": "rate limited"}}},
                         }
         doc["servers"] = [{"url": f"/{version}" if pinned else "/"}]
+        if client_view:
+            doc["paths"] = {path: doc["paths"][path] for path in ("/walletAgeDays", "/walletInsights")}
+            doc["info"].update(
+                title="AnChain.AI Wallet API", version="latest",
+                description=(
+                    "Screen Ethereum withdrawal destinations with two wallet signals.\n\n"
+                    "| Endpoint | Result |\n| --- | --- |\n"
+                    "| `/walletAgeDays` | Full days since the earliest verified activity observed on Ethereum. "
+                    "A result of `0` means less than 24 hours. |\n"
+                    "| `/walletInsights` | ETH and selected token balances, account nonce, code profile "
+                    "and available risk labels. Check the component status when a result is partial. |\n\n"
+                    + doc["components"]["securitySchemes"]["HeaderApiKeyAuth"]["description"]
+                ),
+            )
+            return json.dumps(doc, separators=(",", ":")).encode()
         if pinned:
             if version == "v2":
                 doc["info"]["title"] = "WalletAgeDays API"
@@ -251,32 +267,6 @@ async def create_app(config=None, *, service=None, legacy=None):
                     doc["paths"][f"/{prefix}{route}"] = copy
         doc["x-latest-age-version"] = latest
         return json.dumps(doc, separators=(",", ":")).encode()
-
-    @lru_cache(maxsize=4)
-    def docs(version, pinned):
-        document = json.loads(spec(version, pinned))
-        base = document["servers"][0]["url"].rstrip("/")
-        sections = []
-        for path, operations in document["paths"].items():
-            if path.count("/") != 1 or "post" not in operations:
-                continue
-            get, post = operations["get"], operations["post"]
-            example = next(iter(post["requestBody"]["content"]["application/json"]["examples"].values()))["value"]
-            fields = "".join(f'<li><code>{escape(param["name"])}</code> {escape(param["schema"]["description"])}</li>'
-                             for param in get["parameters"])
-            rows = "".join(f'<tr><th scope="row">{escape(code)}</th><td>{escape(info["description"])}</td></tr>'
-                           for code, info in post["responses"].items())
-            ok = post["responses"]["200"]["content"]["application/json"].get("examples", {})
-            sample = next(iter(ok.values()))["value"] if ok else None
-            sections.append(f"""
-              <section><h2><code>{escape(base + path)}</code></h2><p>{escape(get["summary"])}</p>
-              <h3>GET parameters</h3><ul>{fields}</ul>
-              <h3>POST JSON body</h3><pre>{escape(json.dumps(example, indent=2))}</pre>
-              <details><summary>Example success response</summary><pre>{escape(json.dumps(sample, indent=2))}</pre></details>
-              <details><summary>Response codes</summary><table><tbody>{rows}</tbody></table></details></section>""")
-        template = (ROOT / "docs.html").read_text(encoding="utf-8")
-        return template.replace("<!-- operations -->", "".join(sections)).replace(
-            "<!-- authentication -->", escape(document["components"]["securitySchemes"]["HeaderApiKeyAuth"]["description"]))
 
     async def handle(request):
         parts = request.path.removeprefix("/").split("/")
@@ -325,10 +315,16 @@ async def create_app(config=None, *, service=None, legacy=None):
                     raise AgeError(429, "rate limited")
             if route in {"health", "openapi.json", "docs"} and request.method == "GET":
                 if route == "docs":
-                    headers["Content-Security-Policy"] = "default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; frame-ancestors 'none'"
-                    return web.Response(text=docs(version, pinned), content_type="text/html", headers=headers)
+                    headers["Content-Security-Policy"] = (
+                        "default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; "
+                        "connect-src 'self'; img-src 'self' data:; font-src 'self' data:; "
+                        "base-uri 'none'; frame-ancestors 'none'"
+                    )
+                    return web.Response(text=docs_page, content_type="text/html", headers=headers)
                 if route == "openapi.json":
-                    return web.Response(body=spec(version, pinned), content_type="application/json", headers=headers)
+                    client_view = request.path == "/openapi.json" and request.query.get("view") == "latest"
+                    return web.Response(body=spec(version, pinned, client_view),
+                                        content_type="application/json", headers=headers)
                 body = "ok"
             else:
                 if route not in {"walletAgeDays", "walletInsights"}:
@@ -395,6 +391,7 @@ async def create_app(config=None, *, service=None, legacy=None):
         if session:
             await session.close()
 
+    app.router.add_static("/docs-assets/", ROOT / "static")
     app.router.add_route("*", "/{path:.*}", handle)
     app.on_cleanup.append(cleanup)
     return app

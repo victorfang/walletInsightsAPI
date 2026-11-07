@@ -35,4 +35,4 @@ The response body is a single JSON integer. `0` means the earliest verified obse
 | 404 or 503 | Treat the age as unknown. Retry later for a 503. |
 | 429 | Wait the number of seconds in the `Retry-After` response header before retrying. |
 
-For support, include the HTTP status and `x-railway-request-id`. Add `-i` to curl to see response headers. [Service health](https://walletinsightsapi-production.up.railway.app/health) · [OpenAPI specification](https://walletinsightsapi-production.up.railway.app/openapi.json)
+For support, include the HTTP status and `x-railway-request-id`. Add `-i` to curl to see response headers. [Service health](https://walletinsightsapi-production.up.railway.app/health) · [OpenAPI specification](https://walletinsightsapi-production.up.railway.app/openapi.json?view=latest)

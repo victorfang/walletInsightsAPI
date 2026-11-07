@@ -9,6 +9,8 @@ WORKDIR /app
 COPY v2/requirements.txt v2/requirements.txt
 RUN python -m pip install --no-cache-dir -r v2/requirements.txt
 COPY v2/*.py v2/config.toml v2/docs.html v2/
+COPY v2/static/ v2/static/
+RUN gzip -k v2/static/scalar-*.js
 COPY wallet_age_days/ wallet_age_days/
 COPY wallet_insights/ wallet_insights/
 COPY eth_wallet_check/ eth_wallet_check/

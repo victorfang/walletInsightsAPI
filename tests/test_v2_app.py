@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 import io
 import gzip
 import json
+import re
 import sqlite3
 import tempfile
 from pathlib import Path
@@ -280,18 +281,31 @@ class V2HTTPTests(unittest.IsolatedAsyncioTestCase):
             self.assertIn("/walletAgeDays", body["paths"])
         self.assert_no_checks()
 
-    async def test_public_docs_match_versioned_spec(self):
+    async def test_public_docs_only_show_latest_client_operations(self):
         for prefix in ("", "/latest", "/v1", "/v2"):
             async with self.client.get(prefix + "/docs") as response:
                 self.assertEqual((response.status, response.content_type), (200, "text/html"))
+                self.assertIn("script-src 'self'", response.headers["Content-Security-Policy"])
                 page = await response.text()
-            self.assertIn('href="openapi.json"', page)
-            self.assertIn("walletAgeDays", page)
-            self.assertEqual("/walletInsights" in page, prefix != "/v2")
-            self.assertNotIn("/WalletInsights", page)
-            self.assertIn("x-api-key", page)
-            self.assertIn("429", page)
+            self.assertIn('data-url="/openapi.json?view=latest"', page)
+            self.assertNotIn("/v1", page)
             self.assertNotIn("test-key", page)
+
+        status, doc, _ = await self.call("/openapi.json?view=latest", auth=False)
+        self.assertEqual(status, 200)
+        self.assertEqual(set(doc["paths"]), {"/walletAgeDays", "/walletInsights"})
+        self.assertEqual(doc["info"]["version"], "latest")
+        self.assertNotIn("v1", json.dumps(doc).lower())
+        self.assertEqual(doc["security"], [{"HeaderApiKeyAuth": []}])
+        self.assertNotIn("test-key", json.dumps(doc))
+        for operations in doc["paths"].values():
+            self.assertEqual(set(operations), {"get", "post"})
+            self.assertIn("429", operations["post"]["responses"])
+        for asset in re.findall(r'(?:src|href)="(/docs-assets/[^"]+)"', page):
+            async with self.client.get(asset) as response:
+                self.assertEqual(response.status, 200)
+                self.assertIn(response.content_type, {"text/javascript", "application/javascript", "image/png"})
+                self.assertTrue(await response.read())
         self.assert_no_checks()
 
     async def test_latest_setting_resolves_to_newest_registered_version(self):
