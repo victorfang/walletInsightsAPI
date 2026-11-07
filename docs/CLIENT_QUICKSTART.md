@@ -32,8 +32,11 @@ The response body is a single JSON integer. `0` means the earliest verified obse
 | --- | --- |
 | 400 | Send exactly the two fields shown above. An ETH address starts with `0x` followed by 40 hex digits. |
 | 401 | Check that the `x-api-key` header contains your assigned staging key. |
-| 404 or 503 | Treat the age as unknown. Retry later for a 503. |
+| 404 `"not_found"` | No activity was found to date the address. Record unknown age. A valid address awaiting its first transfer can return this result. |
+| 503 `"unknown"` | The lookup is temporarily unavailable. Record unknown age and retry later. |
 | 429 | Wait the number of seconds in the `Retry-After` response header before retrying. |
+
+Apply an under-three-days rule only to successful ages of `0`, `1`, or `2`. [See examples of zero days and unknown age](https://walletinsightsapi-production.up.railway.app/docs#description/zero-days-and-unknown-age).
 
 **Screen a flagged destination.** Send the same JSON body and key to `POST /walletInsights` for balances, account activity and available risk labels. When `status` is `partial`, check `components` to see which signals you can use.
 

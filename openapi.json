@@ -35,7 +35,7 @@
           "Wallet age"
         ],
         "summary": "Check the destination’s observed age",
-        "description": "Send the withdrawal destination as the address. Use ETH for Ethereum mainnet. The result is a JSON integer. For example, 2 means the earliest observed activity was at least 48 and less than 72 hours ago. Earlier activity may exist. A 404 or 503 means age is unknown. Only a successful response can give an age of zero.",
+        "description": "Send the withdrawal destination as the address. Use ETH for Ethereum mainnet. Read the HTTP status first. A 200 result of 0 means the earliest observed activity was less than 24 hours ago. For example, a first observed transfer six hours ago returns 0. Earlier activity may exist. A 404 or 503 means the age is unknown. Apply an under-three-days rule only to successful values of 0, 1 or 2.",
         "responses": {
           "200": {
             "description": "Full days since the earliest observed Ethereum activity. The response body is one integer.",
@@ -217,7 +217,7 @@
             }
           },
           "404": {
-            "description": "No age is available for this address. Treat it as unknown.",
+            "description": "No activity was found to date the address. A valid address awaiting its first transfer can return this result. Record the age as unknown.",
             "headers": {
               "Cache-Control": {
                 "description": "Do not store this response in an HTTP cache.",
@@ -355,7 +355,7 @@
             }
           },
           "503": {
-            "description": "Age is temporarily unavailable. Treat it as unknown and retry later.",
+            "description": "The lookup could not establish an age at this time. Record the age as unknown and retry later.",
             "headers": {
               "Cache-Control": {
                 "description": "Do not store this response in an HTTP cache.",
@@ -458,7 +458,7 @@
           "Wallet age"
         ],
         "summary": "Check the destination’s observed age",
-        "description": "Send the withdrawal destination as the address. Use ETH for Ethereum mainnet. The result is a JSON integer. For example, 2 means the earliest observed activity was at least 48 and less than 72 hours ago. Earlier activity may exist. A 404 or 503 means age is unknown. Only a successful response can give an age of zero.",
+        "description": "Send the withdrawal destination as the address. Use ETH for Ethereum mainnet. Read the HTTP status first. A 200 result of 0 means the earliest observed activity was less than 24 hours ago. For example, a first observed transfer six hours ago returns 0. Earlier activity may exist. A 404 or 503 means the age is unknown. Apply an under-three-days rule only to successful values of 0, 1 or 2.",
         "responses": {
           "200": {
             "description": "Full days since the earliest observed Ethereum activity. The response body is one integer.",
@@ -640,7 +640,7 @@
             }
           },
           "404": {
-            "description": "No age is available for this address. Treat it as unknown.",
+            "description": "No activity was found to date the address. A valid address awaiting its first transfer can return this result. Record the age as unknown.",
             "headers": {
               "Cache-Control": {
                 "description": "Do not store this response in an HTTP cache.",
@@ -778,7 +778,7 @@
             }
           },
           "503": {
-            "description": "Age is temporarily unavailable. Treat it as unknown and retry later.",
+            "description": "The lookup could not establish an age at this time. Record the age as unknown and retry later.",
             "headers": {
               "Cache-Control": {
                 "description": "Do not store this response in an HTTP cache.",
