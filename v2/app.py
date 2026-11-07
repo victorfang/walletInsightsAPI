@@ -234,6 +234,8 @@ async def create_app(config=None, *, service=None, legacy=None):
         doc["servers"] = [{"url": f"/{version}" if pinned else "/"}]
         if client_view:
             doc["paths"] = {path: doc["paths"][path] for path in ("/walletAgeDays", "/walletInsights")}
+            # The introduction already has a labeled email link; Scalar renders contact as a second icon.
+            doc["info"].pop("contact", None)
             doc["info"].update(
                 version="latest",
                 description=(

@@ -4,9 +4,9 @@ Our beta service targets are a **p95 of about 1 second or less for successful qu
 
 | Endpoint | Lookup | Average | p95 | Observed maximum |
 | --- | --- | ---: | ---: | ---: |
-| `/walletAgeDays` | Cached | 1.01 ms | 1.76 ms | 5.78 ms |
+| `/walletAgeDays` | Cached | 1 ms | 2 ms | 6 ms |
 | `/walletAgeDays` | Uncached | 760 ms | 996 ms | 1,004 ms |
-| `/walletInsights` | Fully cached | 3.42 ms | 4.37 ms | 9.61 ms |
+| `/walletInsights` | Fully cached | 3 ms | 4 ms | 10 ms |
 | `/walletInsights` | Uncached | 690 ms | 807 ms | 884 ms |
 
 The table shows local HTTP benchmarks from November 5–6, 2026, measured one request at a time. Each age row covers 40 successful lookups. Each Insights row covers 80 complete responses. The measurements exclude the network round trip from your client to Railway.
